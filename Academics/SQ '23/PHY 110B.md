@@ -1,7 +1,7 @@
 MWF10: Wellman 202, LEC
-7. [Electrodynamics](Electrodynamics.md)
-8. [Conservation Laws](Conservation%20Laws.md)
-9. [Electromagnetic Waves](Electromagnetic%20Waves.md)
+7. [Electrodynamics](../Notes/Electrodynamics.md)
+8. [Conservation Laws](../Notes/Conservation%20Laws.md)
+9. [Electromagnetic Waves](../Notes/Electromagnetic%20Waves.md)
 ### Assignments
 - [x] HW 1 (4/13)
 - [x] HW 2 (4/20)

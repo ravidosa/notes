@@ -7,6 +7,7 @@ particle periodic table
 | BOSONS   | STRONG  | gluon                       |                          |                      |
 |          | WEAK    | W boson (80.4 GeV)          | Z boson (91.2 GeV)       | Higgs mechanism      |
 |          | EM      | photon                      |                          |                      |
+
 many such questions
 	antiparticles ($\pm E$)
 		klein-gordon equation

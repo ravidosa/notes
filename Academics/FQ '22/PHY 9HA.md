@@ -1,13 +1,13 @@
 MWF11: Roessler 55, LEC
 TR10: Roessler 166, DIS/LAB
-1. [Motion](Motion.md)
-2. [Force](Force.md)
-3. [Work and Energy](Work%20and%20Energy.md)
-4. [Linear Momentum](Linear%20Momentum.md)
-5. [Rotations and Rigid Bodies](Rotations%20and%20Rigid%20Bodies.md)
-6. [Angular Momentum](Angular%20Momentum.md)
-7. [Gravitation](Gravitation.md)
-8. [Small Oscillations](Small%20Oscillations.md)
+1. [Motion](../Notes/Motion.md)
+2. [Force](../Notes/Force.md)
+3. [Work and Energy](../Notes/Work%20and%20Energy.md)
+4. [Linear Momentum](../Notes/Linear%20Momentum.md)
+5. [Rotations and Rigid Bodies](../Notes/Rotations%20and%20Rigid%20Bodies.md)
+6. [Angular Momentum](../Notes/Angular%20Momentum.md)
+7. [Gravitation](../Notes/Gravitation.md)
+8. [Small Oscillations](../Notes/Small%20Oscillations.md)
 ### Assignments
 - [x] DL 0 (9/22)
 - [x] DL 1 (9/27)

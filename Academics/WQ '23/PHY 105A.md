@@ -1,10 +1,10 @@
 MWF9: Roessler 55, LEC
-1. [Problem Solving Strategies](Problem%20Solving%20Strategies.md)
-2. [Statics](Statics.md)
-3. [Using F=ma](Dynamics.md)
-4. [Oscillations](Oscillations.md)
-5. [Energy and Momentum Conservation](Energy%20and%20Momentum%20Conservation.md)
-6. [The Lagrangian Method](The%20Lagrangian%20Method.md)
+1. [Problem Solving Strategies](../Notes/Problem%20Solving%20Strategies.md)
+2. [Statics](../Notes/Statics.md)
+3. [Using F=ma](../Notes/Dynamics.md)
+4. [Oscillations](../Notes/Oscillations.md)
+5. [Energy and Momentum Conservation](../Notes/Energy%20and%20Momentum%20Conservation.md)
+6. [The Lagrangian Method](../Notes/The%20Lagrangian%20Method.md)
 ### Assignments
 - [x] HW 1 (1/15)
 - [x] HW 2 (1/19)

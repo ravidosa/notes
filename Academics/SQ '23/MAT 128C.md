@@ -1,5 +1,5 @@
 MW11: Olson 118, LEC
-1. [Initial-Value Problems for Ordinary Differential Equations](IVP%20Theory.md)
+1. [Initial-Value Problems for Ordinary Differential Equations](../Notes/IVP%20Theory.md)
 ### Assignments
 - [ ] HW 1 (4/17)
 - [ ] HW 2 (5/1)

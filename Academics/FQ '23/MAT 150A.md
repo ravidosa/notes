@@ -1,9 +1,9 @@
 MWF10: Hoagland 168, LEC
-1. [Matrices](Matrices.md)
-2. [Groups](Groups.md)
-3. [Vector Spaces](Vector%20Spaces.md)
-6. [Symmetry](Symmetry.md)
-7. [More Group Theory](Groups.md)
+1. [Matrices](../Notes/Matrices.md)
+2. [Groups](../Notes/Groups.md)
+3. [Vector Spaces](../Notes/Vector%20Spaces.md)
+6. [Symmetry](../Notes/Symmetry.md)
+7. [More Group Theory](../Notes/Groups.md)
 ### Assignments
 - [x] HW 0 (10/3)
 - [x] HW 1 (10/10)

@@ -1,5 +1,5 @@
 MTWF10: TLC 1214, LEC
-8. [Differentiable Functions](Differentiable%20Functions.md)
+8. [Differentiable Functions](../Notes/Differentiable%20Functions.md)
 ### Assignments
 - [x] HW 1 (8/11)
 - [x] HW 2 (8/18)

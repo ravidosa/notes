@@ -1,8 +1,8 @@
 MWF9: Roessler 55, LEC
-1. [The Wave Function](The%20Wave%20Function.md)
-2. [Time-Independent Schrodinger Equation](Time-Independent%20Schrodinger%20Equation.md)
-3. [Formalism](Formalism.md)
-4. [The WKB Approximation](The%20WKB%20Approximation.md)
+1. [The Wave Function](../Notes/The%20Wave%20Function.md)
+2. [Time-Independent Schrodinger Equation](../Notes/Time-Independent%20Schrodinger%20Equation.md)
+3. [Formalism](../Notes/Formalism.md)
+4. [The WKB Approximation](../Notes/The%20WKB%20Approximation.md)
 ### Assignments
 - [x] HW 1 (9/29)
 - [x] HW 2 (10/6)

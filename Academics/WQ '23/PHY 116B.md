@@ -1,11 +1,11 @@
 MWF2: Physics 148, LEC
 W3: Roessler 152, LAB
-1. [Analog Computing](Analog%20Computing.md)
-2. [Digital Logic](Digital%20Logic.md)
-3. [Binary Numbers](Binary%20Arithmetic.md)
-3. [Combinatorics and Arithmetic](Binary%20Arithmetic.md#Arithmetic)
-4. [Synchronous Logic](Synchronous%20Logic.md)
-5. [Configurable Logic](Configurable%20Logic.md)
+1. [Analog Computing](../Notes/Analog%20Computing.md)
+2. [Digital Logic](../Notes/Digital%20Logic.md)
+3. [Binary Numbers](../Notes/Binary%20Arithmetic.md)
+3. [Combinatorics and Arithmetic](../Notes/Binary%20Arithmetic.md#Arithmetic)
+4. [Synchronous Logic](../Notes/Synchronous%20Logic.md)
+5. [Configurable Logic](../Notes/Configurable%20Logic.md)
 ### Assignments
 - [x] HW 1 (1/20)
 - [x] LAB 1 (1/26)

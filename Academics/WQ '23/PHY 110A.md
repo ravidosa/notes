@@ -1,10 +1,10 @@
 MWF10: Roessler 55, LEC
-1. [Vector Analysis](Vector%20Analysis.md)
-2. [Electrostatics](Electrostatics.md)
-3. [Potentials](Potentials.md)
-4. [Electric Fields in Matter](Electric%20Fields%20in%20Matter.md)
-5. [Magnetostatics](Magnetostatics.md)
-6. [Magnetic Fields in Matter](Magnetic%20Fields%20in%20Matter.md)
+1. [Vector Analysis](../Notes/Vector%20Analysis.md)
+2. [Electrostatics](../Notes/Electrostatics.md)
+3. [Potentials](../Notes/Potentials.md)
+4. [Electric Fields in Matter](../Notes/Electric%20Fields%20in%20Matter.md)
+5. [Magnetostatics](../Notes/Magnetostatics.md)
+6. [Magnetic Fields in Matter](../Notes/Magnetic%20Fields%20in%20Matter.md)
 ### Assignments
 - [x] HW 1 (1/16)
 - [x] HW 2 (1/23)

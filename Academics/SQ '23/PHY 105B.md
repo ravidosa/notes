@@ -1,5 +1,5 @@
 MWF9: Roessler 55, LEC
-7. [Central Forces](Central%20Forces.md)
+7. [Central Forces](../Notes/Central%20Forces.md)
 ### Assignments
 - [x] HW 1 (4/7)
 - [x] HW 2 (4/14)

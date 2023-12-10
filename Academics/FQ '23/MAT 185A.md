@@ -1,8 +1,8 @@
 MWF11: Olson 106, LEC
-1. [Analytic Functions](Analytic%20Functions.md)
-2. [Cauchy's Theorem](Cauchy's%20Theorem.md)
-3. [Series Representation of Analytic Functions](Series%20Representation%20of%20Analytic%20Functions.md)
-4. [Calculus of Residues](Calculus%20of%20Residues.md)
+1. [Analytic Functions](../Notes/Analytic%20Functions.md)
+2. [Cauchy's Theorem](../Notes/Cauchy's%20Theorem.md)
+3. [Series Representation of Analytic Functions](../Notes/Series%20Representation%20of%20Analytic%20Functions.md)
+4. [Calculus of Residues](../Notes/Calculus%20of%20Residues.md)
 ### Assignments
 - [x] HW 1 (9/27)
 - [x] HW 2 (10/9)
