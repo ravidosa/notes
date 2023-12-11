@@ -49,6 +49,9 @@ markdown_extensions:
 
   - toc:
       permalink: true
+  - pymdownx.escapeall:
+      hardbreak: true
+      nbsp: true
 
 plugins:
   - search
