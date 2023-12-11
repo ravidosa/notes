@@ -73,7 +73,7 @@ nav:
     - PHY 40: "/FQ%20'22/PHY%2040.md"
     - PHY 104A: "/FQ%20'22/PHY%20104A.md"
     - PHY 116A: "/FQ%20'22/PHY%20116A.md"
-  - Winter 2023: "/WQ%20'22/"
+  - Winter 2023:
     - LIN 103B: "/WQ%20'23/LIN%20103B.md"
     - MAT 108: "/WQ%20'23/MAT%20108.md"
     - MAT 119A: "/WQ%20'23/MAT%20119A.md"
@@ -82,7 +82,7 @@ nav:
     - PHY 105A: "/WQ%20'22/PHY%20105A.md"
     - PHY 110A: "/WQ%20'22/PHY%20110A.md"
     - PHY 116B: "/WQ%20'22/PHY%20116B.md"
-  - Spring 2023: "/SQ%20'22/"
+  - Spring 2023:
     - LIN 165: "/SQ%20'23/LIN%20165.md"
     - MAT 127A: "/SQ%20'23/MAT%20127A.md"
     - MAT 128B: "/SQ%20'23/MAT%20128B.md"
@@ -90,10 +90,10 @@ nav:
     - PHY 105B: "/SQ%20'22/PHY%20105B.md"
     - PHY 108: "/SQ%20'22/PHY%20108.md"
     - PHY 110B: "/SQ%20'22/PHY%20110B.md"
-  - Summer 2023: "/MQ%20'22/"
+  - Summer 2023:
     - MAT 127B: "/MQ%20'23/MAT%20127B.md"
     - MAT 128A: "/MQ%20'23/MAT%20128A.md"
-  - Fall 2023: "/FQ%20'23/"
+  - Fall 2023:
     - LIN 112: "/FQ%20'23/LIN%20112.md"
     - LIN 141: "/FQ%20'23/LIN%20141.md"
     - MAT 150A: "/FQ%20'23/MAT%20150A.md"
