@@ -1,6 +1,6 @@
 site_name: notes
 
-doc_dir: Academics
+docs_dir: Academics
 
 theme:
     name: 'material'
