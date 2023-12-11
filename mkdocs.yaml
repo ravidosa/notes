@@ -6,26 +6,8 @@ extra_css:
   - style.css
 
 theme:
-    name: 'material'
-    palette:
-
-    # Light mode
-    - media: "(prefers-color-scheme: light)"
-      scheme: default
-      primary: pink
-      accent: indigo
-      toggle:
-        icon: material/toggle-switch-off-outline
-        name: Switch to dark mode
-
-    # Dark mode
-    - media: "(prefers-color-scheme: dark)"
-      scheme: slate
-      primary: pink
-      accent: blue
-      toggle:
-        icon: material/toggle-switch
-        name: Switch to light mode
+    name: 'terminal'
+    palette: dark
 
 # Extensions
 markdown_extensions:
@@ -64,7 +46,7 @@ extra_javascript:
   - https://unpkg.com/mermaid/dist/mermaid.min.js 
 
 nav:
-  - Home: 'index/'
+  - Home: '/'
   - Course List: 'Course%20List/'
   - Fall 2022:
     - LIN 1Y: "./FQ%20'22/LIN%201Y/"

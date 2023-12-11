@@ -13,5 +13,5 @@ MWF9: Roessler 55, LEC
 - [x] MIDTERM (11/8)
 - [x] HW 7 (11/22)
 - [x] HW 8 (12/4)
-- [ ] HW 9 (12/11)
+- [x] HW 9 (12/11)
 - [ ] FINAL (12/13)
