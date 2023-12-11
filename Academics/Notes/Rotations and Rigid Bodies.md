@@ -47,6 +47,7 @@ $K_{rot} = \frac{1}{2}I\omega^2$, $I = \sum_i m_ir_i^2 = \sum_0^L dm x^2$
 |spherical shell | $\frac{2}{3}MR^2$ |
 | rod, center | $\frac{1}{12}ML^2$ |
 | rod, end | $\frac{1}{3}ML^2$ |
+
 additivity around common axis
 	$I = I_1 + I_2$
 parallel axis theorem

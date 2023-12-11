@@ -49,5 +49,6 @@ taylor series
 | $e^x$                                           | $\sum_{n=0}^\infty \frac{x^n}{n!}$                 | $1 + x + \frac{x^2}{2!} + \ldots$   |
 | $\ln(1+x)$                                      | $\sum_{n=1}^\infty \frac{(-1)^{n+1}x^n}{n}$        | $x - \frac{x^2}{2} + \frac{x^3}{3} - \ldots$ |
 | $(1+x)^p$ for real $p$, infinite for non-integral $p$ | $\sum_{n=0}^\infty {p \choose n}x^n$               | $1 + px + \frac{p(p-1)}{2!}x^2 + \ldots$ |                    
+
 division
 	valid if ratio finite as $x \to  0$

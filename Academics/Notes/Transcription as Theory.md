@@ -17,6 +17,7 @@ transcript
 			no well-developed, concise notation system for nonverbal
 			practical vs theoretical
 			different prioritization in different contexts
+
 | type                        | marking                                                                                      | reasoning                              |
 | --------------------------- | -------------------------------------------------------------------------------------------- | -------------------------------------- |
 | utterance boundary          | /                                                                                            | basic unit of communication            |

@@ -1,4 +1,5 @@
 particle periodic table
+
 | FERMIONS | QUARKS  | up (-0.1 GeV)               | charm (1.7 GeV)          | top (175 GeV)        |
 | -------- | ------- | --------------------------- | ------------------------ | -------------------- |
 |          |         | down (-0.1 GeV)             | strange (0.5 GeV)        | bottom (4.5 GeV)     |

@@ -1,12 +1,14 @@
 conserved quantities
 	energy, momentum, angular momentum
 force and potential energy
+
 | interaction      | zero      | potential energy                                   | force                                                 |
 | ---------------- | --------- | -------------------------------------------------- | ----------------------------------------------------- |
 | Gravity on Earth | arbitrary | $V(y) = mgy$                                       | $F=-mg\hat{y}$                                        |
 | Hooke's Law      | $x_0$     | $V(x) = \frac{1}{2}kx^2$                           | $F=-kx\hat{x}$                                        |
 | Gravity in space | $\infty$  | $V(r) = \frac{Gm_1m_2}{r}$                         | $F=-\frac{Gm_1m_2}{r^2}$                              |
 | Coulomb's Law    | $\infty$  | $V(r) = -\frac{1}{4\pi\epsilon_0}\frac{q_1q_2}{r}$ | $F=\frac{1}{4\pi\epsilon_0}\frac{q_1q_2}{r^2}\hat{r}$ |
+
 change in kinetic energy between $x_1$ and $x_2$ is work done on object between $x_1$ and $x_2$
 	conservative force: work done not dependent on path between $x_1$ and $x_2$, must be $F(x)$
 potential energy plot

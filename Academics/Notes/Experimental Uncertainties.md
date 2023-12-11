@@ -3,6 +3,7 @@ gaussian distribution
 	use z-score to find probability of lying between sigmas
 		$\mathrm{erf}(z) = \frac{1}{\pi} \int_{-z}^z e^{-t^2} \, dt$
 common probabilities
+
 | interval        | integrated probability |
 | --------------- | ---------------------- |
 | $\pm 1\sigma$   | $68.3\%$               |
@@ -10,6 +11,7 @@ common probabilities
 | $\pm 2\sigma$   | $95.4\%$               |
 | $\pm 3\sigma$   | $99.7\%$               |
 | $\pm 5\sigma$   | $99.9\%$               |
+
 propagation
 	$\langle f(x) \rangle = \int f(x)P(x) \, dx$
 	$\langle f(x,y) \rangle = \int\int f(x,y)P(x,y) \, dx \, dy$

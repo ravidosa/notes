@@ -7,9 +7,11 @@ signs: arbitrary and conventional pairings of form and meaning
 	ditransitive construction
 		two objects
 idiomaticity continuum
+
 | words                   | fixed idioms | idioms with variables | comparative conditional | subject-predicate |
 | ----------------------- | ------------ | --------------------- | ----------------------- | ----------------- |
 | simple word-level signs | unchanging phrase | changing phrase |                         |                   |
+
 identify contructions needed to describe syntactic combinations and rules that govern combination of words and phrases
 ### Lexical Signs
 lexemes: basic unit of syntax, abstract sign that captures form-meaning correspondence

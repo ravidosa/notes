@@ -2,31 +2,38 @@ proposition: statement that has one truth value (T/F)
 ### Logical Operators
 and ($P \land Q$)
 	true if both propositions true
+
 | $P$ | $Q$ | $P \land Q$ |
 | --- | --- | ----------- |
 | T   | T   | T           |
 | T   | F   | F           |
 | F   | T   | F           |
 | F   | F   | F           |
+
 or ($P \lor Q$)
 	true if either or both propositions true
+
 | $P$ | $Q$ | $P \lor Q$ |
 | --- | --- | ----------- |
 | T   | T   | T           |
 | T   | F   | T           |
 | F   | T   | T           |
 | F   | F   | F           |
+
 not ($\neg P$)
 	true if false, false if true
+
 | $P$ | $\neg P$ |
 | --- | --- |
 | T   | F   | 
 | F   | T   | 
+
 truth tables: organized way of defining logical operator
 tautology: always true, regardless of truth values of constituent propositions
 contradiction: always false, regardless of truth values of constituent propositions
 ### Logical Equivalence ($\equiv$)
 same truth table for all constituent propositions
+
 | A                     | B                              | Name                         |
 | --------------------- | ------------------------------ | ---------------------------- |
 | $P$                   | $\neg(\neg P)$                 | double negation               |

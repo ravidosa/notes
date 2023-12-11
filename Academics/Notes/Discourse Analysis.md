@@ -48,8 +48,9 @@ contextualization cues and prosody
 	assonance, consonance, alliteration
 rhetorical strategies in persuasion
 	cultural differences, code switching
-| unit               | definition                                                           |
-| ------------------ | -------------------------------------------------------------------- |
+
+| **unit**               | **definition**                                                           |
+| ------------------ | --------------------------- |
 | sentence           | complete thought, subject and predicate                              |
 | clause             | subject, finite verb, clausal complements                            |
 | t-unit             | main clause, dependent clauses                                       |
@@ -58,7 +59,8 @@ rhetorical strategies in persuasion
 | center of interest | set of intonation units, one predication each                        |
 | utterance          | single intonation contour, bounded by pauses, single unit of meaning |
 | tone group         | one pitch nucleus, syllables                                         |
-| tone constructional unit                   | transition in speaker                                                                     |
+| tone constructional unit                   | transition in speaker     |
+
 syntactic structure and communicative function
 	active vs passive
 cohesion
