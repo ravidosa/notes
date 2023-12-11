@@ -16,7 +16,7 @@ entropy
 boltzmann distribution
 	$E=\sum_{i=1}^Nn_i\hbar\omega_0 = M\hbar\omega_0$
 	stars and bars
-	$P(n_i)=\frac{{(M - n_i) + (N-1) - 1} \choose {M-n_i}}{{M+N-1}\choose M}$
+	$P(n_i)=\frac{{{(M - n_i) + (N-1) - 1} \choose {M-n_i}}}{{{M+N-1}\choose M}}$
 	$N(E_n)=e^{-\frac{E^n}{k_BT}}$
 	$P(E_n)=\frac{e^{-\frac{E^n}{k_BT}}}{\sum_n e^{-\frac{E^n}{k_BT}}}$ for very large N
 	$\mathcal{N}(E_n)=NAe^{-\frac{E^n}{k_BT}}$ number of particles per state with energy $E_n$
