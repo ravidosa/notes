@@ -64,44 +64,44 @@ extra_javascript:
   - https://unpkg.com/mermaid/dist/mermaid.min.js 
 
 nav:
-  - Home: 'index.md'
-  - Course List: 'Course%20List.md'
+  - Home: 'index/'
+  - Course List: 'Course%20List/'
   - Fall 2022:
-    - LIN 1Y: "/FQ%20'22/LIN%201Y.md"
-    - PHY 9D: "/FQ%20'22/PHY%209D.md"
-    - PHY 9HA: "/FQ%20'22/PHY%209HA.md"
-    - PHY 40: "/FQ%20'22/PHY%2040.md"
-    - PHY 104A: "/FQ%20'22/PHY%20104A.md"
-    - PHY 116A: "/FQ%20'22/PHY%20116A.md"
+    - LIN 1Y: "/FQ%20'22/LIN%201Y/"
+    - PHY 9D: "/FQ%20'22/PHY%209D/"
+    - PHY 9HA: "/FQ%20'22/PHY%209HA/"
+    - PHY 40: "/FQ%20'22/PHY%2040/"
+    - PHY 104A: "/FQ%20'22/PHY%20104A/"
+    - PHY 116A: "/FQ%20'22/PHY%20116A/"
   - Winter 2023:
-    - LIN 103B: "/WQ%20'23/LIN%20103B.md"
-    - MAT 108: "/WQ%20'23/MAT%20108.md"
-    - MAT 119A: "/WQ%20'23/MAT%20119A.md"
-    - PHY 45: "/WQ%20'23/PHY%2045.md"
-    - PHY 80: "/WQ%20'23/PHY%2080.md"
-    - PHY 105A: "/WQ%20'22/PHY%20105A.md"
-    - PHY 110A: "/WQ%20'22/PHY%20110A.md"
-    - PHY 116B: "/WQ%20'22/PHY%20116B.md"
+    - LIN 103B: "/WQ%20'23/LIN%20103B/"
+    - MAT 108: "/WQ%20'23/MAT%20108/"
+    - MAT 119A: "/WQ%20'23/MAT%20119A/"
+    - PHY 45: "/WQ%20'23/PHY%2045/"
+    - PHY 80: "/WQ%20'23/PHY%2080/"
+    - PHY 105A: "/WQ%20'22/PHY%20105A/"
+    - PHY 110A: "/WQ%20'22/PHY%20110A/"
+    - PHY 116B: "/WQ%20'22/PHY%20116B/"
   - Spring 2023:
-    - LIN 165: "/SQ%20'23/LIN%20165.md"
-    - MAT 127A: "/SQ%20'23/MAT%20127A.md"
-    - MAT 128B: "/SQ%20'23/MAT%20128B.md"
-    - MAT 135A: "/SQ%20'23/MAT%20135A.md"
-    - PHY 105B: "/SQ%20'22/PHY%20105B.md"
-    - PHY 108: "/SQ%20'22/PHY%20108.md"
-    - PHY 110B: "/SQ%20'22/PHY%20110B.md"
+    - LIN 165: "/SQ%20'23/LIN%20165/"
+    - MAT 127A: "/SQ%20'23/MAT%20127A/"
+    - MAT 128B: "/SQ%20'23/MAT%20128B/"
+    - MAT 135A: "/SQ%20'23/MAT%20135A/"
+    - PHY 105B: "/SQ%20'22/PHY%20105B/"
+    - PHY 108: "/SQ%20'22/PHY%20108/"
+    - PHY 110B: "/SQ%20'22/PHY%20110B/"
   - Summer 2023:
-    - MAT 127B: "/MQ%20'23/MAT%20127B.md"
-    - MAT 128A: "/MQ%20'23/MAT%20128A.md"
+    - MAT 127B: "/MQ%20'23/MAT%20127B/"
+    - MAT 128A: "/MQ%20'23/MAT%20128A/"
   - Fall 2023:
-    - LIN 112: "/FQ%20'23/LIN%20112.md"
-    - LIN 141: "/FQ%20'23/LIN%20141.md"
-    - MAT 150A: "/FQ%20'23/MAT%20150A.md"
-    - MAT 168: "/FQ%20'23/MAT%20168.md"
-    - MAT 185A: "/FQ%20'23/MAT%20185A.md"
-    - PHY 105C: "/FQ%20'22/PHY%20105C.md"
-    - PHY 112: "/FQ%20'22/PHY%20112.md"
-    - PHY 115A: "/FQ%20'22/PHY%20115A.md"
+    - LIN 112: "/FQ%20'23/LIN%20112/"
+    - LIN 141: "/FQ%20'23/LIN%20141/"
+    - MAT 150A: "/FQ%20'23/MAT%20150A/"
+    - MAT 168: "/FQ%20'23/MAT%20168/"
+    - MAT 185A: "/FQ%20'23/MAT%20185A/"
+    - PHY 105C: "/FQ%20'22/PHY%20105C/"
+    - PHY 112: "/FQ%20'22/PHY%20112/"
+    - PHY 115A: "/FQ%20'22/PHY%20115A/"
 
 not_in_nav: |
   Notes/*
