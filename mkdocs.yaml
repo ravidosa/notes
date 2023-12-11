@@ -55,11 +55,11 @@ plugins:
   - roamlinks
   - replace_markdown:
       patterns:        
-        - pattern_1: # Pattern name, can be anything
+        - pattern_1: newl
           url: "/" # Only replace text on pages that match the given URL
           oldvalue: "\n"
           newvalue: "\\ \n"
-        - pattern_2: # Next pattern
+        - pattern_2: tabby
           url: "/"
           oldvalue: "\t"
           newvalue: "&emsp;"
