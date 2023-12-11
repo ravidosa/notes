@@ -52,6 +52,16 @@ markdown_extensions:
 
 plugins:
   - search
+  - replace_markdown:
+    patterns:        
+      - pattern_1: # Pattern name, can be anything
+        url: "/" # Only replace text on pages that match the given URL
+        oldvalue: "\n"
+        newvalue: "\\ \n"
+      - pattern_2: # Next pattern
+        url: "/"
+        oldvalue: "\t"
+        newvalue: "&emsp;"
   - roamlinks 
 
 
