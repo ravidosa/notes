@@ -56,13 +56,13 @@ plugins:
   - replace_markdown:
       patterns:        
         - pattern_1:
-          url: "/" # Only replace text on pages that match the given URL
-          oldvalue: "\n"
-          newvalue: "\\ \n"
+            url: "/" # Only replace text on pages that match the given URL
+            oldvalue: "\n"
+            newvalue: "\\ \n"
         - pattern_2:
-          url: "/"
-          oldvalue: "\t"
-          newvalue: "&emsp;"
+            url: "/"
+            oldvalue: "\t"
+            newvalue: "&emsp;"
 
 
 extra_javascript:
