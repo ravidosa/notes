@@ -2,6 +2,9 @@ site_name: notes
 
 docs_dir: Academics
 
+extra_css:
+  - style.css
+
 theme:
     name: 'material'
     palette:
@@ -49,23 +52,10 @@ markdown_extensions:
 
   - toc:
       permalink: true
-  - pymdownx.escapeall:
-      hardbreak: true
-      nbsp: true
 
 plugins:
   - search
   - roamlinks
-  - replace_markdown:
-      patterns:        
-        - pattern_1:
-            url: "\\" # Only replace text on pages that match the given URL
-            oldvalue: "\n"
-            newvalue: "\\ \n"
-        - pattern_2:
-            url: "\\"
-            oldvalue: "\t"
-            newvalue: "&emsp;"
 
 
 extra_javascript:
