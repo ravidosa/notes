@@ -40,7 +40,6 @@ quantum speed half of classical speed
 		wave packet, multiple energies and speeds
 		$\phi(k) = \frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty} \Psi(x, 0)e^{-ikx} \, dx$ (plancherel's theorem)
 	phase velocity (quantum) vs group velocity (classical)
-	see [Continuous Systems](Continuous%20Systems.md)
 ### The Delta-Function Potential
 $V(x) = -\alpha\delta(x)$
 	see [Dirac Delta Function](Ordinary%20Differential%20Equations.md#Dirac%20Delta%20Function)
