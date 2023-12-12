@@ -46,7 +46,7 @@ extra_javascript:
   - https://unpkg.com/mermaid/dist/mermaid.min.js 
 
 nav:
-  - Home: '/'
+  - Home: './'
   - Course List: 'Course%20List/'
   - Fall 2022:
     - LIN 1Y: "./FQ%20'22/LIN%201Y/"
