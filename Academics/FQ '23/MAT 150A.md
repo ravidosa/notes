@@ -3,7 +3,7 @@ MWF10: Hoagland 168, LEC
 2. [Groups](../Notes/Groups.md)
 3. [Vector Spaces](../Notes/Vector%20Spaces.md)
 6. [Symmetry](../Notes/Symmetry.md)
-7. [More Group Theory](../Notes/Groups.md)
+7. [More Group Theory](../Notes/Groups.md#Cayley's%20Theorem)
 ### Assignments
 - [x] HW 0 (10/3)
 - [x] HW 1 (10/10)
@@ -16,4 +16,4 @@ MWF10: Hoagland 168, LEC
 - [x] HW 6 (11/21)
 - [x] HW 7 (11/28)
 - [x] HW 8 (12/5)
-- [ ] FINAL (12/11)
+- [x] FINAL (12/11)

@@ -40,3 +40,24 @@ group of isometries is discrete if no arbitrarily small translations/rotations
 	either $L = \{0\}$, $L = \mathbb{Z}a$, $L = \mathbb{Z}a + \mathbb{Z}b$ (lattices)
 crystallographic restriction: discrete subgroup $\Lambda$ of $\mathbb{V}$, group of symmetries of $\Lambda$ $\mathrm{Sym}(\Lambda)$
 	$H$ subgroup of $\mathrm{Sym}(\Lambda)$,  rotations of order $1, 2, 3, 4, 6$,  either $C_n, D_n$ where $n \in \{1, 2, 3, 4, 6\}$
+### Plane Crystallographic Group
+look for rotational symmetries to identify $n$
+$D_n$ if reflection/glide symmetries, $C_n$ otherwise
+### Abstract Symmetry: Group Operations
+operation of group $G$ on set $S$: map of $G \times S \to S$
+	identity, associativity
+	free: only identity in stabilizer
+	transitive: only one orbit
+	permutation: bijective operation
+	orbit $O_s$: set of elements of $S$ that element maps to
+		partition $S$
+	stabilizer $G_s$: set of elements of $G$ that maps element to itself
+		subgroup of $G$
+		$as = bs$ iff $a^{-1}b \in G_s$
+		stabilizer of mapped element is conjugate subgroup
+### The Operation on Cosets
+operation of group on set of cosets is transitive
+stabilizer of coset is subgroup
+orbit-stabilizer theorem: bijective map between quotient group of stabilizer and orbit
+### The Counting Formula
+counting formula: $|G| = |G_s||O_s|$, $|S| = \sum_k |O_k|$
