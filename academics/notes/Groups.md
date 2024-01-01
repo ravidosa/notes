@@ -89,6 +89,7 @@ see
 ### The Correspondence Theorem
 equivalence relation of elements mapped to same element (preimage)
 restriction map: restrict mapping $\varphi$ to homomorphism of $H \unlhd G$ as $\varphi\vert_H$, kernel is $\mathrm{ker}\varphi \cap H$, image is $\varphi(H)$
+
 correspondence theorem: surjective group homomorphism $\varphi : G \to \mathcal{G}$, bijective map between subgroups of $G$ containing kernel $K$ and subgroups of $\mathcal{G}$
 	$\mathcal{H}$ bijectively corresponds to $H = \varphi^{-1}(\mathcal{H})$
 	corresponding subgroups $H, \mathcal{H}$, $H \unlhd G$ iff $\mathcal{H} \unlhd \mathcal{G}$, $|H| = |\mathcal{H}||K|$
