@@ -1,5 +1,6 @@
-### Newton's Laws
-see [Newton's Laws](Force.md#Properties%20and%20Effects%20of%20Forces)
+# Dynamics
+## Newton's Laws
+see [Newton's Laws](force.md#properties-and-effects-of-forces)
 implications
 	1st
 		definition of zero force
@@ -17,23 +18,23 @@ implications
 		$F_G = G\frac{m_gM_g}{r^2}$
 		general relativity
 			matter tells space to bend, space shows matter how to move
-### Free Body Diagrams
-see [Free Body Diagrams](Force.md#Properties%20and%20Effects%20of%20Forces)
-### Solving Differential Equations
-see [Scalar Autonomous ODEs](Scalar%20Autonomous%20ODEs.md)
+## Free Body Diagrams
+see [Free Body Diagrams](force.md#properties-and-effects-of-forces)
+## Solving Differential Equations
+see [Scalar Autonomous ODEs](scalar-autonomous-odes.md)
 second order (displacement, velocity, acceleration)
 $m\ddot{x} = F(x, v, t)$
 	dependence only on $t$: oscillatory driving forces, $\ddot{x} = \frac{dv}{dt}$
 	dependence only on $x$: mass-spring system, $\ddot{x} = v\frac{dv}{dx}$
 	dependence only on $v$: drag force, $\ddot{x} = \frac{dv}{dt}$
 	separate variables, solve for $x(t)$
-### Projectile Motion
-see [Kinematics Equations](Motion.md#Kinematics)
+## Projectile Motion
+see [Kinematics Equations](motion.md#kinematics)
 motion in 2d
 	$x(t)$, $y(t)$
 	$\ddot{x} = 0$, $\ddot{y} = -g$
-### Motion in a Plane, Polar Coordinates
-see [Polar Coordinates](Vector%20Analysis.md#Spherical%20Coordinates)
+## Motion in a Plane, Polar Coordinates
+see [Polar Coordinates](vector-analysis.md#spherical-coordinates)
 newton's laws in polar coordinates
 	$\sum F = m\vec{a} = m\ddot{\vec{r}}$
 		radial vector $\hat{r}$, $\hat{\theta}$ perpendicular to $\hat{r}$ pointing towards growing $\theta$

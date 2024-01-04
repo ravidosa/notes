@@ -1,3 +1,4 @@
+# Combinatorics
 independent events
 	$P(A \cap B) = P(A) \cdot P(B)$
 permutations: $P(n,k) = \frac{n!}{(n-k)!}$

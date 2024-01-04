@@ -1,3 +1,4 @@
+# Matrices
 matrix
 	$m \times n$ rectangular array, entries identified by indices (row, column)
 	row vector: $1 \times n$ matrix (similar for column vector)

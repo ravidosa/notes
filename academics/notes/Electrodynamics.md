@@ -1,3 +1,4 @@
+# Electrodynamics
 conductivity $\sigma$, resistivity $\rho$
 	$\vec{J} = \sigma\vec{E}$
 	$P = \int \vec{E} \cdot \vec{J} \, d\tau$

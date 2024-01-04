@@ -1,0 +1,30 @@
+# PHY 116B
+MWF2: Physics 148, LEC
+W3: Roessler 152, LAB
+## Notes
+1. [Analog Computing](analog-computing.md)
+2. [Digital Logic](digital-logic.md)
+3. [Binary Numbers](binary-arithmetic.md)
+3. [Combinatorics and Arithmetic](binary-arithmetic.md#arithmetic)
+4. [Synchronous Logic](synchronous-logic.md)
+5. [Configurable Logic](configurable-logic.md)
+## Assignments
+- [x] HW 1 (1/20)
+- [x] LAB 1 (1/26)
+- [x] QUIZ 1 (1/27)
+- [x] LAB 2 (2/2)
+- [x] HW 2 (2/3)
+- [x] LAB 3 (2/9)
+- [x] QUIZ 2 (2/10)
+- [x] LAB 4 (2/16)
+- [x] HW 3 (2/17)
+- [x] LAB 5 (2/23)
+- [x] QUIZ 3 (2/24)
+- [x] LAB 6 (3/2)
+- [x] HW 4 (3/3)
+- [x] LAB 7 (3/9)
+- [x] QUIZ 4 (3/10)
+- [x] LAB 8 (3/16)
+- [x] HW 5 (3/17)
+- [x] LAB 9 (3/23)
+- [x] FINAL (3/23)

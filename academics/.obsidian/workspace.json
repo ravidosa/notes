@@ -1,0 +1,180 @@
+{
+  "main": {
+    "id": "f4ef1c8e4c8d4e65",
+    "type": "split",
+    "children": [
+      {
+        "id": "a2ce14de0f1c73a2",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "04221f921d9911a8",
+            "type": "leaf",
+            "state": {
+              "type": "markdown",
+              "state": {
+                "file": "notes/time-independent-schrodinger-equation.md",
+                "mode": "source",
+                "source": false
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "vertical"
+  },
+  "left": {
+    "id": "96e4f6d467e24419",
+    "type": "split",
+    "children": [
+      {
+        "id": "7abcc33136e0cbb6",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "e2b77a58a4193c10",
+            "type": "leaf",
+            "state": {
+              "type": "file-explorer",
+              "state": {
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "d488fd99f1ec757b",
+            "type": "leaf",
+            "state": {
+              "type": "search",
+              "state": {
+                "query": "%20",
+                "matchingCase": false,
+                "explainSearch": false,
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical"
+              }
+            }
+          },
+          {
+            "id": "05cf2c4c3130dcb3",
+            "type": "leaf",
+            "state": {
+              "type": "bookmarks",
+              "state": {}
+            }
+          }
+        ],
+        "currentTab": 1
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300
+  },
+  "right": {
+    "id": "ef5ad3c25b204265",
+    "type": "split",
+    "children": [
+      {
+        "id": "89af95706cb1777f",
+        "type": "tabs",
+        "children": [
+          {
+            "id": "501e34f9d2c2d800",
+            "type": "leaf",
+            "state": {
+              "type": "backlink",
+              "state": {
+                "file": "notes/time-independent-schrodinger-equation.md",
+                "collapseAll": false,
+                "extraContext": false,
+                "sortOrder": "alphabetical",
+                "showSearch": false,
+                "searchQuery": "",
+                "backlinkCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "31dee10cba3a8dcf",
+            "type": "leaf",
+            "state": {
+              "type": "outgoing-link",
+              "state": {
+                "file": "notes/time-independent-schrodinger-equation.md",
+                "linksCollapsed": false,
+                "unlinkedCollapsed": true
+              }
+            }
+          },
+          {
+            "id": "68ad753b6e87a926",
+            "type": "leaf",
+            "state": {
+              "type": "tag",
+              "state": {
+                "sortOrder": "frequency",
+                "useHierarchy": true
+              }
+            }
+          },
+          {
+            "id": "79867a9ffd198f5f",
+            "type": "leaf",
+            "state": {
+              "type": "outline",
+              "state": {
+                "file": "notes/time-independent-schrodinger-equation.md"
+              }
+            }
+          }
+        ]
+      }
+    ],
+    "direction": "horizontal",
+    "width": 300,
+    "collapsed": true
+  },
+  "left-ribbon": {
+    "hiddenItems": {
+      "switcher:Open quick switcher": false,
+      "graph:Open graph view": false,
+      "canvas:Create new canvas": false,
+      "daily-notes:Open today's daily note": false,
+      "templates:Insert template": false,
+      "command-palette:Open command palette": false
+    }
+  },
+  "active": "d488fd99f1ec757b",
+  "lastOpenFiles": [
+    "notes/thermodynamic-potentials.md",
+    "notes/statics.md",
+    "notes/potentials.md",
+    "notes/series-solutions-differential-equations.md",
+    "w23/phy116b.md",
+    "f22/phy104a.md",
+    "notes/partial-differential-equations.md",
+    "notes/oscillations.md",
+    "notes/ivp-theory.md",
+    "notes/groups-ii.md",
+    "notes/function-application.md",
+    "notes/dynamics.md",
+    "notes/digital-logic.md",
+    "notes/dc-circuit-analysis.md",
+    "notes/binary-arithmetic.md",
+    "notes/wave-function.md",
+    "s23/mat135a.md",
+    "notes/typed-lambda-calculus.md",
+    "notes/sounds-spectrums.md",
+    "notes/syntactic-forms-grammatical-functions-semantic-roles.md",
+    "notes/sets-relations-functions.md",
+    "notes/series-representation-analytic-functions.md",
+    "notes/sequences-series.md",
+    "notes/propositional-logic.md",
+    "notes/predicate-logic.md",
+    "notes/groups-i.md",
+    "w23"
+  ]
+}

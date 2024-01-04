@@ -1,4 +1,5 @@
-### Stop Consonants
+# Consonants
+## Stop Consonants
 consonants: speech sounds produced with obstruction in vocal tract
 stops/plosives: complete stop of airflow
 	location of constriction is place of articulation
@@ -24,7 +25,7 @@ stop voicing
 			aspirated stop
 			incomplete formant transitions
 dependent on articulator timing
-### Fricatives
+## Fricatives
 fricatives: partial stop of airflow
 	exhalation creates pressure difference, airflow
 	location of constriction is place of articulation
@@ -37,7 +38,7 @@ fricatives: partial stop of airflow
 		less noise, some energy goes to voicing
 		more noise energy at high frequencies compared to vowels
 	characterized by noise, high frequency energy
-### Sonorants
+## Sonorants
 approximants: less closure than stops + fricatives, more than vowels
 	no turbulence, similar acoustically to vowels
 	/ w r l j / in english, gradual transitions

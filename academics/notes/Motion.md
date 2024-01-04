@@ -1,4 +1,5 @@
-### Vectors
+# Motion
+## Vectors
 vector
 	definition: quantity with both magnitude and direction
 	notation: $\vec{A}$, $|\vec{A}| = A$ is magnitude of $\vec{A}$
@@ -18,7 +19,7 @@ vector
 		column matrices
 			$\hat{i} = \begin{pmatrix}1\\0\\0\end{pmatrix}$, $\hat{j} = \begin{pmatrix}0\\1\\0\end{pmatrix}$, $\hat{k} = \begin{pmatrix}0\\0\\1\end{pmatrix}$
 			$\hat{A} = \begin{pmatrix}\cos{\theta}\\\sin{\theta}\\0\end{pmatrix}$
-### Vector Multiplication
+## Vector Multiplication
 scalar/dot product
 	$\vec{A} \cdot \vec{B} = AB\cos{\theta}$ where $\theta$ is the angle between $\vec{A}$ and $\vec{B}$
 	measure of how much vectors are parallel to each other
@@ -41,7 +42,7 @@ vector/cross product
 	$\hat{i} \times \hat{j} = \hat{k}$, $\hat{j} \times \hat{k} = \hat{i}$, $\hat{k} \times \hat{i} = \hat{j}$ (right-handed coordinate system)
 	$\vec{A} \times \vec{A} = \vec{0}$
 	$\vec{A} \times \vec{B} = \begin{pmatrix}A_x\\A_y\\A_z\end{pmatrix} \times \begin{pmatrix}B_x\\B_y\\B_z\end{pmatrix} = \begin{pmatrix}A_yB_z-A_zB_y\\A_zB_x-A_xB_z\\A_xB_y-A_yB_x\end{pmatrix}$
-### Straight Line Motion
+## Straight Line Motion
 displacement
 	definition: change in position
 	$\Delta x = x_f - x_i$
@@ -55,7 +56,7 @@ acceleration
 	$a_{ave} = \frac{\Delta v}{\Delta t} = \frac{v_f-v_0}{t_f-t_0}$
 	$a = \lim_{\Delta t \to 0} \frac{\Delta v}{\Delta t} = \frac{dv}{dt} = \frac{d^2x}{dt^2}$
 motion diagrams
-### Kinematics
+## Kinematics
 motion w/ constant acceleration
 	$a = \frac{dv}{dt}$
 	$v(t) = \int a dt = at + v_0$
@@ -70,7 +71,7 @@ motion w/ constant acceleration
 free fall
 	$a = g = 9.8 m/s^2$
 	independent of mass
-### Graphing
+## Graphing
 position
 	+/- → position wrt origin
 	integral of velocity
@@ -84,7 +85,7 @@ acceleration
 	derivative of velocity
 	same sign as velocity → speeding up
 	different sign as velocity → slowing down
-### Motion in Multiple Dimensions
+## Motion in Multiple Dimensions
 position/displacement
 	$\vec{r} = x\hat{i} + y\hat{j} + z\hat{k}$
 	$\Delta \vec{r} = \vec{r}_f - \vec{r}_0 = (x_f-x_0)\hat{i} + (y_f-y_0)\hat{j} + (z_f-z_0)\hat{j}$
@@ -104,7 +105,7 @@ acceleration
 		$\vec{a} = \frac{d\vec{v}}{dt} = v\frac{d\hat{v}}{dt} + \hat{v}\frac{dv}{dt}$
 		$\vec{a}_{\parallel} = \hat{v}\frac{dv}{dt} = \vec{a} \cdot \hat{v}$ (change in magnitude)
 		$\vec{a}_{\perp} = v\frac{d\hat{v}}{dt}$ (change in direction)
-### Examples of 2D Motion
+## Examples of 2D Motion
 uniform circular motion
 	$\vec{a}_{\parallel} = 0$
 	$\vec{a}_{\perp} = \frac{v^2}{r} = r\omega^2$ (centripetal acceleration)
@@ -115,7 +116,7 @@ projectile motion
 	$v_y(t) = v_{0,t} - gt$
 	$x(t) = v_{0,x}t$
 	$y(t) = v_{0,t}t - \frac{1}{2}gt^2$
-### Relative Motion
+## Relative Motion
 $\vec{v}$ magnitude and direction dependent on reference frame
 relative velocity vector ($\to$ = relative to)
 	$\vec{v}_{B \to A} = -\vec{v}_{A \to B}$

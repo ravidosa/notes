@@ -1,4 +1,5 @@
-### Electric Field
+# Electrostatics
+## Electric Field
 coulomb's law
 	source charges (may be moving) exert force on test charge
 	net force is sum of forces from individual charges (principle of superposition)
@@ -22,14 +23,14 @@ $\vec{E}$ for continuous charge distribution
 		$\vec{E}(\vec{r})=\frac{1}{4\pi\epsilon_0}\int\frac{\sigma(\vec{r'})}{\mathbf{r}^2}\hat{\mathbf{r}} \, da'$
 	volume charge density $\rho$
 		$\vec{E}(\vec{r})=\frac{1}{4\pi\epsilon_0}\int\frac{\rho(\vec{r'})}{\mathbf{r}^2}\hat{\mathbf{r}} \, d\tau'$
-#### Useful Integrals
+### Useful Integrals
 	$\int \frac{1}{\sqrt{x^2+a^2}} \, dx = \ln(x+\sqrt{x^2+a^2}) + c$
 	$\int \frac{1}{x^2+a^2} \, dx = \frac{1}{a}\tan^{-1}(\frac{x}{a}) + c$
 	$\int \frac{1}{(x^2+a^2)^{\frac{3}{2}}} \, dx = \frac{1}{a^2}\frac{x}{\sqrt{x^2+a^2}} + c$
 	$\int \frac{x}{\sqrt{x^2+a^2}} \, dx = \sqrt{x^2+a^2} + c$
 	$\int \frac{x}{x^2+a^2} \, dx = \frac{1}{2}\ln(x^2+a^2) + c$
 	$\int \frac{x}{(x^2+a^2)^{\frac{3}{2}}} \, dx = -\frac{1}{\sqrt{x^2+a^2}} + c$
-### Divergence and Curl of Electrostatic Fields
+## Divergence and Curl of Electrostatic Fields
 field lines
 	go outward from positive, inward to negative
 	proportional to $q$
@@ -44,7 +45,7 @@ gauss's law (generalizable to any number of charges inside closed(gaussian) surf
 	not dependent on surface 
 faraday's law
 	$\vec{\nabla} \times \vec{E} = -\frac{\partial \vec{B}}{dt}= 0$ (for electrostatics)
-### Electric Potential
+## Electric Potential
 electric potential
 	$\vec{E} = -\vec{\nabla}V$
 	$V(\vec{r}) = -\int_0^{\vec{r}} \vec{E}  \, \vec{dl}$
@@ -66,7 +67,7 @@ poisson's equation
 	$\nabla^2 V = -\frac{\rho}{\epsilon_0}$
 	for no charge ($\rho = 0$), $V = 0$ (laplace's equation)
 electric field discontinuous at boundary ($\frac{\sigma}{\epsilon_0}$), electric potential continuous
-### Work and Energy
+## Work and Energy
 work
 	$W = -\int_a^b \vec{F} \, \vec{dl} = Q(V(\vec{b}) - V(\vec{a}))$
 	conservative, only depends on potential, not path
@@ -81,7 +82,7 @@ electric potential energy
 		$W = \frac{1}{2}\int \sigma V(\vec{r}) \, da'$
 	volume charge
 		$W = \frac{1}{2}\int \rho V(\vec{r}) \, d\tau'$
-### Conductors
+## Conductors
 conductor
 	electrons free to roam
 	$\vec{E}_{inside = 0}$

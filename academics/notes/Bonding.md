@@ -1,3 +1,4 @@
+# Bonding
 pseudo-atoms (1-d potential wells)
 	energy bands → continuous set of solutions
 H2+ molecule

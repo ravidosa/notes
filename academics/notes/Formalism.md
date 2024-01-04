@@ -1,4 +1,5 @@
-### Hilbert Space
+# Formalism
+## Hilbert Space
 state: wave function, treat as vectors
 	vector space of square-integrable functions (hilbert space)
 observables: operators, treat as linear transformations
@@ -10,7 +11,7 @@ inner product $\langle f | g \rangle = \int_a^b f(x)^*g(x) \, dx$
 	orthonormal: normalized and orthogonal
 	complete: any function in hilbert space expressed as linear combination $f(x) = \sum_n c_n f_n(x)$
 		for orthonormal $f_n$, $c_n = \langle f_n | f \rangle$
-### Observables
+## Observables
 linear operators
 	$\hat{Q} (a | \Psi \rangle + b | \Phi \rangle) = a\hat{Q} | \Psi \rangle + b\hat{Q} | \Psi \rangle$
 expectation value of operator $\langle Q \rangle = \langle \Psi | \hat{Q} \Psi \rangle$
@@ -26,7 +27,7 @@ determinate states
 		$\Psi$ is eigenfunction (exclude zero function), $q$ is eigenvalue
 		spectrum: collection of eigenvalues
 			degenerate: same eigenvalue for multiple linearly independent eigenfunctions
-### Eigenfunctions of a Hermitian Operator
+## Eigenfunctions of a Hermitian Operator
 discrete spectrum = eigenfunctions in hilbert space + normalizable
 	ex hamiltonian of harmonic oscillator
 continuous spectrum = eigenfunctions not normalizable (linear combination may be normalizable)

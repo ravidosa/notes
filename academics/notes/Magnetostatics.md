@@ -1,4 +1,5 @@
-### The Lorentz Force Law
+# Magnetostatics
+## The Lorentz Force Law
 source charges move, generate magnetic field
 for magnetostatics, assume constant currents and $\vec{B}$
 	$\vec{\nabla} \cdot \vec{B} = 0$
@@ -20,7 +21,7 @@ current
 	volume current density $\vec{J} = \frac{dI}{da_{\perp}}$
 		$I = \int \vec{J} \, \vec{da}$
 		$\vec{F}_{mag} = \int (\vec{J} \times \vec{B}) \, d\tau$
-### The Biot-Savart Law
+## The Biot-Savart Law
 $\vec{B} = \frac{\mu_0}{4\pi}\int \frac{\vec{I}\times\hat{\mathbf{r}}}{\mathbf{r}^2} \, dl'$
 	surface current density
 		$\vec{B} = \frac{\mu_0}{4\pi}\int \frac{\vec{K}(\vec{r}')\times\hat{\mathbf{r}}}{\mathbf{r}^2} \, da'$
@@ -29,11 +30,11 @@ $\vec{B} = \frac{\mu_0}{4\pi}\int \frac{\vec{I}\times\hat{\mathbf{r}}}{\mathbf{r
 	permeability of free space $\mu_0 \approx 4\pi*10^{-7}$
 field lines originate at positive charges, terminate at negative charges
 	no magnetic monopoles
-### The Divergence and Curl of $\vec{B}$
+## The Divergence and Curl of $\vec{B}$
 ampere's law
 	$\oint \vec{B} \cdot d\vec{l} = \mu_0I_{enc}$
 	$\nabla^2 \vec{A} = -\mu_0\vec{J}$
-### Magnetic Vector Potential
+## Magnetic Vector Potential
 $\vec{B} = \vec{\nabla} \times \vec{A}$
 	can add any function with zero curl (gauge freedom)
 		$\vec{\nabla}\cdot \vec{A} = 0$ (coulomb gauge)

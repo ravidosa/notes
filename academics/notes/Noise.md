@@ -1,3 +1,4 @@
+# Noise
 classes of noise
 	characterized by frequency spectra
 	white noise: $P(f)=\frac{dP}{df} \propto C$

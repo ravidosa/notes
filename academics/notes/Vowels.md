@@ -1,4 +1,5 @@
-### Vowel Acoustics and Articulation
+# Vowels
+## Vowel Acoustics and Articulation
 speech sounds produced without obstruction in vocal tract
 differentiated by location of tongue in mouth
 	height: height of tongue in mouth with respect to roof

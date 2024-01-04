@@ -1,4 +1,5 @@
-### Linear Differential Equations
+# Oscillations
+## Linear Differential Equations
 linear diff eq: $a\ddot{x} + b\dot{x} + cx + d$
 	homogenous if $d = 0$, else inhomogenous
 standard cases
@@ -22,13 +23,13 @@ standard cases
 		$\gamma^2 - a < 0$, sines and cosines (underdamped)
 		$\gamma^2 - a > 0$, exponential (overdamped)
 		$\gamma^2 - a = 0$, exponential (critically damped)
-### Simple Harmonic Motion
+## Simple Harmonic Motion
 linear restoring force (hooke's law)
-	see [Simple Harmonic Motion](Small%20Oscillations.md#Simple%20Harmonic%20Motion)
+	see [Simple Harmonic Motion](small-oscillations.md#simple-harmonic-motion)
 use $x(0)$, $v(0)$ to solve
 conservation of energy
-### Damped Oscillators
-see [Simple Harmonic Motion](Small%20Oscillations.md#Damping%20and%20Resonance)
+## Damped Oscillators
+see [Simple Harmonic Motion](small-oscillations.md#damping-and-resonance)
 $\ddot{x} + 2\gamma\dot{x} + \omega^2 x = 0$
 	$x(t) = e^{-\gamma t}(Ae^{\Omega t} + Be^{-\Omega t})$ for $\Omega^2 = \gamma^2 - \omega^2$, $\gamma > 0$, $\omega^2 > 0$
 	$\Omega^2 < 0$ ($\gamma < \omega$) (underdamped)
@@ -41,7 +42,7 @@ $\ddot{x} + 2\gamma\dot{x} + \omega^2 x = 0$
 		$x(t) = e^{-\gamma t}(A + Bt)$
 		$\dot{x}(t) = -\gamma e^{-\gamma t}(A + Bt) + Be^{-\gamma t}$
 		only crosses $0$ once, if at all ($t = -\frac{A}{B}$)
-### Driven and Coupled Oscillators
+## Driven and Coupled Oscillators
 periodic driving force $f_d(t) = F_d\cos\omega_d t$
 $\ddot{x} + 2\gamma\dot{x} + \omega^2 x = \sum_{n=1}^N C_n e^{i\omega_nt}$
 	$x(t) = e^{-\gamma t}(Ae^{\sqrt{\gamma^2 - \omega^2}t} + Be^{-\sqrt{\gamma^2 - \omega^2}t}) + \frac{c_0}{-\omega_d^2 + 2i\gamma\omega_d +\omega^2}e^{i\omega_d t}$

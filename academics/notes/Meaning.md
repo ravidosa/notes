@@ -1,8 +1,9 @@
+# Meaning
 truth: either true or false
 	preconditions
 	relative truth
 	generalizations
-	disjunction (see [Logic](Logic%20and%20Proofs.md))
+	disjunction (see [Logic](logic-proofs.md))
 	compositionality
 	ambiguity/underspecificity
 modeling

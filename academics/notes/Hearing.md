@@ -1,3 +1,4 @@
+# Hearing
 peripheral auditory system
 	outer ear
 		pinna: reflects sound, causes spectral distortion

@@ -1,4 +1,5 @@
-### Laplace's Equation
+# Potentials
+## Laplace's Equation
 $\nabla^2 V = -\frac{\rho}{\epsilon_0}$ (poisson)
 $\nabla^2 V =0$ (laplace)
 	no local maxima or minima, extrema at endpoints
@@ -22,19 +23,19 @@ uniqueness
 		$V$ solution for some volume $\mathcal{V}$ uniquely determined if $V$ specified on boundary surface $\mathcal{S}$
 			potential $V$ uniquely determined for specified charge density and boundary value
 		$E$ solution for some volume $\mathcal{V}$ surrounded by conductors with charge density $\rho$ uniquely determined if total charge on each conductor specified
-### Method of Images
+## Method of Images
 reflect charge across conducting surface with opposite sign
-### Separation of Variables
-see [Partial Differential Equations](Partial%20Differential%20Equations.md)
+## Separation of Variables
+see [Partial Differential Equations](partial-differential-equations.md)
 cartesian coordinates and spherical coordinates
 	find infinite set of solutions
 	linear combination
 	coefficients to match boundary conditions
-	see [Legendre Polynomials](Series%20Solutions%20of%20Differential%20Equations.md#Legendre%20Polynomials and%20Functions)
+	see [Legendre Polynomials](series-solutions-differential-equations.md#legendre-polynomials-and-functions)
 	fourier's trick
 		multiply by $P_{\ell'}(\cos\theta)\sin\theta$
 		integrate from $0$ to $\pi$
-### Multipole Expansion
+## Multipole Expansion
 approximation of potential at large distances
 $V(\vec{r}) = \frac{1}{4\pi\epsilon_0}(\frac{q}{\mathbf{r}_+} - \frac{q}{\mathbf{r}_-})$
 	$\mathbf{r}_{\pm}^2 = r^2 \mp rd\cos\theta + (\frac{d}{2})^2 = r^2(1 \mp \frac{d\cos\theta}{r} + \frac{d^2}{4r^2}) = r^2(1 \mp \frac{d\cos\theta}{r} )$ for $r \gg d$

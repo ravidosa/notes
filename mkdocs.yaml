@@ -34,6 +34,7 @@ markdown_extensions:
 
   - toc:
       slugify: !!python/object/apply:pymdownx.slugs.slugify {kwds: {case: lower}}
+      toc_depth: 2
       permalink: true
 
 plugins:
@@ -48,43 +49,43 @@ extra_javascript:
 
 nav:
   - Home: './'
-  - Course List: 'Course%20List/'
+  - Course List: 'course-list/'
   - Fall 2022:
-    - LIN 1Y: "./f22/LIN%201Y/"
-    - PHY 9D: "./f22/PHY%209D/"
-    - PHY 9HA: "./f22/PHY%209HA/"
-    - PHY 40: "./f22/PHY%2040/"
-    - PHY 104A: "./f22/PHY%20104A/"
-    - PHY 116A: "./f22/PHY%20116A/"
+    - LIN 1Y: "./f22/lin1y/"
+    - PHY 9D: "./f22/phy9d/"
+    - PHY 9HA: "./f22/phy9ha/"
+    - PHY 40: "./f22/phy40/"
+    - PHY 104A: "./f22/phy104a/"
+    - PHY 116A: "./f22/phy116a/"
   - Winter 2023:
-    - LIN 103B: "./w23/LIN%20103B/"
-    - MAT 108: "./w23/MAT%20108/"
-    - MAT 119A: "./w23/MAT%20119A/"
-    - PHY 45: "./w23/PHY%2045/"
-    - PHY 80: "./w23/PHY%2080/"
-    - PHY 105A: "./w23/PHY%20105A/"
-    - PHY 110A: "./w23/PHY%20110A/"
-    - PHY 116B: "./w23/PHY%20116B/"
+    - LIN 103B: "./w23/lin103b/"
+    - MAT 108: "./w23/mat108/"
+    - MAT 119A: "./w23/mat119a/"
+    - PHY 45: "./w23/phy45/"
+    - PHY 80: "./w23/phy80/"
+    - PHY 105A: "./w23/phy105a/"
+    - PHY 110A: "./w23/phy110a/"
+    - PHY 116B: "./w23/phy116b/"
   - Spring 2023:
-    - LIN 165: "./s23/LIN%20165/"
-    - MAT 127A: "./s23/MAT%20127A/"
-    - MAT 128B: "./s23/MAT%20128B/"
-    - MAT 135A: "./s23/MAT%20135A/"
-    - PHY 105B: "./s23/PHY%20105B/"
-    - PHY 108(L): "./s23/PHY%20108/"
-    - PHY 110B: "./s23/PHY%20110B/"
+    - LIN 165: "./s23/lin165/"
+    - MAT 127A: "./s23/mat127a/"
+    - MAT 128B: "./s23/mat128b/"
+    - MAT 135A: "./s23/mat135a/"
+    - PHY 105B: "./s23/phy105b/"
+    - PHY 108(L): "./s23/phy108/"
+    - PHY 110B: "./s23/phy110b/"
   - Summer 2023:
-    - MAT 127B: "./m23/MAT%20127B/"
-    - MAT 128A: "./m23/MAT%20128A/"
+    - MAT 127B: "./m23/mat127b/"
+    - MAT 128A: "./m23/mat128a/"
   - Fall 2023:
-    - LIN 112: "./f23/LIN%20112/"
-    - LIN 141: "./f23/LIN%20141/"
-    - MAT 150A: "./f23/MAT%20150A/"
-    - MAT 168: "./f23/MAT%20168/"
-    - MAT 185A: "./f23/MAT%20185A/"
-    - PHY 105C: "./f23/PHY%20105C/"
-    - PHY 112(L): "./f23/PHY%20112/"
-    - PHY 115A: "./f23/PHY%20115A/"
+    - LIN 112: "./f23/lin112/"
+    - LIN 141: "./f23/lin141/"
+    - MAT 150A: "./f23/mat150a/"
+    - MAT 168: "./f23/mat168/"
+    - MAT 185A: "./f23/mat185a/"
+    - PHY 105C: "./f23/phy105c/"
+    - PHY 112(L): "./f23/phy112/"
+    - PHY 115A: "./f23/phy115a/"
 
 not_in_nav: |
   Notes/*

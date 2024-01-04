@@ -1,3 +1,4 @@
+# Transistors
 amplification
 	small signal creates larger signal
 diode tubes

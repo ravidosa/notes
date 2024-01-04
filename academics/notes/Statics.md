@@ -1,5 +1,6 @@
-### Balancing Forces
-see [Newton's Laws](Force.md#Properties%20and%20Effects%20of%20Forces)
+# Statics
+## Balancing Forces
+see [Newton's Laws](force.md#properties-and-effects-of-forces)
 draw force vectors to center of mass
 tension
 	force from object exerted when pushed/pulled
@@ -11,9 +12,9 @@ normal force
 friction
 	parallel to objects surface
 	depends on normal force, properties of material
-	see [Friction](Force.md#Types%20of%20Forces)
+	see [Friction](force.md#types-of-forces)
 gravity
-	see [Gravitation](Gravitation.md#Universal%20Gravitation)
+	see [Gravitation](gravitation.md#universal-gravitation)
 others
 	drag force
 		stoke's drag: $F_D = -bv$
@@ -23,6 +24,6 @@ others
 	lorentz force: $F_M = q\vec{v}x\vec{B}$
 	magnus force: $F_A = \Delta p \cdot A = c_A \cdot \frac{\varrho}{2}(u_1^2 - u_2^2) \cdot A$
 	buoyant force: $F_b = -\rho gV$
-### Balancing Torques
-see [Torque](Rotations%20and%20Rigid%20Bodies.md#Torque)
+## Balancing Torques
+see [Torque](rotations-rigid-bodies.md#torque)
 draw force vectors and displacement vectors

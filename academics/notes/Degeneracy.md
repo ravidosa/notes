@@ -1,3 +1,4 @@
+# Degeneracy
 degenerate dictionary: no constant in a constraint
 	problem when degenerate pivot (pivoted constraint is degenerate)
 	no increase in objective value
