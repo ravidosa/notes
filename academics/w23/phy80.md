@@ -2,10 +2,10 @@
 MW11: Olson 101, LEC
 TR12.5: Roessler 152, LAB
 ## Notes
-1. [Direct Current Circuits and Resistance](dc-circuit-analysis.md)
-2. [Alternating Current Circuits and Impedance](ac-circuit-analysis.md)
-1. [Statistical Distributions](statistical-distributions.md)
-2. [Experimental Uncertainties](experimental-uncertainties.md)
+1. [Direct Current Circuits and Resistance](../notes/dc-circuit-analysis.md)
+2. [Alternating Current Circuits and Impedance](../notes/ac-circuit-analysis.md)
+1. [Statistical Distributions](../notes/statistical-distributions.md)
+2. [Experimental Uncertainties](../notes/experimental-uncertainties.md)
 ## Assignments
 - [x] LAB 1 (1/10)
 - [x] LAB 2 (1/12)

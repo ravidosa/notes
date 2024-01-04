@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "notes/time-independent-schrodinger-equation.md",
+                "file": "course-list.md",
                 "mode": "source",
                 "source": false
               }
@@ -48,7 +48,7 @@
             "state": {
               "type": "search",
               "state": {
-                "query": "%20",
+                "query": "",
                 "matchingCase": false,
                 "explainSearch": false,
                 "collapseAll": false,
@@ -65,8 +65,7 @@
               "state": {}
             }
           }
-        ],
-        "currentTab": 1
+        ]
       }
     ],
     "direction": "horizontal",
@@ -86,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "notes/time-independent-schrodinger-equation.md",
+                "file": "course-list.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -103,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "notes/time-independent-schrodinger-equation.md",
+                "file": "course-list.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -126,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "notes/time-independent-schrodinger-equation.md"
+                "file": "course-list.md"
               }
             }
           }
@@ -147,34 +146,34 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "d488fd99f1ec757b",
+  "active": "04221f921d9911a8",
   "lastOpenFiles": [
-    "notes/thermodynamic-potentials.md",
-    "notes/statics.md",
-    "notes/potentials.md",
-    "notes/series-solutions-differential-equations.md",
-    "w23/phy116b.md",
+    "f22/lin1y.md",
+    "course-list.md",
+    "f22/phy116a.md",
     "f22/phy104a.md",
-    "notes/partial-differential-equations.md",
-    "notes/oscillations.md",
-    "notes/ivp-theory.md",
-    "notes/groups-ii.md",
-    "notes/function-application.md",
-    "notes/dynamics.md",
-    "notes/digital-logic.md",
-    "notes/dc-circuit-analysis.md",
-    "notes/binary-arithmetic.md",
-    "notes/wave-function.md",
+    "f22/phy40.md",
+    "f22/phy9ha.md",
+    "f22/phy9d.md",
+    "f23/lin112.md",
+    "f23/lin141.md",
+    "f23/mat150a.md",
+    "f23/mat168.md",
+    "f23/mat185a.md",
+    "f23/phy105c.md",
+    "f23/phy112.md",
+    "f23/phy115a.md",
+    "m23/mat127b.md",
+    "m23/mat128a.md",
+    "s23/phy110b.md",
+    "s23/phy108.md",
+    "s23/phy105b.md",
     "s23/mat135a.md",
-    "notes/typed-lambda-calculus.md",
-    "notes/sounds-spectrums.md",
-    "notes/syntactic-forms-grammatical-functions-semantic-roles.md",
-    "notes/sets-relations-functions.md",
-    "notes/series-representation-analytic-functions.md",
-    "notes/sequences-series.md",
-    "notes/propositional-logic.md",
-    "notes/predicate-logic.md",
-    "notes/groups-i.md",
+    "s23/mat128c.md",
+    "s23/mat128b.md",
+    "s23/mat127a.md",
+    "s23/lin165.md",
+    "w23/phy116b.md",
     "w23"
   ]
 }

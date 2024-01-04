@@ -1,12 +1,12 @@
 # PHY 105A
 MWF9: Roessler 55, LEC
 ## Notes
-1. [Problem Solving Strategies](problem-solving-strategies.md)
-2. [Statics](statics.md)
-3. [Using F=ma](dynamics.md)
-4. [Oscillations](oscillations.md)
-5. [Energy and Momentum Conservation](energy-momentum-conservation.md)
-6. [The Lagrangian Method](lagrangian-method.md)
+1. [Problem Solving Strategies](../notes/problem-solving-strategies.md)
+2. [Statics](../notes/statics.md)
+3. [Using F=ma](../notes/dynamics.md)
+4. [Oscillations](../notes/oscillations.md)
+5. [Energy and Momentum Conservation](../notes/energy-momentum-conservation.md)
+6. [The Lagrangian Method](../notes/lagrangian-method.md)
 ## Assignments
 - [x] HW 1 (1/15)
 - [x] HW 2 (1/19)

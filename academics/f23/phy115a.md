@@ -1,10 +1,10 @@
 # PHY 115A
 MWF9: Roessler 55, LEC
 ## Notes
-1. [The Wave Function](wave-function.md)
-2. [Time-Independent Schrodinger Equation](time-independent-schrodinger-equation.md)
-3. [Formalism](formalism.md)
-4. [The WKB Approximation](wkb-approximation.md)
+1. [The Wave Function](../notes/wave-function.md)
+2. [Time-Independent Schrodinger Equation](../notes/time-independent-schrodinger-equation.md)
+3. [Formalism](../notes/formalism.md)
+4. [The WKB Approximation](../notes/wkb-approximation.md)
 ## Assignments
 - [x] HW 1 (9/29)
 - [x] HW 2 (10/6)

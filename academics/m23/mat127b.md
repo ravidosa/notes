@@ -1,7 +1,7 @@
 # MAT 127B
 MTWF10: TLC 1214, LEC
 ## Notes
-8. [Differentiable Functions](differentiable-functions.md)
+8. [Differentiable Functions](../notes/differentiable-functions.md)
 ## Assignments
 - [x] HW 1 (8/11)
 - [x] HW 2 (8/18)

@@ -2,8 +2,8 @@
 TR9: Young 184, LEC
 TR5.5: Physics 285, LAB
 ## Notes
-1. [Computing Capabilities](computing-capabilities.md)
-2. [C Syntax](c-syntax.md)
+1. [Computing Capabilities](../notes/computing-capabilities.md)
+2. [C Syntax](../notes/c-syntax.md)
 ## Assignments
 - [x] LAB 1 (1/14)
 - [x] LAB 2 (1/21)

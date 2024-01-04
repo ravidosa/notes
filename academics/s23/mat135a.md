@@ -2,7 +2,7 @@
 MWF4: TLC 55, LEC
 R6: Wellman 3, DIS
 ## Notes
-1. [Combinatorics](combinatorics.md)
+1. [Combinatorics](../notes/combinatorics.md)
 ## Assignments
 - [x] HW 1 (4/20)
 - [x] HW 2 (4/27)

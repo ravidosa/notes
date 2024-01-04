@@ -1,12 +1,12 @@
 # PHY 110A
 MWF10: Roessler 55, LEC
 ## Notes
-1. [Vector Analysis](vector-analysis.md)
-2. [Electrostatics](electrostatics.md)
-3. [Potentials](potentials.md)
-4. [Electric Fields in Matter](electric-fields-matter.md)
-5. [Magnetostatics](magnetostatics.md)
-6. [Magnetic Fields in Matter](magnetic-fields-matter.md)
+1. [Vector Analysis](../notes/vector-analysis.md)
+2. [Electrostatics](../notes/electrostatics.md)
+3. [Potentials](../notes/potentials.md)
+4. [Electric Fields in Matter](../notes/electric-fields-matter.md)
+5. [Magnetostatics](../notes/magnetostatics.md)
+6. [Magnetic Fields in Matter](../notes/magnetic-fields-matter.md)
 ## Assignments
 - [x] HW 1 (1/16)
 - [x] HW 2 (1/23)

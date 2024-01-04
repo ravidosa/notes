@@ -2,11 +2,11 @@
 TR3: Wellman 6, LEC
 W1: Young 192, DIS
 ## Notes
-1. [What is a Theory of English Syntax About?](theory-english-syntax.md)
-2. [Lexical and Phrasal Signs](lexical-phrasal-signs.md)
-3. [Syntactic Forms, Grammatical Functions, and Semantic Roles](syntactic-forms-grammatical-functions-semantic-roles.md)
-4. [Head, Complements, Modifiers, and Argument Structurers](head-complements-modifiers-argument-structures.md)
-5. [Combinatorial Construction Rules and Principles](combinatorial-construction-rules-principles.md)
+1. [What is a Theory of English Syntax About?](../notes/theory-english-syntax.md)
+2. [Lexical and Phrasal Signs](../notes/lexical-phrasal-signs.md)
+3. [Syntactic Forms, Grammatical Functions, and Semantic Roles](../notes/syntactic-forms-grammatical-functions-semantic-roles.md)
+4. [Head, Complements, Modifiers, and Argument Structurers](../notes/head-complements-modifiers-argument-structures.md)
+5. [Combinatorial Construction Rules and Principles](../notes/combinatorial-construction-rules-principles.md)
 ## Assignments
 - [x] QUIZ 1 (1/12)
 - [x] HW 1 (1/15)

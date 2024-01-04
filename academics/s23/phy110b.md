@@ -1,9 +1,9 @@
 # PHY 110B
 MWF10: Wellman 202, LEC
 ## Notes
-7. [Electrodynamics](electrodynamics.md)
-8. [Conservation Laws](conservation-laws.md)
-9. [Electromagnetic Waves](electromagnetic-waves.md)
+7. [Electrodynamics](../notes/electrodynamics.md)
+8. [Conservation Laws](../notes/conservation-laws.md)
+9. [Electromagnetic Waves](../notes/electromagnetic-waves.md)
 ## Assignments
 - [x] HW 1 (4/13)
 - [x] HW 2 (4/20)

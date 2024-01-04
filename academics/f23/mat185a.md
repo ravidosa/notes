@@ -1,10 +1,10 @@
 # MAT 185A
 MWF11: Olson 106, LEC
 ## Notes
-1. [Analytic Functions](analytic-functions.md)
-2. [Cauchy's Theorem](cauchy-s-theorem.md)
-3. [Series Representation of Analytic Functions](series-representation-analytic-functions.md)
-4. [Calculus of Residues](calculus-of-residues.md)
+1. [Analytic Functions](../notes/analytic-functions.md)
+2. [Cauchy's Theorem](../notes/cauchy-s-theorem.md)
+3. [Series Representation of Analytic Functions](../notes/series-representation-analytic-functions.md)
+4. [Calculus of Residues](../notes/calculus-of-residues.md)
 ## Assignments
 - [x] HW 1 (9/27)
 - [x] HW 2 (10/9)

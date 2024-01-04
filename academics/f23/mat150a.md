@@ -1,11 +1,11 @@
 # MAT 150A
 MWF10: Hoagland 168, LEC
 ## Notes
-1. [Matrices](matrices.md)
-2. [Groups](groups-i.md)
-3. [Vector Spaces](vector-spaces.md)
-6. [Symmetry](symmetry.md)
-7. [More Group Theory](groups-ii.md)
+1. [Matrices](../notes/matrices.md)
+2. [Groups](../notes/groups-i.md)
+3. [Vector Spaces](../notes/vector-spaces.md)
+6. [Symmetry](../notes/symmetry.md)
+7. [More Group Theory](../notes/groups-ii.md)
 ## Assignments
 - [x] HW 0 (10/3)
 - [x] HW 1 (10/10)
