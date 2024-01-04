@@ -13,7 +13,7 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "course-list.md",
+                "file": "notes/magnetostatics.md",
                 "mode": "source",
                 "source": false
               }
@@ -85,7 +85,7 @@
             "state": {
               "type": "backlink",
               "state": {
-                "file": "course-list.md",
+                "file": "notes/magnetostatics.md",
                 "collapseAll": false,
                 "extraContext": false,
                 "sortOrder": "alphabetical",
@@ -102,7 +102,7 @@
             "state": {
               "type": "outgoing-link",
               "state": {
-                "file": "course-list.md",
+                "file": "notes/magnetostatics.md",
                 "linksCollapsed": false,
                 "unlinkedCollapsed": true
               }
@@ -125,7 +125,7 @@
             "state": {
               "type": "outline",
               "state": {
-                "file": "course-list.md"
+                "file": "notes/magnetostatics.md"
               }
             }
           }
@@ -148,15 +148,17 @@
   },
   "active": "04221f921d9911a8",
   "lastOpenFiles": [
-    "f22/lin1y.md",
+    "f23/lin141.md",
+    "w23/phy110a.md",
+    "notes/magnetostatics.md",
     "course-list.md",
+    "f22/lin1y.md",
     "f22/phy116a.md",
     "f22/phy104a.md",
     "f22/phy40.md",
     "f22/phy9ha.md",
     "f22/phy9d.md",
     "f23/lin112.md",
-    "f23/lin141.md",
     "f23/mat150a.md",
     "f23/mat168.md",
     "f23/mat185a.md",
@@ -172,8 +174,6 @@
     "s23/mat128c.md",
     "s23/mat128b.md",
     "s23/mat127a.md",
-    "s23/lin165.md",
-    "w23/phy116b.md",
     "w23"
   ]
 }
