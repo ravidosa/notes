@@ -1,0 +1,4 @@
+ The position at step 7854 (t = 7.854) is -5.0792 and the velocity is 0.0002 using the Euler method.
+ This is slighly off from what was found using the leapfrog method, which reflects that due to being a 
+ second order numerical integration method, leapfrog integration is more stable than Euler integration
+ for oscillatory motion.

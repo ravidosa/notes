@@ -1,0 +1,4 @@
+This problem cannot be solved analytically.
+
+The V=3 equipotential looks reasonable, resembling parabolas.
+Trying to run it for dx=0.01 results in a segmentation fault. :(

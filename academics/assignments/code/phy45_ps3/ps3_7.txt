@@ -1,0 +1,9 @@
+When the projectile hits the ground, it has traveled 20 meters, placing it at x = 20.
+The same happens when m = 7, as the range is not dependent on mass.
+This makes sense, as in classical mechanics:
+x(t) = vx0*t = 5t
+y(t) = vy0*t + 1/2*a*t^2 = 19.6t - 4.9t^2
+y(t) = 0 = 19.6t - 4.9t^2 = 4.9t(4 - t)
+t = 0, 4
+x(4) = 20
+The computed value for the range agrees with the value calculated using principles of classical mechanics.

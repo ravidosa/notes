@@ -1,0 +1,2 @@
+The normalization stays constant at 1 over the whole elapsed time.
+This is good because it dos not violate the principle of conservation of mass.

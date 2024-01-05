@@ -1,0 +1,5 @@
+The final time recorded is t=20, at which point v=6 and x=26.
+This makes sense, as in classical mechanics:
+v=v_0+at=-4+9/18*20=6
+x=x_0+v_0t+0.5at^2=6+20*-4+0.5*0.5*20^2=26
+The computed values for the final velocity and displacement agree with the values calculated using principles of classical mechanics.

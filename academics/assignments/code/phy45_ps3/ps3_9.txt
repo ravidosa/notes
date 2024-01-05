@@ -1,0 +1,5 @@
+a) Since the earth is at position x=R,y=0, it should be traveling tangent to the orbit, which would be directly upwards with velocity V in the y-direction, and 0 in the x-direction.
+b) Since this motion takes place over a very long time, 1 day, or 86400 seconds would be a good value for dt.
+c) The plotted orbit is correct. It is roughly elliptical, finishing 3/4 of the orbit in a 9 month period.
+d) When vy=V/2, the orbit appears to be have a higher eccentricity although it is not perfectly elliptical, and the time to complete a full orbit is shortened, with around 7/4 of an orbit being completed in a 9 month period.
+e) When vy=2V, the Earth escapes orbit. As N increases, it flies farther and farther off into the cold and unfeeling void of space.

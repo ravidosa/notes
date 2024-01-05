@@ -1,0 +1,2 @@
+The total time elapsed is 10 seconds.
+The plot of the rho[x] vs x matches the analytic solution presented in class fairly well.

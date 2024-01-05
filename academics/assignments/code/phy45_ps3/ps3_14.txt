@@ -1,0 +1,4 @@
+When the planet escapes the sun, the radius tending to infinity, the potential energy will tend to 0.
+The kinetic energy is always positive, so a planet that escapes the sun must have a positive total energy.
+When vy=V/2, the total energy is negative (and around twice the value for vy=V) and when vy=2V, the total energy is positive.
+This is reflected in the fact that the planet escaped orbit in the second case, but not the first.

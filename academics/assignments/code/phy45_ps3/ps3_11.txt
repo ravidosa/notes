@@ -1,0 +1,10 @@
+Q = m(x*vy - y*vx)
+dQ/dt
+= d/dt(m*x*vy - m*y*vx)
+= d/dt(m*x*vy) - d/dt(m*y*vx)
+= m(dx/dt * vy + x * dvy/dt) - m(dy/dt * vx + y * dvx/dt)
+= m(vx * vy + x * ay) - m(vy * vx + y * ax)
+= m(vx * vy + x * -GMy/r^3) - m(vy * vx + y * -GMx/r^3)
+= m(vx * vy + x * -GMy/r^3 - vy * vx - y * -GMx/r^3)
+= 0
+Q can also be referred to as angular momentum.

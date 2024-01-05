@@ -3,7 +3,7 @@ MW3: Olson 146, LEC
 TR4: Physics 185, LAB
 ## Notes
 ## Assignments
-- [x] LAB 1 (9/23)
+- [x] [LAB 1](../assignments/code/phy40_lab1.ipynb) (9/23)
 - [x] QUIZ 1 (9/28)
 - [x] LAB 2 (9/30)
 - [x] QUIZ 2 (10/3)
