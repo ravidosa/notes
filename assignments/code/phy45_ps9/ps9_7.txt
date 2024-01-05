@@ -1,0 +1,4 @@
+The funny participation ratio is around 4, while the rest are around 170.
+The funny eigenvalue is around 14.
+The eigenvector with the funny participation ratio is the same as the eigenvector with the funny eigenvalue.
+This makes sense as for that eigenvector, the masses are moving a lot more, so the participation ratio will be a lot smaller.

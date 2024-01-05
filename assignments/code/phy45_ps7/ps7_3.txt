@@ -1,0 +1,43 @@
+[[2, 3, 0], [x,           [x,
+ [3, 2, 0],  y,  = lambda  y,
+ [0, 0, 7]]  z,]           z,]
+
+|[[2 - lambda, 3, 0], |
+| [3, 2 - lambda, 0], | = (2-lambda)(2-lambda)(7-lambda) - 3(3)(7-lambda)
+| [0, 0, 7 - lambda]] |
+
+(2-lambda)(2-lambda)(7-lambda) - 3(3)(7-lambda) = (7-lambda)(lambda-5)(lambda+1)
+
+lambda = -1,5,7
+
+[[2, 3, 0], [x,           [x,
+ [3, 2, 0],  y,  = -1      y,
+ [0, 0, 7]]  z,]           z,]
+
+ 2x + 3y = -x, 3x + 2y = -y, 7z = -z
+ x = -y, z = 0
+ [x,   [sqrt(2)/2,
+  y, =  -sqrt(2)/2,
+  x]    0]
+
+[[2, 3, 0], [x,           [x,
+ [3, 2, 0],  y,  =  5      y,
+ [0, 0, 7]]  z,]           z,]
+
+ 2x + 3y = 5x, 3x + 2y = 5y, 7z = 5z
+ x = y, z = 0
+ [x,   [sqrt(2)/2,
+  y, =  sqrt(2)/2,
+  x]    0]
+
+[[2, 3, 0], [x,           [x,
+ [3, 2, 0],  y,  =  7      y,
+ [0, 0, 7]]  z,]           z,]
+
+ 2x + 3y = 7x, 3x + 2y = 7y, 7z = 7z
+ x = y = 0
+ [x,   [0,
+  y, =  0,
+  x]    1]
+
+hese are the correct eigenvalues and eigenvectors.

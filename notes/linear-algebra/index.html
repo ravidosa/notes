@@ -1,0 +1,1054 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="generator" content="mkdocs-1.5.3, mkdocs-terminal-4.4.0">
+     
+     
+    <link rel="icon" type="image/png" sizes="192x192" href="../../img/android-chrome-192x192.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="../../img/android-chrome-512x512.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../img/apple-touch-icon.png" />
+<link rel="shortcut icon" type="image/png" sizes="48x48" href="../../img/favicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="../../img/favicon-32x32.png" />
+
+
+    
+ 
+<title>Linear Algebra - notes</title>
+
+
+<link href="../../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+<link href="../../css/fontawesome/css/solid.min.css" rel="stylesheet">
+<link href="../../css/normalize.css" rel="stylesheet">
+<link href="../../css/terminal.css" rel="stylesheet">
+<link href="../../css/theme.css" rel="stylesheet">
+<link href="../../css/theme.tile_grid.css" rel="stylesheet">
+<link href="../../css/theme.footer.css" rel="stylesheet">
+<!-- dark color palette -->
+<link href="../../css/palettes/dark.css" rel="stylesheet">
+
+<!-- page layout -->
+<style>
+/* initially set page layout to a one column grid */
+.terminal-mkdocs-main-grid {
+    display: grid;
+    grid-column-gap: 1.4em;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+/*  
+*   when side navigation is not hidden, use a two column grid.  
+*   if the screen is too narrow, fall back to the initial one column grid layout.
+*   in this case the main content will be placed under the navigation panel. 
+*/
+@media only screen and (min-width: 70em) {
+    .terminal-mkdocs-main-grid {
+        grid-template-columns: 4fr 9fr;
+    }
+}</style>
+
+
+
+    
+    <link href="../../style.css" rel="stylesheet">  
+    
+    
+
+    
+    <!-- search css support -->
+<link href="../../css/search/bootstrap-modal.css" rel="stylesheet">
+<!-- search scripts -->
+<script>
+    var base_url = "../..",
+    shortcuts = "{}";
+</script>
+<script src="../../js/jquery/jquery-1.10.1.min.js" defer></script>
+<script src="../../js/bootstrap/bootstrap.min.js" defer></script>
+<script src="../../js/mkdocs/base.js" defer></script>
+    
+    
+    
+    
+    <script src="../../javascripts/mathjax.js"></script>
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    
+    <script src="../../search/main.js"></script>
+    
+
+    
+</head>
+
+<body class="terminal"><div class="container">
+    <div class="terminal-nav">
+        <header class="terminal-logo">
+            <div id="mkdocs-terminal-site-name" class="logo terminal-prompt"><a href="/" class="no-style">notes</a></div>
+        </header>
+        
+        <nav class="terminal-menu">
+            
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Home</span>
+                    </a>
+                    <meta property="position" content="0">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../course-list/" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Course List</span>
+                    </a>
+                    <meta property="position" content="1">
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                    
+                    
+
+
+<li property="itemListElement" typeof="ListItem">
+    <a href="#" class="menu-item" data-toggle="modal" data-target="#mkdocs_search_modal" property="item" typeof="SearchAction">
+        <i aria-hidden="true" class="fa fa-search"></i> <span property="name">Search</span>
+    </a>
+    <meta property="position" content="2">
+</li>
+                    
+            </ul>
+            
+        </nav>
+    </div>
+</div>
+        
+    <div class="container">
+        <div class="terminal-mkdocs-main-grid"><aside id="terminal-mkdocs-side-panel"><nav>
+  
+    <ul class="terminal-mkdocs-side-nav-items">
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../">Home</a>
+        
+    
+    
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../course-list/">Course List</a>
+        
+    
+    
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Fall 2022</span>
+        
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f22/lin1y/">LIN 1Y</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f22/phy9d/">PHY 9D</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f22/phy9ha/">PHY 9HA</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f22/phy40/">PHY 40</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f22/phy104a/">PHY 104A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f22/phy116a/">PHY 116A</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Winter 2023</span>
+        
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w23/lin103b/">LIN 103B</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w23/mat108/">MAT 108</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w23/mat119a/">MAT 119A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w23/phy45/">PHY 45</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w23/phy80/">PHY 80</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w23/phy105a/">PHY 105A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w23/phy110a/">PHY 110A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w23/phy116b/">PHY 116B</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Spring 2023</span>
+        
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s23/lin165/">LIN 165</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s23/mat127a/">MAT 127A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s23/mat128b/">MAT 128B</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s23/mat135a/">MAT 135A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s23/phy105b/">PHY 105B</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s23/phy108/">PHY 108(L)</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s23/phy110b/">PHY 110B</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Summer 2023</span>
+        
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../m23/mat127b/">MAT 127B</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../m23/mat128a/">MAT 128A</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Fall 2023</span>
+        
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f23/lin112/">LIN 112</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f23/lin141/">LIN 141</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f23/mat150a/">MAT 150A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f23/mat168/">MAT 168</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f23/mat185a/">MAT 185A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f23/phy105c/">PHY 105C</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f23/phy112/">PHY 112(L)</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f23/phy115a/">PHY 115A</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+    </ul>
+  
+</nav><hr>
+<nav>
+    <ul>
+        <li><a href="#linear-algebra">Linear Algebra</a></li>
+        <li><a href="#matrices">Matrices</a></li><li><a href="#determinants">Determinants</a></li><li><a href="#vectors">Vectors</a></li><li><a href="#matrix-operations">Matrix Operations</a></li><li><a href="#lines-and-planes">Lines and Planes</a></li><li><a href="#linear-combinations-linear-functions-and-linear-operators">Linear Combinations, Linear Functions, and Linear Operators</a></li><li><a href="#linear-dependence-and-independence">Linear Dependence and Independence</a></li><li><a href="#special-matrices">Special Matrices</a></li><li><a href="#linear-vector-spaces">Linear Vector Spaces</a></li><li><a href="#eigenvalues-eigenvectors-and-diagonalization">Eigenvalues, Eigenvectors, and Diagonalization</a></li><li><a href="#groups">Groups</a></li>
+    </ul>
+</nav>
+</aside>
+            <main id="terminal-mkdocs-main-content">
+<section id="mkdocs-terminal-content">
+    <h1 id="linear-algebra">Linear Algebra<a class="headerlink" href="#linear-algebra" title="Permanent link">&para;</a></h1>
+<h2 id="matrices">Matrices<a class="headerlink" href="#matrices" title="Permanent link">&para;</a></h2>
+<p>matrix: <span class="arithmatex">\(m \times n\)</span> matrix is collection of <span class="arithmatex">\(mn\)</span> numbers arranged in <span class="arithmatex">\(m\)</span> rows, <span class="arithmatex">\(n\)</span> columns
+    column vector: <span class="arithmatex">\(m \times 1\)</span> matrix
+    row vector: <span class="arithmatex">\(1 \times n\)</span> matrix
+    square matrix: <span class="arithmatex">\(m=n\)</span></p>
+<h2 id="determinants">Determinants<a class="headerlink" href="#determinants" title="Permanent link">&para;</a></h2>
+<p>for <span class="arithmatex">\(2 \times 2 \begin{bmatrix}a &amp; b \\ c &amp; d\end{bmatrix}\)</span>: <span class="arithmatex">\(ad - bc\)</span>
+cofactor matrix <span class="arithmatex">\(M\)</span>
+    <span class="arithmatex">\(m_{ij} = (-1)^{i+j}\)</span>(determinant of <span class="arithmatex">\((m-1)\times(n-1)\)</span> matrix obtained by deleting <span class="arithmatex">\(i\)</span>th row and <span class="arithmatex">\(j\)</span>th column of A)
+<span class="arithmatex">\(\operatorname{det}A = \sum_{j=1}^n a_{ij}m_{ij}\)</span> for any <span class="arithmatex">\(i\)</span> (can be done for any column)
+totally antisymmetric tensor
+    <span class="arithmatex">\(\epsilon_{i_1i_2\ldots i_n} = 0\)</span><span class="arithmatex">\(\epsilon_{i_1i_2\ldots i_N} = 0\)</span> if any two <span class="arithmatex">\(i_n\)</span> same, <span class="arithmatex">\(=1\)</span> for <span class="arithmatex">\(i_1=1, i_2=2, \ldots i_N=n\)</span>, <span class="arithmatex">\(=\pm 1\)</span> based on number of permutations needed
+    <span class="arithmatex">\(\operatorname{det}A = \sum_{i_1=1}^n \sum_{i_N=1}^N \epsilon_{i_1i_2\ldots i_N}a_{1,i_1}a_{2,i_2}\ldots a_{n,i_N}\)</span>
+properties
+    0 if row or column has only zeroes
+    changes sign if rows/columns interchanged
+    0 if two rows/columns identical
+    unchanged by adding multiples of rows to other rows
+    <span class="arithmatex">\(\operatorname{det}kA = k^n\operatorname{det}A\)</span>
+    determinant of transpose <span class="arithmatex">\(A^T\)</span> (interchange rows and columns) is same
+<span class="arithmatex">\(\operatorname{det}(AB) = \operatorname{det}(A)\operatorname{det}(B)\)</span></p>
+<h2 id="vectors">Vectors<a class="headerlink" href="#vectors" title="Permanent link">&para;</a></h2>
+<p><span class="arithmatex">\(\vec{v}_1 + \vec{v}_2 = \vec{v}_3\)</span>
+    <span class="arithmatex">\(c\vec{v}\)</span>
+    <span class="arithmatex">\(\vec{v}_1 \cdot \vec{v}_2 = |\vec{v}_1||\vec{v}_2|\cos\theta\)</span>
+        <span class="arithmatex">\(|\vec{v}_1| = \sqrt{\vec{v}_1 \cdot \vec{v}_1} = \vec{v}_1 \cdot \hat{v}_1\)</span>
+    <span class="arithmatex">\(\vec{v} = v_x\hat{x} + v_y\hat{y} + v_z\hat{z}\)</span>
+    linear operator <span class="arithmatex">\(M\)</span>
+        <span class="arithmatex">\(\hat{M}\vec{v} = \vec{v}_1\)</span>
+        <span class="arithmatex">\(Mc\vec{v} = c\vec{v}_1\)</span>
+        <span class="arithmatex">\(M(\vec{v}+\vec{w}) = \vec{v}_1 + \vec{w}_1\)</span>
+    odd (<span class="arithmatex">\(\psi_1 \to -\psi_1\)</span>), even (<span class="arithmatex">\(\psi_2 \to \psi_2\)</span>)
+        <span class="arithmatex">\(M = \begin{pmatrix}a &amp; b &amp; c \\ b &amp; a &amp; c \\ c &amp; c &amp; d\end{pmatrix}\)</span>
+        <span class="arithmatex">\(\psi_1 = \begin{pmatrix}\alpha \\ -\alpha \\ 0\end{pmatrix}\)</span>, <span class="arithmatex">\(\psi_2 = \begin{pmatrix}\alpha \\ \alpha \\ \beta\end{pmatrix}\)</span></p>
+<h2 id="matrix-operations">Matrix Operations<a class="headerlink" href="#matrix-operations" title="Permanent link">&para;</a></h2>
+<p>transpose: <span class="arithmatex">\(M^T_{ij} = M_{ji}\)</span>
+    <span class="arithmatex">\((AB)^T = B^TA^T\)</span>
+    <span class="arithmatex">\((e^A)^T = e^{(A^T)}\)</span>
+complex conjugate <span class="arithmatex">\(A^*\)</span> is complex conjugate of every element
+addition
+    <span class="arithmatex">\(A+B=C\)</span>
+    <span class="arithmatex">\(A\)</span> is <span class="arithmatex">\(m \times n\)</span>, <span class="arithmatex">\(B\)</span> is <span class="arithmatex">\(m \times n\)</span>, <span class="arithmatex">\(C\)</span> is <span class="arithmatex">\(m \times n\)</span>
+    <span class="arithmatex">\(A_{ij} + B_{ij} = C_{ij}\)</span>
+scalar multiplication
+    <span class="arithmatex">\(kA = B\)</span>
+    <span class="arithmatex">\(A\)</span> is <span class="arithmatex">\(m \times n\)</span>, <span class="arithmatex">\(B\)</span> is <span class="arithmatex">\(m \times n\)</span>
+    <span class="arithmatex">\(kA_{ij} = B_{ij}\)</span>
+matrix multiplication
+    <span class="arithmatex">\(A \cdot B = C\)</span>
+    <span class="arithmatex">\(A\)</span> is <span class="arithmatex">\(m \times n\)</span>, <span class="arithmatex">\(B\)</span> is <span class="arithmatex">\(n \times p\)</span>, <span class="arithmatex">\(C\)</span> is <span class="arithmatex">\(m \times p\)</span>
+    <span class="arithmatex">\(C_{ij} = \sum_{k=1}^n a_{ik}b_{kj}\)</span>
+inverse matrix
+    only for square matrix w nonzero determinant
+    <span class="arithmatex">\(A^{-1}A = AA^{-1} = I\)</span>
+    <span class="arithmatex">\(A^{-1} = \frac{1}{\operatorname{det}A} M^T\)</span></p>
+<h2 id="lines-and-planes">Lines and Planes<a class="headerlink" href="#lines-and-planes" title="Permanent link">&para;</a></h2>
+<p>system of linear equations
+    <span class="arithmatex">\(a_1x+b_1y=c_1 , a_2x+b_2y=c_2\)</span>
+    <span class="arithmatex">\(x = \frac{b_2c_1-b_1c_2}{b_2a_1-b_1a_2}, y = \frac{a_2c_1-a_1c_2}{a_2b_1-a_1a_2}\)</span>
+    geometric solution: straight line
+        unique solution: intersecting lines
+        no solution: parallel lines (<span class="arithmatex">\(-\frac{a_1}{b_1} =-\frac{a_2}{b_2}, c_1 \neq c_2\)</span>)
+        infinite solutions: overlapping lines (<span class="arithmatex">\(-\frac{a_1}{b_1} =-\frac{a_2}{b_2} , c_1=c_2\)</span>)
+    matrix solution
+        <span class="arithmatex">\(M = \begin{bmatrix}a_1 &amp; b_1 \\ a_2 &amp; b_2\end{bmatrix}\)</span>, <span class="arithmatex">\(V = \begin{bmatrix}x \\ y \end{bmatrix}\)</span>, <span class="arithmatex">\(R = \begin{bmatrix}c_1 \\ c_2\end{bmatrix}\)</span>
+        <span class="arithmatex">\(MV = R\)</span>
+        <span class="arithmatex">\(V = M^{-1}R\)</span>
+        <span class="arithmatex">\(\tilde{M} = \begin{bmatrix}c_1 &amp; b_1 \\ c_2 &amp; b_2\end{bmatrix}\)</span>
+        <span class="arithmatex">\(x = \frac{\operatorname{det}\tilde{M}}{\operatorname{det}M}\)</span> (cramer’s rule)</p>
+<h2 id="linear-combinations-linear-functions-and-linear-operators">Linear Combinations, Linear Functions, and Linear Operators<a class="headerlink" href="#linear-combinations-linear-functions-and-linear-operators" title="Permanent link">&para;</a></h2>
+<p>rotation operator
+    must be orthogonality matrix
+        <span class="arithmatex">\(\begin{bmatrix}\cos\theta &amp; \sin\theta \\ -\sin\theta &amp; \cos\theta\end{bmatrix}\)</span>
+change of basis
+    <span class="arithmatex">\(\vec{V} = v_1\vec{\psi}_1 + v_2\vec{\psi}_2 = \begin{bmatrix}v_1 \\ v_2\end{bmatrix}\)</span>
+    <span class="arithmatex">\(M\vec{V} = \begin{bmatrix}\lambda_1 v_1 \\ \lambda_2 v_2\end{bmatrix}\)</span>
+    bases must be linearly independent (preferred orthonormal <span class="arithmatex">\(\hat{v}_i \cdot \hat{v}_j = \delta_{ij}\)</span>)
+<span class="arithmatex">\(O|f_1\rangle = |f_2\rangle\)</span>
+    eg. derivative
+non linear operator
+    <span class="arithmatex">\(\hat{O}f(x) \to (f(x))^2\)</span>
+complex conjugate = anti linear operator</p>
+<h2 id="linear-dependence-and-independence">Linear Dependence and Independence<a class="headerlink" href="#linear-dependence-and-independence" title="Permanent link">&para;</a></h2>
+<p>linear independence of nonzero vectors
+    <span class="arithmatex">\(c_1\vec{v}_1 + c_2\vec{v}_2 + \ldots + c_n\vec{v}_n = 0\)</span> implies all c are 0
+functions on vectors
+function linear independence
+    <span class="arithmatex">\(c_1f_1(x) + c_2f_2(x) + \ldots + c_nf_n(x) = 0\)</span> implies all c are 0
+    wronskian for smooth functions with enough derivatives
+        <span class="arithmatex">\(c_1f_1^{(n-1)}(x) + c_2f_2^{(n-1)}(x) + \ldots + c_nf_n^{(n-1)}(x) = 0\)</span>
+        system of n linear equations for c
+        nonzero determinant
+        <span class="arithmatex">\(W(x) = \begin{vmatrix}f_1(x) &amp; f_2(x) &amp; \cdots &amp; f_n(x) \\ f_1'(x) &amp; f_2'(x) &amp; \cdots &amp; f_n'(x) \\ \vdots \\ f_1^{(n-1)}(x) &amp; f_2^{(n-1)}(x) &amp; \cdots &amp; f_n^{(n-1)}(x)\end{vmatrix} \neq 0\)</span> then linearly independent</p>
+<h2 id="special-matrices">Special Matrices<a class="headerlink" href="#special-matrices" title="Permanent link">&para;</a></h2>
+<p>special matrices
+        orthogonal
+            <span class="arithmatex">\(O^T = O^{-1}\)</span>
+        unitary (complex matrix)
+            <span class="arithmatex">\(U^\dagger = U^{-1}\)</span>
+        real symmetric
+            <span class="arithmatex">\(A^T = A\)</span>
+        hermitian
+            hermitian inner product
+            diagonalized by unitary transformation
+                <span class="arithmatex">\(C = \begin{bmatrix}\psi_1 &amp; \psi_2\end{bmatrix}\)</span>
+                <span class="arithmatex">\(C^{-1} = \begin{bmatrix}\psi_1^\dagger \\ \psi_2^\dagger\end{bmatrix} = C^\dagger\)</span>
+            normal matrix
+                hermitian conjugate <span class="arithmatex">\(M^\dagger\)</span>
+                    transpose and complex conjugate
+                    <span class="arithmatex">\(M^*_{ij} = M^*_{ji}\)</span> (commutable)
+                    <span class="arithmatex">\((M^\dagger)^\dagger = M\)</span>
+                    <span class="arithmatex">\((AB)^\dagger = B^\dagger A^\dagger\)</span>
+                <span class="arithmatex">\(A^*A = AA^**\)</span></p>
+<h2 id="linear-vector-spaces">Linear Vector Spaces<a class="headerlink" href="#linear-vector-spaces" title="Permanent link">&para;</a></h2>
+<p>inner product
+    <span class="arithmatex">\(\langle f_1 | f_2 \rangle = \int_a^b f_1(x)f_2(x)dx\)</span> for real functions
+    <span class="arithmatex">\(\langle f_1 | f_2 \rangle = \int_a^b f_1^*(x)f_2(x)dx = \langle f_2 | f_1 \rangle^*\)</span> for complex functions
+    <span class="arithmatex">\(\int_a^b p_1(x)f_1^*(x)f_2(x)dx\)</span> with positive weighting
+    inner product with self greater than 0, 0 only if function is 0
+    length of vector, norm of function
+    functions orthogonal when <span class="arithmatex">\(\langle f_1 | f_2 \rangle = 0\)</span>
+    function normalized when <span class="arithmatex">\(\langle f_1 | f_1 \rangle = 1\)</span>
+gramm-schmidt
+    linearly independent vectors <span class="arithmatex">\(\psi\)</span> to orthonormal vectors <span class="arithmatex">\(e\)</span> by linear combination
+    <span class="arithmatex">\(\hat{e}_1 = \frac{\vec{\psi}_1}{|\vec{\psi}_1|}\)</span>, <span class="arithmatex">\(\vec{\psi}_{2,\perp} = \vec{\psi}_2 -(\vec{\psi}_2 \cdot \hat{e}_1)\hat{e}_1\)</span>, <span class="arithmatex">\(\hat{e}_2 = \frac{\vec{\psi}_{2,\perp}}{|\vec{\psi}_{2,\perp}|}\)</span>, <span class="arithmatex">\(\vec{\psi}_{3,\perp} = \vec{\psi}_3 - (\vec{\psi}_3\cdot\hat{e}_1)\hat{e}_1 - (\vec{\psi}_3\cdot\hat{e}_2)\hat{e}_2\)</span>, <span class="arithmatex">\(\hat{e}_3 = \frac{\vec{\psi}_{3,\perp}}{|\vec{\psi}_{3,\perp}|}\)</span>…
+    subtract parts along other vectors, normalize</p>
+<h2 id="eigenvalues-eigenvectors-and-diagonalization">Eigenvalues, Eigenvectors, and Diagonalization<a class="headerlink" href="#eigenvalues-eigenvectors-and-diagonalization" title="Permanent link">&para;</a></h2>
+<p>diagonalizing matrix (by similarity transformation)
+    eigenvector <span class="arithmatex">\(\vec{V}\)</span>, eigenvalue <span class="arithmatex">\(\lambda\)</span>
+        <span class="arithmatex">\(M\vec{\psi} = \vec{\psi}' = \lambda\vec{\psi}\)</span>
+        if <span class="arithmatex">\(\vec{\psi }\)</span> is eigenvector, so is <span class="arithmatex">\(c\vec{\psi}\)</span>
+        characteristic equation
+            non-trivial solutions
+            <span class="arithmatex">\(|M-\lambda I| = 0\)</span>
+            as many eigenvalues as rows/columns
+            normalized eigenvector → terms squared sum to 1
+            eigenvectors real and orthogonal (scalar product is 0) → symmetric matrix (real symmetric vs hermitian)
+        matrix multiplied by matrix of eigenvectors is matrix of eigenvectors multiplied by diagonal matrix of eigenvalues (<span class="arithmatex">\(C^{-1}MC = D)\)</span>
+    <span class="arithmatex">\(M = CDC^{-1}\)</span></p>
+<h2 id="groups">Groups<a class="headerlink" href="#groups" title="Permanent link">&para;</a></h2>
+<p>closure
+    n linearly independent functions
+    <span class="arithmatex">\(c_1f_1^{(n-1)}(x) + c_2f_2^{(n-1)}(x) + \ldots + c_nf_n^{(n-1)}(x) = f(x)\)</span>
+    addition, scalar product, null, inverse</p>
+</section>
+
+            </main>
+        </div>
+        <hr><footer>
+    <div class="terminal-mkdocs-footer-grid">
+        <div id="terminal-mkdocs-footer-copyright-info">
+             Site built with <a href="http://www.mkdocs.org">MkDocs</a> and <a href="https://github.com/ntno/mkdocs-terminal">Terminal for MkDocs</a>.
+        </div>
+    </div>
+</footer>
+    </div>
+
+    
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="alertdialog" aria-modal="true" aria-labelledby="searchModalLabel">
+    <div class="modal-dialog modal-lg" role="search">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="searchModalLabel">Search</h5>
+                <button type="button" class="close btn btn-default btn-ghost" data-dismiss="modal"><span aria-hidden="true">x</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p id="searchInputLabel">Type to start searching</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" aria-labelledby="searchInputLabel" placeholder="" id="mkdocs-search-query" title="Please enter search terms here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No document matches found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</body>
+
+</html>

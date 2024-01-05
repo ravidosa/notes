@@ -1,0 +1,992 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="generator" content="mkdocs-1.5.3, mkdocs-terminal-4.4.0">
+     
+     
+    <link rel="icon" type="image/png" sizes="192x192" href="../../img/android-chrome-192x192.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="../../img/android-chrome-512x512.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../img/apple-touch-icon.png" />
+<link rel="shortcut icon" type="image/png" sizes="48x48" href="../../img/favicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="../../img/favicon-32x32.png" />
+
+
+    
+ 
+<title>Infinite Series and Power Series - notes</title>
+
+
+<link href="../../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+<link href="../../css/fontawesome/css/solid.min.css" rel="stylesheet">
+<link href="../../css/normalize.css" rel="stylesheet">
+<link href="../../css/terminal.css" rel="stylesheet">
+<link href="../../css/theme.css" rel="stylesheet">
+<link href="../../css/theme.tile_grid.css" rel="stylesheet">
+<link href="../../css/theme.footer.css" rel="stylesheet">
+<!-- dark color palette -->
+<link href="../../css/palettes/dark.css" rel="stylesheet">
+
+<!-- page layout -->
+<style>
+/* initially set page layout to a one column grid */
+.terminal-mkdocs-main-grid {
+    display: grid;
+    grid-column-gap: 1.4em;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+/*  
+*   when side navigation is not hidden, use a two column grid.  
+*   if the screen is too narrow, fall back to the initial one column grid layout.
+*   in this case the main content will be placed under the navigation panel. 
+*/
+@media only screen and (min-width: 70em) {
+    .terminal-mkdocs-main-grid {
+        grid-template-columns: 4fr 9fr;
+    }
+}</style>
+
+
+
+    
+    <link href="../../style.css" rel="stylesheet">  
+    
+    
+
+    
+    <!-- search css support -->
+<link href="../../css/search/bootstrap-modal.css" rel="stylesheet">
+<!-- search scripts -->
+<script>
+    var base_url = "../..",
+    shortcuts = "{}";
+</script>
+<script src="../../js/jquery/jquery-1.10.1.min.js" defer></script>
+<script src="../../js/bootstrap/bootstrap.min.js" defer></script>
+<script src="../../js/mkdocs/base.js" defer></script>
+    
+    
+    
+    
+    <script src="../../javascripts/mathjax.js"></script>
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    
+    <script src="../../search/main.js"></script>
+    
+
+    
+</head>
+
+<body class="terminal"><div class="container">
+    <div class="terminal-nav">
+        <header class="terminal-logo">
+            <div id="mkdocs-terminal-site-name" class="logo terminal-prompt"><a href="/" class="no-style">notes</a></div>
+        </header>
+        
+        <nav class="terminal-menu">
+            
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Home</span>
+                    </a>
+                    <meta property="position" content="0">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../course-list/" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Course List</span>
+                    </a>
+                    <meta property="position" content="1">
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                    
+                    
+
+
+<li property="itemListElement" typeof="ListItem">
+    <a href="#" class="menu-item" data-toggle="modal" data-target="#mkdocs_search_modal" property="item" typeof="SearchAction">
+        <i aria-hidden="true" class="fa fa-search"></i> <span property="name">Search</span>
+    </a>
+    <meta property="position" content="2">
+</li>
+                    
+            </ul>
+            
+        </nav>
+    </div>
+</div>
+        
+    <div class="container">
+        <div class="terminal-mkdocs-main-grid"><aside id="terminal-mkdocs-side-panel"><nav>
+  
+    <ul class="terminal-mkdocs-side-nav-items">
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../">Home</a>
+        
+    
+    
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../course-list/">Course List</a>
+        
+    
+    
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Fall 2022</span>
+        
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f22/lin1y/">LIN 1Y</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f22/phy9d/">PHY 9D</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f22/phy9ha/">PHY 9HA</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f22/phy40/">PHY 40</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f22/phy104a/">PHY 104A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f22/phy116a/">PHY 116A</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Winter 2023</span>
+        
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w23/lin103b/">LIN 103B</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w23/mat108/">MAT 108</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w23/mat119a/">MAT 119A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w23/phy45/">PHY 45</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w23/phy80/">PHY 80</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w23/phy105a/">PHY 105A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w23/phy110a/">PHY 110A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w23/phy116b/">PHY 116B</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Spring 2023</span>
+        
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s23/lin165/">LIN 165</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s23/mat127a/">MAT 127A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s23/mat128b/">MAT 128B</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s23/mat135a/">MAT 135A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s23/phy105b/">PHY 105B</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s23/phy108/">PHY 108(L)</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s23/phy110b/">PHY 110B</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Summer 2023</span>
+        
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../m23/mat127b/">MAT 127B</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../m23/mat128a/">MAT 128A</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Fall 2023</span>
+        
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f23/lin112/">LIN 112</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f23/lin141/">LIN 141</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f23/mat150a/">MAT 150A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f23/mat168/">MAT 168</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f23/mat185a/">MAT 185A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f23/phy105c/">PHY 105C</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f23/phy112/">PHY 112(L)</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f23/phy115a/">PHY 115A</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+    </ul>
+  
+</nav><hr>
+<nav>
+    <ul>
+        <li><a href="#infinite-series-and-power-series">Infinite Series and Power Series</a></li>
+        <li><a href="#geometric-series">Geometric Series</a></li><li><a href="#convergent-and-divergent-series">Convergent and Divergent Series</a></li><li><a href="#convergence-tests">Convergence Tests</a></li><li><a href="#absolute-and-conditional-convergence">Absolute and Conditional Convergence</a></li><li><a href="#power-series-and-interval-of-convergence">Power Series and Interval of Convergence</a></li><li><a href="#expanding-functions-in-power-series">Expanding Functions in Power Series</a></li>
+    </ul>
+</nav>
+</aside>
+            <main id="terminal-mkdocs-main-content">
+<section id="mkdocs-terminal-content">
+    <h1 id="infinite-series-and-power-series">Infinite Series and Power Series<a class="headerlink" href="#infinite-series-and-power-series" title="Permanent link">&para;</a></h1>
+<h2 id="geometric-series">Geometric Series<a class="headerlink" href="#geometric-series" title="Permanent link">&para;</a></h2>
+<p>geometric series
+    <span class="arithmatex">\(S_n = \frac{a(1-r^n)}{1-r}\)</span>
+    <span class="arithmatex">\(S = \lim_{n \to \infty} S_n = \frac{a}{1-r}\)</span></p>
+<h2 id="convergent-and-divergent-series">Convergent and Divergent Series<a class="headerlink" href="#convergent-and-divergent-series" title="Permanent link">&para;</a></h2>
+<p>convergence of series of positive terms
+    <span class="arithmatex">\(S = a_1 + a_2 + \ldots\)</span></p>
+<h2 id="convergence-tests">Convergence Tests<a class="headerlink" href="#convergence-tests" title="Permanent link">&para;</a></h2>
+<p>preliminary test
+    if <span class="arithmatex">\(\lim_{n \to \infty} a_n \neq 0\)</span>, <span class="arithmatex">\(S\)</span> diverges
+    otherwise, test further
+comparison test
+    if <span class="arithmatex">\(|a_n| \leq m_n\)</span> for converging <span class="arithmatex">\(m\)</span> series, <span class="arithmatex">\(S\)</span> converges
+    if <span class="arithmatex">\(|a_n| \geq d_n\)</span> for diverging <span class="arithmatex">\(d\)</span> series, <span class="arithmatex">\(S\)</span> diverges
+integral test
+    if <span class="arithmatex">\(0 &lt; a_{n+1} \leq a_n\)</span> for <span class="arithmatex">\(n &gt; N\)</span>, <span class="arithmatex">\(\sum_N^\infty a_n\)</span> converges if <span class="arithmatex">\(\int^\infty a_n dn\)</span> is finite, diverges if infinite
+ratio test
+    <span class="arithmatex">\(\rho = \lim_{n \to \infty} |\frac{a_{n+1}}{a_n}|\)</span>
+    if <span class="arithmatex">\(\rho &lt; 1\)</span>, <span class="arithmatex">\(S\)</span> converges
+    if <span class="arithmatex">\(\rho = 1\)</span>, use a different test
+    if <span class="arithmatex">\(\rho &gt; 1\)</span>, <span class="arithmatex">\(S\)</span> diverges
+special comparison test
+    if <span class="arithmatex">\(\sum_{n=1}^\infty b_n\)</span> is convergent and positive terms and <span class="arithmatex">\(a_n \geq 0\)</span> and <span class="arithmatex">\(\lim_{n \to \infty} \frac{a_n}{b_n}\)</span> is finite, <span class="arithmatex">\(\sum_{n=1}^\infty a_n\)</span> converges
+    if <span class="arithmatex">\(\sum_{n=1}^\infty d_n\)</span> is divergent and positive terms and <span class="arithmatex">\(a_n \geq 0\)</span> and <span class="arithmatex">\(\lim_{n \to \infty} \frac{a_n}{d_n}\)</span> is greater than 0 (or <span class="arithmatex">\(\infty\)</span>), <span class="arithmatex">\(\sum_{n=1}^\infty a_n\)</span> diverges</p>
+<h2 id="absolute-and-conditional-convergence">Absolute and Conditional Convergence<a class="headerlink" href="#absolute-and-conditional-convergence" title="Permanent link">&para;</a></h2>
+<p>convergence of alternating series that does not converge absolutely
+    <span class="arithmatex">\(S = |a_1| - |a_2| + |a_3| + \ldots\)</span>
+    <span class="arithmatex">\(S_2 = |a_1| + |a_2| + |a_3| + \ldots\)</span>
+    if <span class="arithmatex">\(S_2\)</span> converges, <span class="arithmatex">\(S\)</span> converges
+    if <span class="arithmatex">\(S_2\)</span> diverges, <span class="arithmatex">\(S\)</span> converges (at least conditionally) if <span class="arithmatex">\(a_n \to 0\)</span> as <span class="arithmatex">\(n \to \infty\)</span> and <span class="arithmatex">\(|a_{n+1}| &lt; |a_n|\)</span></p>
+<h2 id="power-series-and-interval-of-convergence">Power Series and Interval of Convergence<a class="headerlink" href="#power-series-and-interval-of-convergence" title="Permanent link">&para;</a></h2>
+<p>power series
+    <span class="arithmatex">\(S(x) = a_0 + a_1x + a_2x^2 + \ldots\)</span>
+    radius of convergence
+        <span class="arithmatex">\(R = \lim_{n \to \infty} |\frac{a_{n+1}}{a_n}|x &lt; 1\)</span>
+        <span class="arithmatex">\(x = \lim_{n \to \infty} |\frac{a_n}{a_{n+1}}|\)</span>
+    test endpoint separately
+    entire function converges everywhere</p>
+<h2 id="expanding-functions-in-power-series">Expanding Functions in Power Series<a class="headerlink" href="#expanding-functions-in-power-series" title="Permanent link">&para;</a></h2>
+<p>taylor series
+    <span class="arithmatex">\(f(x) = f(a) + f'(a)(x-a) + f''(a)\frac{(x-a)^2}{2!} + \ldots = \sum_{n=0}^\infty f^{(n)}(a)\frac{(x-a)^n}{n!}\)</span>
+    <span class="arithmatex">\(f(x,y)=f(0,0) + x\frac{\delta f}{\delta x}(0,0) + y\frac{\delta f}{\delta y}(0,0) + x^2\frac{\delta ^2f}{\delta x^2}(0,0) + 2xy\frac{\delta ^2f}{\delta x\delta y}(0,0) + y^2\frac{\delta ^2f}{\delta y^2}(0,0) + \ldots = \sum_{n=0}^\infty \frac{1}{n!}((x-a)\frac{\delta}{\delta x} + (y-b)\frac{\delta}{\delta y})^n f(a,b)\)</span>maclaurin series (taylor for <span class="arithmatex">\(a=0\)</span>)
+        <span class="arithmatex">\(f(x) = f(0) + f'(0)x + f''(0)\frac{x^2}{2!} + \ldots = \sum_{n=0}^\infty f^{(n)}(0)\frac{x^n}{n!}\)</span></p>
+<h3 id="common-maclaurin-series">Common Maclaurin series<a class="headerlink" href="#common-maclaurin-series" title="Permanent link">&para;</a></h3>
+<table>
+<thead>
+<tr>
+<th><strong>Function</strong></th>
+<th><strong>Maclaurin series (series form)</strong></th>
+<th><strong>Maclaurin series (polynomial form)</strong></th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td><span class="arithmatex">\(\sin{x}\)</span></td>
+<td><span class="arithmatex">\(\sum_{n=0}^\infty \frac{(-1)^nx^{2n+1}}{(2n+1)!}\)</span></td>
+<td><span class="arithmatex">\(x - \frac{x^3}{3!} + \frac{x^5}{5!} - \ldots\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\cos x\)</span></td>
+<td><span class="arithmatex">\(\sum_{n=0}^\infty \frac{(-1)^n x^{2n}}{(2n)!}\)</span></td>
+<td><span class="arithmatex">\(1 - \frac{x^2}{2!} + \frac{x^4}{4!} + \ldots\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(e^x\)</span></td>
+<td><span class="arithmatex">\(\sum_{n=0}^\infty \frac{x^n}{n!}\)</span></td>
+<td><span class="arithmatex">\(1 + x + \frac{x^2}{2!} + \ldots\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\(\ln(1+x)\)</span></td>
+<td><span class="arithmatex">\(\sum_{n=1}^\infty \frac{(-1)^{n+1}x^n}{n}\)</span></td>
+<td><span class="arithmatex">\(x - \frac{x^2}{2} + \frac{x^3}{3} - \ldots\)</span></td>
+</tr>
+<tr>
+<td><span class="arithmatex">\((1+x)^p\)</span> for real <span class="arithmatex">\(p\)</span>, infinite for non-integral <span class="arithmatex">\(p\)</span></td>
+<td><span class="arithmatex">\(\sum_{n=0}^\infty {p \choose n}x^n\)</span></td>
+<td><span class="arithmatex">\(1 + px + \frac{p(p-1)}{2!}x^2 + \ldots\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>division
+    valid if ratio finite as <span class="arithmatex">\(x \to  0\)</span></p>
+</section>
+
+            </main>
+        </div>
+        <hr><footer>
+    <div class="terminal-mkdocs-footer-grid">
+        <div id="terminal-mkdocs-footer-copyright-info">
+             Site built with <a href="http://www.mkdocs.org">MkDocs</a> and <a href="https://github.com/ntno/mkdocs-terminal">Terminal for MkDocs</a>.
+        </div>
+    </div>
+</footer>
+    </div>
+
+    
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="alertdialog" aria-modal="true" aria-labelledby="searchModalLabel">
+    <div class="modal-dialog modal-lg" role="search">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="searchModalLabel">Search</h5>
+                <button type="button" class="close btn btn-default btn-ghost" data-dismiss="modal"><span aria-hidden="true">x</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p id="searchInputLabel">Type to start searching</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" aria-labelledby="searchInputLabel" placeholder="" id="mkdocs-search-query" title="Please enter search terms here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No document matches found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</body>
+
+</html>

@@ -1,0 +1,1020 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="generator" content="mkdocs-1.5.3, mkdocs-terminal-4.4.0">
+     
+     
+    <link rel="icon" type="image/png" sizes="192x192" href="../../img/android-chrome-192x192.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="../../img/android-chrome-512x512.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../img/apple-touch-icon.png" />
+<link rel="shortcut icon" type="image/png" sizes="48x48" href="../../img/favicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="../../img/favicon-32x32.png" />
+
+
+    
+ 
+<title>Rotations and Rigid Bodies - notes</title>
+
+
+<link href="../../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+<link href="../../css/fontawesome/css/solid.min.css" rel="stylesheet">
+<link href="../../css/normalize.css" rel="stylesheet">
+<link href="../../css/terminal.css" rel="stylesheet">
+<link href="../../css/theme.css" rel="stylesheet">
+<link href="../../css/theme.tile_grid.css" rel="stylesheet">
+<link href="../../css/theme.footer.css" rel="stylesheet">
+<!-- dark color palette -->
+<link href="../../css/palettes/dark.css" rel="stylesheet">
+
+<!-- page layout -->
+<style>
+/* initially set page layout to a one column grid */
+.terminal-mkdocs-main-grid {
+    display: grid;
+    grid-column-gap: 1.4em;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+/*  
+*   when side navigation is not hidden, use a two column grid.  
+*   if the screen is too narrow, fall back to the initial one column grid layout.
+*   in this case the main content will be placed under the navigation panel. 
+*/
+@media only screen and (min-width: 70em) {
+    .terminal-mkdocs-main-grid {
+        grid-template-columns: 4fr 9fr;
+    }
+}</style>
+
+
+
+    
+    <link href="../../style.css" rel="stylesheet">  
+    
+    
+
+    
+    <!-- search css support -->
+<link href="../../css/search/bootstrap-modal.css" rel="stylesheet">
+<!-- search scripts -->
+<script>
+    var base_url = "../..",
+    shortcuts = "{}";
+</script>
+<script src="../../js/jquery/jquery-1.10.1.min.js" defer></script>
+<script src="../../js/bootstrap/bootstrap.min.js" defer></script>
+<script src="../../js/mkdocs/base.js" defer></script>
+    
+    
+    
+    
+    <script src="../../javascripts/mathjax.js"></script>
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    
+    <script src="../../search/main.js"></script>
+    
+
+    
+</head>
+
+<body class="terminal"><div class="container">
+    <div class="terminal-nav">
+        <header class="terminal-logo">
+            <div id="mkdocs-terminal-site-name" class="logo terminal-prompt"><a href="/" class="no-style">notes</a></div>
+        </header>
+        
+        <nav class="terminal-menu">
+            
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Home</span>
+                    </a>
+                    <meta property="position" content="0">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../course-list/" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Course List</span>
+                    </a>
+                    <meta property="position" content="1">
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                    
+                    
+
+
+<li property="itemListElement" typeof="ListItem">
+    <a href="#" class="menu-item" data-toggle="modal" data-target="#mkdocs_search_modal" property="item" typeof="SearchAction">
+        <i aria-hidden="true" class="fa fa-search"></i> <span property="name">Search</span>
+    </a>
+    <meta property="position" content="2">
+</li>
+                    
+            </ul>
+            
+        </nav>
+    </div>
+</div>
+        
+    <div class="container">
+        <div class="terminal-mkdocs-main-grid"><aside id="terminal-mkdocs-side-panel"><nav>
+  
+    <ul class="terminal-mkdocs-side-nav-items">
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../">Home</a>
+        
+    
+    
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../course-list/">Course List</a>
+        
+    
+    
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Fall 2022</span>
+        
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f22/lin1y/">LIN 1Y</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f22/phy9d/">PHY 9D</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f22/phy9ha/">PHY 9HA</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f22/phy40/">PHY 40</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f22/phy104a/">PHY 104A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f22/phy116a/">PHY 116A</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Winter 2023</span>
+        
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w23/lin103b/">LIN 103B</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w23/mat108/">MAT 108</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w23/mat119a/">MAT 119A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w23/phy45/">PHY 45</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w23/phy80/">PHY 80</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w23/phy105a/">PHY 105A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w23/phy110a/">PHY 110A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w23/phy116b/">PHY 116B</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Spring 2023</span>
+        
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s23/lin165/">LIN 165</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s23/mat127a/">MAT 127A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s23/mat128b/">MAT 128B</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s23/mat135a/">MAT 135A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s23/phy105b/">PHY 105B</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s23/phy108/">PHY 108(L)</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s23/phy110b/">PHY 110B</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Summer 2023</span>
+        
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../m23/mat127b/">MAT 127B</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../m23/mat128a/">MAT 128A</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Fall 2023</span>
+        
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f23/lin112/">LIN 112</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f23/lin141/">LIN 141</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f23/mat150a/">MAT 150A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f23/mat168/">MAT 168</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f23/mat185a/">MAT 185A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f23/phy105c/">PHY 105C</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f23/phy112/">PHY 112(L)</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f23/phy115a/">PHY 115A</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+    </ul>
+  
+</nav><hr>
+<nav>
+    <ul>
+        <li><a href="#rotations-and-rigid-bodies">Rotations and Rigid Bodies</a></li>
+        <li><a href="#rotational-kinematics">Rotational Kinematics</a></li><li><a href="#non-inertial-frames">Non-Inertial Frames</a></li><li><a href="#rotational-inertia">Rotational Inertia</a></li><li><a href="#dynamics-of-rotating-objects">Dynamics of Rotating Objects</a></li><li><a href="#torque">Torque</a></li><li><a href="#static-equilibrium">Static Equilibrium</a></li>
+    </ul>
+</nav>
+</aside>
+            <main id="terminal-mkdocs-main-content">
+<section id="mkdocs-terminal-content">
+    <h1 id="rotations-and-rigid-bodies">Rotations and Rigid Bodies<a class="headerlink" href="#rotations-and-rigid-bodies" title="Permanent link">&para;</a></h1>
+<h2 id="rotational-kinematics">Rotational Kinematics<a class="headerlink" href="#rotational-kinematics" title="Permanent link">&para;</a></h2>
+<p>angular position <span class="arithmatex">\(\theta\)</span> in radians
+angular displacement <span class="arithmatex">\(\Delta \theta = \theta_f - \theta_i\)</span>
+velocity
+    average angular velocity <span class="arithmatex">\(\omega_{avg} = \frac{\Delta \theta}{\Delta t}\)</span>
+    instantaneous angular velocity <span class="arithmatex">\(\omega(t) = \frac{d\theta}{dt}\)</span>
+acceleration
+    average angular acceleration <span class="arithmatex">\(\alpha_{avg} = \frac{\Delta \omega}{\Delta t}\)</span>
+    instantaneous angular acceleration <span class="arithmatex">\(\alpha(t) = \frac{d\omega}{dt} = \frac{d^2\theta}{dt^2}\)</span>
+    <span class="arithmatex">\(a_c = r\omega^2\)</span>, <span class="arithmatex">\(a_t = r\alpha\)</span>
+not same for all points on body
+linear vs rotational
+    <span class="arithmatex">\(s = r\theta\)</span> , <span class="arithmatex">\(v = r\omega\)</span>, <span class="arithmatex">\(a = r\alpha\)</span>
+RHR for direction (clockwise up, counterclockwise down)</p>
+<h2 id="non-inertial-frames">Non-Inertial Frames<a class="headerlink" href="#non-inertial-frames" title="Permanent link">&para;</a></h2>
+<p>inertial is non-accelerated, non-inertial has non-constant v
+transformation relations in inertial <span class="arithmatex">\((x, y, z, t) \to (x',y',z',t')\)</span>
+    <span class="arithmatex">\(t = t'\)</span>
+    <span class="arithmatex">\(x' = x - v_xt\)</span>, <span class="arithmatex">\(\frac{dx'}{dt} = \frac{dx}{dt} - v_x\)</span>, <span class="arithmatex">\(\frac{d^2x'}{dt^2} = \frac{d^2x}{dt^2} - \frac{dv_x}{dt} = \frac{d^2x}{dt^2}\)</span>
+    <span class="arithmatex">\(y' = y - v_yt\)</span>, <span class="arithmatex">\(\frac{dy'}{dt} = \frac{dy}{dt} - v_y\)</span>, <span class="arithmatex">\(\frac{d^2y'}{dt^2} = \frac{d^2y}{dt^2} - \frac{dv_y}{dt} = \frac{d^2y}{dt^2}\)</span>
+    <span class="arithmatex">\(z' = z - v_zt\)</span>, <span class="arithmatex">\(\frac{dz'}{dt} = \frac{dz}{dt} - v_z\)</span>, <span class="arithmatex">\(\frac{d^2z'}{dt^2} = \frac{d^2z}{dt^2} - \frac{dv_z}{dt} = \frac{d^2z}{dt^2}\)</span>
+transformation relations in non-inertial
+    <span class="arithmatex">\(t = t'\)</span>
+    <span class="arithmatex">\(x' = x - v_xt\)</span>, <span class="arithmatex">\(\frac{dx'}{dt} = \frac{dx}{dt} - v_x\)</span>, <span class="arithmatex">\(\frac{d^2x'}{dt^2} = \frac{d^2x}{dt^2} - \frac{dv_x}{dt}\)</span>
+    <span class="arithmatex">\(y' = y - v_yt\)</span>, <span class="arithmatex">\(\frac{dy'}{dt} = \frac{dy}{dt} - v_y\)</span>, <span class="arithmatex">\(\frac{d^2y'}{dt^2} = \frac{d^2y}{dt^2} - \frac{dv_y}{dt}\)</span>
+    <span class="arithmatex">\(z' = z - v_zt\)</span>, <span class="arithmatex">\(\frac{dz'}{dt} = \frac{dz}{dt} - v_z\)</span>, <span class="arithmatex">\(\frac{d^2z'}{dt^2} = \frac{d^2z}{dt^2} - \frac{dv_z}{dt}\)</span>
+    do not agree on acceleration, and fictitious force <span class="arithmatex">\(\mathcal{F}\)</span>
+        same acceleration for all objects, proportional to mass
+        gravity is fictitious (principle of equivalence)
+rotating frame (constant <span class="arithmatex">\(\omega\)</span>)
+    at rest in <span class="arithmatex">\((x', y', z', t')\)</span>, rotating in <span class="arithmatex">\((x, y, z, t)\)</span>
+    <span class="arithmatex">\(\vec{v}' = \vec{v} - \vec{\omega} \times \vec{r}\)</span>
+    <span class="arithmatex">\(\frac{d}{dt}_{stat} = \frac{d}{dt}_{rot} + \vec{\omega} \times\)</span>
+    <span class="arithmatex">\(\vec{a} = \vec{a}' + 2\vec{\omega}\times\vec{v}' + \vec{\omega}\times(\vec{\omega}\times\vec{r})\)</span>
+    <span class="arithmatex">\(\vec{F}' = \vec{F}- 2m\vec{\omega}\times\vec{v}' - m\vec{\omega}\times(\vec{\omega}\times\vec{r})\)</span> (coriolis, centrifugal)
+centrifugal is fictitious, centripetal is sum of forces</p>
+<h2 id="rotational-inertia">Rotational Inertia<a class="headerlink" href="#rotational-inertia" title="Permanent link">&para;</a></h2>
+<p><span class="arithmatex">\(K_{rot} = \frac{1}{2}I\omega^2\)</span>, <span class="arithmatex">\(I = \sum_i m_ir_i^2 = \sum_0^L dm x^2\)</span></p>
+<table>
+<thead>
+<tr>
+<th>Body</th>
+<th>Moment of Inertia</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>solid cylinder, symmetry axis</td>
+<td><span class="arithmatex">\(\frac{1}{2}MR^2\)</span></td>
+</tr>
+<tr>
+<td>solid cylinder, central diameter</td>
+<td><span class="arithmatex">\(\frac{1}{2}MR^2+\frac{1}{12}ML^2\)</span></td>
+</tr>
+<tr>
+<td>hoop, symmetry axis</td>
+<td><span class="arithmatex">\(MR^2\)</span></td>
+</tr>
+<tr>
+<td>hoop, central diameter</td>
+<td><span class="arithmatex">\(\frac{1}{2}MR^2\)</span></td>
+</tr>
+<tr>
+<td>solid sphere</td>
+<td><span class="arithmatex">\(\frac{2}{5}MR^2\)</span></td>
+</tr>
+<tr>
+<td>spherical shell</td>
+<td><span class="arithmatex">\(\frac{2}{3}MR^2\)</span></td>
+</tr>
+<tr>
+<td>rod, center</td>
+<td><span class="arithmatex">\(\frac{1}{12}ML^2\)</span></td>
+</tr>
+<tr>
+<td>rod, end</td>
+<td><span class="arithmatex">\(\frac{1}{3}ML^2\)</span></td>
+</tr>
+</tbody>
+</table>
+<p>additivity around common axis
+    <span class="arithmatex">\(I = I_1 + I_2\)</span>
+parallel axis theorem
+    <span class="arithmatex">\(I = I_{cm} + Md^2\)</span>
+minimum for center of mass
+if rotating freely in space, axis of rotation must pass through center of mass</p>
+<h2 id="dynamics-of-rotating-objects">Dynamics of Rotating Objects<a class="headerlink" href="#dynamics-of-rotating-objects" title="Permanent link">&para;</a></h2>
+<p>rolling without slipping and pulleys
+    total kinetic energy (sum of linear and rotational) constant if no loss to thermal
+        <span class="arithmatex">\(K_{tot} = \frac{1}{2}mv_{cm}^2 + \frac{1}{2}I_{cm}\omega^2\)</span>
+larger final velocity does not mean arrive first
+unwinding spool
+    <span class="arithmatex">\(v_f = \sqrt{\frac{4mgh}{2m+M}}\)</span>
+massive pulley
+    unequal tensions
+massive pendulum
+    <span class="arithmatex">\(\frac{1}{2}mv_{cm}^2 + \frac{1}{2}I_{cm}\omega^2 = \frac{1}{2}I_{pivot}\omega^2\)</span></p>
+<h2 id="torque">Torque<a class="headerlink" href="#torque" title="Permanent link">&para;</a></h2>
+<p>torque
+    <span class="arithmatex">\(\vec{\tau}=\vec{r}\times\vec{F}\)</span>
+rotational 2nd law
+    <span class="arithmatex">\(\vec{\tau}=I\vec{\alpha}\)</span>
+rotational work
+    <span class="arithmatex">\(\int_A^B \vec{\tau} \vec{d\theta}=\Delta K=\frac{1}{2}I\omega_B^2-\frac{1}{2}I\omega_A^2\)</span>
+rotational power
+    <span class="arithmatex">\(P=\vec{\tau}\cdot\vec{\omega}\)</span></p>
+<h2 id="static-equilibrium">Static Equilibrium<a class="headerlink" href="#static-equilibrium" title="Permanent link">&para;</a></h2>
+<p>conditions for static equilibrium
+    <span class="arithmatex">\(\vec{F}_{net}=0\)</span>, <span class="arithmatex">\(\vec{\tau}_{net}=0\)</span> regardless of reference point
+conditions for tipping</p>
+</section>
+
+            </main>
+        </div>
+        <hr><footer>
+    <div class="terminal-mkdocs-footer-grid">
+        <div id="terminal-mkdocs-footer-copyright-info">
+             Site built with <a href="http://www.mkdocs.org">MkDocs</a> and <a href="https://github.com/ntno/mkdocs-terminal">Terminal for MkDocs</a>.
+        </div>
+    </div>
+</footer>
+    </div>
+
+    
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="alertdialog" aria-modal="true" aria-labelledby="searchModalLabel">
+    <div class="modal-dialog modal-lg" role="search">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="searchModalLabel">Search</h5>
+                <button type="button" class="close btn btn-default btn-ghost" data-dismiss="modal"><span aria-hidden="true">x</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p id="searchInputLabel">Type to start searching</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" aria-labelledby="searchInputLabel" placeholder="" id="mkdocs-search-query" title="Please enter search terms here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No document matches found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</body>
+
+</html>

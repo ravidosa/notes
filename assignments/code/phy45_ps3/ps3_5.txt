@@ -1,0 +1,3 @@
+The value of the final position is higher, but the value of the final velocity is lower.
+A mass pushed with a constant force with a frictional force acting for large t when v is large will eventually cease to accelerate, travelling at a constant velocity.
+This occurs when an object reaches terminal velocity, with the drag force equalling the force of gravity, which is when v = mg/b.

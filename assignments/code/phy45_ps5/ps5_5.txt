@@ -1,0 +1,15 @@
+Newton's method:
+Pros
+- converges faster (quadratic)
+- can find roots that are close together
+Cons
+- can overshoot point depending on slope and proximity of guess to root
+- requires function to be defined and differentiable over relevant interval
+
+Bisection method:
+Pros
+- does not require derivative to compute next iteration
+- no conditions for function
+Cons
+- requires function to cross x-axis to find root
+- converges slower (linear)
