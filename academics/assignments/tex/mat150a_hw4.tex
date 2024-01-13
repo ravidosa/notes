@@ -1,0 +1,74 @@
+\documentclass{article}
+\usepackage{assignment_preamble}
+
+\title{HW 4}
+\author{Ravi Kini}
+\date{October 31, 2023}
+
+\begin{document}
+
+\maketitle
+
+\problem
+\subsection*{Part (a)}
+Let
+\begin{equation}
+    \begin{split}
+        \varphi: \Z/10\Z & \to \Z/7\Z \\
+            \bar k &  \mapsto \bar k
+    \end{split}
+\end{equation}
+Note that $5 = 15 \mod 10$, since $5 = 10\left(0\right) + 5$ and $15 = 10\left(1\right) + 5$, which means that $\overline{5} = \overline{15}$ in $\Z/10\Z$. However, $5 \neq 15 \mod 7$, since $5 = 7\left(0\right) + 5$ and $15 = 7\left(2\right) + 1$, which means that $\overline{5} \neq \overline{15}$ in $\Z/7\Z$. Since $\overline{5} = \overline{15}$ but $\varphi\left(\overline{5}\right) \neq \varphi\left(\overline{15}\right)$, $\varphi$ is not well-defined, as a single element maps to multiple elements in the codomain. 
+\subsection*{Part (b)}
+Let
+\begin{equation}
+    \begin{split}
+        \varphi: \Z/10\Z & \to \Z/7\Z \\
+            \bar k &  \mapsto \bar k
+    \end{split}
+\end{equation}
+Let $\overline{x}, \overline{y} \in \Z/10\Z$ such that $\overline{x} = \overline{y}$ in $\Z/10\Z$. Then, since $x = y \mod 10$, $x = 10\left(m\right) + p$ and $y = 10\left(n\right) + p$ for $m, n, p \in \Z$. Then, since $x = 10\left(m\right) + p = 5\left(2m\right) + p$ and $y = 10\left(n\right) + p = 5\left(2n\right) + p$ with $2m, 2n \in \Z$, $x = y \mod 5$, which means that $\overline{x} = \overline{y}$ in $\Z/5\Z$. Consequently, since $\overline{x} = \overline{y}$ implies that $\varphi\left(\overline{x}\right) = \varphi\left(\overline{y}\right)$, $\varphi$ is well-defined.
+
+\newpage
+
+\problem
+\subsection*{Part (a)}
+Let
+\begin{equation}
+    \begin{split}
+        \varphi: \Z & \to \Z/3\Z \\
+            \bar k &  \mapsto \bar k
+    \end{split}
+\end{equation}
+Let $\alpha: \Z \to \Z/9\Z$, $k \mapsto \bar k$ and $\beta: \Z/9\Z \to \Z/3\Z$, $\bar k \mapsto \bar k$. We first show that $\alpha$ and $\beta$ are well defined.
+
+Let $x, y \in \Z$ such that $x = y$. Then, since $x = y$, $x = 9\left(m\right) + p$ and $y = 9\left(m\right) + p$ for $m, p \in \Z$. Then, $x = y \mod 9$, which means that $\overline{x} = \overline{y}$ in $\Z/9\Z$. Consequently, since $x = y$ implies that $\varphi\left(x\right) = \varphi\left(y\right)$, $\alpha$ is well-defined.
+
+Let $\overline{x}, \overline{y} \in \Z/9\Z$ such that $\overline{x} = \overline{y}$. Then, since $\overline{x} = \overline{y}$, $x = 9\left(m\right) + p$ and $y = 9\left(n\right) + p$ for $m, n, p \in \Z$. Then, since $x = 9\left(m\right) + p = 3\left(3m\right) + p$ and $y = 9\left(n\right) + p = 3\left(3n\right) + p$ with $3m, 3n \in \Z$, $x = y \mod 3$, which means that $\overline{x} = \overline{y}$ in $\Z/3\Z$. Consequently, since $\overline{x} = \overline{y}$ implies that $\varphi\left(\overline{x}\right) = \varphi\left(\overline{y}\right)$, $\beta$ is well-defined.
+
+Let $a, b \in \Z$ and $\overline{c}, \overline{d} \in \Z/9\Z$. Then, since $\overline{x}\overline{y} = \overline{xy}$:
+\begin{equation}
+    \begin{split}
+        \alpha\left(a\right)\alpha\left(b\right) = \overline{a}\overline{b} & = \overline{ab} = \alpha\left(ab\right) \\
+        \beta\left(\overline{c}\right)\beta\left(\overline{d}\right) = \overline{c}\overline{d} & = \overline{cd} = \beta\left(\overline{cd}\right)
+    \end{split}
+\end{equation}
+Therefore $\alpha$ and $\beta$ are homomorphisms. Since $\beta \circ \alpha \left(x\right) = \overline{x} = \varphi\left(x\right)$, $\beta \circ \alpha = \varphi$, and the homomorphism $\varphi$ factors through $\Z/9\Z$.
+
+\subsection*{Part (b)}
+Let $\ell \in \N$. Let $\alpha: \Z \to \Z/3^\ell\Z$, $k \mapsto \bar k$ and $\beta: \Z/3^\ell\Z \to \Z/3\Z$, $\bar k \mapsto \bar k$. We first show that $\alpha$ and $\beta$ are well defined.
+
+Let $x, y \in \Z$ such that $x = y$. Then, since $x = y$, $x = 3^\ell\left(m\right) + p$ and $y = 3^\ell\left(m\right) + p$ for $m, p \in \Z$. Then, $x = y \mod 3^\ell$, which means that $\overline{x} = \overline{y}$ in $\Z/3^\ell\Z$. Consequently, since $x = y$ implies that $\varphi\left(x\right) = \varphi\left(y\right)$, $\alpha$ is well-defined.
+
+Let $\overline{x}, \overline{y} \in \Z/3^\ell\Z$ such that $\overline{x} = \overline{y}$. Then, since $\overline{x} = \overline{y}$, $x = 3^\ell\left(m\right) + p$ and $y = 3^\ell\left(n\right) + p$ for $m, n, p \in \Z$. Then, since $x = 3^\ell\left(m\right) + p = 3\left(3^{\ell-1}m\right) + p$ and $y = 3^\ell\left(n\right) + p = 3\left(3^{\ell-1}n\right) + p$ with $3^{\ell-1}m, 3^{\ell-1}n \in \Z$, $x = y \mod 3$, which means that $\overline{x} = \overline{y}$ in $\Z/3\Z$. Consequently, since $\overline{x} = \overline{y}$ implies that $\varphi\left(\overline{x}\right) = \varphi\left(\overline{y}\right)$, $\beta$ is well-defined.
+
+Let $a, b \in \Z$ and $\overline{c}, \overline{d} \in \Z/3^\ell\Z$. Then, since $\overline{x}\overline{y} = \overline{xy}$:
+\begin{equation}
+    \begin{split}
+        \alpha\left(a\right)\alpha\left(b\right) = \overline{a}\overline{b} & = \overline{ab} = \alpha\left(ab\right) \\
+        \beta\left(\overline{c}\right)\beta\left(\overline{d}\right) = \overline{c}\overline{d} & = \overline{cd} = \beta\left(\overline{cd}\right)
+    \end{split}
+\end{equation}
+Therefore $\alpha$ and $\beta$ are homomorphisms. Since $\beta \circ \alpha \left(x\right) = \overline{x} = \varphi\left(x\right)$, $\beta \circ \alpha = \varphi$, and the homomorphism $\varphi$ factors through $\Z/3^\ell\Z$ for all $\ell \in \N$.
+
+\end{document}

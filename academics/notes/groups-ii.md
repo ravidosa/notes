@@ -1,4 +1,4 @@
-# Groups II
+# More Group Theory
 ## Cayley's Theorem
 operation of group on self transitive and free
 cayley's theorem: finite group is isomorphic to subgroup of permutation group (order $n$ to $S_n$)

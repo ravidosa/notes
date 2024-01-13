@@ -1,4 +1,4 @@
-# Groups I
+# Groups
 ## Laws of Composition
 law of composition: maps $S \times S \to S$
 	product/sum of $a$ and $b$

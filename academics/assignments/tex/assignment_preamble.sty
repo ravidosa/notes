@@ -1,0 +1,43 @@
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{tikz, tikz-cd}
+\usetikzlibrary{decorations.markings}
+\usepackage{xcolor}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xifthen}
+
+\newcounter{pnum}
+\newcommand{\problem}[1][]{
+\stepcounter{pnum} 
+\section*{Exercise \thepnum}
+\ifthenelse{\isempty{#1}}%
+    {}
+    {\textbf{#1}\vspace{5pt}\hrule\vspace{5pt}}
+}
+
+% COMMANDS
+\newcommand{\solution}{{\color{blue} \textsc{\ \\ Solution.\ \ }}}
+\newcommand{\Z}{\mathbb{Z}} % the integers
+\newcommand{\N}{\mathbb{N}} % natural numbers
+\newcommand{\R}{\mathbb{R}} % real numbers
+\newcommand{\C}{\mathbb{C}} % complex numbers
+\newcommand{\Q}{\mathbb{Q}} % rational numbers
+\newcommand{\st}{ \ : \ } % such that
+\newcommand{\inv}{^{-1}} % inverse
+\newcommand{\into}{\hookrightarrow}  % injection
+\newcommand{\onto}{\twoheadrightarrow} % surjection
+\newcommand{\map}[1]{\xrightarrow{#1}} % named map
+\newcommand{\id}{\mathrm{id}} % identity map
+\newcommand{\Frac}{\mathrm{Frac}} % fraction field
+\newcommand{\normal}{\unlhd} % normal subgroup of
+
+\DeclareMathOperator{\img}{im} % image
+\DeclareMathOperator{\sgn}{sgn} % sign of permutation
+\DeclareMathOperator{\ord}{ord} % order of group element
+\DeclareMathOperator{\lcm}{lcm} % least common multiple
+% \DeclareMathOperator{\gcd}{gcd} % greatest common divisor
+\newcommand{\F}{\mathbb{F}} % random field
+\newcommand{\Isom}{\mathrm{Isom}} % isometries group

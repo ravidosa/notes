@@ -12,5 +12,10 @@ ring
 	addition commutative with identity $0$, multiplicative identity $1$
 field
 	ring with both operations associative and commutative, distributive
-	identites not the same
+	identities not the same (additive identity has no multiplicative inverse)
 	$\mathbb{Z} \backslash p\mathbb{Z}$ field for prime $p$
+## Vector Spaces
+vector space over field with addition, scalar multiplication as laws of composition
+	addition commutative
+	multiplication identity, associative
+	multiplication distributes over addition

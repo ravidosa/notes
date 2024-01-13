@@ -1,0 +1,197 @@
+\documentclass{article}
+\usepackage{assignment_preamble}
+
+\title{HW 2}
+\author{Ravi Kini}
+\date{October 17, 2023}
+
+\begin{document}
+
+\maketitle
+
+\problem
+Let $a,b \in G$. Since $a^{-1}\left(ab\right)a = \left(a^{-1}a\right)\left(ba\right) = ba$, $ba$ is the conjugate of $ab$ by $a^{-1}$. We now show that $a^{-1}\left(ab\right)^ka = \left(ba\right)^k$. The case where $k = 1$ was shown above. Assume that this holds for some $k$. Then:
+\begin{equation}
+    \begin{split}
+        a^{-1}\left(ab\right)^{k + 1}a & = a^{-1}\left(ab\right)^{k}\left(ab\right)a \\
+        & = a^{-1}\left(ab\right)^{k}a\left(ba\right) \\
+        & = \left(ba\right)^k\left(ba\right) = \left(ba\right)^{k + 1}
+    \end{split}
+\end{equation}
+By the Principle of Mathematical Induction, $a^{-1}\left(ab\right)^ka = \left(ba\right)^k$ for all $k \in \Z$. Suppose $ab$ is of infinite order. Then, for all $n \in \N$:
+\begin{equation}
+    \begin{split}
+        \left(ab\right)^n & \neq 1 \\
+        a^{-1}\left(ab\right)^na & \neq a^{-1}a = 1 \\
+        \left(ba\right)^n & \neq 1
+    \end{split}
+\end{equation}
+Therefore $ba$ is also of infinite order. Now suppose $ab$ is of finite order, with $n := \ord\left(ab\right)$:
+\begin{equation}
+    \begin{split}
+        \left(ab\right)^n & = 1 \\
+        a^{-1}\left(ab\right)^na & = a^{-1}a = 1 \\
+        \left(ba\right)^n & = 1
+    \end{split}
+\end{equation}
+Since $\left(ab\right)^n = 1 \iff \left(ba\right)^n = 1$, it is impossible for there to be some $n' < n$ such that $\left(ba\right)^{n'} = 1$, as that would imply $\left(ab\right)^{n'} = 1$, contradicting the definition of $n$. Therefore $\ord\left(ba\right) = n$, and $\ord\left(ab\right) = \ord\left(ba\right)$.
+
+\newpage
+
+\problem[\textit{Algebra} (Artin, 2e) Exercise 2.4.10]
+
+Take the group of $2 \times 2$ matrices $G = GL_2\left(\R\right)$. The matrices $A, B$ are elements with order 2:
+\begin{equation}
+    \begin{split}
+        A & = \begin{pmatrix}
+            -1 & 1 \\ 0 & 1 \\
+        \end{pmatrix} \\
+        A^2 & = \begin{pmatrix}
+            -1 & 1 \\ 0 & 1 \\
+        \end{pmatrix} \begin{pmatrix}
+            -1 & 1 \\ 0 & 1 \\
+        \end{pmatrix} = \begin{pmatrix}
+            1 & 0 \\ 0 & 1 \\
+        \end{pmatrix} = 1_{G} \\
+        B & = \begin{pmatrix}
+            -1 & 0 \\ 0 & 1 \\
+        \end{pmatrix} \\
+        B^2 & = \begin{pmatrix}
+            -1 & 0 \\ 0 & 1 \\
+        \end{pmatrix} \begin{pmatrix}
+            -1 & 0 \\ 0 & 1 \\
+        \end{pmatrix} = \begin{pmatrix}
+            1 & 1 \\ 0 & 1 \\
+        \end{pmatrix} = 1_{G} \\
+    \end{split}
+\end{equation}
+However, their product $AB$ is of infinite order, as there is no $n$ such that $\left(AB\right)^n = 1_{G}$. We instead assert that $\left(AB\right)^n = \begin{pmatrix} 1 & n \\ 0 & 1 \\ \end{pmatrix}$. In the case where $n = 1$:
+\begin{equation}
+    \begin{split}
+        AB & = \begin{pmatrix}
+            -1 & 1 \\ 0 & 1 \\
+        \end{pmatrix} \begin{pmatrix}
+            -1 & 0 \\ 0 & 1 \\
+        \end{pmatrix} = \begin{pmatrix}
+            1 & 1 \\ 0 & 1 \\
+        \end{pmatrix} \neq 1_{G}
+    \end{split}
+\end{equation}
+Clearly the assertion holds for $n = 1$. Assume that this assertion holds for some $n$. Then:
+\begin{equation}
+    \begin{split}
+        \left(AB\right)^{n + 1} & = \left(AB\right)^n\left(AB\right) \\
+        & = \begin{pmatrix} 1 & n \\ 0 & 1 \\ \end{pmatrix}\begin{pmatrix} 1 & 1 \\ 0 & 1 \\ \end{pmatrix} \\
+        & = \begin{pmatrix} 1 & n + 1 \\ 0 & 1 \\ \end{pmatrix} \neq 1_{G}
+    \end{split}
+\end{equation}
+By the Principle of Mathematical Induction, $\left(AB\right)^n = \begin{pmatrix} 1 & n \\ 0 & 1 \\ \end{pmatrix} \neq 1_{G}$ for all $n \in \N$. Consequently, $\ord\left(AB\right) = \infty$.
+
+In the case of an abelian group, let $G$ be some abelian group and $a, b \in G$ with $m := \ord\left(a\right), n := \ord\left(b\right)$. We assert that $\left(ab\right)^k = a^kb^k$. Clearly the assertion holds for $k = 1$, when $\left(ab\right)^1 = ab = a^1b^1$. Assume that this assertion holds for some $k$. Then:
+\begin{equation}
+    \begin{split}
+        \left(ab\right)^{k + 1} & = \left(ab\right)^k\left(ab\right) \\
+        & = \left(a^kb^k\right)\left(ab\right) = a^k\left(b^ka\right)b = a^k\left(ab^k\right)b \\
+        & = \left(a^nk\right)\left(b^kb\right) \\
+        & = a^{k+1}b^{k+1}
+    \end{split}
+\end{equation}
+By the Principle of Mathematical Induction, $\left(ab\right)^k = a^kb^k$ for all $k \in \N$. Let there be some $p \in \Z$ such that $m|p$ and $n|p$, or equivalently, $p = m \cdot i = n \cdot j$ for $i, j \in \Z$. Then:
+\begin{equation}
+    \begin{split}
+        \left(ab\right)^p & = a^pb^p \\
+        & = a^{m \cdot i}b^{n \cdot j} \\
+        & = \left(a^m\right)^i\left(b^n\right)^j \\
+        & = 1_G^i1_G^j = 1_G1_G = 1_G
+    \end{split}
+\end{equation}
+Since $\left(ab\right)^p = 1$, $p \in \left\{ n\in \N \st g^n = 1 \right\}$, which means that $p \geq \min\left\{ n\in \N \st g^n = 1 \right\}$. Since $p$ is finite, $p < \infty$, and $\ord\left(ab\right) < \infty$, which means $ab$ has finite order.
+
+\newpage
+
+\problem[\textit{Algebra} (Artin, 2e) Exercise 2.4.5]
+
+Let $G = \langle g \rangle$ be some cyclic group of order $n$, and $H$ a subgroup of $G$. If $H$ is either the trivial subgroup or $G$, both subgroups are evidently cyclic. Suppose $H$ is then a proper subgroup of $G$ that is not the trivial subgroup. As $G$ is $\left\{1, g, g^2, \ldots g^{n-1}\right\}$, $H$, being a subset of $G$ must contain only integral powers of $g$ as well. Let $m$ be the least positive integer such that $g^m \in H$. Let some $g^p \in H$. By the division theorem, there exist $q, r \in \Z$ where $0 \leq r < m$ such that $p = mq + r$. Then:
+\begin{equation}
+    \begin{split}
+        g^m & \in H \\
+        \left(g^{m}\right)^q = g^{mq} & \in H \\
+        \left(g^{mq}\right)^{-1} = g^{-mq} & \in H \\
+        g^{p}g^{-mq} = g^{p-mq} = g^r \in H
+    \end{split}
+\end{equation}
+Since $m$ is the least positive integer such that $g^m \in H$, $r = 0$. Consequently, every element of $H$ can be represented as $g^p = g^{mq} = \left(g^m\right)^q$, which means $H$ is the cyclic subgroup of $G$ generated by $g^m$. In all cases, $H$ is cyclic, which means that every subgroup of a cyclic group is cyclic.
+
+\newpage
+
+\problem[\textit{Algebra} (Artin, 2e) Exercise 2.5.3]
+
+Let $A, B \in U$ such that:
+\begin{equation}
+    \begin{split}
+        A & = \begin{bmatrix}
+            a_A & b_A \\ 0 & d_A \\
+        \end{bmatrix}, B = \begin{bmatrix}
+            a_B & b_B \\ 0 & d_B \\
+        \end{bmatrix} \\
+    \end{split}
+\end{equation}
+Then:
+\begin{equation}
+    \begin{split}
+        AB & = \begin{bmatrix}
+            a_A & b_A \\ 0 & d_A \\
+        \end{bmatrix}\begin{bmatrix}
+            a_B & b_B \\ 0 & d_B \\
+        \end{bmatrix} = \begin{bmatrix}
+            a_Aa_B & a_Ab_B + b_Ad_B \\ 0 & d_B \\
+        \end{bmatrix} \\
+        \phi\left(AB\right) & = \left(a_Aa_B\right)^2 = a_A^2a_B^2 = \phi\left(A\right) \times \phi\left(B\right) \\
+    \end{split}
+\end{equation}
+Therefore $\phi$ is a homomorphism.
+
+The kernel of $\phi$ is $\left\{A \in U \st \phi\left(A\right) = 1\right\}$. Then:
+\begin{equation}
+    \begin{split}
+        \phi\left(A\right) = a^2 & = 1 \\
+        a^2 - 1 = \left(a + 1\right)\left(a - 1\right) & = 0 \\
+        a & = \pm 1
+    \end{split}
+\end{equation}
+Consequently, $\ker\phi = \left\{
+\begin{bmatrix}
+    a & b \\ 0 & d 
+\end{bmatrix} 
+\st a \in \left\{\pm 1\right\}, \ b,d \in \R, \ ad \neq 0
+\right\} \subset U$.
+
+The image of $\phi$ is $\left\{r \in \R \st \exists A \in G \left(\phi\left(A\right) = r\right)\right\}$. Since $r = a^2$ for $a \in \R$, $r \geq 0$. Furthermore, since $ad \neq 0$, $a \neq 0$, so $r > 0$. Consequently, $\img\phi = \left(0, \infty\right)$.
+
+\newpage
+
+\problem[\textit{Algebra} (Artin, 2e) Exercise 2.5.4]
+
+Let $x, y \in \R$. Then:
+\begin{equation}
+    \begin{split}
+        f\left(x + y\right) & = e^{i\left(x + y\right)} \\
+        & = e^{ix + iy} \\
+        & = e^{ix}e^{iy} \\
+        & = f\left(x\right) \times f\left(y\right)
+    \end{split}
+\end{equation}
+Therefore $f$ is a homomorphism.
+
+The kernel of $f$ is $\left\{x \in \R \st f\left(x\right) = 1\right\}$. Then:
+\begin{equation}
+    \begin{split}
+        \phi\left(x\right) = e^{ix} & = \cos x + i\sin x = 1 \\
+        x & = 2\pi n
+    \end{split}
+\end{equation}
+Consequently, $\ker f = 2\pi n$ for $n \in \Z$.
+
+The image of $f$ is $\left\{z \in \C \st \exists x \in \R \left(f\left(x\right) = z\right)\right\}$. Since $z = e^{ix}$ for $x \in \R$, we see that $|z| = |e^{ix}| = 1$. Consequently, $\img f = \left\{z \in C \st |z| = 1\right\}$.
+
+\end{document}
