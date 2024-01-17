@@ -36,4 +36,3 @@ diffusive equilibrium: chemical potential $\mu = -T(\frac{\partial S}{\partial N
 	flow from higher potential to lower potential (diffusion)
 	$dU = T \, dS - P \, dV + \mu \, dN$
 		$dU = T \, dS - P \, dV + \sum_i \mu_i \, dN_i$ (generalized to multiple types of particles)
-	

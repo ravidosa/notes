@@ -71,9 +71,3 @@ heat capacity $C = \frac{Q}{\Delta T}$
 latent heat $L$ heat required to change phase
 	specific latent heat $l = \frac{L}{m}$
 enthalpy $H = U + PV$
-## Rates of Processes
-conduction: $\frac{Q}{\Delta t} = -kA\frac{dT}{dx}$
-	ideal gas thermal conductivity $k = \frac{1}{2}\frac{C_V}{V}\ell\bar{v}$
-viscosity $\frac{|F_x|}{A} = \eta\frac{du_x}{dz}$ in poise
-diffusion
-	fick's law: $J_x = -D\frac{dn}{dx}$
