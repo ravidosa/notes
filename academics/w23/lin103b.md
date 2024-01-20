@@ -9,7 +9,7 @@ W1: Young 192, DIS
 5. [Combinatorial Construction Rules and Principles](../notes/combinatorial-construction-rules-principles.md)
 ## Assignments
 - [x] QUIZ 1 (1/12)
-- [x] HW 1 (1/15)
+- [x] [HW 1](../assignments/pdf/lin103b_hw1.pdf) (1/15)
 - [x] QUIZ 2 (1/17)
 - [x] QUIZ 3 (1/19)
 - [x] HW 2 (1/22)
