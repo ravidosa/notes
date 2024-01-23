@@ -1,4 +1,8 @@
 # Consonants
+IPA has chart has shaded areas to represent "impossible" sounds
+environment introduces variation
+	contrastive sounds
+positional and dialectical variation indicated using diacritics
 ## Stop Consonants
 consonants: speech sounds produced with obstruction in vocal tract
 stops/plosives: complete stop of airflow
@@ -38,6 +42,8 @@ fricatives: partial stop of airflow
 		less noise, some energy goes to voicing
 		more noise energy at high frequencies compared to vowels
 	characterized by noise, high frequency energy
+usually bilabial or labiodental fricatives
+apical (tongue tip) vs laminal (tongue blade)
 ## Sonorants
 approximants: less closure than stops + fricatives, more than vowels
 	no turbulence, similar acoustically to vowels
@@ -51,3 +57,6 @@ nasals/nasal stops: stops produced with lowered velum
 	opens nasal cavity, airflow without oral cavity open
 	almost always voiced, louder + more melodious (with pitch) than voiced stops
 	more complicated acoustics, formant discontinuities/zeros
+## Positional Variation in English
+descriptive rules
+	A is realized as B in environment Y

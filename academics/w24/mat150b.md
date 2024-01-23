@@ -5,3 +5,6 @@ R6: SocSci 80, DIS
 3. [Vector Spaces](../notes/vector-spaces.md)
 6. [Bilinear Forms](../notes/bilinear-forms.md)
 ## Assignments
+- [x] HW 1 (1/24)
+- [ ] MIDTERM (2/16)
+- [ ] FINAL (3/18)

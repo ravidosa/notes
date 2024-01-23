@@ -1,0 +1,182 @@
+\documentclass{article}
+\usepackage{assignment_preamble}
+
+\title{Homework 4}
+\author{Ravi Kini}
+\date{November 2, 2023}
+
+\begin{document}
+
+\maketitle
+
+\problem[\textit{An Introduction to Thermal Physics} (Schroeder, 1e) Exercise 3.19 (extended)]
+\subsection*{Part (a)}
+The reciprocal of the temperature of a two-state paramagnet $\frac{1}{T}$ is:
+\begin{equation}
+    \begin{split}
+        U & = \mu_z B\left(N_{\downarrow} - N_{\uparrow}\right) = \mu_z B\left(N - 2N_{\uparrow}\right) \\
+        N_{\uparrow} & = \frac{N}{2} - \frac{U}{2\mu_z B} \\
+        S & = k_B\ln\Omega = k_B\ln\frac{N!}{N_{\uparrow}!N_{\downarrow}!} \\
+        & = k_B((N\ln N - N) - (N_{\uparrow}\ln N_{\uparrow} - N_{\uparrow}) - (N_{\downarrow}\ln N_{\downarrow} - N_{\downarrow})) \\
+        & = k_B\left(N\ln N - N_{\uparrow}\ln N_{\uparrow} - (N - N_{\uparrow})\ln \left(N - N_{\uparrow}\right)\right) \\
+        \pderiv{S}{N_{\uparrow}} & = -k_B\left(\ln N_{\uparrow} + 1 - \ln \left(N - N_{\uparrow}\right) - 1\right) \\
+        \frac{1}{T} & = -\frac{1}{2\mu_z B}\pderiv{S}{N_{\uparrow}} = \frac{k_B}{2\mu_z B}\ln \frac{N_{\uparrow}}{N - N_{\uparrow}} \\
+        & = \frac{k_B}{2\mu_z B}\ln \frac{\frac{N}{2} - \frac{U}{2\mu_z B}}{\frac{N}{2} + \frac{U}{2\mu_z B}} \\
+        & = \frac{k_B}{2\mu_z B}\ln \frac{N - \frac{U}{\mu_z B}}{N + \frac{U}{\mu_z B}}
+    \end{split}
+\end{equation}
+\subsection*{Part (b)}
+The energy of a two-state paramagnet $U$ is:
+\begin{equation}
+    \begin{split}
+        \frac{1}{T} & = \frac{k_B}{2\mu_z B}\ln \frac{N - \frac{U}{\mu_z B}}{N + \frac{U}{\mu_z B}} \\
+        \frac{N - \frac{U}{\mu_z B}}{N + \frac{U}{\mu_z B}} & = e^{\frac{2\mu_z B}{k_B T}} \\
+        N - \frac{U}{\mu_z B} & = e^{\frac{2\mu_z B}{k_B T}}\left(N + \frac{U}{\mu_z B}\right) \\
+        N\left(1 - e^{\frac{2\mu_z B}{k_B T}}\right) & = \frac{1}{\mu_z B}\left(e^{\frac{2\mu_z B}{k_B T}} + 1\right)U \\
+        U & = N\mu_z B\frac{1 - e^{\frac{2\mu_z B}{k_B T}}}{1 + e^{\frac{2\mu_z B}{k_B T}}}  = -N\mu_z B\tanh\frac{\mu_z B}{k_B T}
+    \end{split}
+\end{equation}
+\subsection*{Part (c)}
+The heat capacity of a two-state paramagnet $C_B$ is:
+\begin{equation}
+    \begin{split}
+        C_B = {\left(\pderiv{U}{T}\right)}_{N,B} & = \pderiv{}{T}-N\mu_z B\tanh\frac{\mu_z B}{k_B T} \\
+        & = \frac{N{\mu}_z^2B^2\mathrm{sech}^2\frac{\mu_z B}{k_B T}}{k_B T^2} \\
+        & = Nk_B\frac{{\left(\frac{\mu_z B}{k_B T}\right)}^2}{\cosh^2\frac{\mu_z B}{k_B T}}
+    \end{split}
+\end{equation}
+\subsection*{Part (d)}
+In the limit where $\mu_z B \ll k_B T$, the magnetic moment $m$ is:
+\begin{equation}
+    \begin{split}
+        m = -\frac{U}{B} & = N\mu_z\tanh\frac{\mu_z B}{k_B T} \\
+        & \approx N\mu_z \cdot \frac{\mu_z B}{k_B T} = \frac{N\mu_z^2B}{k_B T}
+    \end{split}
+\end{equation}
+\begin{center}
+\begin{tikzpicture}
+\begin{axis}[samples=200,xlabel=$T$,ylabel=$\frac{1}{m}$,ytick={0},xtick={0},xmin=0,xmax=3]
+\addplot[color=red,domain=-3:3]{x};
+\end{axis}
+\end{tikzpicture}
+\end{center}
+
+\clearpage
+
+\problem[\textit{An Introduction to Thermal Physics} (Schroeder, 1e) Exercise 3.34]
+\subsection*{Part (a)}
+The entropy of the system $S$ is:
+\begin{equation}
+    \begin{split}
+        \Omega & = {N \choose N_R} \\
+        S = k_B\ln\Omega & = k_B\ln\frac{N!}{N_R!\left(N - N_R\right)!} \\
+        & = k_B\left(N\ln N - N_R\ln N_R - \left(N - N_R\right)\ln\left(N - N_R\right)\right)
+    \end{split}
+\end{equation}
+\subsection*{Part (b)}
+The length of the rubber band $L$ is:
+\begin{equation}
+    \begin{split}
+        L & = \ell\left(N_R - N_L\right) = \ell\left(2N_R - N\right)
+    \end{split}
+\end{equation}
+\subsection*{Part (c)}A
+n analogous thermodynamic identity would be:
+\begin{equation}
+    \begin{split}
+        \diff{U} & = T \, \diff{S} + F \, \diff{L} \\
+    \end{split}
+\end{equation}
+\subsection*{Part (d)}
+The tension $F$ is:
+\begin{equation}
+    \begin{split}
+        F & = \frac{\diff{U} - T \, \diff{S}}{\diff{L}} = -T\pderiv{S}{L} \\
+        & = -T\pderiv{N_R}{L}\pderiv{S}{N_R} = -\frac{T}{2\ell}\pderiv{S}{N_R} \\
+        & = \frac{Tk_B}{2\ell}\left(\ln N_R - \ln\left(N - N_R\right)\right) = \frac{Tk_B}{2\ell}\ln \frac{N_R}{N - N_R} \\
+        & = \frac{Tk_B}{2\ell}\ln \frac{\frac{N}{2} + \frac{L}{2\ell}}{\frac{N}{2} - \frac{L}{2\ell}} = \frac{Tk_B}{2\ell}\ln \frac{N + \frac{L}{\ell}}{N - \frac{L}{\ell}}
+    \end{split}
+\end{equation}
+\subsection*{Part (e)}
+In the limit where $L \ll N\ell$:
+\begin{equation}
+    \begin{split}
+        F & = \frac{Tk_B}{2\ell}\ln \frac{N + \frac{L}{\ell}}{N - \frac{L}{\ell}} = \frac{Tk_B}{2\ell}\ln \frac{1 + \frac{L}{N\ell}}{1 - \frac{L}{N\ell}} \\
+        & = \frac{Tk_B}{2\ell}\left(\ln \left(1 + \frac{L}{N\ell}\right) - \ln\left(1 - \frac{L}{N\ell}\right)\right) \\
+        & \approx \frac{Tk_B}{2\ell}\left(\left(1 + \frac{L}{N\ell}\right) - \left(1 - \frac{L}{N\ell}\right)\right) \\
+        & \approx \frac{Tk_B}{N\ell^2}L
+    \end{split}
+\end{equation}
+Evidently, $F \propto L$.
+\subsection*{Part (f)}
+Since $F \propto T$, increasing the temperature increases the tension for constant $L$. When $F$ is held constant, increasing $T$ decreases $L$, causing the rubber band to shrink.
+\subsection*{Part (g)}
+Rewriting the expression for entropy $S$:
+\begin{equation}
+    \begin{split}
+        S & = k_B\left(N\ln N - N_R\ln N_R - \left(N - N_R\right)\ln\left(N - N_R\right)\right) \\
+        & = k_B\left(N\ln N - \left(\frac{N}{2} + \frac{L}{2\ell}\right)\ln\left(\frac{N}{2} + \frac{L}{2\ell}\right) - \left(\frac{N}{2} - \frac{L}{2\ell}\right)\ln\left(\frac{N}{2} - \frac{L}{2\ell}\right)\right)
+    \end{split}
+\end{equation}
+The stretching can be modelled as adiabatic, so the entropy does not change. Since stretching the rubber band increases $L$ and therefore decreases the component of the entropy calculated in (a), the vibrational entropy must increase, causing the temperature to increase.
+
+\clearpage
+
+\problem[\textit{An Introduction to Thermal Physics} (Schroeder, 1e) Exercise 3.36]
+\subsection*{Part (a)}
+For an Einstein solid where $N, q \gg 1$, the chemical potential $\mu$ is:
+\begin{equation}
+    \begin{split}
+        S = k_B\ln\Omega & \approx k_B\left(\left(q + N\right)\ln\left(q + N\right) - q\ln q - N\ln N\right) \\
+        & \approx k_B\left(q\ln\frac{q + N}{q} + N\ln\frac{q + N}{N}\right) \\
+        \pderiv{S}{N} & = k_B\left(q \cdot \frac{1}{q} \cdot \frac{q}{q + N} + N \cdot -\frac{q}{N^2} \cdot \frac{N}{q + N} + \ln\frac{q + N}{N}\right) \\
+        & = k_B\ln\frac{q + N}{N} \\
+        \mu & = -T{\left(\pderiv{S}{N}\right)}_{U,V} = -k_B T\ln\frac{q + N}{N}
+    \end{split}
+\end{equation}
+\subsection*{Part (b)}
+\begin{equation}
+    \begin{split}
+        \mu & = -k_B T\ln\frac{q + N}{N} = = -k_B T\ln(1 + \frac{q}{N})
+    \end{split}
+\end{equation}
+In the limit where $N \gg q$, $\mu \approx -k_B T \cdot \frac{q}{N} = -\frac{k_B Tq}{N}$. When a particle carrying no energy is added to the system, this means that the entropy increases by approximately $\frac{q}{N} \ll 1$. In the limit where $q \gg N$, $\mu \approx -k_B T\ln\frac{q}{N}$. When a particle carrying no energy is added to the system, this means that the entropy increases by approximately $\ln\frac{q}{N} > 1$. When there are more particles than energy, adding another particle does not significantly change the entropy, but when there is more energy than particles, adding another particle significantly increases the entropy.
+
+\clearpage
+
+\problem[\textit{An Introduction to Thermal Physics} (Schroeder, 1e) Exercise 3.39]
+For an ideal monatomic gas in a two-dimensional universe, temperature $T$, pressure $p$, and chemical potential $\mu$ are:
+\begin{equation}
+    \begin{split}
+        S & = Nk_B\left(\ln\left(\frac{A}{N}\frac{2\pi mU}{Nh^{2}}\right) + 2\right) \\
+        \frac{1}{T} = {\left(\pderiv{S}{U}\right)}_{A,N} & = \frac{Nk_B}{U} \\
+        T & = \frac{U}{Nk_B} \\
+        \frac{p}{T} = {\left(\pderiv{S}{A}\right)}_{U,N} & = \frac{Nk_B}{A} \\
+        p & = \frac{U}{A} \\
+        -\frac{\mu}{T} = {\left(\pderiv{S}{N}\right)}_{U,A} & = k_B\ln\frac{A}{N}\frac{2\pi mU}{Nh^{2}} \\
+        \mu & = -k_B T\ln\frac{A}{N}\frac{2\pi mk_B T}{h^{2}} \\
+    \end{split}
+\end{equation}
+From the formula for $U$, we see that $U = Nk_B T$, which makes sense, as the gas has two degrees of freedom per particle. From the formula for $p$, we see that $pA = U = Nk_B T$, which is analogous to the ideal gas law. The formula for $\mu$ is similar to that of the three dimensional case, with the chemical potential being negative and becoming less negative as density increases.
+
+\clearpage
+
+\problem[\textit{An Introduction to Thermal Physics} (Schroeder, 1e) Exercise 3.20]
+The maximum energy, magnetization, and entropy of a two state paramagnet are $U_{\text{max}} = N\mu_z B, M_{\text{max}} = N\mu_z, S_{\text{max}} = Nk_B\ln 2$. As a fraction of the maximum, the energy, magnetization, and entropy are then:
+\begin{equation}
+    \begin{split}
+        \frac{\mu_z B}{k_B T} & \approx \frac{9.274 \cdot 10^{-24}~\unit{\joule\per\tesla} \cdot 2.06~\unit{\tesla}}{1.381 \cdot 10^{-23}~\unit{\joule\per\kelvin} \cdot 2.2~\unit{\kelvin}} \approx 0.629 \\
+        \frac{U}{U_{\text{max}}} = \frac{U}{N\mu_z B} & = -\tanh\frac{\mu_z B}{k_B T} \approx -0.557 \\
+        \frac{M}{M_{\text{max}}} = \frac{M}{N\mu_z} & = \tanh\frac{\mu_z B}{k_B T} \approx 0.557 \\
+        \frac{S}{S_{\text{max}}} = \frac{S}{Nk_B\ln 2} & = \frac{1}{N\ln 2}\left(N\ln N - \left(\frac{N}{2} - \frac{U}{2\mu_z B}\right)\ln \left(\frac{N}{2} - \frac{U}{2\mu_z B}\right)\right. \\
+        & \left.- \left(\frac{N}{2} + \frac{U}{2\mu_z B}\right)\ln \left(\frac{N}{2} + \frac{U}{2\mu_z B}\right)\right) \\
+        & = \frac{1}{2\ln 2}\left(2\ln N - \left(1 - \frac{U}{N\mu_z B}\right)\left(\ln\frac{N}{2} + \ln \left(1 - \frac{U}{N\mu_z B}\right)\right)\right. \\
+        & \left.- \left(1 + \frac{U}{N\mu_z B}\right)\left(\ln\frac{N}{2} + \ln \left(1 + \frac{U}{N\mu_z B}\right)\right)\right) \\
+        & = \frac{1}{2\ln 2}\left(2\ln 2 - \left(1 - \frac{U}{N\mu_z B}\right)\ln \left(1 - \frac{U}{N\mu_z B}\right)\right. \\
+        & \left.- \left(1 + \frac{U}{N\mu_z B}\right)\ln \left(1 + \frac{U}{N\mu_z B}\right)\right) \\
+        & \approx 0.762
+    \end{split}
+\end{equation}
+To attain $99\%$ of the maximum magnetization, we would need $\tanh\frac{\mu_z B}{k_B T} = 0.99$, which means that $\frac{\mu_z B}{k_B T} = 2.647$. This would require increasing the field strength by a factor of approximately $4.2$, decreasing the temperature by a factor of approximately $4.2$, or some other combination of increasing field strength and decreasing temperature that increases $\frac{\mu_z B}{k_B T}$ by a factor of approximately $4.2$.
+
+\end{document}
