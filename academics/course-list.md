@@ -51,3 +51,16 @@
 [PHY 105C: Continuum Mechanics](./f23/phy105c.md) (Kaloper)
 [PHY 112(L): Thermodynamics & Statistical Mechanics](./f23/phy112.md) (Taufour, Scalettar)
 [PHY 115A: Quantum Mechanics](./f23/phy115a.md) (Mulhearn)
+
+## Winter '24
+### Linguistics
+[LIN 103A: Linguistic Analysis I: Phonetics, Phonology, Morphology](./w24/lin103a.md) (Zellou)
+[LIN 131: Introduction to Syntactic Theory](./w24/lin131.md) (Nykiel)
+[LIN 152: Language Universals & Typology](./w24/lin131.md) (Filipović)
+### Mathematics
+[MAT 148: Discrete Mathematics](./w24/mat148.md) (Li)
+[MAT 150B: Modern Algebra](./w24/mat150b.md) (McDonough)
+[MAT 167: Applied Linear Algebra](./w24/mat167.md) (Puckett)
+### Physics
+[PHY 115B(L): Quantum Mechanics](./w24/phy115b.md) (Carlip, Mulhearn)
+[PHY 130A: Elementary Particle Physics](./w24/phy130a.md) (Mulhearn)
