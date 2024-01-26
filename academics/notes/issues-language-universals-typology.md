@@ -41,3 +41,10 @@ language universals
 	1. more about languages grouped than indicator sorts by, multiple things in common
 	2. check notes
 	3. check notes
+	4. check notes
+	5. wals
+	6. inflectional/fusional - one morpheme added to word indicates grammatical, agglutinative - several morphemes
+	7. axis of fusion - increases with independent meanings per morpheme, axis of synthesis - increases with morphemes per word (analytic low both, polysynthetic high synth, agg/fusional in middle)
+	8. inflectional morpheme on head, dependent, both, or alternate (head, dependent, double, split)
+	
+	2. certain word order, less placement flexibility, less complex inflection = more rigid

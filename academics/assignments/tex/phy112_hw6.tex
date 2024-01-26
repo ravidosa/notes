@@ -1,0 +1,207 @@
+\documentclass{article}
+\usepackage{assignment_preamble}
+
+\title{Homework 5}
+\author{Ravi Kini}
+\date{November 9, 2023}
+
+\begin{document}
+
+\maketitle
+
+\problem
+The rotational modes of a molecule freeze out when $E_j - E_0 = j(j + 1)\epsilon \geq k_BT$. For all of the modes to be frozen out, it is then enough that only $E_1$ be held to this constraint, as the other levels will be frozen out as well by extension. Inspection of the graph shows that freezing out for $\ce{H2}$ begins to occur at about $T = 200 \unit{\kelvin}$; treating that as the relevant temperature, we can estimate the value of $\epsilon$ for $\ce{H2}$.
+\begin{equation}
+    \begin{split}
+        E_0 & = 0\left(0 + 1\right)\epsilon = 0  \\
+        E_1 & = 1\left(1 + 1\right)\epsilon = 2\epsilon \\
+        \epsilon & = \frac{E_1 - E_0}{2} = \frac{kT}{2} \\
+        & = \frac{\left(1.381 \cdot 10^{-23}~\unit{\joule\per\kelvin} \cdot 200~\unit{\kelvin}\right)}{2} \\
+        & \approx 1.381 \cdot 10^{-21}~\unit{\joule} = 0.00862~\unit{eV} \\
+    \end{split}
+\end{equation}
+
+\clearpage
+
+\problem[\textit{An Introduction to Thermal Physics} (Schroeder, 1e) Exercise 6.31]
+For a classical degree of freedom, the partition function $Z$ is:
+\begin{equation}
+    \begin{split}
+        Z = \sum_q e^{-\beta E\left(q\right)} & = \sum_q e^{-\beta c\left|q\right|} \\
+        & = \frac{1}{\Delta q} \sum_q e^{-\beta c\left|q\right|} \Delta q \\
+        & = \frac{1}{\Delta q} \int_{-\infty}^{\infty} e^{-\beta c\left|q\right|} \, \diff{q} \\
+        & = \frac{2}{\Delta q} \int_{0}^{\infty} e^{-\beta cq} \, \diff{q} \\
+        & = \frac{2}{\Delta q \beta c} = C\beta^{-1} \\
+    \end{split}
+\end{equation}
+The average energy $\overline{E}$ is then:
+\begin{equation}
+    \begin{split}
+        \overline{E} & = -\frac{1}{Z}\pderiv{Z}{\beta} \\
+        & = -\frac{\beta}{C} \cdot -\frac{C}{\beta^2} = \beta = k_BT
+    \end{split}
+\end{equation}
+
+\clearpage
+
+\problem[\textit{An Introduction to Thermal Physics} (Schroeder, 1e) Exercise 6.39]
+\subsection*{Part (a)}
+The probability of a nitrogen molecule moving faster than $11~\unit{\kilo\meter\per\second}$ is:
+\begin{equation}
+    \begin{split}
+        x_{\text{min},\ce{N2}} & = \frac{v_{\text{min}}}{v_{\text{max}}} = \frac{v_{\text{min}}}{\sqrt{\frac{2k_BT}{m_{\ce{N2}}}}} \\
+        & = \frac{11000~\unit{\meter\per\second}}{\sqrt{\frac{2\left(1.381 \cdot 10^{-23}~\unit{\joule\per\kelvin} \cdot 1000~\unit{\kelvin}\right)}{4.652 \cdot 10^{-26}~\unit{\kilo\gram}}}} \approx 14.276 \\
+        \mathcal{D}_{N_2}(v \geq 11000~\unit{\meter\per\second}) & = \frac{4}{\sqrt{\pi}}\int_{x_{\text{min}}}^{\infty} x^2 e^{-x^2} \, \diff{x} \\
+        & = \frac{4}{\sqrt{\pi}}\int_{14.276}^{\infty} x^2 e^{-x^2} \, \diff{x} \approx 4.978 \cdot 10^{-88} \\
+    \end{split}
+\end{equation}
+\subsection*{Part (b)}
+The probability of a hydrogen molecule moving faster than $11~\unit{\kilo\meter\per\second}$ is:
+\begin{equation}
+    \begin{split}
+        x_{\text{min},\ce{H2}} & = \frac{v_{\text{min}}}{v_{\text{max}}} = \frac{v_{\text{min}}}{\sqrt{\frac{2k_BT}{m_{\ce{H2}}}}} \\
+        & = \frac{11000~\unit{\meter\per\second}}{\sqrt{\frac{2\left(1.381 \cdot 10^{-23}~\unit{\joule\per\kelvin} \cdot 1000~\unit{\kelvin}\right)}{3.348 \cdot 10^{-27}~\unit{\kilo\gram}}}} \approx 3.830 \\
+        \mathcal{D}_{N_2}(v \geq 11000~\unit{\meter\per\second}) & = \frac{4}{\sqrt{\pi}}\int_{x_{\text{min}}}^{\infty} x^2 e^{-x^2} \, \diff{x} \\
+        & = \frac{4}{\sqrt{\pi}}\int_{3.830}^{\infty} x^2 e^{-x^2} \, \diff{x} \approx 1.905 \cdot 10^{-6} \\
+    \end{split}
+\end{equation}
+The probability of a helium atom moving faster than $11~\unit{\kilo\meter\per\second}$ is:
+\begin{equation}
+    \begin{split}
+        x_{\text{min},\ce{He}} & = \frac{v_{\text{min}}}{v_{\text{max}}} = \frac{v_{\text{min}}}{\sqrt{\frac{2k_BT}{m_{\ce{He}}}}} \\
+        & = \frac{11000~\unit{\meter\per\second}}{\sqrt{\frac{2\left(1.381 \cdot 10^{-23}~\unit{\joule\per\kelvin} \cdot 1000~\unit{\kelvin}\right)}{6.646 \cdot 10^{-27}~\unit{\kilo\gram}}}} \approx 5.396 \\
+        \mathcal{D}_{N_2}(v \geq 11000~\unit{\meter\per\second}) & = \frac{4}{\sqrt{\pi}}\int_{x_{\text{min}}}^{\infty} x^2 e^{-x^2} \, \diff{x} \\
+        & = \frac{4}{\sqrt{\pi}}\int_{3.830}^{\infty} x^2 e^{-x^2} \, \diff{x} \approx 1.403 \cdot 10^{-12} \\
+    \end{split}
+\end{equation}
+As the earth has a lifetime on the order of $10^{17}~\unit{\second}$, it is highly unlikely that a nitrogen molecule will escape Earth's gravity, but far more likely that hydrogen and helium molecules would.
+\subsection*{Part (c)}
+The probability of a nitrogen molecule moving faster than $2.4~\unit{\kilo\meter\per\second}$ is:
+\begin{equation}
+    \begin{split}
+        x_{\text{min},\ce{N2}} & = \frac{v_{\text{min}}}{v_{\text{max}}} = \frac{v_{\text{min}}}{\sqrt{\frac{2k_BT}{m_{\ce{N2}}}}} \\
+        & = \frac{2400~\unit{\meter\per\second}}{\sqrt{\frac{2\left(1.381 \cdot 10^{-23}~\unit{\joule\per\kelvin} \cdot 1000~\unit{\kelvin}\right)}{4.652 \cdot 10^{-26}~\unit{\kilo\gram}}}} \approx 3.115 \\
+        \mathcal{D}_{N_2}(v \geq 2400~\unit{\meter\per\second}) & = \frac{4}{\sqrt{\pi}}\int_{x_{\text{min}}}^{\infty} x^2 e^{-x^2} \, \diff{x} \\
+        & = \frac{4}{\sqrt{\pi}}\int_{3.115}^{\infty} x^2 e^{-x^2} \, \diff{x} \approx 2.257 \cdot 10^{-4} \\
+    \end{split}
+\end{equation}
+Assuming a comparable lifetime to the Earth, it is very likely that even nitrogen molecules would escape the moon's gravity, even more than hydrogen and helium molecules on Earth. Consequently, all of the molecules that would have made up the atmosphere escape due to the moon's weak gravity, leaving the moon with no atmosphere.
+
+\clearpage
+
+\problem[\textit{An Introduction to Thermal Physics} (Schroeder, 1e) Exercise 6.42]
+\subsection*{Part (a)}
+The Helmholtz free energy of a single harmonic oscillator $F_1$ is:
+\begin{equation}
+    \begin{split}
+        F_1 & = -k_BT\ln Z = -k_BT\ln \frac{1}{1 - e^{-\beta\epsilon}} \\
+        & = k_BT\ln\left(1 - e^{-\beta\epsilon}\right) = k_BT\ln\left(1 - e^{-\frac{\epsilon}{k_BT}}\right) \\
+    \end{split}
+\end{equation}
+The Helmholtz free energy of a system of $N$ harmonic oscillators $F$ is:
+\begin{equation}
+    \begin{split}
+        F = NF_1 & = Nk_BT\ln\left(1 - e^{-\frac{\epsilon}{k_BT}}\right) \\
+    \end{split}
+\end{equation}
+\subsection*{Part (b)}
+The entropy of the system $S$ is:
+\begin{equation}
+    \begin{split}
+        S & = -{\left(\pderiv{F}{T}\right)}_{V,N} \\
+        & = -Nk_B\left(\ln\left(1 - e^{-\frac{\epsilon}{k_BT}}\right) - \frac{\epsilon e^{-\frac{\epsilon}{k_BT}}}{k_BT(1 - e^{-\frac{\epsilon}{k_BT}})}\right)
+    \end{split}
+\end{equation}
+
+\clearpage
+
+\problem[\textit{An Introduction to Thermal Physics} (Schroeder, 1e) Exercise 6.44 (expanded)]
+\subsection*{Part (a)}
+The Helmholtz free energy $F$ is:
+\begin{equation}
+    \begin{split}
+        Z & = \frac{1}{N!}Z_1^N \\
+        F & = -k_BT\ln Z = -k_BT\left(N\ln Z_1 - \ln N!\right) \\
+        & = -k_BT\left(N\ln Z_1 - N\ln N + N\right) = -Nk_BT\left(\ln\frac{Z_1}{N} + 1\right)
+    \end{split}
+\end{equation}
+\subsection*{Part (b)}
+The chemical potential $\mu$ is:
+\begin{equation}
+    \begin{split}
+        \mu & = {\left(\frac{\partial F}{\partial N}\right)}_{T,V} \\
+        & = -k_BT\left(\left(\ln\frac{Z_1}{N} + 1\right) + N\left(-\frac{Z_1}{N^2} \cdot \frac{1}{\frac{Z_1}{N}}\right)\right) \\
+        & = -k_BT\ln\frac{Z_1}{N}
+    \end{split}
+\end{equation}
+\subsection*{Part (c)}
+The probability of a single particle being in a selected state with energy $\epsilon$ is $p = \frac{e^{-\frac{\epsilon}{k_BT}}}{Z_1}$. Since the system is dilute, the number of available states at a given energy far exceeds the number of particles, so it is unlikely two particles will be in the same selected state and can be treated as distinguishable and independent, with $\overline{n} = Np$. Consequently:
+\begin{equation}
+    \begin{split}
+        \overline{n} = Np & = N\frac{e^{-\frac{\epsilon}{k_BT}}}{Z_1} \\
+        & = \frac{Z_1}{e^{-\frac{\mu}{k_BT}}}\frac{e^{-\frac{\epsilon}{k_BT}}}{Z_1} \\
+        & = e^{-\frac{\epsilon - \mu}{k_BT}}
+    \end{split}
+\end{equation}
+
+\clearpage
+
+\problem[\textit{An Introduction to Thermal Physics} (Schroeder, 1e) Exercise 6.47]
+Translational motion freezes out when $E_2 - E_1 \geq k_BT$. For a nitrogran molecule:
+\begin{equation}
+    \begin{split}
+        E_2 - E_1 & \geq k_BT \\
+        T & \leq \frac{(6.63 \cdot 10^{-34}~\unit{\joule\second})^2}{8(4.652 \cdot 10^{-26}~\unit{\kilo\gram})(0.01~\unit{\meter})^2(1.381 \cdot 10^{-23}~\unit{\joule\per\kelvin})}(2^2 - 1^2) \\
+        & \leq 2.566 \cdot 10^{-15}~\unit{\kelvin}
+    \end{split}
+\end{equation}
+Translational motion would freeze out around $T = 2.566 \cdot 10^{-15}~\unit{\kelvin}$.
+
+\clearpage
+
+\problem[\textit{An Introduction to Thermal Physics} (Schroeder, 1e) Exercise 6.48]
+\subsection*{Part (a)}
+Depending on if the atoms are the same or different, let $c = 1, 2$, respectively. The entropy of a diatomic gas $S$ is:
+\begin{equation}
+    \begin{split}
+        F_{int} & = -Nk_BT\ln Z_{int} = -k_BT\ln \left(Z_eZ_Z{\text{rot}}\right) \\
+        & = -Nk_BT\ln \left(Z_e\frac{kT}{c\epsilon}\right) \\
+        {\left(\pderiv{F_{int}}{T}\right)}_{V,N} & = -Nk_B\left(\ln\left(Z_e\frac{kT}{c\epsilon}\right) + TZ_e\frac{k}{c\epsilon}\frac{1} {Z_e\frac{kT}{c\epsilon}}\right) \\
+        & = -Nk_B\left(\ln \left(Z_eZ_Z{\text{rot}}\right) + 1\right) \\
+        S & = Nk_B\left(\ln\frac{V}{Nv_Q} + \frac{5}{2}\right) - {\left(\pderiv{F_{int}}{T}\right)}_{N,V} \\
+        & = Nk_B\left(\ln\frac{VZ_eZ_Z{\text{rot}}}{Nv_Q} + \frac{7}{2}\right)
+    \end{split}
+\end{equation}
+\subsection*{Part (b)}
+The entropy of a mole of oxygen at room temperature and atmospheric pressure $S$ is:
+\begin{equation}
+    \begin{split}
+        Z_{\text{rot}} & = \frac{kT}{2\epsilon} \\
+        & = \frac{\left(8.617 \cdot 10^{-5}~\unit{eV\per\kelvin} \cdot 298~\unit{\kelvin}\right)}{2\left(0.00018~\unit{eV}\right)} \approx 71.329 \\
+        \frac{V}{N} & = \frac{k_BT}{P} \\
+        & = \frac{(1.381 \cdot 10^{-23}~\unit{\joule\per\kelvin} \cdot 298~\unit{\kelvin})}{1.01 \cdot 10^5~\unit{\pascal}} \approx 4.074 \cdot 10^{-26}~\unit{\meter\cubed} \\
+        v_Q & = {\left(\frac{h^2}{2\pi mk_BT}\right)}^{\frac{3}{2}} \\
+        & = {\left(\frac{{\left(6.63 \cdot 10^{-34}~\unit{\joule\second}\right)}^2}{2\pi (5.313 \cdot 10^{-26}~\unit{\kilogram})(1.381 \cdot 10^{-23}~\unit{\joule\per\kelvin} \cdot 298~\unit{\kelvin})}\right)}^{\frac{3}{2}} \approx 5.724 \cdot 10^{-33}~\unit{\meter\cubed} \\
+        S_{\ce{O2}} & = Nk_B(\ln\frac{VZ_eZ_{\text{rot}}}{Nv_Q} + \frac{7}{2}) \\
+        & = \left(6.022 \cdot 10^{23}~\unit{\joule\second}\right)\left(1.381 \cdot 10^{-23}~\unit{\joule\per\kelvin}\right)\left(\ln(\frac{4.074 \cdot 10^{-26}~\unit{\meter\cubed}\cdot 3 \cdot 71.329}{5.724 \cdot 10^{-33}~\unit{\meter\cubed}}\right) + \frac{7}{2}) \\
+        & \approx 204.949~\unit{\frac{\joule}{\kelvin}}
+    \end{split}
+\end{equation}
+The calculated value is very close to the measured value of $205.14~\unit{\frac{\joule}{\kelvin}}$.
+
+\clearpage
+
+\problem[\textit{An Introduction to Thermal Physics} (Schroeder, 1e) Exercise 6.52]
+The partition function of a single highly relativistic particle $Z_1$ is:
+\begin{equation}
+    \begin{split}
+        \lambda_n & = \frac{2L}{n} \\
+        p_n = \frac{h}{\lambda_n} & = \frac{hn}{2L} \\
+        E_n = p_nc = \frac{hnc}{2L} \\
+        Z_1 = \sum_n e^{-\frac{E_n}{k_BT}} & = \sum_n e^{-\frac{hnc}{2Lk_BT}} \\
+        & = \int_0^{\infty} e^{-\frac{hnc}{2Lk_BT}} \, \diff{n} \\
+        & = \frac{2Lk_BT}{hc}
+    \end{split}
+\end{equation}
+
+\end{document}
