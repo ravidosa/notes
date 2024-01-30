@@ -7,6 +7,6 @@ R6: SocSci 80, DIS
 6. [Bilinear Forms](../notes/bilinear-forms.md)
 ## Assignments
 - [x] HW 1 (1/24)
-- [ ] HW 2 (1/31)
+- [x] HW 2 (1/31)
 - [ ] MIDTERM (2/16)
 - [ ] FINAL (3/18)

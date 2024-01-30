@@ -1,4 +1,8 @@
 # Vowels
+syllable: grouping of segments
+	syllable nucleus: open articulation
+	syllabic consonants: onset before, coda after
+	stress: prominent, longer, higher-pitched
 ## Vowel Acoustics and Articulation
 speech sounds produced without obstruction in vocal tract
 differentiated by location of tongue in mouth
@@ -41,3 +45,7 @@ both formants (peaks in spectral envelope) and harmonics (individual components)
 glottal source spectrum
 	spectral envelope inferred from relative power of harmonics, vowel identification
 		easier with widely distributed frequency components
+## Tones
+intonation used in all languages
+marked with tone letters
+## Positional Variation in English  Vowels

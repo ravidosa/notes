@@ -57,6 +57,6 @@ nasals/nasal stops: stops produced with lowered velum
 	opens nasal cavity, airflow without oral cavity open
 	almost always voiced, louder + more melodious (with pitch) than voiced stops
 	more complicated acoustics, formant discontinuities/zeros
-## Positional Variation in English
+## Positional Variation in English Consonants
 descriptive rules
 	A is realized as B in environment Y

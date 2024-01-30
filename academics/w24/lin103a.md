@@ -4,7 +4,8 @@ R8: SocSci 80, DIS
 ## Notes
 1. [The Vocal Tract](../notes/vocal-tract.md)
 2. [Basics of Articulation](../notes/basics-articulation.md)
-3. [Consonants](../notes/consonants.md)
+3. [A Tour of the Consonants](../notes/consonants.md)
+4. [A Map of the Vowels](../notes/vowels.md)
 ## Assignments
 - [x] QUIZ 1 (1/13)
 - [x] QUIZ 2 (1/20)
