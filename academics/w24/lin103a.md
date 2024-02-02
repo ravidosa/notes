@@ -10,7 +10,7 @@ R8: SocSci 80, DIS
 - [x] QUIZ 1 (1/13)
 - [x] QUIZ 2 (1/20)
 - [x] QUIZ 3 (1/27)
-- [ ] MIDTERM 1 (2/3)
+- [x] MIDTERM 1 (2/3)
 - [ ] QUIZ 4 (2/10)
 - [ ] QUIZ 5 (2/17)
 - [ ] QUIZ 6 (2/23)

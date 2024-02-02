@@ -8,5 +8,6 @@ R6: SocSci 80, DIS
 ## Assignments
 - [x] HW 1 (1/24)
 - [x] HW 2 (1/31)
+- [ ] HW 3 (2/7)
 - [ ] MIDTERM (2/16)
 - [ ] FINAL (3/18)
