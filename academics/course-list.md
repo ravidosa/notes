@@ -56,7 +56,7 @@
 ### Linguistics
 [LIN 103A: Linguistic Analysis I: Phonetics, Phonology, Morphology](./w24/lin103a.md) (Zellou)
 [LIN 131: Introduction to Syntactic Theory](./w24/lin131.md) (Nykiel)
-[LIN 152: Language Universals & Typology](./w24/lin131.md) (Filipović)
+[LIN 152: Language Universals & Typology](./w24/lin152.md) (Filipović)
 ### Mathematics
 [MAT 148: Discrete Mathematics](./w24/mat148.md) (Li)
 [MAT 150B: Modern Algebra](./w24/mat150b.md) (McDonough)

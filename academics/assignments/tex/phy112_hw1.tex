@@ -10,7 +10,7 @@
 \maketitle
 
 \problem[\textit{An Introduction to Thermal Physics} (Schroeder,  1e) Exercise 1.16, 1.40]
-\subsection*{Part (a)}
+\subproblem{(a)}
 We consider a horizontal slab of air with thickness $\diff{z}$.
 
 \begin{center}
@@ -44,7 +44,7 @@ Balancing forces on the slab:
         \deriv{p}{z} & = -\rho g
     \end{split}
 \end{equation}
-\subsection*{Part (b)}
+\subproblem{(b)}
 Assuming the dry air can be treated as an ideal gas, equating the mole fraction and volume fraction:
 \begin{equation}
     \begin{split}
@@ -55,7 +55,7 @@ Assuming the dry air can be treated as an ideal gas, equating the mole fraction 
     \end{split}
 \end{equation}
 One mole of dry air has a mass of $28.969722 \unit{\gram}$. One molecule of dry air then has a mass of $\frac{m_{\text{air}}}{N_A} = 4.810536 \cdot 10^{-26}~\unit{\kilo\gram}$.
-\subsection*{Part (c)}
+\subproblem{(c)}
 Using the ideal gas law:
 \begin{equation}
     \begin{split}
@@ -64,7 +64,7 @@ Using the ideal gas law:
         \deriv{p}{z} = -\rho g & = -\frac{mpg}{k_B T}
     \end{split}
 \end{equation}
-\subsection*{Part (d)}
+\subproblem{(d)}
 Solving to find the differential equation of pressure as a function of height:
 \begin{equation}
     \begin{split}
@@ -77,7 +77,7 @@ Solving to find the differential equation of pressure as a function of height:
         \rho = \frac{mp}{k_B T} & = p\left(0\right)\frac{m}{k_B T}e^{-\frac{mgz}{k_B T}}
     \end{split}
 \end{equation}
-\subsection*{Part (e)}
+\subproblem{(e)}
 \begin{equation}
     \begin{split}
         p(1430) & = p(0)e^{-\frac{mgz}{k_BT}} \\
@@ -102,7 +102,7 @@ Mt. Whitney (elevation $z \approx 4420~\unit{\meter}$) has an air pressure of $0
     \end{split}
 \end{equation}
 Mt. Everest (elevation $z \approx 8840~\unit{\meter}$) has an air pressure of $0.365620079068~\unit{atm}$.
-\subsection*{Part (f)}
+\subproblem{(f)}
 Using the ideal gas law:
 \begin{equation}
     \begin{split}
@@ -121,7 +121,7 @@ Since the gas expands adiabatically:
         \deriv{T}{p} & = \frac{2}{f + 2}\frac{T}{p}
     \end{split}
 \end{equation}
-\subsection*{Part (g)}
+\subproblem{(g)}
 \begin{equation}
     \begin{split}
         \diff{T} & = \frac{2}{f + 2}\frac{T}{p} \, \diff{p} = -\frac{2}{f + 2}\frac{T}{p}\frac{mpg}{k_B T} \, \diff{z} = -\frac{2}{f + 2}\frac{mg}{k_B} \, \diff{z} \\
@@ -140,7 +140,7 @@ Water molecules have three translational degrees of freedom corresponding to mov
 \clearpage
 
 \problem[\textit{An Introduction to Thermal Physics} (Schroeder, 1e) Exercise 1.16]
-\subsection*{Part (a)}
+\subproblem{(a)}
 The gas is ideal and monatomic, originally at a temperature $T_i$ and pressure $p_i$, and is compressed quasistatically to half its original volume and a final temperature $T_f$ such that at each instant, $p = AV^3$ for constant $A$. The $p$-$V$ diagram is then:
 \begin{center}
     \begin{tikzpicture}
@@ -152,7 +152,7 @@ The gas is ideal and monatomic, originally at a temperature $T_i$ and pressure $
         \end{axis}
     \end{tikzpicture}
 \end{center}
-\subsection*{Part (b)}
+\subproblem{(b)}
 Using the ideal gas law:
 \begin{equation}
     \begin{split}
@@ -161,7 +161,7 @@ Using the ideal gas law:
         T_f & = \frac{1}{16}T_i
     \end{split}
 \end{equation}
-\subsection*{Part (c)}
+\subproblem{(c)}
 Using the fact that the compression is quasistatic, the work done $W$ is:
 \begin{equation}
     \begin{split}
@@ -170,21 +170,21 @@ Using the fact that the compression is quasistatic, the work done $W$ is:
         & = \left.-\frac{AV^4}{4}\right\vert_{V_i}^{\frac{1}{2}V_i} = \frac{15A}{64}V_i^4 = \frac{15}{64}Nk_B T_i
     \end{split}
 \end{equation}
-\subsection*{Part (d)}
+\subproblem{(d)}
 The change in energy of the gas $\diff{U}$ is:
 \begin{equation}
     \begin{split}
         \diff{U} & = \frac{f}{2}Nk_B \, \diff{T} = -\frac{45}{32}Nk_B T_i
     \end{split}
 \end{equation}
-\subsection*{Part (e)}
+\subproblem{(e)}
 The heat transferred from the gas to the environment $Q$ is:
 \begin{equation}
     \begin{split}
         Q = \diff{U} - W & = -\frac{45}{32}Nk_B T_i - \frac{15}{64}Nk_B T_i = -\frac{105}{64}Nk_B T_i
     \end{split}
 \end{equation}
-\subsection*{Part (f)}
+\subproblem{(f)}
 Heat was lost, and the temperature was not kept constant, so the process described is neither adiabatic nor isothermal.
 
 \end{document}

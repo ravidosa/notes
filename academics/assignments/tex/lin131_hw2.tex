@@ -1,0 +1,102 @@
+\documentclass{article}
+\usepackage{assignment_preamble}
+
+\title{Homework 2}
+\author{Ravi Kini}
+\date{January 21, 2024}
+
+\begin{document}
+
+\maketitle
+
+\problem[\textit{Syntactic Constructions in English} (Kim and Michaelis, 1e) Exercise 2.1 (partial)]
+\subproblem{(a)}
+Semantically, \textit{well} does not seem to refer to anything. Morphologically, \textit{well} can take plural marking to form \textit{wells}. Syntactically, \textit{well} occurs in the following environment:
+\begin{exe}
+    \ex {He treats John very well.}
+\end{exe}
+The syntactic function of \textit{well} is the most reliable criterion, allowing us to determine it is an adjective.
+\subproblem{(c)}
+Semantically, \textit{well} refers to an object. Morphologically, \textit{well} can take plural marking to form \textit{wells}. Syntactically, \textit{well} occurs in the following environment:
+\begin{exe}
+    \ex {They have no well.}
+\end{exe}
+The syntactic function of \textit{well} is the most reliable criterion, allowing us to determine it is a noun.
+\subproblem{(e)}
+Semantically, \textit{Google} refers to an entity. Morphologically, \textit{Google} can take possessive marking to form \textit{Google's}. Syntactically, \textit{Google} occurs in the following environment:
+\begin{exe}
+    \ex {Where is Google's office?}
+\end{exe}
+The syntactic function of \textit{Google} is the most reliable criterion, allowing us to determine it is a noun.
+\subproblem{(g)}
+Semantically, \textit{for} introduces a clause. Morphologically, \textit{for} cannot take any marking. Syntactically, \textit{for} introduces a complement clause. Syntactically, \textit{for} occurs in the following environment:
+\begin{exe}
+    \ex {All you want is for nothing.}
+\end{exe}
+The syntactic function of \textit{for} is the most reliable criterion, allowing us to determine it is a complementizer.
+\clearpage
+
+\problem[\textit{Syntactic Constructions in English} (Kim and Michaelis, 1e) Exercise 2.4 (partial)]
+\subproblem{(ii)}
+\begin{exe}
+    \ex[*] {It was down my dinner invitation that Dana turned.}
+    \ex {It was down a side road that Dana turned.}
+    \ex[*] {What did Dana turn? Down my dinner invitation.}
+    \ex {What did Dana turn? Down a side road.}
+\end{exe}
+The italicized part in (b) forms a constituent, but (a) does not.
+\begin{center}
+\Tree [.S [.NP [.N Dana ]] [.VP [.V turned ] [.PP [.P down ] [.NP [.D a ] [\qroof{side road}.NP ]]]]]
+\Tree [.S [.NP [.N Dana ]] [.VP [.VP [.V turned ] [.Part down ]] [.NP [.D my ] [\qroof{dinner invitation}.NP ]]]]
+\end{center}
+\subproblem{(iii)}
+\begin{exe}
+    \ex {It was a book about Construction Grammar that he pointed at.}
+    \ex[*] {It was a stranger about Construction Grammar that he talked to.}
+    \ex[*] {It was a stranger about Construction Grammar that he talked with.}
+    \ex {What did he point at? A book about Construction Grammar.}
+    \ex[*] {Who did he talk to? A stranger about Construction Grammar.}
+    \ex[*] {Who did he talk with? A stranger about Construction Grammar.}
+\end{exe}
+The italicized part in (a) forms a constituent, but (b) and (c) do not.
+\begin{center}
+    \Tree [.S [.NP [.N He ]] [.VP [.V pointed ] [.PP [.P at ] [.NP [.D a ] [\qroof{book about Construction Grammar}.NP ]]] ]]
+    \Tree [.S [.NP [.N He ]] [.VP [.V talked ] [.PP [.P with ] [.NP [.D a ] [.N stranger ]]] [.CP [.C about ] [.NP [\qroof{Construction Grammar}.N ]]] ]]
+    \Tree [.S [.NP [.N He ]] [.VP [.V talked ] [.PP [.P to ] [.NP [.D a ] [.N stranger ]]] [.CP [.C about ] [.NP [\qroof{Construction Grammar}.N ]]] ]]
+\end{center}
+\clearpage
+
+\problem[\textit{Syntactic Constructions in English} (Kim and Michaelis, 1e) Exercise 2.8 (partial)]
+\subproblem{(a)}
+\begin{center}
+    \Tree [.S [.NP [.N I ]] [.VP [.V saw ] [.NP [.D the ] [.N film ]] [.PP [.P with ] [.N Beyonce ]]]]
+    \Tree [.S [.NP [.N I ]] [.VP [.V saw ] [.NP [.D the ] [.NP [.N film ] [.PP [.P with ] [.N Beyonce ]]] ]]]
+\end{center}
+\clearpage
+
+\problem[\textit{Syntactic Constructions in English} (Kim and Michaelis, 1e) Exercise 2.9 (partial)]
+\subproblem{(a)}
+\textit{shooting the breeze} is idiomatic, as it can be inflected but does not allow internal modification or passivization.
+\begin{exe}
+    \ex {Two guys from Texas shot the breeze.}
+\end{exe}
+\begin{center}
+    \Tree [.S [.NP [.A Two ] [.NP [.N guys ] [.PP [.P from ] [.N Texas ]] ]] [.VP [.V were ] [.VP[=chat] [.V shooting ] [\qroof{the breeze}.NP ]]]]
+\end{center}
+\subproblem{(c)}
+\textit{at large} is fixed, as it allows neither inflection, internal modification, nor passivization.
+\begin{exe}
+    \ex[*] {The suspect is still at larger}
+\end{exe}
+\begin{center}
+    \Tree [.S [.NP [.D The ] [.N suspect ]] [.VP [.V is ] [.AP [.Adv still ] [\qroof{at large}.A ]]]]
+\end{center}
+\subproblem{(d)}
+\textit{try ... on} is a verb-particle complex, as the particle does not form a constituent with the object:
+\begin{exe}
+    \ex[*] {It was the boots on that I tried.}
+\end{exe}
+\begin{center}
+    \Tree [.S [.VP [.V Let ] [.NP [.N me ] ] [.VP [.V try ] [.NP [.D the ] [.N boots ]] [.Part on ]]]]
+\end{center}
+\end{document}

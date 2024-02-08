@@ -18,6 +18,7 @@
 \sisetup{per-mode = symbol}
 \usepackage{mhchem}
 \usepackage{gb4e}
+\usepackage{qtree}
 \noautomath
 
 \newcounter{pnum}
@@ -30,6 +31,9 @@
 }
 \newcommand{\skipproblem}{
     \stepcounter{pnum}
+}
+\newcommand{\subproblem}[1]{
+\subsection*{Part #1}
 }
 \newcommand{\repository}[1]{
 Code available on \href{#1}{Github}.\vspace{5pt}\hrule\vspace{5pt}

@@ -23,7 +23,7 @@ Evidently, every element in $\overline{G}$ can be expressed as $\overline{g}_1\o
 \clearpage
 
 \problem[\textit{Algebra} (Artin, 2e) Exercise 2.12.2 (partial)]
-\subsection*{Part (a)}
+\subproblem{(a)}
 Evidently, the identity element is in $H$, as it is the element of $H$ where $a, b, c = 0$. We then compute the product of two arbitrary elements of $H$:
 \begin{equation}
     \begin{split}
@@ -51,7 +51,7 @@ Evidently, the identity element is in $H$, as it is the element of $H$ where $a,
     \end{split}
 \end{equation}
 From the above computation, the group exhibits closure, as the product is the element of $H$ where $a' = x + a, b' = y + az + b, c' = z + c$. From the above computation, the group has inverses, as when $x = -a, y = ac - b, z = -c$, the product is the identity. Since $H$ satisfies the identity, closure, and inverse properties, $H \leq GL_3\left(\mathbb{F}\right)$.
-\subsection*{Part (b)}
+\subproblem{(b)}
 We compute the following product:
 \begin{equation}
     \begin{split}
@@ -105,13 +105,13 @@ We compute the following product:
     \end{split}
 \end{equation}
 Evidently, for arbitrary $h \in H$ and $k \in K$, $hkh^{-1} \in K$, so $K \normal H$.
-\subsection*{Part (c)}
+\subproblem{(c)}
 Let $A = \begin{bmatrix} 1 & a_1 & a_2 \\ 0 & 1 & a_3 \\ 0 & 0 & 1\end{bmatrix}, B = \begin{bmatrix} 1 & b_1 & b_2 \\ 0 & 1 & b_3 \\ 0 & 0 & 1\end{bmatrix} \in H$. From the computation done in (b), we see that $A$ and $B$ are in the same coset of $K$ when $a_1 = b_1$ and $a_3 = b_3$. We can then construct the surjective homomorphism mapping $h = \begin{bmatrix} 1 & h_1 & h_2 \\ 0 & 1 & h_3 \\ 0 & 0 & 1\end{bmatrix} \in H$ to $\overline{h} = \overline{\begin{bmatrix} 1 & h_1 & 0 \\ 0 & 1 & h_3 \\ 0 & 0 & 1\end{bmatrix}} \in \overline{H}$. Evidently, $K$ is the kernel of this homomorphism, as it maps to the identity matrix.
 
 \clearpage
 
 \problem
-\subsection*{Part (a)}
+\subproblem{(a)}
 Let the Klein four group $V = \left\{1, a, b, ab\right\} = \langle a,b \st a^2 = b^2 = \left[a,b\right] = 1\rangle \cong C_2 \times C_2$. Let the subgroup $N = \left\{ e, \left(1~2\right)\left(3~4\right), \left(1~3\right)\left(2~4\right), \left(1~4\right)\left(2~3\right)\right\}$ in $S_4$. We construct the bijective mapping $\varphi : V \to N$ where $1 \to e$, $a \to \left(1~2\right)\left(3~4\right)$, $b \to \left(1~3\right)\left(2~4\right)$, $ab \to \left(1~4\right)\left(2~3\right)$. To show that this is a homomorphism, we construct Cayley tables:
 \begin{center}
 \begin{tabular}{|c||c|c|c|c|}
@@ -148,9 +148,9 @@ Let the Klein four group $V = \left\{1, a, b, ab\right\} = \langle a,b \st a^2 =
 \end{tabular}
 \end{center}
 By inspecting the Cayley tables, we see that $\varphi\left(x\right)\varphi\left(y\right) = \varphi\left(xy\right)$ for all $x, y \in V$. As $\varphi$ is a bijective homomorphism, it is an isomorphism and as an isomorphism exists between $V$ and $N$, $N$ is isomorphic to the Klein four group.
-\subsection*{Part (b)}
+\subproblem{(b)}
 The subgroup $N$ is composed of 1 permutation of cycle type $1,1,1,1$ and permutations of cycle type $2,2$. We note that $e$ is the only permutation of cycle type $1,1,1,1$, as $\frac{\frac{P_1^4}{1}\frac{P_1^3}{1}\frac{P_1^1}{1}\frac{P_1^1}{1}}{4!} = 1$, and that $\left(1~2\right)\left(3~4\right), \left(1~3\right)\left(2~4\right), \left(1~4\right)\left(2~3\right)$ are the only permutations of cycle type $2,2$, as $\frac{\frac{P_2^4}{2}\frac{P_2^2}{2}}{2!} = 3$. As conjugation preserves cycle type, $e$ must be mapped back to itself, the only permutation of its cycle type, and $\left(1~2\right)\left(3~4\right), \left(1~3\right)\left(2~4\right), \left(1~4\right)\left(2~3\right)$ must be mapped to cycles of type $2,2,2$, all of which are elements of $V$. Since for all $p \in V$ and all $q \in S_4$, $qpq^{-1} \in V$, $V \normal S_4$.
-\subsection*{Part (c)}
+\subproblem{(c)}
 Let $H = \langle \left(1~2\right) , \left(3~4\right) \rangle  \leq S_4$. We note that $H = \langle \left(1~2\right) , \left(3~4\right) \rangle = \left\{e, \left(1~2\right), \left(3~4\right), \left(1~2\right)\left(3~4\right)\right\}$. We construct the bijective mapping $\varphi : V \to H$ where $1 \to e$, $a \to \left(1~2\right)$, $b \to \left(3~4\right)$, $ab \to \left(1~2\right)\left(3~4\right)$. To show that this is a homomorphism, we construct Cayley tables:
 \begin{center}
 \begin{tabular}{|c||c|c|c|c|}
@@ -196,7 +196,7 @@ However, $H$ is not normal in $S_4$. To see this, conjugate $\left(1~2\right)$ b
     \end{split}
 \end{equation}
 Since $\left(2~3\right) \not\in H$, evidently $H$ is not normal in $S_4$.
-\subsection*{Part (d)}
+\subproblem{(d)}
 We compute the cosets of $N$ in $S_4$.
 \begin{equation*}
     \begin{split}
@@ -215,7 +215,7 @@ We compute the cosets of $N$ in $S_4$.
     \end{split}
 \end{equation*}
 Consequently, we define $S_4 / N = \left\{\overline{e} ,\overline{\left(1~2\right)},  \overline{\left(2~3\right)}, \overline{\left(1~3~2\right)}, \overline{\left(1~2~3\right)}, \overline{\left(1~3\right)}\right\}$, noting that each coset has exactly one element where $4$ permutes to itself. We then define the biijection $\varphi : S_4 / N \to S_3$ that maps $\overline{\sigma} \to \sigma$.  It is easily verified that $\varphi$ is a homomorphism and that $N$ is the kernel of the homomorphism. As $\varphi$ is a bijective homomorphism, $\varphi$ is an isomorphism and as an isomorphism exists between $S_4 / N$ and $S_3$, $S_4 / N \cong S_3$.
-\subsection*{Part (e)}
+\subproblem{(e)}
 By the Correspondence Theorem, since $\varphi$ is a subjective homomorphism of which $N$ is the kernel, there exists a bijection between the subgroups of $S_4$ containing $N$ and the subgroups of $S_3$. We note that the inverse of an element of $S_3$ (and, in general, $S_n$) can be found by reversing the order of the individual cycles that compose the permutation (e.g. $\left(1~2~3\right)^{-1} = \left(3~2~1\right) = \left(1~3~2\right)$). Consequently, the three permutations of cycle type $2,1$ are their own inverses, and the two permutations of cycle type $3$ are inverses of each other (the identity permutation of cycle type $1,1,1$ is, of course, its own inverse). Further, the composition of two different permutations of cycle type $2,1$ is a permutation of cycle type $3$. We then enumerate the subgroups of $S_3$ as such: the trivial subgroup, three subgroups containing the identity and one of the permutations of cycle type $2,1$, the subgroup containing the identity and both permutations of cycle type $3$, and $S_3$ itself. As there exist $6$ subgroups of $S_3$, there are therefore $6$ subgroups of $S_4$ that contain $N$.
 
 \end{document}
