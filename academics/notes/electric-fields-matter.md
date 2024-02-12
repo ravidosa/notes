@@ -29,7 +29,7 @@ electric susceptibility $\chi_e$, relative permittivity/dielectric constant $\ep
 	$\vec{P} = \epsilon_0\chi_e\vec{E}$
 	$\vec{D} = \epsilon_0(1+\chi_e)\vec{E} = \epsilon_0\epsilon_r\vec{E}  =\epsilon\vec{E}$
 	measure of ease of polarization (nonpolar hard, polar easy)
-		vaccuum has $\epsilon_r =  1$, $\chi_e = 0$
+		vacuum has $\epsilon_r =  1$, $\chi_e = 0$
 		$\vec{E}$ smaller in dielectric than in vacuum, partial shielding
 	non-linear
 		$\epsilon_r$ dependent on $\vec{E}$ (electro-optic response)

@@ -72,7 +72,8 @@ nav:
     - MAT 128B: "./s23/mat128b/"
     - MAT 135A: "./s23/mat135a/"
     - PHY 105B: "./s23/phy105b/"
-    - PHY 108(L): "./s23/phy108/"
+    - PHY 108: "./s23/phy108/"
+    - PHY 108L: "./s23/phy108/"
     - PHY 110B: "./s23/phy110b/"
   - Summer 2023:
     - MAT 127B: "./m23/mat127b/"
@@ -84,8 +85,19 @@ nav:
     - MAT 168: "./f23/mat168/"
     - MAT 185A: "./f23/mat185a/"
     - PHY 105C: "./f23/phy105c/"
-    - PHY 112(L): "./f23/phy112/"
+    - PHY 112: "./f23/phy112/"
+    - PHY 112L: "./f23/phy112/"
     - PHY 115A: "./f23/phy115a/"
+  - Winter 2024:
+    - LIN 103A: "./w24/lin103a/"
+    - LIN 131: "./w24/lin131/"
+    - LIN 152: "./w24/lin152/"
+    - MAT 148: "./w24/mat148/"
+    - MAT 150B: "./w24/mat150b/"
+    - MAT 167: "./w24/mat167/"
+    - PHY 115B: "./w24/phy115b/"
+    - PHY 115L: "./w24/phy115b/"
+    - PHY 130A: "./w24/phy130a/"
 
 not_in_nav: |
   Notes/*

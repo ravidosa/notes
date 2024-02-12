@@ -2,6 +2,7 @@
 MWF3: TLC 55, LEC
 T5: Wellman 7, DIS
 ## Notes
+*Understanding Analysis* (Abbott, 2e)
 1. [Real Numbers](../notes/real-numbers.md)
 2. [Sequences and Series](../notes/sequences-series.md)
 3. [Basic Topology of R](../notes/topology-r.md)

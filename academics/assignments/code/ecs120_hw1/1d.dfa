@@ -1,0 +1,30 @@
+// DFA recognizing { w in {a,b}* | w starts with a and has even length, or w starts with b and has odd length }
+
+states = {e,        // epsilon
+          a0,       // starts with a, even length
+          a1,       // starts with a, odd length
+          b0,       // starts with b, even length
+          b1}       // starts with b, odd length
+
+input_alphabet = {a,b}
+
+// does not start with anything when we start
+start_state =    e
+
+// accept if first character a and even length or first charactr b and odd length
+accept_states =  {a0,b1}
+
+delta =
+    // track first character, starts with odd length (1) 
+    e,a         -> a1;
+    e,b         -> b1;
+
+    // switch to opposite parity length regardless of character, retain first character
+    a0,a        -> a1;
+    a0,b        -> a1;
+    a1,a        -> a0;
+    a1,b        -> a0;
+    b0,a        -> b1;
+    b0,b        -> b1;
+    b1,a        -> b0;
+    b1,b        -> b0;

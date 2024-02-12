@@ -1,6 +1,7 @@
 # PHY 105B
 MWF9: Roessler 55, LEC
 ## Notes
+*Introduction to Classical Mechanics* (Morin, 1e)
 7. [Central Forces](../notes/central-forces.md)
 ## Assignments
 - [x] HW 1 (4/7)

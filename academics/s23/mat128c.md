@@ -1,6 +1,7 @@
 # MAT 128C
 MW11: Olson 118, LEC
 ## Notes
+*Numerical Analysis* (Burden, Faires, and Burden, 10e)
 1. [Initial-Value Problems for Ordinary Differential Equations](ivp-theory.md)
 ## Assignments
 - [ ] HW 1 (4/17)

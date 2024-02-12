@@ -1,6 +1,7 @@
 # PHY 110B
 MWF10: Wellman 202, LEC
 ## Notes
+*Introduction to Electrodynamics* (Griffiths, 4e)
 7. [Electrodynamics](../notes/electrodynamics.md)
 8. [Conservation Laws](../notes/conservation-laws.md)
 9. [Electromagnetic Waves](../notes/electromagnetic-waves.md)

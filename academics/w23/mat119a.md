@@ -1,6 +1,7 @@
 # MAT 119A
 MWF12: Hutchinson 115, LEC
 ## Notes
+*Nonlinear Dynamics and Chaos: With Applications to Physics, Biology, Chemistry, and Engineering* (Strogatz, 2e)
 1. [Ordinary Differential Equations](../notes/ordinary-differential-equations.md)
 2. [Scalar Autonomous ODEs](../notes/scalar-autonomous-odes.md)
 ## Assignments

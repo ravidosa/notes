@@ -1,6 +1,7 @@
 # PHY 105A
 MWF9: Roessler 55, LEC
 ## Notes
+*Introduction to Classical Mechanics* (Morin, 1e)
 1. [Problem Solving Strategies](../notes/problem-solving-strategies.md)
 2. [Statics](../notes/statics.md)
 3. [Using F=ma](../notes/dynamics.md)

@@ -2,6 +2,7 @@
 MWF8: Wellman 6, LEC
 R8: SocSci 80, DIS
 ## Notes
+*The Sounds of Language: An Introduction to Phonetics and Phonology* (Zsiga, 1e)
 1. [The Vocal Tract](../notes/vocal-tract.md)
 2. [Basics of Articulation](../notes/basics-articulation.md)
 3. [A Tour of the Consonants](../notes/consonants.md)
@@ -12,7 +13,7 @@ R8: SocSci 80, DIS
 - [x] QUIZ 3 (1/27)
 - [x] MIDTERM 1 (2/3)
 - [x] QUIZ 4 (2/10)
-- [ ] QUIZ 5 (2/17)
+- [x] QUIZ 5 (2/17)
 - [ ] QUIZ 6 (2/23)
 - [ ] MIDTERM 2 (2/29)
 - [ ] QUIZ 7 (3/15)

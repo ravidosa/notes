@@ -1,6 +1,7 @@
 # MAT 127B
 MTWF10: TLC 1214, LEC
 ## Notes
+[*An Introduction to Real Analysis*](http://www.math.ucdavis.edu/~hunter/intro_analysis_pdf/intro_analysis.pdf) (Hunter)
 8. [Differentiable Functions](../notes/differentiable-functions.md)
 ## Assignments
 - [x] HW 1 (8/11)

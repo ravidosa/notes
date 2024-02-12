@@ -2,6 +2,7 @@
 MWF1: Roessler 66, LEC
 T6: Roessler 166, DIS
 ## Notes
+*Modern Physics* (Harris, 2e)
 1. [The Modern Physics Revolution](../notes/modern-physics-revolution.md)
 2. [Special Relativity](../notes/special-relativity.md)
 3. [Waves and Particles I](../notes/waves-particles-i.md)

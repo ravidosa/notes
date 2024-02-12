@@ -1,0 +1,4 @@
+// matches { x in {0,1}* | |x| >= 3 and the first symbol of x appears at least three times total in x }
+
+alph = (0|1)*;  // subexpression matching any character string
+0 alph 0 alph 0 alph|1 alph 1 alph 1 alph

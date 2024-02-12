@@ -3,3 +3,6 @@ This repository contains my lecture notes and assignments for my undergraduate (
 > There’s nothing wrong with putting a problem aside for a while and coming back to it later. Indeed, this is probably the best way to learn things. If you head to the solution at the first sign of not being able to solve a problem, then you have wasted the problem.
 
 Learning takes time and effort, and there are no shortcuts to understanding material at the level of complexity present here. Please ensure, for your sake as much as my own, that my work is treated with care.
+
+[course list](./course-list.md): a list of courses taken, indexed by quarter taken, subindexed by subject
+[library](./library.md): a list of textbooks, not all read (yet), indexed loosely by subject

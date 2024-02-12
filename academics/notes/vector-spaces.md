@@ -8,14 +8,33 @@ subspace
 linear maps preserve structure
 ### Fields
 ring
-	two binary operations
-	addition commutative with identity $0$, multiplicative identity $1$
+	see [Rings](rings.md)
 field
-	ring with both operations associative and commutative, distributive
-	identities not the same (additive identity has no multiplicative inverse)
-	$\mathbb{Z} \backslash p\mathbb{Z}$ field for prime $p$
+	see [Fields](fields.md)
 ## Vector Spaces
-vector space over field with addition, scalar multiplication as laws of composition
+vector space $V$ over field $F$ with addition, scalar multiplication as laws of composition
 	addition commutative
 	multiplication identity, associative
 	multiplication distributes over addition
+## Bases and Dimension
+linear combination of ordered set of vectors (hypervector): vector expressible as sum and scalar multiple of set vectors
+	span of hypervector: all vectors that can be expressed as linear combination
+	if hypervector in subspace, span in subspace
+	linearly independent: no vector is linear combination of other vectors, only trivial combination is zero vector
+basis of $V$: linearly independent vectors that span $V$
+	every vector expressible as unique linear combination
+	all bases have same order
+finite-dimensional vs infinite-dimensional
+	subspace has at most dimension of $V$
+spanning subset has at least as many elements as independent subset, basis subset in between
+	$|S| \geq |B| \geq |L|$
+## Computing with Bases
+isomorphism sending vector to vector in basis
+change of basis matrix
+	find coordinate vector of every old basis vector in new basis
+## Direct Sums
+sum of subspaces $\otimes$: span but with subspaces
+	combine bases
+	dimension of sum at most sum of dimension
+## Infinite-Dimensional Spaces
+ex. complex exponentials (see [Fourier Series](fourier-series-transforms.md#fourier-series-and-transforms))

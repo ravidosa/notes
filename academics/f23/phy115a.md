@@ -1,6 +1,7 @@
 # PHY 115A
 MWF9: Roessler 55, LEC
 ## Notes
+*Introduction to Quantum Mechanics* (Griffiths and Schroeter, 3e)
 1. [The Wave Function](../notes/wave-function.md)
 2. [Time-Independent Schrodinger Equation](../notes/time-independent-schrodinger-equation.md)
 3. [Formalism](../notes/formalism.md)

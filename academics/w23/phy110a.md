@@ -1,6 +1,7 @@
 # PHY 110A
 MWF10: Roessler 55, LEC
 ## Notes
+*Introduction to Electrodynamics* (Griffiths, 4e)
 1. [Vector Analysis](../notes/vector-analysis.md)
 2. [Electrostatics](../notes/electrostatics.md)
 3. [Potentials](../notes/potentials.md)

@@ -1,6 +1,7 @@
 # MAT 128B
 MW12: Olson 146, LEC
 ## Notes
+*Numerical Analysis* (Burden, Faires, and Burden, 10e)
 ## Assignments
 - [x] HW 1 (4/14)
 - [x] CR 1 (4/17)

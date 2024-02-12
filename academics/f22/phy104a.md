@@ -1,6 +1,7 @@
 # PHY 104A
 TR1.5: Roessler 55, LEC
 ## Notes
+*Mathematical Methods in the Physical Sciences* (Boas, 3e)
 1. [Complex Numbers](../notes/complex-numbers.md)
 2. [Sequences and Series](../notes/infinite-series-power-series.md)
 3. [Dirac Delta Function](../notes/ordinary-differential-equations.md#dirac-delta-function)

@@ -1,6 +1,7 @@
 # MAT 128A
 MWF2: Art 204, LEC
 ## Notes
+*Numerical Analysis* (Burden, Faires, and Burden, 10e)
 ## Assignments
 - [x] HW 1 (8/11)
 - [x] HW 2 (8/18)

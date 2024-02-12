@@ -32,6 +32,7 @@
 ### Physics
 [PHY 105B: Analytical Mechanics](./s23/phy105b.md) (Luty)
 [PHY 108: Optics](./s23/phy108.md) (Zhu)
+[PHY 108L: Optics Laboratory](./s23/phy108.md) (Zhu)
 [PHY 110B: Electricity & Magnetism](./s23/phy110b.md) (Yu)
 
 ## Summer '23
@@ -49,7 +50,8 @@
 [MAT 185A: Complex Analysis](./f23/mat185a.md) (Temple)
 ### Physics
 [PHY 105C: Continuum Mechanics](./f23/phy105c.md) (Kaloper)
-[PHY 112(L): Thermodynamics & Statistical Mechanics](./f23/phy112.md) (Taufour, Scalettar)
+[PHY 112: Thermodynamics & Statistical Mechanics](./f23/phy112.md) (Taufour)
+[PHY 112L: Computational Physics Lab for Statistical Mechanics](./f23/phy112.md) (Scalettar)
 [PHY 115A: Quantum Mechanics](./f23/phy115a.md) (Mulhearn)
 
 ## Winter '24
@@ -62,5 +64,6 @@
 [MAT 150B: Modern Algebra](./w24/mat150b.md) (McDonough)
 [MAT 167: Applied Linear Algebra](./w24/mat167.md) (Puckett)
 ### Physics
-[PHY 115B(L): Quantum Mechanics](./w24/phy115b.md) (Carlip, Mulhearn)
+[PHY 115B: Quantum Mechanics](./w24/phy115b.md) (Carlip)
+[PHY 115L: Computational Physics Lab for Quantum Mechanics](./w24/phy115b.md) (Mulhearn)
 [PHY 130A: Elementary Particle Physics](./w24/phy130a.md) (Mulhearn)

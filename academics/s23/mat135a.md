@@ -2,6 +2,7 @@
 MWF4: TLC 55, LEC
 R6: Wellman 3, DIS
 ## Notes
+[*Lecture Notes for Introductory Probability*](https://www.math.ucdavis.edu/~gravner/MAT135A/resources/lecturenotes.pdf) (Gravner)
 1. [Combinatorics](../notes/combinatorics.md)
 ## Assignments
 - [x] HW 1 (4/20)

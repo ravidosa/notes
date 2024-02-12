@@ -1,0 +1,58 @@
+// nfa union construction
+states = s union states_1 union states_2
+input_alphabet = input_alphabet_1 = input_alphabet_2
+start_state = s
+accept_states = accept_states_1 union accept_states_2
+delta = 
+    s, -> {start_state_1, start_state_2};
+    delta_1
+    delta_2
+
+// nfa concatenation construction
+states = states_1 union states_2
+input_alphabet = input_alphabet_1 = input_alphabet_2
+start_state = start_state_1
+accept_states = accept_states_2
+delta = 
+    accept_state_1, -> start_state_2;
+    delta_1
+    delta_2
+
+// nfa star construction
+states = s union states_1
+input_alphabet = input_alphabet_1
+start_state = s
+accept_states = accept_states_1
+delta = 
+    s, -> start_state_1;
+    accept_state_1, -> s;
+    delta_1
+    delta_2
+
+// nfa to dfa
+follow construction in notes
+
+// regex to nfa
+follow construction in notes, hope you get an easy one
+
+// dfa to rrg
+LHS = state
+RHS = symbol + transition_state to | ...
+
+// dfa majority
+states = states_1 concat states_2 concat states_3
+input_alphabet = input_alphabet_1 = input_alphabet_2 = input_alphabet_3
+start_state = start_state_1 concat start_state_2 concat start_state_3
+accept_states = (s1, s2, s3) where (s1 in accept_states_1 and s2 in accept_states_2) or (s1 in accept_states_1 and s3 in accept_states_3) or (s2 in accept_states_2 and s3 in accept_states_3)
+delta = 
+    (s1, s2, s3), r -> (delta_1(s1, r), delta_2(s2, r), delta_3(s3, r))
+
+// nfa to drop nfa
+states = states_1 union states_1'
+input_alphabet = input_alphabet_1
+start_state = start_state_1
+accept_states = accept_states_1'
+delta =
+    state, -> {non-e transition_state'}
+    delta_1
+    delta_1'

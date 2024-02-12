@@ -2,6 +2,7 @@
 TR3: Wellman 6, LEC
 W1: Young 192, DIS
 ## Notes
+*Syntactic Constructions in English* (Kim and Michaelis, 1e)
 1. [What is a Theory of English Syntax About?](../notes/theory-english-syntax.md)
 2. [Lexical and Phrasal Signs](../notes/lexical-phrasal-signs.md)
 3. [Syntactic Forms, Grammatical Functions, and Semantic Roles](../notes/syntactic-forms-grammatical-functions-semantic-roles.md)
