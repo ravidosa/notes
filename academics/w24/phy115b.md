@@ -2,7 +2,9 @@
 MFW11: TLC 3214, LEC
 ## Notes
 *Introduction to Quantum Mechanics* (Griffiths and Schroeter, 3e)
-
+4. [Quantum Mechanics in Three Dimensions](../notes/quantum-mechanics-3d.md)
+5. [Identical Particles](../notes/identical-particles.md)
+7. [Time-Independent Perturbation Theory](../notes/time-independent-perturbation-theory.md)
 ## Assignments
 - [x] HW 1 (1/19)
 - [x] LAB 1 (1/25)
@@ -10,6 +12,6 @@ MFW11: TLC 3214, LEC
 - [x] HW 3 (2/2)
 - [x] MIDTERM (2/5)
 - [x] LAB 2 (2/8)
-- [ ] HW 4 (2/14)
+- [x] HW 4 (2/14)
 - [ ] LAB 3 (2/22)
 - [ ] FINAL (3/19)

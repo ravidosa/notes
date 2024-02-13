@@ -4,5 +4,7 @@ This repository contains my lecture notes and assignments for my undergraduate (
 
 Learning takes time and effort, and there are no shortcuts to understanding material at the level of complexity present here. Please ensure, for your sake as much as my own, that my work is treated with care.
 
+**currently in the process of redoing my notes to be less text-dependent and more connectable (see [PHY 130A](./w24/phy130a.md) for an example). notes will remain accessible, but are subject to movement and reorganization**
+
 [course list](./course-list.md): a list of courses taken, indexed by quarter taken, subindexed by subject
-[library](./library.md): a list of textbooks, not all read (yet), indexed loosely by subject
+[library](./library.md): a list of textbooks, not all read (yet), indexed lexicographically

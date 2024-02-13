@@ -1,5 +1,6 @@
-# Introduction to the Elementary Particles
+# History of Particle Physics
 ## The Classical Era
+(1897-1932)
 electron $e$ (lepton)
 	discovered by thomson
 nucleus (baryons)
@@ -8,15 +9,20 @@ nucleus (baryons)
 	chadwick
 		neutron $n$
 ## The Photon
+(1900-1924)
+blackbody spectrum (planck)
 photon $\gamma$
 EM radiation quantized, $E = hf$
 photoelectric effect
 compton scattering
+	compton wavelength
 ## Mesons
+(1934-1947)
 strong force
 	proton and neutron attracted by force (yukawa)
 pions $\pi^+, \pi^-, \pi^0$ (meson), muon $\mu$ (lepton)
 ## Antiparticles
+(1930-1956)
 relativistic quantum mechanics
 	solution with negative energy
 quantum numbers switch sign
@@ -26,6 +32,7 @@ reactions can be treated as equations
 	detailed balance
 	must obey conservation of energy (dynamically but not kinematically valid)
 ## Neutrinos
+(1930-1962)
 neutrinos $\nu$
 antineutrinos $\bar{\nu}$
 	produced by beta decay
@@ -38,15 +45,18 @@ lepton number
 			$1$ for electron and electron neutrino and $-1$ for positron and electron antineutrino,  $0$ otherwise
 		both conserved
 ## Strange Particles
+(1947-1960)
 kaon $K^0$ (meson), lambda $\Lambda$ and more
 strangeness number
 	conserved in strong interaction, not weak interaction
 ## The Eightfold Way
+(1961-1964)
 arrays ordered by strangeness, charge
 baryon octet (light baryons)
 meson nonet
 baryon decuplet (heavy baryons)
 ## The Quark Model
+(1964)
 hadrons composed of quarks/antiquarks
 strangeness, flavor
 	add to find hadron strangeness, charge
@@ -84,14 +94,17 @@ meson nonet
 | $s\bar{d}$ | $0$ | $-1$ | $\bar{K}^0$ |
 | $s\bar{s}$ | $0$ | $0$ | $\eta'$ |
 ## The November Revolution and Its Aftermath
+(1974-1983, 1995)
 psi meson
 	charm, bottom, top quarks
 	four-quark supermultiplets (aaaaah)
 ## Intermediate Vector Bosons
+(1983)
 weak force mediates beta decay (vector boson)
 	electroweak theory
 	charged W and Z bosons
 ## The Standard Model
+(1978-present)
 leptons
 
 | $l$ | $Q$ | $L_e$ | $L_{\mu}$ | $L_{\tau}$ | $m$ (MeV/c) |
@@ -108,7 +121,7 @@ quarks
 | $q$ | $Q$ | $D$ | $U$ | $S$ | $C$ | $B$ | $T$ | $m$ (MeV/c) |
 | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- | ---- |
 | $d$ | $-\frac{1}{3}$ | $-1$ | $0$ | $0$ | $0$ | $0$ | $0$ | $2$ |
-| $u$ | $\frac{2}{3}$ | $0$ | $1$ | $0$ | $0$ | $0$ | $0$ | $5% |
+| $u$ | $\frac{2}{3}$ | $0$ | $1$ | $0$ | $0$ | $0$ | $0$ | $5$ |
 | $s$ | $-\frac{1}{3}$ | $0$ | $0$ | $-1$ | $0$ | $0$ | $0$ | $100$ |
 | $c$ | $\frac{2}{3}$ | $0$ | $0$ | $0$ | $1$ | $0$ | $0$ | $1200$ |
 | $b$ | $-\frac{1}{3}$ | $0$ | $0$ | $0$ | $0$ | $-1$ | $0$ | $4200$ |
@@ -119,6 +132,6 @@ mediators
 	W and Z bosons: weak
 	graviton(?): gravity
 	gluon: strong
-grand unified theory (GUT)
+[grand unified theory](unified-field-theory.md) (GUT)
 supersymmetry (SUSY)
 superstring theory

@@ -3,7 +3,7 @@
 separation of variables
 	$\Psi(x, t) = \psi(x)\phi(t)$
 	time-independent schrodinger equation $-\frac{\hbar^2}{2m}\frac{d^2\psi}{dx^2} + V\psi = E\psi$
-	$\phi(t) = e^{-\frac{iEt}{\hbar}}$
+	$\phi(t) = e^{-\frac{iEt}{\hbar}}$ (wiggle factor)
 	stationary states: probability density not time-dependent
 	hamiltonian: definite total energy
 		$\hat{H} = -\frac{\hbar^2}{2m}\frac{\partial^2}{\partial x^2} + V(x)$
@@ -12,7 +12,7 @@ separation of variables
 		$\Psi(x, t) = \sum_{n=1}^\infty c_n\psi_n(x)\phi_n(t)$
 		$|c_n|^2$ probability of energy measurement returning $E_n$
 			$\sum_{n=1}^\infty |c_n|^2 = 1$, $\langle H \rangle = \sum_{n=1}^\infty |c_n|^2 E_n$
-			probability of energy level, $H$ independent of time,  energy conservation
+			probability of energy level, $H$ independent of time, energy conservation
 ## The Infinite Square Well
 $V(x) = \begin{cases} 0 & 0 \leq x \leq a \\ \infty & \text{otherwise}\end{cases}$
 boundary conditions $\psi(0) = \psi(a) = 0$
@@ -25,14 +25,18 @@ properties of $\psi_n(x)$
 	complete: represent any function (fourier series, dirichlet's theorem)
 		$c_n = \int \psi_n(x)^* f(x) \, dx$
 ## The Harmonic Oscillator
+$V(x) = \frac{1}{2}m\omega x^2$
 ladder operators
-	raising operator $\hat{a}_+ = \frac{1}{\sqrt{2\hbar m\omega}}(-i\hat{p} + m\omega x)$, lowering operator $\hat{a}_- = \frac{1}{\sqrt{2\hbar m\omega}}(i\hat{p} + m\omega x)$
+	raising operator $\hat{a}_+ = \frac{1}{\sqrt{2\hbar m\omega}}(-i\hat{p} + m\omega x)$, lowering operator $\hat{a}_- = \frac{1}{\sqrt{2\hbar m\omega}}(i\hat{p} + m\omega x)$, mutual adjoints
+		hamiltonian becomes $\hat{H} = \hbar\omega(\hat{a}_-\hat{a}_+ - \frac{1}{2})$
 	canonical commutation relation: $[x, \hat{p}] = i\hbar$
 	$\psi_0(x) = (\frac{m\omega}{\pi \hbar})^{\frac{1}{4}}e^{-\frac{m\omega}{2\hbar}x^2}, \psi_n(x) =  \frac{1}{\sqrt{n!}}(\hat{a}_+)^n\psi_0(x)$
+		$E_n = (n + \frac{1}{2})\hbar\omega$
 	$\hat{a}_+\psi_n = \sqrt{n+1}\psi_{n+1}, \hat{a}_-\psi_n = \sqrt{n}\psi_{n-1}$
 	$x = \sqrt{\frac{\hbar}{2m\omega}}(\hat{a}_+ + \hat{a}_-), \hat{p} = \sqrt{\frac{\hbar m\omega}{2}}(\hat{a}_+ - \hat{a}_-)$
 hermite polynomials
 	$\psi_n(x) = (\frac{m\omega}{\pi\hbar})^{\frac{1}{4}}\frac{1}{\sqrt{2^n n!}} H_n(x)e^{-\frac{x^2}{2}}$
+wag the dog
 ## The Free Particle
 stationary states of free particle are waves
 quantum speed half of classical speed

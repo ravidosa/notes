@@ -10,4 +10,7 @@ $\psi(x) = A(x)e^{i\phi(x)}, \frac{d^2\psi}{dx^2} = -\frac{p^2}{\hbar^2}\psi$
 	$A'' = A((\phi')^2 - \frac{p^2}{\hbar^2}), (A^2\phi')' = 0$
 	$\psi(x) \approx \frac{C}{\sqrt{p(x)}}e^{\pm\frac{i}{\hbar} \int p(x) \, dx}$ ($A'' \ll A$ )
 ## Tunneling
-## The Connection Formulas
+non-classical region ($E < V$)
+	$\psi(x) \approx \frac{C}{\sqrt{|p(x)|}}e^{\pm \frac{1}{\hbar}\int |p(x)| \, dx}$
+	$T \approx e^{-2\gamma}$ ($\gamma = \frac{1}{\hbar}\int_0^a |p(x)| \, dx$)
+	

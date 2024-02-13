@@ -24,13 +24,5 @@ $K = \frac{1}{2}mv^2 = \frac{p^2}{2m}$
 work on particle in system larger than work on system
 non conservative force accelerates particles in system differently, work adds to internal energy of system
 ## Collisions
-elastic collision: kinetic energy conserved
-	$\Delta K = 0$, $\Delta E_{thermal} = 0$
-inelastic collision: kinetic energy not conserved
-	totally inelastic: stuck together, max drop in kinetic energy
-		all mechanical energy becomes thermal in center of mass frame
-	$\Delta E_{thermal} > 0$
-2d → split along axes
-	$\cos\theta = \frac{1}{2}(1 - \frac{m_2}{m_1})\frac{v_2}{v_1}$
-	if masses equal $\theta = 90$, if moving less mass $\theta > 90$
+see [Collisions](collision.md)
 ## Problem Solving
