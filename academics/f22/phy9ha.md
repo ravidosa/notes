@@ -2,14 +2,26 @@
 MWF11: Roessler 55, LEC
 TR10: Roessler 166, DIS/LAB
 ## Notes
-1. [Motion](../notes/motion.md)
-2. [Force](../notes/force.md)
-3. [Work and Energy](../notes/work-energy.md)
+[*Classical Mechanics*](https://phys.libretexts.org/Courses/University_of_California_Davis/UCD%3A_Physics_9HA__Classical_Mechanics) (Weideman)
+1. Motion
+	1. [Vectors](../notes/vector.md)
+	2. [Vector Multiplication](../notes/vector.md#vector-operations)
+	3. [Straight-Line Motion](../notes/kinematics.md#translational)
+	4. [Kinematics](../notes/kinematics.md#translational)
+	5. [Graphing](../notes/kinematics.md#motion-diagrams)
+	6. [Motion in Multiple Dimensions](../notes/kinematics.md#motion-in-multiple-dimensions)
+	7. [Examples of 2-Dimensional Motion](../notes/kinematics.md#examples-of-2d-motion)
+	8. [Relative Motion](../notes/kinematics.md#relative-motion)
+2. [Force](../notes/dynamics.md)
+3. [Work and Energy](../notes/work.md)
 4. [Linear Momentum](../notes/linear-momentum.md)
-5. [Rotations and Rigid Bodies](../notes/rotations-rigid-bodies.md)
+5. Rotations and Rigid Bodies
+	1. [Linking Linear and Angular Momentum](../notes/dynamics.md#rotational)
+	2. [Effects of Torque](../notes/torque.md)
+	3. [Applications of Angular Momentum Conservation](../notes/dynamics.md#rotational)
 6. [Angular Momentum](../notes/angular-momentum.md)
 7. [Gravitation](../notes/gravitation.md)
-8. [Small Oscillations](../notes/small-oscillations.md)
+8. [Small Oscillations](../notes/oscillation.md)
 ## Assignments
 - [x] DL 0 (9/22)
 - [x] DL 1 (9/27)

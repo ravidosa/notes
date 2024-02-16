@@ -5,6 +5,8 @@ MFW11: TLC 3214, LEC
 4. [Quantum Mechanics in Three Dimensions](../notes/quantum-mechanics-3d.md)
 5. [Identical Particles](../notes/identical-particles.md)
 7. [Time-Independent Perturbation Theory](../notes/time-independent-perturbation-theory.md)
+10. Scattering
+11. Quantum Dynamics
 ## Assignments
 - [x] HW 1 (1/19)
 - [x] LAB 1 (1/25)
@@ -13,5 +15,6 @@ MFW11: TLC 3214, LEC
 - [x] MIDTERM (2/5)
 - [x] LAB 2 (2/8)
 - [x] HW 4 (2/14)
+- [ ] HW 5 (2/23)
 - [ ] LAB 3 (2/22)
 - [ ] FINAL (3/19)

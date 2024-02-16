@@ -135,3 +135,29 @@ mediators
 [grand unified theory](unified-field-theory.md) (GUT)
 supersymmetry (SUSY)
 superstring theory
+producing subatomic particles
+	accelerators
+	cyclotrons
+	synchotrons (faster)
+	$r=\frac{p}{eB}=\frac{p}{0.3B}$ for p in GeV/c, B in Tesla
+	higher energy, larger radius, slower
+	low energy arrive later if v < c
+luminosity
+	$N=L\sigma\epsilon$
+	interesting things every 1/100k seconds
+higgs boson
+	forces in nature arise from symmetries of wavefunction
+	weak force → W, Z, H
+	strong force → gluon
+	em → photon
+	standard model lagrangian
+		higgs mass term
+	produced by collisions of gluons
+	supersymmetry?
+dark matter
+	no electromagnetic interaction
+	massive
+	weakly interact
+	WIMP vs MACHO
+	squarks
+	relic dark matter

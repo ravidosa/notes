@@ -33,7 +33,7 @@ series $\sum_{n=1}^{\infty} a_n = A$
 		doubly indexed series
 			if $\sum_{i=1}^{\infty}\sum_{j=1}^{\infty} |a_{ij}|$ converges, $\sum_{i=1}^{\infty}\sum_{j=1}^{\infty} a_{ij}$ and $\sum_{j=1}^{\infty}\sum_{i=1}^{\infty} a_{ij}$ converge
 			$\sum_{i=1}^{\infty}\sum_{j=1}^{\infty} a_ib_j = AB$
-		see [Infinite Series and Power Series](infinite-series-power-series.md)
+		see [Infinite Series and Power Series](infinite-series.md)
 cauchy criterion
 	cauchy sequence $(a_n)$ if $\forall \epsilon > 0 (\exists N \in \mathbb{N} (m, n \geq N \implies |a_n - a_m| < \epsilon))$
 	all convergent sequences are cauchy

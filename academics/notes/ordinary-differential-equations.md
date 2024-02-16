@@ -27,6 +27,11 @@ lorenz equation (atmospheric dynamics)
 		vertical temperature difference $r$
 scalar autonomous ODE
 	solution is scalar function, no explicit time dependence
+series solution
+	assume series solution for $y(x)$
+	differentiate term by term
+	substitute into diff eq
+	equate coefficients of powers of x
 ### Dirac Delta Function
 kronecker delta
 	$\delta_{ij} = 1$ if $i = j$, $0$ if $i \neq j$

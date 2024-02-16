@@ -1,12 +1,10 @@
 # Complex Numbers
-## Real and Imaginary Parts of Complex Numbers
 real numbers
 	represented along real number line $-\infty < x < \infty$
 	certain algebraic operations not defined for all real numbers ($\sqrt{-1})$
 complex numbers
 	$i = \sqrt{-1}$
 	$z = x + iy$
-## The Complex Plane
 represented along complex plane
 	real part on x-axis, imaginary part on y-axis
 	$z = r(\cos\theta+\sin\theta) = re^{i\theta}$
@@ -15,7 +13,7 @@ represented along complex plane
 		$\tan\theta=\frac{y}{x}$
 	complex conjugate
 		$\bar{z} = x - iy = re^{-i\theta}$
-## Complex Algebra
+## Operations
 absolute value
 	$|z| = r = \sqrt{z\bar{z}}$
 multiplication/division

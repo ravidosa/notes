@@ -1,7 +1,7 @@
 # IVP Theory
 taylor's theorem
 	approximation of nth order differentiable function with n degree polynomial (nth order taylor polynomial)
-	see [Taylor Series](infinite-series-power-series.md#expanding-functions-in-power-series)
+	see [Taylor Series](power-series.md#expanding-functions-in-power-series)
 finite differences
 	approximate derivative of function at point using points on function close to point
 	$u'(x_0) \approx \frac{u(x_0 + h) - u(x_0 - h)}{2h} + O(h^2)$

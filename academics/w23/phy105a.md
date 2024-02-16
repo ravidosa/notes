@@ -5,7 +5,7 @@ MWF9: Roessler 55, LEC
 1. [Problem Solving Strategies](../notes/problem-solving-strategies.md)
 2. [Statics](../notes/statics.md)
 3. [Using F=ma](../notes/dynamics.md)
-4. [Oscillations](../notes/oscillations.md)
+4. [Oscillation](../notes/oscillation.md)
 5. [Energy and Momentum Conservation](../notes/energy-momentum-conservation.md)
 6. [The Lagrangian Method](../notes/lagrangian-method.md)
 ## Assignments

@@ -1,5 +1,5 @@
 # Fourier Transforms and Convolutions
-see [Fourier Series and Transforms](fourier-series-transforms.md)
+see [Fourier Series and Transforms](fourier-series.md)
 discrete transformations
 	express periodic function as sum of infinite series of sines and cosines
 	$f(t+T) = f(t) = \sum_{n=0}^\infty C_n\cos(n\omega_0t+\delta_n)$ for fundamental frequency $\omega_0 = 2\pi, f_0 = 2\pi\frac{1}{T}$, period $T$

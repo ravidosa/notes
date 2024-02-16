@@ -37,4 +37,4 @@ sum of subspaces $\otimes$: span but with subspaces
 	combine bases
 	dimension of sum at most sum of dimension
 ## Infinite-Dimensional Spaces
-ex. complex exponentials (see [Fourier Series](fourier-series-transforms.md#fourier-series-and-transforms))
+ex. complex exponentials (see [Fourier Series](fourier-series.md#fourier-series-and-transforms))

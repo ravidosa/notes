@@ -31,7 +31,7 @@ cartesian coordinates and spherical coordinates
 	find infinite set of solutions
 	linear combination
 	coefficients to match boundary conditions
-	see [Legendre Polynomials](series-solutions-differential-equations.md#legendre-polynomials-and-functions)
+	see [Legendre Polynomials](legendre-polynomials.md)
 	fourier's trick
 		multiply by $P_{\ell'}(\cos\theta)\sin\theta$
 		integrate from $0$ to $\pi$

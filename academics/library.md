@@ -32,16 +32,20 @@
 - Elements of Set Theory (Enderton)
 - English Grammar (Barry)
 - Essentials of Linguistics (Anderson)
+- Experiments in Modern Physics (Melissinos, Napolitano) {PHY 122A, PHY 122B}
 - Figurative Language (Dancygier, Sweetser)
+- Foundations of Astrophysics (Ryden) {PHY 153}
 - A First Course in Abstract Algebra (Fraleigh)
 - A First Course in Probability (Ross) {[MAT 135A](./s23/mat135a.md)}
 - A First Course in Wavelets with Fourier Analysis (Boggess, Narcowich)
 - The Four Pillars of Geometry (Stillwell)
 - Galois Theory (Stewart)
+- General Relativity (Carlip) {PHY 155}
 - Historical Linguistics (Campbell)
 - Ideals, Varieties, and Algorithms (Cox, Little, O'Shea)
 - Insight Through Computing (Van Loan, Fan)
 - Introduction to Classical Mechanics (Morin) {[PHY 105A](./w23/phy105a.md), [PHY 105B](./s23/phy105b.md)}
+- Introduction to Cosmology (Ryden) {PHY 153}
 - Introduction to Electrodynamics (Griffiths) {[PHY 110A](./w23/phy110a.md), [PHY 110B](./s23/phy110b.md)}
 - Introduction to Elementary Particles (Griffiths) {[PHY 130A](./w24/phy130a.md), PHY 130B}
 - Introduction to High Energy Physics (Perkins)
@@ -52,7 +56,7 @@
 - Introduction to Partial Differential Equations (Olver)
 - Introduction to Plasma Physics (Chen)
 - Introduction to Quantum Mechanics (Griffiths, Schroeter) {[PHY 115A](./f23/phy115a.md), [PHY 115B](./w24/phy115b.md)}
-- Introduction to Solid State Physics (Kittel)
+- Introduction to Solid State Physics (Kittel) {PHY 140A, PHY 140B}
 - An Introduction to Thermal Physics (Schroeder) {[PHY 112](./f23/phy112.md)}
 - An Introduction to the Theory of Numbers (Niven, Zuckerman, Montgomery)
 - Introduction to Topology (Mendelson)
@@ -67,8 +71,11 @@
 - Metaphors We Live By (Lakoff, Johnson)
 - Methods of Mathematical Economics (Franklin)
 - Microelectronic Circuits (Sedra, Smith, Carusone, Gaudet)
+- Modern Electrodynamics (Zangwill) {PHY 200C}
 - Modern Particle Physics (Thomson)
 - Modern Physics (Harris) {[PHY 9D](./f22/phy9d.md)}
+- Modern Quantum Mechanics (Sakurai) {PHY 215B}
+- Modern Supersymmetry (Terning) {PHY 246A}
 - More than Cool Reason (Lakoff, Turner)
 - Multivariable Calculus (Stewart)
 - Nonlinear Dynamics with Chaos (Strogatz) {[MAT 119A](./w23/mat119a.md)}
@@ -83,14 +90,17 @@
 - Physics (Giancoli)
 - Physics for Scientists and Engineers (Giancoli)
 - Practical Electronics for Inventors (Scherz, Monk) {[PHY 116A](./f22/phy116a.md), [PHY 116B](./w23/phy116b.md)}
+- Principles of Quantum Mechanics (Shankar) {PHY 215B}
 - Probability and Random Processes (Grimmett, Stirzaker)
 - The Qualitative Theory of Ordinary Differential Equations (Brauer, Nohel)
+- Quantum Mechanics (Commins) {PHY 215B}
 - Real Mathematical Analysis (Pugh)
 - Single Variable Calculus (Stewart)
 - Solid State Basics (Simon)
 - Solid State Physics (Ashcroft, Mermin)
 - The Sounds of Language: An Introduction to Phonetics and Phonology (Zsiga) {[LIN 103A](./w24/lin103a.md)}
 - Spacetime and Geometry (Carroll)
+- Statistical Physics of Particles (Kardar) {PHY 219A}
 - Syntactic Constructions in English (Kim, Michaelis) {[LIN 103B](./w23/lin103b.md), [LIN 131](./w24/lin131.md)}
 - Syntax (Carnie)
 - Thermal Physics (Kittel, Kroemer)

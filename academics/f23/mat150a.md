@@ -2,7 +2,7 @@
 MWF10: Hoagland 168, LEC
 ## Notes
 *Algebra* (Artin, 2e)
-1. [Matrices](../notes/matrices.md)
+1. [Matrices](../notes/matrix.md)
 2. [Groups](../notes/groups-i.md)
 3. [Vector Spaces](../notes/vector-spaces.md)
 6. [Symmetry](../notes/symmetry.md)

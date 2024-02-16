@@ -7,7 +7,7 @@ primitive vertex: lepton/quark absorbing/emitting Z boson, then exiting
 ### Processes
 neutrino-electron scattering: $\nu_\mu + e^- \rightarrow \nu_\mu + e^-$
 neutrino-proton scattering: $\nu_\mu + p \rightarrow \nu_\mu + p$
-contributed to [electrodynamic processes](electrodynamics.md#processes)
+contributed to [electrodynamic processes](quantum-electrodynamics.md#processes)
 ## Charged Interactions
 mediated by W boson
 ### [Feynman Diagram](feynman-diagram.md)
