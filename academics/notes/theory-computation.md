@@ -1,4 +1,4 @@
-## Introduction
+# Theory of Computation
 automata theory: solvable with optimal efficiency
 	regular expressions
 		sum of character counts, but not difference of character counts

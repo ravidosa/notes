@@ -27,4 +27,6 @@ MWF9: Physics 148, LEC
 ## Assignments
 - [x] HW 1 (1/31)
 - [x] HW 2 (2/21)
+- [x] HW 3 (3/5)
+- [x] MIDTERM (3/15)
 - [ ] FINAL (3/21)

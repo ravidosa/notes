@@ -1,4 +1,4 @@
-# String Theory
+# String
 all objects represented in hardware memory as finite binary string
 	processing input = processing finite strings
 alphabet $\Sigma$: nonempty finite set
