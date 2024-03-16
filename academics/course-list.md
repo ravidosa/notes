@@ -55,6 +55,8 @@
 [PHY 115A: Quantum Mechanics](./f23/phy115a.md) (Mulhearn)
 
 ## Winter '24
+### Computer Science
+[ECS 120: Theory of Computation](./w24/ecs120.md) (Doty)
 ### Linguistics
 [LIN 103A: Linguistic Analysis I: Phonetics, Phonology, Morphology](./w24/lin103a.md) (Zellou)
 [LIN 131: Introduction to Syntactic Theory](./w24/lin131.md) (Nykiel)
