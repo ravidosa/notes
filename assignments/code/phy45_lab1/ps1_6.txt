@@ -1,0 +1,5 @@
+The nth partial sum of an arithmetic series is given by n(a_1+a_1+(n-1)d)/2 for first term a_1 and difference d.
+In this program, that would translate to n(n+1)/2.
+Using a calculator yields 1800030000 for N=60000, 2147450880 for N=65535, and 2147516416 for N=65536.
+The computer-calculated sums are correct for the first two, but the third is instead -2147450880.
+This is because 65536 is one more than the maximum integer that can be represented by 16 binary digits, or an unsigned short integer.

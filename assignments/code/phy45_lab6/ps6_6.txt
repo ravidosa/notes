@@ -1,0 +1,2 @@
+The code does converge to the right answer, and symmetry is restored after many iterations.
+The code converges faster than the implementation with separate arrays.

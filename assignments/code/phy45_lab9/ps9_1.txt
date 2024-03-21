@@ -1,0 +1,5 @@
+The dot product of each eigenvector with itself is 1,
+and the dot product with another eigenvector is 0.
+This makes sense, as our dynamical matrix is symmetric,
+and eigenvectors of symmetric matrices are orthogonal,
+and our eigenvectors have been normalized.

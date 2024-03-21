@@ -1,0 +1,4 @@
+// matches { x in Σ∗ | x is a syntactically valid email address }
+
+alph = (a|b);   // subexpression matching any alphabetic character
+(alph+ .)* alph+ @ (alph+ .)* alph+ . alph alph (|alph)

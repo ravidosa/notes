@@ -1,0 +1,35 @@
+// NFA recognizing { xyz in {0,1,2}* | x[|x|-3] = 2, y has at least 2 0's, z starts with 120 }
+states =          {x, x_3, x_2, x_1, x_0, y, y0, y00, z, z1, z12, z120}
+input_alphabet =  {0,1,2}
+start_state =     x
+accept_states =   {z120}
+delta =
+    x,0 -> x;
+    x,1 -> x;
+    x,2 -> {x, x_3};
+    x_3,0 -> x_2;
+    x_3,1 -> x_2;
+    x_3,2 -> x_2;
+    x_2,0 -> x_1;
+    x_2,1 -> x_1;
+    x_2,2 -> x_1;
+    x_1,0 -> x_0;
+    x_1,1 -> x_0;
+    x_1,2 -> x_0;
+    x_0, -> y;
+    y,0 -> y0;
+    y,1 -> y;
+    y,2 -> y;
+    y0,0 -> y00;
+    y0,1 -> y0;
+    y0,2 -> y0;
+    y00,0 -> y00;
+    y00,1 -> y00;
+    y00,2 -> y00;
+    y00, -> z;
+    z,1 -> z1;
+    z1,2 -> z12;
+    z12,0 -> z120;
+    z120,0 -> z120;
+    z120,1 -> z120;
+    z120,2 -> z120;

@@ -1,0 +1,32 @@
+// DFA recognizing { w in {0,1}* | w contains at most three 1's }
+
+states = {q,        // contains zero 1's
+          q1,       // contains one 1's
+          q11,      // contains two 1's
+          q111,     // contains three 1's
+          Q}        // contains four or more 1's
+
+input_alphabet = {0,1}
+
+// zero 1's when we start
+start_state =    q
+
+// accept if three or less 1's
+accept_states =  {q,q1,q11,q111}
+
+delta =
+    // if we see a 0, same number of 1's
+    q,0         -> q;
+    q1,0        -> q1;
+    q11,0       -> q11;
+    q111,0      -> q111;
+
+    // if we see a 1, count one more 1 than before
+    q,1         -> q1;
+    q1,1        -> q11;
+    q11,1       -> q111;
+
+    // until we get to three
+    q111,1      -> Q;
+    Q,0         -> Q;
+    Q,1         -> Q;

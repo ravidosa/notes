@@ -1,0 +1,19 @@
+Root approximation using Newton's Method:
+For f(x) = 5(x-3):
+Guessed number of roots and guesses: 
+1 2.0
+root from x_0 = 2.000000 => 3.000000 
+
+For f(x) = (x-1)(x-4):
+Guessed number of roots and guesses:  
+2 2.0 3.0
+root from x_0 = 2.000000 => 1.000000 
+root from x_0 = 3.000000 => 4.000000
+
+For f(x) = x * tan(x) - sqrt(100 - x^2):
+Guessed number of roots and guesses: 
+4 1.5 4.0 7.0 9.0
+root from x_0 = 1.500000 => 1.427552 
+root from x_0 = 4.000000 => 4.271095
+root from x_0 = 7.000000 => 7.068891
+root from x_0 = 9.000000 => 9.678884
