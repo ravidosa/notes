@@ -21,12 +21,9 @@ MWF9: Physics 148, LEC
 	2. [The Golden Rule](../notes/fermi-s-golden-rule)
 	3. [Feynman Rules for a Toy Theory](../notes/feynman-diagram.md#feynman-rules)
 7. Quantum Electrodynamics
-8. Electrodynamics & Chromodynamics of Quarks
-9. Weak Interactions
-11. Neutrino Oscillations
 ## Assignments
 - [x] HW 1 (1/31)
 - [x] HW 2 (2/21)
 - [x] HW 3 (3/5)
 - [x] MIDTERM (3/15)
-- [ ] FINAL (3/21)
+- [x] FINAL (3/21)

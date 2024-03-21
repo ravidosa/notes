@@ -20,5 +20,5 @@ MFW11: TLC 3214, LEC
 - [x] HW 6 (3/1)
 - [x] LAB 4 (3/7)
 - [x] HW 7 (3/15)
-- [ ] FINAL (3/19)
+- [x] FINAL (3/19)
 - [ ] PROJECT (3/21)

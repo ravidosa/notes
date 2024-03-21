@@ -17,4 +17,4 @@ R6: SocSci 80, DIS
 - [x] HW 5 (2/28)
 - [x] HW 6 (3/6)
 - [x] HW 7 (3/15)
-- [ ] FINAL (3/18)
+- [x] FINAL (3/18)
