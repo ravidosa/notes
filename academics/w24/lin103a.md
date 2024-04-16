@@ -17,4 +17,4 @@ R8: SocSci 80, DIS
 - [x] QUIZ 6 (2/23)
 - [x] MIDTERM 2 (3/2)
 - [x] QUIZ 7 (3/16)
-- [ ] FINAL (3/22)
+- [x] FINAL (3/22)

@@ -90,6 +90,7 @@ nav:
     - PHY 112L: "./f23/phy112/"
     - PHY 115A: "./f23/phy115a/"
   - Winter 2024:
+    - ECS 120: "./w24/ecs120/"
     - LIN 103A: "./w24/lin103a/"
     - LIN 131: "./w24/lin131/"
     - LIN 152: "./w24/lin152/"
@@ -99,6 +100,16 @@ nav:
     - PHY 115B: "./w24/phy115b/"
     - PHY 115L: "./w24/phy115b/"
     - PHY 130A: "./w24/phy130a/"
+  - Spring 2024:
+    - ECS 36C: "./s24/ecs36c/"
+    - ECS 127: "./s24/ecs127/"
+    - MAT 127C: "./s24/mat127c/"
+    - MAT 128C: "./s24/mat128c/"
+    - MAT 185B: "./s24/mat185b/"
+    - PHY 110L: "./s23/phy110b/"
+    - PHY 122B: "./s24/phy122b/"
+    - PHY 129A: "./s24/phy129a/"
+    - PHY 130B: "./s24/phy130b/"
 
 not_in_nav: |
   Notes/*

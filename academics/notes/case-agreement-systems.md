@@ -1,4 +1,4 @@
-# Case ad Agreement Systems
+# Case and Agreement Systems
 constituent order, case, agreement used in marking
 agreement hierarchy/reversed case hierarchy
 	S > DO > IO > other

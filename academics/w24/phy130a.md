@@ -21,6 +21,13 @@ MWF9: Physics 148, LEC
 	2. [The Golden Rule](../notes/fermi-s-golden-rule)
 	3. [Feynman Rules for a Toy Theory](../notes/feynman-diagram.md#feynman-rules)
 7. Quantum Electrodynamics
+	1. [The Dirac Equation](../notes/dirac-equation.md)
+	2. [Solutions to the Dirac Equation](../notes/dirac-equation.md)
+	3. [Bilinear Covariants](../notes/dirac-equation.md)
+	5. [The Feynman Rules for QED](../notes/feynman-diagram.md#feynman-rules)
+	6. [Examples](../notes/feynman-diagram.md#feynman-rules)
+	7. [Casimir's Trick](../notes/feynman-diagram.md#feynman-rules)
+	8. [Cross Sections and Lifetimes](../notes/feynman-diagram.md#feynman-rules)
 ## Assignments
 - [x] HW 1 (1/31)
 - [x] HW 2 (2/21)

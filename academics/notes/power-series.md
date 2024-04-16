@@ -6,6 +6,7 @@ power series
 		$x = \lim_{n \to \infty} |\frac{a_n}{a_{n+1}}|$
 	test endpoint separately
 	entire function converges everywhere
+same for complex
 ## Operations
 addition/subtraction standard
 multiplication

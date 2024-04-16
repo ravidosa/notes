@@ -1,5 +1,6 @@
 # PHY 115B
 MFW11: TLC 3214, LEC
+T3: Roessler 55, LAB
 ## Notes
 *Introduction to Quantum Mechanics* (Griffiths and Schroeter, 3e)
 4. [Quantum Mechanics in Three Dimensions](../notes/quantum-mechanics-3d.md)
@@ -21,4 +22,4 @@ MFW11: TLC 3214, LEC
 - [x] LAB 4 (3/7)
 - [x] HW 7 (3/15)
 - [x] FINAL (3/19)
-- [ ] PROJECT (3/21)
+- [x] PROJECT (3/21)

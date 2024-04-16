@@ -69,3 +69,17 @@
 [PHY 115B: Quantum Mechanics](./w24/phy115b.md) (Carlip)
 [PHY 115L: Computational Physics Lab for Quantum Mechanics](./w24/phy115b.md) (Mulhearn)
 [PHY 130A: Elementary Particle Physics](./w24/phy130a.md) (Mulhearn)
+
+## Spring '24
+### Computer Science
+[ECS 36C: Data Structures, Algorithms, & Programming](./s24/ecs36c.md) (Saltzen)
+[ECS 127: Cryptography](./s24/ecs127.md) (Rogaway)
+### Mathematics
+[MAT 127C: Real Analysis](./s24/mat127c.md) (Babson)
+[MAT 128C: Numerical Analysis in Differential Equations](./s24/mat128c.md) (Teran)
+[MAT 185B: Complex Analysis](./s24/mat185b.md) (Weng)
+### Physics
+[PHY 110L: Computational Physics Lab for Electricity & Magnetism](./s23/phy110b.md) (Wittman)
+[PHY 122B: Advanced Lab in Particle Physics](./s24/phy122b.md) (Citron, Yu)
+[PHY 129A: Introduction to Nuclear Physics](./s24/phy129a.md) (Calderon de la Barca Sanchez)
+[PHY 130B: Elementary Particle Physics](./s24/phy130b.md) (Chertok)
