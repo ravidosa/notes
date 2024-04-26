@@ -1,6 +1,8 @@
 import numpy as np
 import matplotlib.pyplot as plt
+import os
 import itertools
+from utils import E_avg, C, S, F
 
 J = 1
 N = 10
@@ -13,17 +15,6 @@ E_arr = np.zeros(M)
 C_arr = np.zeros(M)
 S_arr = np.zeros(M)
 F_arr = np.zeros(M)
-
-def E_avg(N, E_n, T):
-    return np.sum(np.dot(E_n, np.exp(-1 / T * E_n))) / np.sum(np.exp(-1 / T * E_n))
-def E2_avg(N, E_n, T):
-    return np.sum(np.dot(E_n ** 2, np.exp(-1 / T * E_n))) / np.sum(np.exp(-1 / T * E_n))
-def C(N, E_n, T):
-    return 1/T ** 2 * (E2_avg(N, E_n, T) - E_avg(N, E_n, T) ** 2)
-def S(N, E_n, T):
-    return 1 / T * (E_avg(N, E_n, T) - F(N, E_n, T))
-def F(N, E_n, T):
-    return -1 * T * np.log(np.sum(np.exp(-1 / T * E_n)))
 
 i = 0
 for s in itertools.product([-1, 1], repeat=N):
@@ -60,4 +51,5 @@ axs[1, 1].set_xlabel("T")
 axs[1, 1].set_ylabel("F")
 axs[1, 1].set_title("Free Energy vs. Temperature")
 fig.tight_layout()
+plt.savefig(os.path.join(os.path.dirname(__file__), "3-4.png"))
 plt.show()

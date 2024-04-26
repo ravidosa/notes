@@ -7,7 +7,7 @@ TR2: Roessler 156, LAB
 - [x] ELECTRONICS PRELAB (4/9)
 - [x] QUIZ (4/11)
 - [x] PRELAB 1 (4/16)
-- [ ] NUCLEAR COUNTING REPORT (4/18)
+- [x] NUCLEAR COUNTING REPORT (4/18)
 - [ ] PRELAB 2 (5/9)
 - [ ] REPORT 1 (5/16)
 - [ ] REPORT 2 (6/7)

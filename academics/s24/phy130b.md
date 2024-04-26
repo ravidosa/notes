@@ -14,8 +14,8 @@ MWF10: Physics 130, LEC
 	6. 
 ## Assignments
 - [x] HW 1 (4/15)
-- [ ] HW 2 (4/26)
-- [ ] MIDTERM (5/1)
+- [x] HW 2 (4/26)
+- [ ] MIDTERM (5/3)
 - [ ] HW 3 (5/10)
 - [ ] HW 4 (5/24)
 - [ ] HW 5 (6/10)

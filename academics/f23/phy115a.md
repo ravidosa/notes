@@ -23,7 +23,7 @@ MWF9: Roessler 55, LEC
 	4. [Generalized Statistical Interpretation](../notes/interpretation-quantum-mechanics.md#generalized-statistical-interpretation)
 	5. [The Uncertainty Principle](../notes/heisenberg-uncertainty-principle.md)
 	6. [Vectors and Operators](../notes/bra-ket-notation.md)
-4. [The WKB Approximation](../notes/wkb-approximation.md)
+9. [The WKB Approximation](../notes/wkb-approximation.md)
 ## Assignments
 - [x] HW 1 (9/29)
 - [x] HW 2 (10/6)
