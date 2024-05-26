@@ -29,8 +29,8 @@ MWF9: Physics 148, LEC
 	7. [Casimir's Trick](../notes/feynman-diagram.md#feynman-rules)
 	8. [Cross Sections and Lifetimes](../notes/feynman-diagram.md#feynman-rules)
 ## Assignments
-- [x] HW 1 (1/31)
-- [x] HW 2 (2/21)
-- [x] HW 3 (3/5)
+- [x] [HW 1](../assignments/pdf/phy130a_hw1.pdf) (1/31)
+- [x] [HW 2](../assignments/pdf/phy130a_hw2.pdf) (2/21)
+- [x] [HW 3](../assignments/pdf/phy130a_hw3.pdf) (3/5)
 - [x] MIDTERM (3/15)
 - [x] FINAL (3/21)

@@ -5,11 +5,15 @@
 - Abstract Algebra (Judson)
 - Acoustic and Auditory Phonetics (Johnson)
 - Algebra (Artin) {[MAT 150A](./f23/mat150a.md), [MAT 150B](./w24/mat150b)}
+- [Algebra](https://tutorial.math.lamar.edu/Classes/Alg/Alg.aspx) (Dawkins)
 - Analysis on Manifolds (Munkres)
 - The Art of Electronics (Horowitz, Hill)
 - The Art of Proof (Beck, Geoghegan)
 - Asian Art (Neave, Blanchard, Sardar)
 - Atomic Physics (Foot)
+- [Calculus I](https://tutorial.math.lamar.edu/Classes/CalcI/CalcI.aspx) (Dawkins)
+- [Calculus II](https://tutorial.math.lamar.edu/Classes/CalcII/CalcII.aspx) (Dawkins)
+- [Calculus III](https://tutorial.math.lamar.edu/Classes/CalcIII/CalcIII.aspx) (Dawkins)
 - Classical Electrodynamics (Jackson)
 - Classical Mechanics (Taylor)
 - Classical Topology and Combinatorial Group Theory (Stillwell)
@@ -18,9 +22,12 @@
 - Computability (Cutland)
 - A Computational Introduction to Linguistics (Ojeda)
 - Computational Physics (Giordano) {[PHY 45](./w23/phy45.md)}
+- Computer Graphics with Open GL (Baker, Carithers, Hearn)
 - A Course in Phonetics (Ladefoged, Johnson)
+- [CSDIY](https://csdiy.wiki/en/) (Zhong)
 - Deep Learning (Goodfellow, Bengio, Courville)
 - The Development of Language (Gleason, Ratner)
+- [Differential Equations](https://tutorial.math.lamar.edu/Classes/DE/DE.aspx) (Dawkins)
 - Differential Geometry of Curves and Spaces (Do Carmo)
 - Differential Topology (Guillemin, Pollack)
 - Discrete Mathematics (Biggs) {[MAT 148](./w24/mat148.md)}
@@ -29,21 +36,31 @@
 - Elementary Analysis: The Theory of Calculus (Ross)
 - Elementary Number Theory and Its Application (Rosen)
 - Elements of Differential Geometry (Millman, Parker)
+- Elements of Information Theory (Cover, Thomas)
 - Elements of Set Theory (Enderton)
 - English Grammar (Barry)
 - Essentials of Linguistics (Anderson)
+- Experimental Physics: Modern Methods (Dunlap)
 - Experiments in Modern Physics (Melissinos, Napolitano) {PHY 122A, PHY 122B}
+- [The Feynman Lectures on Physics](https://www.feynmanlectures.caltech.edu/) (Feynman, Leighton, Sands)
 - Figurative Language (Dancygier, Sweetser)
 - Foundations of Astrophysics (Ryden) {PHY 153}
 - A First Course in Abstract Algebra (Fraleigh)
 - A First Course in Probability (Ross) {[MAT 135A](./s23/mat135a.md)}
 - A First Course in Wavelets with Fourier Analysis (Boggess, Narcowich)
+- Foundations of 3D Computer Graphics (Gortler)
 - The Four Pillars of Geometry (Stillwell)
+- Fundamentals of Computer Graphics (Ashikhmin, Marschner, Shirley)
+- [A Graduate Course in Applied Cryptography](https://toc.cryptobook.us/book.pdf) (Boneh, Shoup)
 - Galois Theory (Stewart)
 - General Relativity (Carlip) {PHY 155}
+- [Group Theory in a Nutshell for Physicists](https://emineter.wordpress.com/wp-content/uploads/2018/08/a-zee-group-theory-in-a-nutshell-for-physicists-2016-princeton-university-press.pdf) (Zee)
 - Historical Linguistics (Campbell)
 - Ideals, Varieties, and Algorithms (Cox, Little, O'Shea)
 - Insight Through Computing (Van Loan, Fan)
+- [An Intensive Introduction to Cryptography](https://files.boazbarak.org/crypto/lnotes_book.pdf) (Barak)
+- Interactive Computer Graphics: A Top Down Approach With Shader-Based Open GL (Angel, Schreiner)
+- Introduction to Automata Theory, Languages, and Computation (Hopcroft, Ullman, Motwani)
 - Introduction to Classical Mechanics (Morin) {[PHY 105A](./w23/phy105a.md), [PHY 105B](./s23/phy105b.md)}
 - Introduction to Cosmology (Ryden) {PHY 153}
 - Introduction to Electrodynamics (Griffiths) {[PHY 110A](./w23/phy110a.md), [PHY 110B](./s23/phy110b.md)}
@@ -51,23 +68,32 @@
 - Introduction to High Energy Physics (Perkins)
 - An Introduction to Mathematical Cryptography (Hoffstein, Pipher, Silverman)
 - An Introduction to Modern Astrophysics (Carroll, Ostlie)
+- [Introduction to Modern Cryptography](https://web.cs.ucdavis.edu/~rogaway/classes/227/spring05/book/main.pdf) (Bellare, Rogaway) {ECS 227}
 - Introduction to Numerical Analysis (Stoer, Bulirsch, et al.)
 - Introduction to Optics (Pedrotti) {[PHY 108](./s23/phy108.md)}
 - Introduction to Partial Differential Equations (Olver)
 - Introduction to Plasma Physics (Chen)
+- Introduction to Quantum Field Theory (Peskin, Schroeder)
 - Introduction to Quantum Mechanics (Griffiths, Schroeter) {[PHY 115A](./f23/phy115a.md), [PHY 115B](./w24/phy115b.md)}
 - Introduction to Solid State Physics (Kittel) {PHY 140A, PHY 140B}
+- [Introduction to Theoretical Computer Science](https://introtcs.org/public/) (Barak)
+- Introduction to the Theory of Computation (Sipser)
 - An Introduction to Thermal Physics (Schroeder) {[PHY 112](./f23/phy112.md)}
 - An Introduction to the Theory of Numbers (Niven, Zuckerman, Montgomery)
 - Introduction to Topology (Mendelson)
 - Introduction to Typology: The Unity and Diversity of Language (Whaley) {[LIN 152](./w24/lin152.md)}
-- Invitation to Formal Semantics (Coppock, Champollion) {[LIN 141](./f23/lin141.md)}
+- [Invitation to Formal Semantics](https://eecoppock.info/bootcamp/semantics-boot-camp.pdf) (Coppock, Champollion) {[LIN 141](./f23/lin141.md)}
 - Language Files (OSU) {[LIN 1Y](./f22/lin1y.md)}
+- [LaTeX](https://upload.wikimedia.org/wikipedia/commons/2/2d/LaTeX.pdf)
 - Linear Algebra (Friedberg, Insel, Spence)
 - Linear Algebra and Its Applications (Lay, Lay, McDonald)
 - Linear Programming (Vanderbei) {[MAT 168](./f23/mat168.md)}
 - A Mathematical Introduction to Logic (Enderton)
 - Mathematical Methods in the Physical Sciences (Boas) {[PHY 104A](./f22/phy104a.md)}
+- Mathematical Methods for Physicists (Arfken, Weber)
+- [Mathematical Tools for Physics](http://www-mdp.eng.cam.ac.uk/web/library/enginfo/textbooks_dvd_only/nearing/math_methods.pdf) (Nearing) {[PHY 104A](./f22/phy104a.md)}
+- [Mathematics of Machine Learning](https://raw.githubusercontent.com/alexchandler100/MAT_180/main/00_Course_Files/MAT%20180%20Textbook/main.pdf) (Chandler) {MAT 180}
+- Mathematics for Physics: A Guided Tour for Graduate Students (Goldbart)
 - Metaphors We Live By (Lakoff, Johnson)
 - Methods of Mathematical Economics (Franklin)
 - Microelectronic Circuits (Sedra, Smith, Carusone, Gaudet)
@@ -78,6 +104,7 @@
 - Modern Supersymmetry (Terning) {PHY 246A}
 - More than Cool Reason (Lakoff, Turner)
 - Multivariable Calculus (Stewart)
+- [No-Nonsense Quantum Field Theory](http://www.stat.ucla.edu/~ywu/QFT0.pdf) (Schwichtenberg)
 - Nonlinear Dynamics with Chaos (Strogatz) {[MAT 119A](./w23/mat119a.md)}
 - Nonlinear Optics (Boyd, Prato)
 - Numerical Analysis (Burden, Faires, et al.) {[MAT 128A](./m23/mat128a.md), [MAT 128B](./s23/mat128b.md), [MAT 128C](./s24/mat128c.md)}
@@ -90,10 +117,15 @@
 - Physics (Giancoli)
 - Physics for Scientists and Engineers (Giancoli)
 - Practical Electronics for Inventors (Scherz, Monk) {[PHY 116A](./f22/phy116a.md), [PHY 116B](./w23/phy116b.md)}
+- Principles of Continuum Mechanics (Reddy)
 - Principles of Quantum Mechanics (Shankar) {PHY 215B}
 - Probability and Random Processes (Grimmett, Stirzaker)
 - The Qualitative Theory of Ordinary Differential Equations (Brauer, Nohel)
+- [Quantum Field Theory](https://web.physics.ucsb.edu/~mark/ms-qft-DRAFT.pdf) (Srednicki)
+- [Quantum Field Theory in a Nutshell](http://home.ustc.edu.cn/~gengb/200923/A.%20Zee,%20Quantum%20Field%20Theory%20in%20a%20Nutshell.pdf) (Zee)
+- Quantum Field Theory and the Standard Model (Schwartz)
 - Quantum Mechanics (Commins) {PHY 215B}
+- [Quantum Mechanics for Engineers](https://web1.eng.famu.fsu.edu/~dommelen/quantum/) (Dommelen)
 - Real Mathematical Analysis (Pugh)
 - Single Variable Calculus (Stewart)
 - Solid State Basics (Simon)
@@ -103,6 +135,7 @@
 - Statistical Physics of Particles (Kardar) {PHY 219A}
 - Syntactic Constructions in English (Kim, Michaelis) {[LIN 103B](./w23/lin103b.md), [LIN 131](./w24/lin131.md)}
 - Syntax (Carnie)
+- [Theory of Computation](https://canvas.ucdavis.edu/courses/845987/files/23253366) (Doty) {[ECS 120](./w24/ecs120.md)}
 - Thermal Physics (Kittel, Kroemer)
 - Think Julia (Lauwens, Downey)
 - A Transition to Advanced Mathematics (Smith, Eggen, Andre) {[MAT 108](./w23/mat108.md)}
@@ -111,3 +144,4 @@
 - Understanding Analysis (Abbott) {[MAT 127A](./s23/mat127a.md), [MAT 127B](./m23/mat127b.md)}
 - Understanding Phonology (Gussenhoven)
 - University Physics (Young, Freedman)
+- Visual Complex Analysis (Needham)

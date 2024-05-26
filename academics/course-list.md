@@ -77,6 +77,7 @@
 ### Mathematics
 [MAT 127C: Real Analysis](./s24/mat127c.md) (Babson)
 [MAT 128C: Numerical Analysis in Differential Equations](./s24/mat128c.md) (Teran)
+[MAT 150C: Modern Algebra](./s24/mat150c.md) (Kuperberg)
 [MAT 185B: Complex Analysis](./s24/mat185b.md) (Weng)
 ### Physics
 [PHY 110L: Computational Physics Lab for Electricity & Magnetism](./s23/phy110b.md) (Wittman)

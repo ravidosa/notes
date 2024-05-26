@@ -72,9 +72,11 @@ IVP
 	lipschitz condition on subset $D$ of $\mathbb{R}^2$
 		$|f(t,y_1)-f(t,y_2)|\leq L|y_1-y_2|$ for all $(t,y_1)$, $(t,y_2)$ in $D$, lipschitz constant $L$
 		concavity
+			$|\frac{\partial}{\partial y}f(t, y)| \leq L$
 			convex if points on connecting line also in set
 		if lipschitz satisfied, then unique solution
 			if continuous, then well-posed
+			perturbed problem $\frac{dz}{dt} = f(t, z) + \delta(t)$ has unique solution where $|z(t) - y(t)| < k\epsilon$
 picard iteration
 	functionals
 		$T[y](t) = \alpha + \int_a^t f(s, y(s)) \, ds$
@@ -84,10 +86,3 @@ well-posed problems
 	unique solution exists
 approximation
 	equally spaced time steps with step size
-	euler's method
-		$y_{n+1}=y_n + hf(t_n,y_n)$
-		local truncation error
-			$\frac{y(t_{n+1}) - y(t_n)}{h} - f(t_n, y(t_n)) = \frac{h}{2}y''(\epsilon)$
-			first order accurate (power of step size in truncation error)
-	backwards euler
-		in reverse, same order accuracy

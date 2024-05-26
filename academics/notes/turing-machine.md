@@ -7,6 +7,8 @@ variants
 	equivalent: multitape, 2-way infinite, multiple tape heads, 2d tape, RAM, right or reset, two stacks, queue, three counters
 	less power: one stack, two counters, bounded memory
 church-turing thesis: all functions that are computable can be computed by turing machine
+turing complete: can be used to simulate turing machine
+	[latex](https://www.overleaf.com/learn/latex/Articles/LaTeX_is_More_Powerful_than_you_Think_-_Computing_the_Fibonacci_Numbers_and_Turing_Completeness)
 ## Formalization
 syntax
 	turing machine $M = (Q, \Sigma, \Gamma, \delta, s, q_a, q_r)$

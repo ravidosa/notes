@@ -1,4 +1,5 @@
 # Holomorphic Function
+holomorphic iff analytic
 $\mathbb{C}$ limit/convergence
 	$\lim_{n\to\infty} z_n = z_0$ iff $|z_n - z_0| \to 0$
 	extend convergence of series to convergence of functions
@@ -8,6 +9,9 @@ continuation sequences
 		germ: collection of pairs o/e to pair
 	parametrization
 	analytic relations (differentiation, integration)
+sequence of analytic functions locally uniformly conveging if $\epsilon$ bound holds in some neighborhood, locally uniformly bounded if bounded in some neighborhood
+	hurwitz theorem: if sequence locally uniformly converging to nonconstant function, $f_n(z_n) = f(z), \lim_{n\to\infty} z_n = z$
+	dogwalking lemma: analytic functions that stay within bound of each other have same winding number
 ## FTC in $\mathbb{C}$
 $\int_a^b f(t) \, dt = F(b) - F(a), F(x) = \int_a^x f(t) \, dt$ ($F'(x) = f(x)$)
 different geometrical interpretation, but FTC holds
@@ -47,6 +51,9 @@ inverse function theorem
 	if holomorphic, determinant of jacobian is nonzero
 maximum modulus theorem: analytic function relative maximum on boundary
 	if also in boundary, then constant on closure
+	schwarz's lemma
+		analytic, bounded by $1$ for $|z| < 1$, $f(0) = 0$
+		either $|f(z)| < |z|, |f'(0)| < 1$ or $f(z) = cz$ where $|c| = 1$
 harmonic functions: $\nabla^2 u = \Delta u  = 0$
 	if $u, v$ harmonic and $u + iv$ analytic, $u, v$ are harmonic conjugates
 	equal to average on circle

@@ -8,6 +8,6 @@ TR2: Roessler 156, LAB
 - [x] QUIZ (4/11)
 - [x] PRELAB 1 (4/16)
 - [x] NUCLEAR COUNTING REPORT (4/18)
-- [ ] PRELAB 2 (5/9)
-- [ ] REPORT 1 (5/16)
+- [x] PRELAB 2 (5/9)
+- [x] REPORT 1 (5/17)
 - [ ] REPORT 2 (6/7)
