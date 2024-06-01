@@ -51,6 +51,7 @@
 - Foundations of 3D Computer Graphics (Gortler)
 - The Four Pillars of Geometry (Stillwell)
 - Fundamentals of Computer Graphics (Ashikhmin, Marschner, Shirley)
+- Fundamentals in Nuclear Physics (Basdevant, Rich, Spiro)
 - [A Graduate Course in Applied Cryptography](https://toc.cryptobook.us/book.pdf) (Boneh, Shoup)
 - Galois Theory (Stewart)
 - General Relativity (Carlip) {PHY 155}
@@ -82,6 +83,8 @@
 - An Introduction to the Theory of Numbers (Niven, Zuckerman, Montgomery)
 - Introduction to Topology (Mendelson)
 - Introduction to Typology: The Unity and Diversity of Language (Whaley) {[LIN 152](./w24/lin152.md)}
+- Introductory Nuclear Physics (Krane)
+- Introductory Nuclear Physics (Wong)
 - [Invitation to Formal Semantics](https://eecoppock.info/bootcamp/semantics-boot-camp.pdf) (Coppock, Champollion) {[LIN 141](./f23/lin141.md)}
 - Language Files (OSU) {[LIN 1Y](./f22/lin1y.md)}
 - [LaTeX](https://upload.wikimedia.org/wikipedia/commons/2/2d/LaTeX.pdf)
@@ -107,6 +110,8 @@
 - [No-Nonsense Quantum Field Theory](http://www.stat.ucla.edu/~ywu/QFT0.pdf) (Schwichtenberg)
 - Nonlinear Dynamics with Chaos (Strogatz) {[MAT 119A](./w23/mat119a.md)}
 - Nonlinear Optics (Boyd, Prato)
+- Nuclear and Particle Physics: An Introduction (Martin)
+- Nuclear Physics: Principles and Applications (Lilley)
 - Numerical Analysis (Burden, Faires, et al.) {[MAT 128A](./m23/mat128a.md), [MAT 128B](./s23/mat128b.md), [MAT 128C](./s24/mat128c.md)}
 - Numerical Analysis (Sauer)
 - Numerical Methods for Physics (Garcia) {[PHY 45](./w23/phy45.md)}

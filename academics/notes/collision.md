@@ -18,6 +18,10 @@ energy and momentum always conserved
 elastic collision: kinetic energy, rest energy, and mass conserved
 inelastic collision
 	sticky (decrease in kinetic, increase in rest energy and mass) vs explosive (increase in kinetic, decrease in rest energy and mass)
+mandelstam variables
+	$s = (p_1 + p_2)^2 = (p_3 + p_4)^2, t = (p_3 - p_3)^2 = (p_2 - p_4)^2, u = (p_1 - p_4)^2 = (p_2 - p_3)^2$
+	lorentz invariant
+	center of mass energy $\sqrt{s}$
 ### Strategies
 classical strategies
 use invariant $E^2 - p^2c^2 = m^2c^4$ to get energy from momentum (or vice versa)

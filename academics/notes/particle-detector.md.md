@@ -30,6 +30,25 @@ ionization energy loss
 		good for heavy projectiles, fails for low $\beta$, high $\gamma$
 		$dE$ usually below bethe-bloch prediction
 	plots shift w mass, electron very different, can use to id
+mass measurement
+	nuclei ground state vs excited state
+	particle rest energy
+	mass spectrometer
+		ion beam: multiple isotopes
+		velocity selector: balance electric and magnetic force to keep beam straight
+		uniform B stage: different masses have different radius
+		detector: photographic plate, etc
+		works well for nuclei, not particles
+	particles
+		use $E^2 = p^2 + m^2$
+		select particles with momentum, scintillation counter
+	breit-wigner
+		shape of resonance
+lorentz invariant $s$
+	$s = (\sum_i E_i)^2 - (\sum_i p_i)^2$
+	center of mass energy $\sqrt{s}$
+interactions count
+	cross section, integrate luminosity over time
 bragg peak: depth of radiation penetration
 cherenkov radiation: minimal energy loss
 bremsstrahlung
