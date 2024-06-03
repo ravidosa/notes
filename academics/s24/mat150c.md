@@ -2,8 +2,8 @@
 MWF10: Hoagland 168, LEC
 ## Notes
 *Algebra* (Artin, 2e)
-15. [Fields](../notes/fields.md)
-16. [Galois Theory](../notes/fields.md)
+15. [Fields](../notes/field.md)
+16. [Galois Theory](../notes/field.md)
 ## Assignments
 - [x] HW 1 (4/5)
 - [x] HW 2 (4/12)

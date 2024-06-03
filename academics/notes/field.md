@@ -1,4 +1,4 @@
-# Fields
+# Field
 field $F$
 	commutative under $+$
 	commutative under $\times$ excluding additive identity
@@ -47,3 +47,5 @@ classes of fields
 			irreducible factors of $x^q - x$, polynomials of degree less than $r$ with coefficients in $\mathbb{Z}_p$
 			frobenius automorphism: $(x + y)^q = x^q + y^q$
 	function field: extension of field of rational functions
+## Arithmetic
+treat as polynomials, addition as expected, multiplication mod irreducible polynomial

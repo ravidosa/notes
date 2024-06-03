@@ -10,7 +10,7 @@ linear maps preserve structure
 ring
 	see [Rings](rings.md)
 field
-	see [Fields](fields.md)
+	see [Fields](field.md)
 ## Vector Spaces
 vector space $V$ over field $F$ with addition, scalar multiplication as laws of composition
 	addition commutative
