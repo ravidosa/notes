@@ -11,4 +11,5 @@ order three
 order four
 	$k_1 = hf(t_i, w_i), k_2 = hf(t_i + \frac{h}{2}, w_i + \frac{k_1}{2}), k_3 = hf(t_i + \frac{h}{2}, w_i + \frac{k_2}{2}), k_4 = hf(t_{i+1}, w_i + k_3)$
 	$w_{i+1} = w_i + \frac{1}{6}(k_1 + 2k_2 + 2k_3 + k_4)$
+## Error Bound
 local truncation error $O(n^k)$ where $k = \begin{cases}m & 2 \leq m \leq 4 \\ m - 1 & 5 \leq m \leq 7 \\ m - 2 & 8 \leq m \leq 9 \\ m - 3 & 10 \leq m\end{cases}$ where $m$ is number of evaluations per step

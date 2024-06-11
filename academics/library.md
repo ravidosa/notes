@@ -4,9 +4,9 @@
 - Abstract Algebra (Hungerford)
 - Abstract Algebra (Judson)
 - Acoustic and Auditory Phonetics (Johnson)
-- Algebra (Artin) {[MAT 150A](./f23/mat150a.md), [MAT 150B](./w24/mat150b)}
+- Algebra (Artin) {[MAT 150A](./f23/mat150a.md), [MAT 150B](./w24/mat150b), [MAT 150C](./s24/mat150c)}
 - [Algebra](https://tutorial.math.lamar.edu/Classes/Alg/Alg.aspx) (Dawkins)
-- Analysis on Manifolds (Munkres)
+- Analysis on Manifolds (Munkres) {[MAT 127C](./s24/mat127c.md)}
 - The Art of Electronics (Horowitz, Hill)
 - The Art of Proof (Beck, Geoghegan)
 - Asian Art (Neave, Blanchard, Sardar)
@@ -23,6 +23,7 @@
 - A Computational Introduction to Linguistics (Ojeda)
 - Computational Physics (Giordano) {[PHY 45](./w23/phy45.md)}
 - Computer Graphics with Open GL (Baker, Carithers, Hearn)
+- Concrete Mathematics (Graham, Knuth, Patashnik)
 - A Course in Phonetics (Ladefoged, Johnson)
 - [CSDIY](https://csdiy.wiki/en/) (Zhong)
 - Deep Learning (Goodfellow, Bengio, Courville)
@@ -65,7 +66,7 @@
 - Introduction to Classical Mechanics (Morin) {[PHY 105A](./w23/phy105a.md), [PHY 105B](./s23/phy105b.md)}
 - Introduction to Cosmology (Ryden) {PHY 153}
 - Introduction to Electrodynamics (Griffiths) {[PHY 110A](./w23/phy110a.md), [PHY 110B](./s23/phy110b.md)}
-- Introduction to Elementary Particles (Griffiths) {[PHY 130A](./w24/phy130a.md), PHY 130B}
+- Introduction to Elementary Particles (Griffiths) {[PHY 130A](./w24/phy130a.md)}
 - Introduction to High Energy Physics (Perkins)
 - An Introduction to Mathematical Cryptography (Hoffstein, Pipher, Silverman)
 - An Introduction to Modern Astrophysics (Carroll, Ostlie)
@@ -100,8 +101,9 @@
 - Metaphors We Live By (Lakoff, Johnson)
 - Methods of Mathematical Economics (Franklin)
 - Microelectronic Circuits (Sedra, Smith, Carusone, Gaudet)
+- [Models of Computation](https://cs.brown.edu/people/jsavage/book/pdfs/ModelsOfComputation.pdf) (Savage)
 - Modern Electrodynamics (Zangwill) {PHY 200C}
-- Modern Particle Physics (Thomson)
+- Modern Particle Physics (Thomson) {[PHY 130B](./s24/phy130b.md)}
 - Modern Physics (Harris) {[PHY 9D](./f22/phy9d.md)}
 - Modern Quantum Mechanics (Sakurai) {PHY 215B}
 - Modern Supersymmetry (Terning) {PHY 246A}
@@ -137,6 +139,7 @@
 - Solid State Physics (Ashcroft, Mermin)
 - The Sounds of Language: An Introduction to Phonetics and Phonology (Zsiga) {[LIN 103A](./w24/lin103a.md)}
 - Spacetime and Geometry (Carroll)
+- Subatomic Physics (Garcia, Henley) {[PHY 129A](./s24/phy129a.md)}
 - Statistical Physics of Particles (Kardar) {PHY 219A}
 - Syntactic Constructions in English (Kim, Michaelis) {[LIN 103B](./w23/lin103b.md), [LIN 131](./w24/lin131.md)}
 - Syntax (Carnie)

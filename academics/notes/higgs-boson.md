@@ -9,3 +9,6 @@ lagrangians in QFT (noether's theorem)
 local gauge invariance: use covariant derivative
 	$\mathcal{L}_{QED} = \bar{\psi}(i\gamma^\mu\partial_\mu - m_e)\psi + e\bar{\psi}\gamma^\mu\psi A_\mu - \frac{1}{4}F_{\mu\nu}F^{\mu\nu}$
 	broken by particle mass terms (problematic for weak)
+complete $\mathcal{L}$: $h$ scalar, gauge boson, $h,B$ interaction, $h$ self-interaction
+	$m_B = gv, m_H = \sqrt{2\lambda}v, m_W = \frac{1}{2}g_Wv, m_A = 0, m_Z = \frac{1}{2}v\sqrt{g_W^2 + {g'}^2}$
+	$v = 246$ GeV

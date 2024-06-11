@@ -11,4 +11,16 @@ LEP collider
 	neutrino generations $N_\nu = 2.9840 \pm 0.0082$
 	asymmetry parameter $\mathcal{A}_f = \frac{(c_L^f)^2 - (c_R^f)^2}{(c_L^f)^2 + (c_R^f)^2} = \frac{2c_V^fc_A^f}{(c_V^f)^2 + (c_A^f)^2}$
 	$\sin^2\theta_W = 0.23146 \pm 0.00012$
-	
+## Parameters
+fermion masses (12)
+coupling constants (3)
+higgs potential (2) or higgs mass (1)
+mixing angles (8)
+CP phase (1)
+## Questions
+dark matter: non-luminous matter (WIMPs)
+supersymmetry: sparticles (sfermions, gauginos, higgsinos)
+unification: grand unified theory, convergence at $10^{15}$ GeV
+higgs branching ratios
+flavor, CP violation
+majorana particles

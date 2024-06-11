@@ -1,6 +1,6 @@
 # Electromagnetic Waves
 wave equation
-	see [Partial Differential Equations](partial-differential-equations.md)
+	see [Partial Differential Equations](partial-differential-equation.md)
 	$(\nabla^2 - \mu\epsilon\frac{\partial^2}{\partial t^2})\vec{E} = 0$
 	$(\nabla^2 - \mu\epsilon\frac{\partial^2}{\partial t^2})\vec{B} = 0$
 	sinusoidal solution

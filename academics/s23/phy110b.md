@@ -20,5 +20,5 @@ T3: Roessler 55, LAB
 - [x] MIDTERM 2 (5/26)
 - [x] HW 6 (6/1)
 - [x] HW 7 (6/8)
-- [ ] LAB 5 (6/9)
+- [x] LAB 5 (6/9)
 - [x] FINAL (6/15)

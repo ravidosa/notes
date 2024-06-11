@@ -28,7 +28,7 @@ TR1.5: Roessler 55, LEC
 	8. [Normalization of the Legendre Polynomials](../notes/legendre-polynomials.md)
 	9. [Legendre Series](../notes/legendre-polynomials.md)
 13. Partial Differential Equations
-	1. [Introduction](../notes/partial-differential-equations.md)
+	1. [Introduction](partial-differential-equation.md)
 	2. [Laplace's Equation](../notes/laplace-s-equation)
 	3. [The Diffusion Equation](../notes/diffusion-equation); [The Schrodinger Equation](../notes/schrodinger-equation.md)
 	4. [The Wave Equation](../notes/wave-equation.md)

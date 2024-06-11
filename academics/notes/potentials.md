@@ -26,7 +26,7 @@ uniqueness
 ## Method of Images
 reflect charge across conducting surface with opposite sign
 ## Separation of Variables
-see [Partial Differential Equations](partial-differential-equations.md)
+see [Partial Differential Equations](partial-differential-equation.md)
 cartesian coordinates and spherical coordinates
 	find infinite set of solutions
 	linear combination

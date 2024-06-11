@@ -86,3 +86,23 @@ well-posed problems
 	unique solution exists
 approximation
 	equally spaced time steps with step size
+higher order and systems
+	multivariable lipschitz: $|f(t, \vec{y}_1) - f(t, \vec{y}_2)| \leq L\sum_i (|\vec{y}_1 - \vec{y}_2|)_i$, $\frac{\partial f(t, \vec{y})}{\partial y_i} \leq L$
+	systems: do method for each of the individual equations
+	higher order: convert to system and solve
+stability
+	[one-step](euler-s-method.md)
+		consistent if LTE approaches 0 with smaller steps, convergent if approximation approaches solution with smaller steps
+	[multistep](multistep-method.md)
+		consistent if LTE approaches 0 with smaller steps and error for starting values approach 0
+		convergence condition same as one-step
+		characteristic polynomial
+			root condition satisfied if all roots $|\lambda_i| \leq 1$
+			strongly stable: root condition and 1 as only and simple root
+			weakly stable: root condition and multiple distinct roots with magnitude 1
+			unstable: no root condition
+stiff equation
+	magnitude of derivative increases, error dominates approximation
+	transient solution ($e^{-ct}$), steady state solution
+## BVP Theory
+if BVP $y'' = f(x, y, y')$ and $f_y, f_{y'}$ continuous on $D$ with $f_y > 0$ and $f_{y'}$ bounded, then BVP has unique solution

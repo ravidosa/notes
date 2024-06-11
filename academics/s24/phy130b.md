@@ -1,6 +1,7 @@
 # PHY 130B
 MWF10: Physics 130, LEC
 ## Notes
+*Modern Particle Physics* (Thomson, 1e)
 1. Introduction
 	1. The Standard Model of Particle Physics
 		1. [The Fundamental Particles](../notes/history-particle-physics.md#the-standard-model)
@@ -33,8 +34,8 @@ MWF10: Physics 130, LEC
 14. [CP Violation and Weak Hadronic Interactions](../notes/symmetry-physics.md)
 15. [Electroweak Unification](../notes/weak-interaction.md#electroweak-unification)
 16. [Tests of the Standard Model](../notes/standard-model.md)
-17. The Higgs Boson
-18. The Standard Model and Beyond
+17. [The Higgs Boson](../notes/higgs-boson.md)
+18. [The Standard Model and Beyond](../notes/standard-model.md)
 ## Assignments
 - [x] HW 1 (4/15)
 - [x] HW 2 (4/26)
