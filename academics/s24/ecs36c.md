@@ -2,6 +2,8 @@
 TR12: Hunt 100, LEC
 M12: Art 204, DIS
 ## Notes
+*Data Structures and Algorithm Analysis in C++* (Weiss, 4e)
+*Algorithms and Data Structures Using C++* (Miller, Ranum, and Pearce)
 ## Assignments
 - [x] QUIZ 1 (4/8)
 - [x] QUIZ 2 (4/15)

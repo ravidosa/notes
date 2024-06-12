@@ -119,6 +119,7 @@
 - Numerical Methods for Physics (Garcia) {[PHY 45](./w23/phy45.md)}
 - Numerical Methods in Physics with Python (Gezerlis) {[PHY 40](./f22/phy40.md)}
 - Partial Differential Equations (Evans)
+- Particle Physics (Martin, Shaw)
 - Philosophy in the Flesh (Lakoff, Johnson)
 - Phonetics (Reetz, Jongman) {[LIN 112](./f23/lin112.md)}
 - Physics (Giancoli)

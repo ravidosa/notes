@@ -17,4 +17,4 @@ MWF10: Hoagland 168, LEC
 - [x] HW 8 (5/24)
 - [x] HW 9 (5/31)
 - [x] HW 10 (6/7)
-- [ ] FINAL (6/11)
+- [x] FINAL (6/11)

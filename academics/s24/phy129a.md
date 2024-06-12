@@ -1,6 +1,7 @@
 # PHY 129A
 TR10.5: Physics 148, LEC
 ## Notes
+*Subatomic Physics* (Henley and Garcia, 3e)
 1. Background and Language
 	1. [Orders of Magnitude](../notes/fundamental-interaction.md)
 	2. [Units](../notes/unit.md)
@@ -15,7 +16,7 @@ TR10.5: Physics 148, LEC
 	3. [Heavy Ion Reactions](../notes/heavy-ion-reaction.md)
 	4. [Relativistic Heavy Ion Collisions](../notes/heavy-ion-reaction.md)
 17. [The Shell Model](../notes/shell-model.md)
-19. Nuclear and Particle Astrophysics
+19. [Nuclear and Particle Astrophysics](../notes/subatomic-astrophysics.md)
 ## Assignments
 - [x] PARTICIPATION 1 (4/4)
 - [x] HW 1 (4/4)

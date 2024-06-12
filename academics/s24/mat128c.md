@@ -24,4 +24,4 @@ MWF11: Wellman 119, LEC
 - [x] HW 2 (5/8)
 - [x] HW 3 (5/24)
 - [x] HW 4 (6/11)
-- [ ] FINAL (6/11)
+- [x] FINAL (6/11)

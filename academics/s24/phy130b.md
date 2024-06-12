@@ -42,4 +42,4 @@ MWF10: Physics 130, LEC
 - [x] MIDTERM (5/3)
 - [x] HW 3 (5/20)
 - [x] HW 4 (6/5)
-- [ ] FINAL (6/11)
+- [x] FINAL (6/11)
