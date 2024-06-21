@@ -12,6 +12,9 @@ continuation sequences
 sequence of analytic functions locally uniformly conveging if $\epsilon$ bound holds in some neighborhood, locally uniformly bounded if bounded in some neighborhood
 	hurwitz theorem: if sequence locally uniformly converging to nonconstant function, $f_n(z_n) = f(z), \lim_{n\to\infty} z_n = z$
 	dogwalking lemma: analytic functions that stay within bound of each other have same winding number
+	if $f_n$ analytic and bounded by $1$ on $\Delta$, with pointwise convergence, converges locally uniformly to $f$
+		similar for subset, with different bound $M$
+		if converges on open subset, then on whole set
 ## FTC in $\mathbb{C}$
 $\int_a^b f(t) \, dt = F(b) - F(a), F(x) = \int_a^x f(t) \, dt$ ($F'(x) = f(x)$)
 different geometrical interpretation, but FTC holds
@@ -54,6 +57,11 @@ maximum modulus theorem: analytic function relative maximum on boundary
 	schwarz's lemma
 		analytic, bounded by $1$ for $|z| < 1$, $f(0) = 0$
 		either $|f(z)| < |z|, |f'(0)| < 1$ or $f(z) = cz$ where $|c| = 1$
+		approximately linear functions: approximate one-to-one map of disk has bounded derivative
+		bounded region has unit disk as universal covering
+			[riemann mapping theorem](projective-space.md#c)
+			continuous mapping of sequence without limit point has no limit point
+			lindelof's theorem: holomorphic function on half-strip is bounded if bounded on boundary and derivative bounded
 harmonic functions: $\nabla^2 u = \Delta u  = 0$
 	if $u, v$ harmonic and $u + iv$ analytic, $u, v$ are harmonic conjugates
 	equal to average on circle

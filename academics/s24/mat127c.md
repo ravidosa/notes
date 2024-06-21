@@ -12,4 +12,4 @@ R3: TLC 3212, DIS
 - [x] MIDTERM 2 (5/17)
 - [x] HW 6 (5/24)
 - [x] HW 7 (5/31)
-- [ ] FINAL (6/11)
+- [x] FINAL (6/11)

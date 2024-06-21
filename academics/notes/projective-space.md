@@ -16,6 +16,7 @@ modulus of annulus: $\frac{R}{r^2}$
 	moduli space $\mathbb{R}_{>1}$
 simply connected open proper subset biholomorphic to unit disk, $f(0) = z_0, f'(0)$ real and positive (riemann mapping theorem)
 	two simply connected proper subsets always biholomorphic
+	annuli biholomorphic iff $\frac{R}{r}$ same
 ### Hyperbolic Space
 isometric on biholomorphic maps
 	$d(z, w) = \frac{1}{2}\log\frac{1 + D}{1 - D}, D = |\frac{zw}{1 - \overline{z}w}|$

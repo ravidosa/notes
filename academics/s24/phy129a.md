@@ -35,4 +35,4 @@ TR10.5: Physics 148, LEC
 - [x] HW 7 (5/23)
 - [x] PARTICIPATION 8 (5/30)
 - [x] HW 8 (5/30)
-- [ ] FINAL (6/12)
+- [x] FINAL (6/12)

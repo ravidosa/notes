@@ -3,7 +3,11 @@ TR12: Hunt 100, LEC
 M12: Art 204, DIS
 ## Notes
 *Data Structures and Algorithm Analysis in C++* (Weiss, 4e)
+2. [Algorithm Analysis](../notes/time-complexity.md#asymptotic-analysis)
 *Algorithms and Data Structures Using C++* (Miller, Ranum, and Pearce)
+2. [Analysis](time-complexity.m) 
+4. [Linear Linked Structures](../notes/linked-list.md)
+6. 
 ## Assignments
 - [x] QUIZ 1 (4/8)
 - [x] QUIZ 2 (4/15)
@@ -22,4 +26,4 @@ M12: Art 204, DIS
 - [x] HW 6 (6/6)
 - [x] HW 7 (6/12)
 - [x] HW 8 (6/12)
-- [ ] FINAL (6/12)
+- [x] FINAL (6/12)

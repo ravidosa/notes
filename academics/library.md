@@ -11,6 +11,7 @@
 - The Art of Proof (Beck, Geoghegan)
 - Asian Art (Neave, Blanchard, Sardar)
 - Atomic Physics (Foot)
+- [Book of Proof](https://www.people.vcu.edu/~rhammack/BookOfProof/Main.pdf) (Hammack) {ECS 20}
 - [Calculus I](https://tutorial.math.lamar.edu/Classes/CalcI/CalcI.aspx) (Dawkins)
 - [Calculus II](https://tutorial.math.lamar.edu/Classes/CalcII/CalcII.aspx) (Dawkins)
 - [Calculus III](https://tutorial.math.lamar.edu/Classes/CalcIII/CalcIII.aspx) (Dawkins)
@@ -90,6 +91,7 @@
 - Language Files (OSU) {[LIN 1Y](./f22/lin1y.md)}
 - [LaTeX](https://upload.wikimedia.org/wikipedia/commons/2/2d/LaTeX.pdf)
 - Linear Algebra (Friedberg, Insel, Spence)
+- [Linear Algebra as an Introduction to Abstract Mathematics](http://www.math.ucdavis.edu/~anne/linear_algebra/mat67_course_notes.pdf) (Lankham, Nachtergaele, Schilling) {MAT 67} 
 - Linear Algebra and Its Applications (Lay, Lay, McDonald)
 - Linear Programming (Vanderbei) {[MAT 168](./f23/mat168.md)}
 - A Mathematical Introduction to Logic (Enderton)
@@ -97,6 +99,7 @@
 - Mathematical Methods for Physicists (Arfken, Weber)
 - [Mathematical Tools for Physics](http://www-mdp.eng.cam.ac.uk/web/library/enginfo/textbooks_dvd_only/nearing/math_methods.pdf) (Nearing) {[PHY 104A](./f22/phy104a.md)}
 - [Mathematics of Machine Learning](https://raw.githubusercontent.com/alexchandler100/MAT_180/main/00_Course_Files/MAT%20180%20Textbook/main.pdf) (Chandler) {MAT 180}
+- [Mathematics for Computer Science](https://eng.libretexts.org/Bookshelves/Computer_Science/Programming_and_Computation_Fundamentals/Mathematics_for_Computer_Science_(Lehman_Leighton_and_Meyer)) (Lehman, Leighton, Meyer) {ECS 20}
 - Mathematics for Physics: A Guided Tour for Graduate Students (Goldbart)
 - Metaphors We Live By (Lakoff, Johnson)
 - Methods of Mathematical Economics (Franklin)
