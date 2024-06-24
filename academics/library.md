@@ -6,6 +6,7 @@
 - Acoustic and Auditory Phonetics (Johnson)
 - Algebra (Artin) {[MAT 150A](./f23/mat150a.md), [MAT 150B](./w24/mat150b), [MAT 150C](./s24/mat150c)}
 - [Algebra](https://tutorial.math.lamar.edu/Classes/Alg/Alg.aspx) (Dawkins)
+- [Algorithms and Data Structures Using C++](https://runestone.academy/ns/books/published/cppds/index.html) (Miller, Pearce, Ranum) {[ECS 36]()}
 - Analysis on Manifolds (Munkres) {[MAT 127C](./s24/mat127c.md)}
 - The Art of Electronics (Horowitz, Hill)
 - The Art of Proof (Beck, Geoghegan)
@@ -27,6 +28,7 @@
 - Concrete Mathematics (Graham, Knuth, Patashnik)
 - A Course in Phonetics (Ladefoged, Johnson)
 - [CSDIY](https://csdiy.wiki/en/) (Zhong)
+- [Data Structures and Algorithm Analysis in C++](https://www.uoitc.edu.iq/images/documents/informatics-institute/Competitive_exam/DataStructures.pdf) (Weiss)
 - Deep Learning (Goodfellow, Bengio, Courville)
 - The Development of Language (Gleason, Ratner)
 - [Differential Equations](https://tutorial.math.lamar.edu/Classes/DE/DE.aspx) (Dawkins)
