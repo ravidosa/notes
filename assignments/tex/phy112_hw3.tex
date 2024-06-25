@@ -1,0 +1,155 @@
+\documentclass{article}
+\usepackage{assignment_preamble}
+
+\title{Homework 3}
+\author{Ravi Kini}
+\date{October 19, 2023}
+
+\begin{document}
+
+\maketitle
+
+\problem[\textit{An Introduction to Thermal Physics} (Schroeder, 1e) Exercise 2.26, 2.32]
+\subproblem{(a)}
+For a single gas atom, the multiplicity $\Omega$ should be proportional to the area of position space and area of momentum space.
+\begin{equation}
+    \begin{split}
+        \Omega_1 & \propto A \cdot A_p \\
+        U & = \frac{1}{2}m\left(v_x^2 + v_y^2\right) = \frac{1}{2m}\left(p_x^2 + p_y^2\right) \\
+        2mU & = p_x^2 + p_y^2 \\
+        \Omega_1 & = \frac{AA_p}{h^2}
+    \end{split}
+\end{equation}
+For $N$ gas atoms, the multiplicity $\Omega_N$ is:
+\begin{equation}
+    \begin{split}
+        \Omega_N & = \frac{1}{N!}\frac{A^N}{h^{2N}} \times \left(\text{area of momentum hypersphere}\right) \\
+        & = \frac{1}{N!}\frac{A^N}{h^{2N}} \frac{2\pi^N}{\left(N - 1\right)!}{\left(\sqrt{2mU}\right)}^{2N - 1} \\
+        & \approx \frac{1}{N!}\frac{A^N}{h^{2N}} \frac{\pi^N}{N!}{\left(2mU\right)}^N
+    \end{split}
+\end{equation}
+\subproblem{(b)}
+The entropy $S$ is:
+\begin{equation}
+    \begin{split}
+        S = k_B\ln\Omega_N & = k_B\ln\left(\frac{1}{N!}\frac{A^N}{h^{2N}} \frac{\pi^N}{N!}{\left(2mU\right)}^N\right) \\
+        & = k_B\left(N\ln\left(\frac{A}{h^{2}} \pi\left(2mU\right)\right) - 2\left(N\ln N - N\right)\right) \\
+        & = Nk_B\left(\ln\left(\frac{A}{N}\frac{2\pi mU}{Nh^{2}}\right) + 2\right) \\
+    \end{split}
+\end{equation}
+
+\clearpage
+
+\problem[\textit{An Introduction to Thermal Physics} (Schroeder, 1e) Exercise 2.27 (modified)]
+\subproblem{(a)}
+The probability of finding all $N$ molecules in the left $99.9\%$ of the container is $0.999^N$. For $N = 100$ molecules:
+\begin{equation}
+    \begin{split}
+        P\left(N = 100\right) & = 0.999^{100} \approx 0.905
+    \end{split}
+\end{equation}
+\subproblem{(b)}
+For $N = 10000$ molecules:
+\begin{equation}
+    \begin{split}
+        P\left(N = 10000\right) & = 0.999^{10000} \approx 4.517 \cdot 10^{-5}
+    \end{split}
+\end{equation}
+\subproblem{(c)}
+For $N = 10^{23}$ molecules:
+\begin{equation}
+    \begin{split}
+        P\left(N = 10^{23}\right) & = 0.999^{10^{23}} \\
+        & = e^{10^{23}\ln 0.999} = e^{10^{23}\ln\left(1 - 0.001\right)} \approx e^{10^{23} \cdot -0.001} \\
+        & \approx e^{-10^{20}} \approx 0
+    \end{split}
+\end{equation}
+\subproblem{(d)}
+If there is a $4.517 \cdot 10^{-5}$ chance of the configuration occurring, as all configurations are equally likely, it will take $\frac{1}{4.517 \cdot 10^{-5}} \approx 22139$ trials for the configuration to be observed. As $10^{12}$ trials are occurring per second, observing the configuration will take $2.2139 \cdot 10^{-8}~\unit{\second}$, or $22.139~\unit{\nano\second}$, or $7.02 \cdot 10^{-16}~\unit{y}$.
+
+\clearpage
+
+\problem[\textit{An Introduction to Thermal Physics} (Schroeder, 1e) Exercise 2.37]
+There are $N\left(1 - x\right)$ molecules of gas A, and it expands to a volume $\frac{1}{1 - x}$ as big as its original volume. There are $Nx$ molecules of gas B, and it expands to a volume $\frac{1}{x}$ as big as its original volume. The entropy of mixing $\Delta S_{\text{mixing}}$ is:
+\begin{equation}
+    \begin{split}
+        \Delta S_A = N_A k_b\ln\frac{V_{f,A}}{V_{i,A}} & = N\left(1 - x\right)k_B\ln\frac{1}{1 - x} \\
+        \Delta S_B = N_B k_b\ln\frac{V_{f,B}}{V_{i,B}} & = Nxk_B\ln\frac{1}{x} \\
+        \Delta S_{\text{mixing}} = \Delta S_A + \Delta S_B & = N\left(1 - x\right)k_B\ln\frac{1}{1 - x} + Nxk_B\ln\frac{1}{x} \\
+        & = -Nk_B\left(\left(1 - x\right)\ln\left(1 - x\right) + x\ln x\right)
+    \end{split}
+\end{equation}
+For $x = \frac{1}{2}$:
+\begin{equation}
+    \begin{split}
+        \Delta S_{\text{mixing}} & = -Nk_B\left(\left(1 - \frac{1}{2}\right)\ln\left(1 - \frac{1}{2}\right) + \frac{1}{2}\ln \frac{1}{2}\right) \\
+        & = -Nk_B\left(\frac{1}{2}\ln\left(\frac{1}{2}\right) + \frac{1}{2}\ln \frac{1}{2}\right) \\
+        & = -Nk_B\ln \frac{1}{2} = Nk_B\ln 2 \\
+    \end{split}
+\end{equation}
+
+\clearpage
+
+\problem[\textit{An Introduction to Thermal Physics} (Schroeder, 1e) Exercise 3.8]
+\subproblem{(a)}
+In the low-temperature limit where $q \ll N$, the multiplicity of an Einstein solid $\Omega$ is:
+\begin{equation}
+    \begin{split}
+        \Omega & = {q + N - 1 \choose q} \approx \frac{\left(q + N\right)!}{q!N!} \\
+        \ln\Omega & \approx \left(\left(q + N\right)\ln\left(q + N\right) - \left(q + N\right)\right) - \left(q\ln q - q\right) - \left(N\ln N - N\right) \\
+        & \approx \left(\left(q + N\right)\left(\ln N + \ln\left(1 + \frac{q}{N}\right)\right) - \left(q + N\right)\right) - \left(q\ln q - q\right) - \left(N\ln N - N\right) \\
+        & \approx \left(\left(q + N\right)\left(\ln N + \frac{q}{N}\right) - \left(q + N\right)\right) - \left(q\ln q - q\right) - \left(N\ln N - N\right) \\
+        & \approx q\ln N + \frac{q^2}{N} + q - q\ln q \approx q\ln\frac{N}{q} + q \\
+        \Omega & \approx e^{q\ln\frac{N}{q} + q} = {\left(\frac{eN}{q}\right)}^q
+    \end{split}
+\end{equation}
+\subproblem{(b)}
+In the low-temperature limit, the energy of an Einstein solid $U$ is:
+\begin{equation}
+    \begin{split}
+        S & = k_B\ln\Omega \approx qk_B\ln\frac{eN}{q} \\
+        & \approx qk_B\left(\ln \frac{N}{q} + 1\right) \\
+        & \approx \frac{Uk_B}{\epsilon}\left(\ln \frac{N\epsilon}{U} + 1\right) \\
+        \frac{1}{T} = \pderiv{S}{U} & \approx \frac{k_B}{\epsilon}\left(\ln \frac{N\epsilon}{U} + 1\right) + \frac{k_B U}{\epsilon}\left(-\frac{1}{U}\right) = \frac{k_B}{\epsilon}\ln\frac{N\epsilon}{U} \\
+        T & \approx \frac{\epsilon}{k_B\ln\frac{N\epsilon}{U}} \\
+        U & \approx N\epsilon e^{-\frac{\epsilon}{k_B T}} \\
+    \end{split}
+\end{equation}
+
+\clearpage
+
+\problem[\textit{An Introduction to Thermal Physics} (Schroeder, 1e) Exercise 3.10]
+\subproblem{(a)}
+The change in the entropy of the ice cube as it melts $\Delta S_{\text{water},1}$ is:
+\begin{equation}
+    \begin{split}
+        \Delta S_{\text{water},1} & = \frac{Q}{T} = \frac{ml}{T} \\
+        & = \frac{30~\unit{\gram} \cdot 333~\unit{\joule\per\gram}}{273~\unit{\kelvin}} \approx 36.593~\unit{\joule\per\kelvin}
+    \end{split}
+\end{equation}
+\subproblem{(b)}
+The change in the entropy of the water as it heats up $\Delta S_{\text{water},2}$ is:
+\begin{equation}
+    \begin{split}
+        \Delta S_{\text{water},2} & = \int_{T_i}^{T_f} \frac{C_V}{T} \, \diff{T} = mc_V\ln\frac{T_f}{T_i} \\
+        & = (30~\unit{\gram} \cdot 4.186~\unit{\joule\per\gram\per\kelvin})\ln\frac{298~\unit{\kelvin}}{273~\unit{\kelvin}} \approx 11.004~\unit{\joule\per\kelvin}
+    \end{split}
+\end{equation}
+\subproblem{(c)}
+The change in the entropy of the kitchen $\Delta S_{\text{kitchen}}$ is:
+\begin{equation}
+    \begin{split}
+        \Delta S_{\text{kitchen}} & = \frac{Q}{T} = \frac{-ml - mc_v\Delta T}{T} \\
+        & = \frac{-30~\unit{\gram} \cdot 333~\unit{\joule\per\gram} - 30~\unit{\gram} \cdot 4.186~\unit{\joule\per\gram\per\kelvin} \cdot 25~\unit{\kelvin}}{298~\unit{\kelvin}} \approx -44.059~\unit{\joule\per\kelvin}
+    \end{split}
+\end{equation}
+\subproblem{(d)}
+The net change in the entropy of the universe $\Delta S_{\text{universe}}$ is:
+\begin{equation}
+    \begin{split}
+        \Delta S_{\text{universe}} = \Delta S_{\text{water},1} + \Delta S_{\text{water},2} + \Delta S_{\text{kitchen}} \approx 3.538~\unit{\joule\per\kelvin}
+    \end{split}
+\end{equation}
+The net change is positive, as expected, as the entropy of the universe can only ever increase.
+
+\end{document}

@@ -1,0 +1,19 @@
+// power set
+P(X) should have 2^|X| entries
+
+// boolean formulas
+https://web.stanford.edu/class/cs103/tools/truth-table-tool/
+
+// 1-1 and onto functions
+1-1: check if any values repeated on RHS
+onto: check if every value in domain represented on RHS
+
+// combinatorics
+substring: (|string| - |substring|)^|\Sigma|
+function: |codomain|^|domain|
+1-1 function: P(|codomain|, |domain|)
+#0 = #1 + k: C(|string|, (|string| - k) / 2)
+set mod k: max(set) // k - min(set) // k (+ 1 if min(set) = 0 mod k)
+
+// stringology
+check for repeated values

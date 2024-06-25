@@ -1,0 +1,91 @@
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{tikz, tikz-cd, tikz-dimline, pgfplots}
+\usetikzlibrary{decorations.markings, angles, quotes, scopes}
+\usepackage{pgfplots}
+\usepgfplotslibrary{fillbetween}
+\usepackage{braket}
+\usepackage{tikz-feynman}
+\usepackage{xcolor}
+\usepackage{verbatim}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{xifthen}
+\makeatletter
+\def\new@fontshape{}
+\makeatother
+\usepackage{siunitx}
+\sisetup{per-mode = symbol}
+\usepackage{mhchem}
+\usepackage{gb4e}
+\usepackage{qtree}
+\noautomath
+
+\newcounter{pnum}
+\newcommand{\problem}[1][]{
+\stepcounter{pnum} 
+\section*{Exercise \thepnum}
+\ifthenelse{\isempty{#1}}%
+    {}
+    {\textbf{#1}\vspace{5pt}\hrule\vspace{5pt}}
+}
+\newcommand{\skipproblem}{
+    \stepcounter{pnum}
+}
+\newcommand{\subproblem}[1]{
+\subsection*{Part #1}
+}
+\newcommand{\repository}[1]{
+Code available on \href{#1}{Github}.\vspace{5pt}\hrule\vspace{5pt}
+}
+
+% COMMANDS
+\newcommand{\solution}{{\color{blue} \textsc{\ \\ Solution.\ \ }}}
+\newcommand{\Z}{\mathbb{Z}} % the integers
+\newcommand{\N}{\mathbb{N}} % natural numbers
+\newcommand{\R}{\mathbb{R}} % real numbers
+\newcommand{\C}{\mathbb{C}} % complex numbers
+\newcommand{\Q}{\mathbb{Q}} % rational numbers
+\newcommand{\st}{ \ : \ } % such that
+\newcommand{\inv}{^{-1}} % inverse
+\newcommand{\into}{\hookrightarrow}  % injection
+\newcommand{\onto}{\twoheadrightarrow} % surjection
+\newcommand{\map}[1]{\xrightarrow{#1}} % named map
+\newcommand{\id}{\mathrm{id}} % identity map
+\newcommand{\Frac}{\mathrm{Frac}} % fraction field
+\newcommand{\normal}{\unlhd} % normal subgroup of
+
+\DeclareMathOperator{\img}{im} % image
+\DeclareMathOperator{\sgn}{sgn} % sign of permutation
+\DeclareMathOperator{\ord}{ord} % order of group element
+\DeclareMathOperator{\lcm}{lcm} % least common multiple
+% \DeclareMathOperator{\gcd}{gcd} % greatest common divisor
+\newcommand{\F}{\mathbb{F}} % random field
+\newcommand{\Isom}{\mathrm{Isom}} % isometries group
+
+\makeatletter
+\newcommand*{\diff}%
+{\@ifnextchar^{\DIfF}{\DIfF^{}}}
+\def\DIfF^#1{%
+\mathop{\mathrm{\mathstrut d}}%
+\nolimits^{#1}\gobblespace}
+\def\gobblespace{%
+\futurelet\diffarg\opspace}
+\def\opspace{%
+\let\DiffSpace\!%
+\ifx\diffarg(%
+\let\DiffSpace\relax
+\else
+\ifx\diffarg[%
+\let\DiffSpace\relax
+\else
+\ifx\diffarg\{%
+\let\DiffSpace\relax
+\fi\fi\fi\DiffSpace}
+\newcommand*{\deriv}[3][]{%
+\frac{\diff^{#1}#2}{\diff #3^{#1}}}
+\newcommand*{\pderiv}[3][]{%
+\frac{\partial^{#1}#2}%
+{\partial #3^{#1}}}

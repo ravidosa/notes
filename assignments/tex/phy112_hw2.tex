@@ -1,0 +1,237 @@
+\documentclass{article}
+\usepackage{assignment_preamble}
+
+\title{Homework 2}
+\author{Ravi Kini}
+\date{October 12, 2023}
+
+\begin{document}
+
+\maketitle
+
+\problem[\textit{An Introduction to Thermal Physics} (Schroeder, 1e) Exercise 1.34 (partial)]
+\subproblem{(a)}
+For each step, we calculate the work done $W$, change in energy $\Delta U$, and heat added $Q$. For Step A:
+\begin{equation}
+    \begin{split}
+        W_A & = -\int_{V_1}^{V_1} p \, \diff{V} = 0 \\
+        \Delta U_A & = \frac{3}{2}Nk_B \Delta T = \frac{3}{2}Nk_B\frac{\left(p_2 - p_1\right)V_1}{Nk_B} = \frac{3V_1\left(p_2 - p_1\right)}{2} \\
+        Q_A & = \Delta U - W = \frac{3V_1\left(p_2 - p_1\right)}{2}
+    \end{split}
+\end{equation}
+For Step B:
+\begin{equation}
+    \begin{split}
+        W_B & = -\int_{V_1}^{V_2} p \, \diff{V} = -\int_{V_1}^{V_2} p_2 \, \diff{V} = -p_2\left(V_2 - V_1\right) \\
+        \Delta U_B & = \frac{3}{2}Nk_B \Delta T = \frac{3}{2}Nk_B\frac{\left(V_2 - V_1\right)p_2}{Nk_B} = \frac{3p_2\left(V_2 - V_1\right)}{2} \\
+        Q_B & = \Delta U - W = \frac{5p_2\left(V_2 - V_1\right)}{2}
+    \end{split}
+\end{equation}
+For Step D:
+\begin{equation}
+    \begin{split}
+        W_C & = -\int_{V_2}^{V_2} p \, \diff{V} = 0 \\
+        \Delta U_C & = \frac{3}{2}Nk_B \Delta T = \frac{3}{2}Nk_B\frac{(p_1 - p_2)V_2}{Nk_B} = -\frac{3V_2\left(p_2 - p_1\right)}{2} \\
+        Q_C & = \Delta U - W = -\frac{3V_2\left(p_2 - p_1\right)}{2}
+    \end{split}
+\end{equation}
+For Step C:
+\begin{equation}
+    \begin{split}
+        W_D & = -\int_{V_2}^{V_1} p \, \diff{V} = -\int_{V_2}^{V_1} p_1 \, \diff{V} = p_1\left(V_2 - V_1\right) \\
+        \Delta U_D & = \frac{3}{2}Nk_B \Delta T = \frac{3}{2}Nk_B\frac{(V_1 - V_2)p_1}{Nk_B} = -\frac{3p_1\left(V_2 - V_1\right)}{2} \\
+        Q_D & = \Delta U - W = -\frac{5p_1\left(V_2 - V_1\right)}{2}
+    \end{split}
+\end{equation}
+\subproblem{(b)}
+The net work $W_{\text{net}}$ is
+\begin{equation}
+    \begin{split}
+        W_{\text{net}} & = W_A + W_B + W_D + W_C \\
+        & = 0 - p_2\left(V_2 - V_1\right) + 0 + p_1\left(V_2 - V_1\right) = -\left(p_2 - p_1\right)\left(V_2 - V_1\right) \\
+    \end{split}
+\end{equation}
+The net change in energy $\Delta U_{\text{net}}$ is:
+\begin{equation}
+    \begin{split}
+        \Delta U_{\text{net}} & = \Delta U_A + \Delta U_B + \Delta U_D + \Delta U_C \\
+        & = \frac{3V_1\left(p_2 - p_1\right)}{2} + \frac{3p_2\left(V_2 - V_1\right)}{2} - \frac{3V_2\left(p_2 - p_1\right)}{2} - \frac{3p_1\left(V_2 - V_1\right)}{2} \\
+        & = 0 \\
+    \end{split}
+\end{equation}
+The net heat added to the gas $Q_{\text{net}}$ is:
+\begin{equation}
+    \begin{split}
+        Q_{\text{net}} & = Q_A + Q_B + Q_D + Q_C \\
+        & = \frac{3V_1\left(p_2 - p_1\right)}{2} + \frac{5p_2\left(V_2 - V_1\right)}{2} - \frac{3V_2\left(p_2 - p_1\right)}{2} - \frac{5p_1\left(V_2 - V_1\right)}{2} \\
+        & = \left(p_2 - p_1\right)\left(V_2 - V_1\right)
+    \end{split}
+\end{equation}
+\clearpage
+
+\problem
+\subproblem{(a)}
+Assuming quasistatic compression, the work done on $10~\unit{\kilo\gram}$ of ice by the atmosphere as it melts into water $W$ is:
+\begin{equation}
+    \begin{split}
+        W & = -\int_{V_i}^{V_f} p \, \diff{V} = \left(V_i - V_f\right)p \\
+        & = \left(\frac{m}{\rho_i} - \frac{m}{\rho_f}\right)p = \left(\frac{1}{\rho_i} - \frac{1}{\rho_f}\right)mp \\
+        & = (\frac{1}{916.23~\unit{\kilo\gram\per\meter\cubed}} - \frac{1}{999.84~\unit{\kilo\gram\per\meter\cubed}}) \cdot 10~\unit{\kilo\gram}\cdot 101325~\unit{\pascal}\approx 92.478~\unit{\joule}
+    \end{split}
+\end{equation}
+$W = 92.478~\unit{\joule}$ of work is done on the water by the atmosphere, so $-92.478~\unit{\joule}$ is done on the atmosphere by the water.
+\subproblem{(b)}
+The heat lost by the $10~\unit{\kilo\gram}$ of ice $Q$ is:
+\begin{equation}
+    \begin{split}
+        Q & = ml = 10000~\unit{\gram} \cdot 333~\unit{\joule\per\gram} = 3330000~\unit{\joule}
+    \end{split}
+\end{equation}
+The heat lost far exceeds the work done on the water.
+
+\clearpage
+
+\problem[\textit{An Introduction to Thermal Physics} (Schroeder, 1e) Exercise 1.41]
+\subproblem{(a)}
+The heat gained by the water $Q$ is:
+\begin{equation}
+    \begin{split}
+        Q & = m_wc_w\Delta T_w = 250~\unit{\gram}\cdot 4.2~\unit{\joule\per\kelvin}\cdot 4 = 4200~\unit{\joule}
+    \end{split}
+\end{equation}
+The water loses $-Q = -4200~\unit{\joule}$.
+\subproblem{(b)}
+The metal gains as much heat as is lost by the water, and so gains $-4200~\unit{\joule}$.
+\subproblem{(c)}
+The heat capacity of the metal $C_m$ is:
+\begin{equation}
+    \begin{split}
+        Q & = C_m\Delta T_m \\
+        C_m & = \frac{Q}{\Delta T_m} = \frac{-4200~\unit{\joule}}{-76~\unit{\kelvin}} \approx 55.263~\unit{\joule\per\kelvin}
+    \end{split}
+\end{equation}
+\subproblem{(d)}
+The specific heat of the chunk $c_m$ is:
+\begin{equation}
+    \begin{split}
+        c_m & = \frac{C_m}{m_m} = \frac{Q}{m_m\Delta T_m} = \frac{-4200~\unit{\joule}}{100~\unit{\gram}\cdot -76~\unit{\kelvin}} \approx 0.553~\unit{\joule\per\kelvin}
+    \end{split}
+\end{equation}
+
+\clearpage
+
+\problem
+\subproblem{(a)}
+$10000$ coins are flipped. Using Stirling's approximation:
+\begin{equation}
+    \begin{split}
+        \frac{{10000 \choose 5000}}{2^{10000}} & = \frac{1}{2^{10000}}\frac{10000!}{5000!5000!} \\
+        & \approx \frac{1}{2^{10000}}\frac{10000^{10000}e^{-10000}\sqrt{2\pi \cdot 10000}}{5000^{5000}e^{-5000}\sqrt{2\pi \cdot 5000} \cdot 5000^{5000}e^{-5000}\sqrt{2\pi \cdot 5000}} \\
+        & \approx \frac{1}{\sqrt{2\pi \cdot 50 \cdot 50}} \approx 0.00798
+    \end{split}
+\end{equation}
+There is a $0.564$ probability of getting $5000$ heads and $5000$ tails.
+\subproblem{(b)}
+Using Stirling's approximation:
+\begin{equation}
+    \begin{split}
+        \frac{{10000 \choose 5100}}{2^{10000}} & = \frac{1}{2^{10000}}\frac{10000!}{5100!4900!} \\
+        & \approx \frac{1}{2^{10000}}\frac{10000^{10000}e^{-10000}\sqrt{2\pi \cdot 10000}}{5100^{5100}e^{-5100}\sqrt{2\pi \cdot 5100} \cdot 4900^{4900}e^{-4900}\sqrt{2\pi \cdot 4900}} \\
+        & \approx \frac{{\left(\frac{50}{51}\right)}^{5100}(\frac{50}{49})^{4900}}{\sqrt{2\pi \cdot 49 \cdot 51}} \approx 0.00107
+    \end{split}
+\end{equation}
+There is a $0.00107$ probability of getting $5100$ heads and $4900$ tails.
+\subproblem{(c)}
+Using Stirling's approximation:
+\begin{equation}
+    \begin{split}
+        \frac{{10000 \choose 5500}}{2^{10000}} & = \frac{1}{2^{10000}}\frac{10000!}{5500!4500!} \\
+        & \approx \frac{1}{2^{10000}}\frac{10000^{10000}e^{-10000}\sqrt{2\pi \cdot 10000}}{5500^{5500}e^{-5500}\sqrt{2\pi \cdot 5500} \cdot 4500^{4500}e^{-4500}\sqrt{2\pi \cdot 4500}} \\
+        & \approx \frac{{\left(\frac{50}{55}\right)}^{5500}(\frac{50}{45})^{4500}}{\sqrt{2\pi \cdot 45 \cdot 55}} \approx 1.423 \cdot 10^{-24}
+    \end{split}
+\end{equation}
+There is a $1.423 \cdot 10^{-24}$ probability of getting $5500$ heads and $4500$ tails.
+
+\clearpage
+
+\problem[\textit{An Introduction to Thermal Physics} (Schroeder, 1e) Exercise 2.7]
+\begin{center}
+\begin{tabular}{|c|c|c|c|c||c|c|c|c|}
+    \hline
+    Oscillator & \#1 & \#2 & \#3 & \#4 & \#1 & \#2 & \#3 & \#4 \\
+    \hline
+    Energy & 2 & 0 & 0 & 0 & 1 & 0 & 0 & 0 \\
+    \hline
+     & 0 & 2 & 0 & 0 & 0 & 1 & 0 & 0 \\
+    \hline
+     & 0 & 0 & 2 & 0 & 0 & 0 & 1 & 0 \\
+    \hline
+     & 0 & 0 & 0 & 2 & 0 & 0 & 0 & 1 \\
+    \hline
+     & 1 & 1 & 0 & 0 & 0 & 0 & 0 & 0 \\
+    \hline
+     & 1 & 0 & 1 & 0 & & & & \\
+    \hline
+     & 1 & 0 & 0 & 1 & & & & \\
+    \hline
+     & 0 & 1 & 1 & 0 & & & & \\
+    \hline
+     & 0 & 1 & 0 & 1 & & & & \\
+    \hline
+     & 0 & 0 & 1 & 1 & & & & \\
+     \hline
+\end{tabular}
+\end{center}
+
+There are three macrostates with the following multiplicities:
+\begin{equation}
+    \begin{split}
+        \Omega\left(0\right) = 1, \Omega\left(1\right) & = 4, \Omega\left(2\right) = 10
+    \end{split}
+\end{equation}
+
+\clearpage
+
+\problem[\textit{An Introduction to Thermal Physics} (Schroeder, 1e) Exercise 2.25 (partial, extended)]
+\subproblem{(a)}
+At the end of a long ranndom walk, you are most likely to end up at your starting position, as you are expected to get equal numbers of heads and tails, and consequently equal number of steps to the left and right.
+\subproblem{(b)}
+At the end of the walk, you are $y$ steps to the right of your starting position. Let $N_L$ be the number of steps taken to the left, and $N_R$ to the right. Then:
+\begin{equation}
+    \begin{split}
+        N_R + N_L & = N \\
+        N_R - N_L & = y \\
+    \end{split}
+\end{equation}
+Solving for $N_L, N_R$ in terms of $N$ and $y$:
+\begin{equation}
+    \begin{split}
+        N_R & = \frac{N + y}{2} \\
+        N_L & = \frac{N - y}{2} \\
+    \end{split}
+\end{equation}
+The multiplicity $\Omega$ is:
+\begin{equation}
+    \begin{split}
+        \Omega = {N \choose N_R} & = {N \choose \frac{N + y}{2}} \\
+        & = \frac{N!}{(\frac{N + y}{2})!(\frac{N - y}{2})!} \\
+    \end{split}
+\end{equation}
+\subproblem{(c)}
+In the limit where $N \gg 1$ and $N \gg y$, using Stirling's approximation:
+\begin{equation}
+    \begin{split}
+        \ln \Omega & = \ln \frac{N!}{\left(\frac{N + y}{2}\right)!\left(\frac{N - y}{2}\right)!} = \ln N! - \ln\left(\frac{N + y}{2}\right)! - \ln\left(\frac{N - y}{2}\right)! \\
+        & \approx \left(N\ln N - N + \frac{1}{2}\ln 2\pi N\right) \\
+        & - \left(\frac{N + y}{2}\ln \frac{N + y}{2} - \frac{N + y}{2} + \frac{1}{2}\ln 2\pi \frac{N + y}{2}\right) \\
+        & - \left(\frac{N - y}{2}\ln \frac{N - y}{2} - \frac{N - y}{2} + \frac{1}{2}\ln 2\pi \frac{N - y}{2}\right) \\
+        & \approx N\ln N - \frac{N + y}{2}\ln \frac{N + y}{2} - \frac{N - y}{2}\ln \frac{N - y}{2} + \frac{1}{2}\ln\frac{N}{2\pi\frac{N + y}{2}\frac{N - y}{2}} \\
+        & \approx N\ln N+ \frac{1}{2}\ln\frac{N}{2\pi\frac{N + y}{2}\frac{N - y}{2}} - \frac{N + y}{2}\left(\ln\frac{N}{2} + \ln \left(1 + \frac{y}{N}\right)\right) \\ & - \frac{N - y}{2}\left(\ln\frac{N}{2} + \ln \left(1 - \frac{y}{N}\right)\right) \\
+        & \approx N\ln 2+ \frac{1}{2}\ln\frac{N}{2\pi\frac{N + y}{2}\frac{N - y}{2}}  - \frac{N + y}{2}\ln \left(1 + \frac{y}{N}\right) - \frac{N - y}{2}\ln \left(1 - \frac{y}{N}\right) \\
+        & \approx N\ln 2+ \frac{1}{2}\ln\frac{2}{N\pi}  - \frac{N + y}{2}\frac{y}{N} - \frac{N - y}{2} \cdot -\frac{y}{N} \\
+        & \approx N\ln 2+ \frac{1}{2}\ln\frac{2}{N\pi} - \frac{y^2}{N} \\
+        \Omega & \approx e^{N\ln 2+ \frac{1}{2}\ln\frac{2}{N\pi} - \frac{y^2}{N}} \approx 2^N\sqrt{\frac{2}{N\pi}}e^{- \frac{y^2}{N}}
+    \end{split}
+\end{equation}
+
+\end{document}

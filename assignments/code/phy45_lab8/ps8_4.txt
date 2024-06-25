@@ -1,0 +1,2 @@
+As N increases, the plot of eigenvalues grows smoother and stretches horizontally.
+This resembles a sine function.

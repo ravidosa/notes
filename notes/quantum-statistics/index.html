@@ -1,0 +1,1409 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="generator" content="mkdocs-1.6.0, mkdocs-terminal-4.4.0">
+     
+     
+    
+    <link rel="canonical" href="https://ravidosa.github.io/notes/notes/quantum-statistics/"><link rel="icon" type="image/png" sizes="192x192" href="../../img/android-chrome-192x192.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="../../img/android-chrome-512x512.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../img/apple-touch-icon.png" />
+<link rel="shortcut icon" type="image/png" sizes="48x48" href="../../img/favicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="../../img/favicon-32x32.png" />
+
+
+    
+ 
+<title>Quantum Statistics - notes</title>
+
+
+<link href="../../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+<link href="../../css/fontawesome/css/solid.min.css" rel="stylesheet">
+<link href="../../css/normalize.css" rel="stylesheet">
+<link href="../../css/terminal.css" rel="stylesheet">
+<link href="../../css/theme.css" rel="stylesheet">
+<link href="../../css/theme.tile_grid.css" rel="stylesheet">
+<link href="../../css/theme.footer.css" rel="stylesheet">
+<!-- dark color palette -->
+<link href="../../css/palettes/dark.css" rel="stylesheet">
+
+<!-- page layout -->
+<style>
+/* initially set page layout to a one column grid */
+.terminal-mkdocs-main-grid {
+    display: grid;
+    grid-column-gap: 1.4em;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+/*  
+*   when side navigation is not hidden, use a two column grid.  
+*   if the screen is too narrow, fall back to the initial one column grid layout.
+*   in this case the main content will be placed under the navigation panel. 
+*/
+@media only screen and (min-width: 70em) {
+    .terminal-mkdocs-main-grid {
+        grid-template-columns: 4fr 9fr;
+    }
+}</style>
+
+
+
+    
+    <link href="../../style.css" rel="stylesheet">  
+    
+    
+
+    
+    <!-- search css support -->
+<link href="../../css/search/bootstrap-modal.css" rel="stylesheet">
+<!-- search scripts -->
+<script>
+    var base_url = "../..",
+    shortcuts = "{}";
+</script>
+<script src="../../js/jquery/jquery-1.10.1.min.js" defer></script>
+<script src="../../js/bootstrap/bootstrap.min.js" defer></script>
+<script src="../../js/mkdocs/base.js" defer></script>
+    
+    
+    
+    
+    <script src="../../javascripts/mathjax.js"></script>
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    
+    <script src="../../search/main.js"></script>
+    
+
+    
+</head>
+
+<body class="terminal"><div class="container">
+    <div class="terminal-nav">
+        <header class="terminal-logo">
+            <div id="mkdocs-terminal-site-name" class="logo terminal-prompt"><a href="https://ravidosa.github.io/notes/" class="no-style">notes</a></div>
+        </header>
+        
+        <nav class="terminal-menu">
+            
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Home</span>
+                    </a>
+                    <meta property="position" content="0">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../course-list/" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Course List</span>
+                    </a>
+                    <meta property="position" content="1">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../library/" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Library</span>
+                    </a>
+                    <meta property="position" content="2">
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                    
+                    
+
+
+<li property="itemListElement" typeof="ListItem">
+    <a href="#" class="menu-item" data-toggle="modal" data-target="#mkdocs_search_modal" property="item" typeof="SearchAction">
+        <i aria-hidden="true" class="fa fa-search"></i> <span property="name">Search</span>
+    </a>
+    <meta property="position" content="3">
+</li>
+                    
+            </ul>
+            
+        </nav>
+    </div>
+</div>
+        
+    <div class="container">
+        <div class="terminal-mkdocs-main-grid"><aside id="terminal-mkdocs-side-panel"><nav>
+  
+    <ul class="terminal-mkdocs-side-nav-items">
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../">Home</a>
+        
+    
+    
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../course-list/">Course List</a>
+        
+    
+    
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../library/">Library</a>
+        
+    
+    
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Fall 2022</span>
+        
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f22/lin1y/">LIN 1Y</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f22/phy9d/">PHY 9D</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f22/phy9ha/">PHY 9HA</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f22/phy40/">PHY 40</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f22/phy104a/">PHY 104A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f22/phy116a/">PHY 116A</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Winter 2023</span>
+        
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w23/lin103b/">LIN 103B</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w23/mat108/">MAT 108</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w23/mat119a/">MAT 119A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w23/phy45/">PHY 45</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w23/phy80/">PHY 80</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w23/phy105a/">PHY 105A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w23/phy110a/">PHY 110A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w23/phy116b/">PHY 116B</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Spring 2023</span>
+        
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s23/lin165/">LIN 165</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s23/mat127a/">MAT 127A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s23/mat128b/">MAT 128B</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s23/mat135a/">MAT 135A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s23/phy105b/">PHY 105B</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s23/phy108/">PHY 108</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s23/phy108/">PHY 108L</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s23/phy110b/">PHY 110B</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Summer 2023</span>
+        
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../m23/mat127b/">MAT 127B</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../m23/mat128a/">MAT 128A</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Fall 2023</span>
+        
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f23/lin112/">LIN 112</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f23/lin141/">LIN 141</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f23/mat150a/">MAT 150A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f23/mat168/">MAT 168</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f23/mat185a/">MAT 185A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f23/phy105c/">PHY 105C</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f23/phy112/">PHY 112</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f23/phy112/">PHY 112L</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f23/phy115a/">PHY 115A</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Winter 2024</span>
+        
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w24/ecs120/">ECS 120</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w24/lin103a/">LIN 103A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w24/lin131/">LIN 131</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w24/lin152/">LIN 152</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w24/mat148/">MAT 148</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w24/mat150b/">MAT 150B</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w24/mat167/">MAT 167</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w24/phy115b/">PHY 115B</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w24/phy115b/">PHY 115L</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w24/phy130a/">PHY 130A</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Spring 2024</span>
+        
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s24/ecs36c/">ECS 36C</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s24/ecs127/">ECS 127</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s24/mat127c/">MAT 127C</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s24/mat128c/">MAT 128C</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s24/mat185b/">MAT 185B</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s23/phy110b/">PHY 110L</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s24/phy122b/">PHY 122B</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s24/phy129a/">PHY 129A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s24/phy130b/">PHY 130B</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+    </ul>
+  
+</nav><hr>
+<nav>
+    <ul>
+        <li><a href="#quantum-statistics">Quantum Statistics</a></li>
+        <li><a href="#the-gibbs-factor">The Gibbs Factor</a></li><li><a href="#bosons-and-fermions">Bosons and Fermions</a></li><li><a href="#degenerate-fermi-gases">Degenerate Fermi Gases</a></li><li><a href="#blackbody-radiation">Blackbody Radiation</a></li><li><a href="#debye-theory-of-solids">Debye Theory of Solids</a></li><li><a href="#bose-einstein-condensation">Bose-Einstein Condensation</a></li>
+    </ul>
+</nav>
+</aside>
+            <main id="terminal-mkdocs-main-content">
+<section id="mkdocs-terminal-content">
+    <h1 id="quantum-statistics">Quantum Statistics<a class="headerlink" href="#quantum-statistics" title="Permanent link">&para;</a></h1>
+<h2 id="the-gibbs-factor">The Gibbs Factor<a class="headerlink" href="#the-gibbs-factor" title="Permanent link">&para;</a></h2>
+<p>gibbs factor <span class="arithmatex">\(e^{-\frac{E(s) - \mu N(s)}{k_BT}}\)</span>
+probability of finding atom in microstate <span class="arithmatex">\(s\)</span> of <span class="arithmatex">\(N\)</span> total states <span class="arithmatex">\(\mathcal{P}(s) = \frac{1}{\mathcal{Z}}e^{-\frac{E(s)-\mu N(s)}{k_BT}}\)</span>
+    grand partition function <span class="arithmatex">\(\mathcal{Z} = \sum_s e^{-\frac{E(s) - \mu N(s)}{k_BT}}\)</span>
+    <span class="arithmatex">\(\Phi = -k_BT\ln \mathcal{Z}\)</span></p>
+<h2 id="bosons-and-fermions">Bosons and Fermions<a class="headerlink" href="#bosons-and-fermions" title="Permanent link">&para;</a></h2>
+<p>occupancy <span class="arithmatex">\(\overline{n}\)</span> of state: average number of particles in state
+    system = single particle state, reservoir = all other single particle states
+    unoccupied (<span class="arithmatex">\(n = 0, E = 0\)</span>) vs occupied (<span class="arithmatex">\(n \neq 0, E=n\epsilon\)</span>)
+    <span class="arithmatex">\(\overline{n} = -\frac{1}{\mathcal{Z}}\frac{\partial\mathcal{Z}}{\partial x}\)</span> for <span class="arithmatex">\(x = \frac{\epsilon - \mu}{k_BT}\)</span>
+bosons: can share state
+    photon, pion, helium-4 atom, etc
+    integer spin
+fermions: cannot share state (pauli exclusion principle)
+    electron, proton, neutron, helium-3 atom, etc
+    half-integer spin
+when number of available states much greater than number of particles (<span class="arithmatex">\(Z_1 \gg N,\frac{V}{N} \gg v_Q\)</span>), boson/fermion irrelevant
+distribution functions
+    fermi-dirac distribution: <span class="arithmatex">\(\overline{n}_{FD} = \frac{1}{e^{\frac{\epsilon - \mu}{k_BT}} + 1}\)</span>
+        <span class="arithmatex">\(\mathcal{Z} = 1 + e^{-\frac{\epsilon - \mu}{k_BT}}\)</span>
+        goes to <span class="arithmatex">\(0\)</span> for <span class="arithmatex">\(\epsilon \gg \mu\)</span>, goes to <span class="arithmatex">\(1\)</span> for small <span class="arithmatex">\(\epsilon \ll \mu\)</span>
+    bose-einstein distribution: <span class="arithmatex">\(\overline{n}_{BE} = \frac{1}{e^{\frac{\epsilon - \mu}{k_BT}} - 1}\)</span>
+        <span class="arithmatex">\(\mathcal{Z} = \frac{1}{1 - e^{-\frac{\epsilon - \mu}{k_BT}}}\)</span>
+        goes to <span class="arithmatex">\(0\)</span> for <span class="arithmatex">\(\epsilon \gg \mu\)</span>, goes to <span class="arithmatex">\(\infty\)</span> as <span class="arithmatex">\(\epsilon \to \mu\)</span>
+    boltzmann distribution: <span class="arithmatex">\(\overline{n}_B = e^{-\frac{\epsilon - \mu}{k_BT}}\)</span>
+        fermi-dirac and bose-einstein reduce to boltzmann for <span class="arithmatex">\(\frac{\epsilon - \mu}{k_BT} \gg 1\)</span></p>
+<h2 id="degenerate-fermi-gases">Degenerate Fermi Gases<a class="headerlink" href="#degenerate-fermi-gases" title="Permanent link">&para;</a></h2>
+<p>degenerate gas: <span class="arithmatex">\(\frac{V}{N} \ll v_Q\)</span>, treat as <span class="arithmatex">\(T = 0\)</span>
+    fermi-dirac distribution becomes step function (fermi energy <span class="arithmatex">\(\epsilon_F = \mu\)</span>)
+        all states below <span class="arithmatex">\(\epsilon_F\)</span> occupied, all above unoccupied
+        allowed energies <span class="arithmatex">\(\epsilon = \frac{h^2}{8mL^2}(n_x^2 + n_y^2 + n_z^2)\)</span>
+        fermi temperature <span class="arithmatex">\(T_F = \frac{\epsilon_F}{k_B}\)</span>
+        degeneracy pressure <span class="arithmatex">\(P = \frac{2N\epsilon_F}{5V} = \frac{2U}{3V}\)</span>
+        bulk modulus <span class="arithmatex">\(B = -V(\frac{\partial P}{\partial V})_T = \frac{10U}{9V}\)</span>
+        heat capacity <span class="arithmatex">\(C_V = \frac{\pi^2 Nk_B^2T}{2\epsilon_F}\)</span>
+    density of states <span class="arithmatex">\(g(\epsilon) = \frac{\pi}{2}(\frac{8mL^2}{h^2})^{\frac{3}{2}}\sqrt{\epsilon}\)</span>
+        <span class="arithmatex">\(U = \int_0^{\epsilon_F} \epsilon g(\epsilon) \, d\epsilon\)</span>
+        at <span class="arithmatex">\(T = 0\)</span>, <span class="arithmatex">\(N = \int_0^{\epsilon_F} g(\epsilon) \, d\epsilon\)</span>
+        <span class="arithmatex">\(\mu = \epsilon_F\)</span> only at <span class="arithmatex">\(T = 0\)</span>
+        sommerfeld expansion</p>
+<h2 id="blackbody-radiation">Blackbody Radiation<a class="headerlink" href="#blackbody-radiation" title="Permanent link">&para;</a></h2>
+<p>ultraviolet catastrophe: theoretically infinite thermal energy in electromagnetic wave
+planck distribution
+    <span class="arithmatex">\(E_n = nhf\)</span>
+    <span class="arithmatex">\(\overline{E} = \frac{hf}{e^{\frac{hf}{k_BT}} - 1}, \overline{n} = \frac{1}{e^{\frac{hf}{k_BT}} - 1}\)</span>
+    photon  gas: treat <span class="arithmatex">\(\mu = 0\)</span>
+        density of energy <span class="arithmatex">\(u(\epsilon) = \frac{8\pi}{(hc)^3}\frac{\epsilon^3}{e^{\frac{\epsilon}{k_BT}} - 1}\)</span>
+            <span class="arithmatex">\(\frac{U}{V} = \int_0^{\infty} u(\epsilon) \, d\epsilon\)</span>
+            wien's law: peak at <span class="arithmatex">\(\epsilon = 2.82k_BT\)</span>
+        <span class="arithmatex">\(S(T) = \frac{32\pi^5}{45}V(\frac{k_BT}{hc})^3k_B\)</span>
+stefan-boltzmann constant: <span class="arithmatex">\(\sigma = \frac{2\pi^5k_B^4}{15h^3c^2} \approx 5.67 \cdot 10^{-8}\)</span> W/m<sup>2K</sup>4
+    <span class="arithmatex">\(P = \sigma eA T^4\)</span> (weighted average of <span class="arithmatex">\(\epsilon\)</span> over all wavelengths)</p>
+<h2 id="debye-theory-of-solids">Debye Theory of Solids<a class="headerlink" href="#debye-theory-of-solids" title="Permanent link">&para;</a></h2>
+<p>atoms in crystal do not vibrate independently
+debye temperature <span class="arithmatex">\(T_D = \frac{hc_s}{2k_BT}(\frac{6N}{\pi V})^{\frac{1}{3}}T\)</span>
+    agree with einstein model in large temp limit</p>
+<h2 id="bose-einstein-condensation">Bose-Einstein Condensation<a class="headerlink" href="#bose-einstein-condensation" title="Permanent link">&para;</a></h2>
+<p>one spin instead of two (divide <span class="arithmatex">\(g(\epsilon)\)</span> by 2)
+condensation temperature <span class="arithmatex">\(T_c = \frac{0.527}{k_B}(\frac{h^2}{2\pi m})(\frac{N}{V})^{\frac{2}{3}}\)</span>
+    <span class="arithmatex">\(N\)</span> increases exponentially to <span class="arithmatex">\(T_c\)</span>, then flattens out
+    balance between excited and unexcited states</p>
+</section>
+
+            </main>
+        </div>
+        <hr><footer>
+    <div class="terminal-mkdocs-footer-grid">
+        <div id="terminal-mkdocs-footer-copyright-info">
+             Site built with <a href="http://www.mkdocs.org">MkDocs</a> and <a href="https://github.com/ntno/mkdocs-terminal">Terminal for MkDocs</a>.
+        </div>
+    </div>
+</footer>
+    </div>
+
+    
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="alertdialog" aria-modal="true" aria-labelledby="searchModalLabel">
+    <div class="modal-dialog modal-lg" role="search">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="searchModalLabel">Search</h5>
+                <button type="button" class="close btn btn-default btn-ghost" data-dismiss="modal"><span aria-hidden="true">x</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p id="searchInputLabel">Type to start searching</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" aria-labelledby="searchInputLabel" placeholder="" id="mkdocs-search-query" title="Please enter search terms here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No document matches found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</body>
+
+</html>

@@ -1,0 +1,265 @@
+\documentclass{article}
+\usepackage{assignment_preamble}
+
+\title{Homework 1}
+\author{Ravi Kini}
+\date{January 31, 2024}
+
+\begin{document}
+
+\maketitle
+
+\problem[\textit{Introduction to Elementary Particles} (Griffiths, 2e) Exercise 1.1]
+
+For a particle to be undeflected, $F_e = F_m$.
+\begin{equation}
+    \begin{split}
+        F_e & = F_m \\
+        qE & = qv \times B = qvB \\
+        v & = \frac{E}{B}
+    \end{split}
+\end{equation}
+Turning off the electric field:
+\begin{equation}
+    \begin{split}
+        F_m = qvB & = \frac{mv^2}{R} \\
+        \frac{q}{m} & = \frac{v}{RB} = \frac{E}{RB^2}
+    \end{split}
+\end{equation}
+\clearpage
+
+\problem[\textit{Introduction to Elementary Particles} (Griffiths, 2e) Exercise 1.3]
+By the position-momentum uncertainty relation:
+\begin{equation}
+    \begin{split}
+        \Delta x\Delta p & \geq \frac{\hbar}{2} \\
+        p_{\text{min}} & = \frac{\hbar}{2\Delta x} \\
+        & = \frac{\hbar c}{2\Delta x} \frac{1}{c} \\
+        & = \frac{6.58212 \cdot 10^{-22}~\unit{\mega eV\second} \cdot 3 \cdot 10^8~\unit{\meter\per\second}}{2 \cdot 10^{-15}~\unit{\meter}} \frac{1}{c} \\
+        & = 98.7318~\unit{\mega eV\per c} \\
+        E & = \sqrt{m^2c^4 + p^2c^2} \\
+    \end{split}
+\end{equation}
+The corresponding energy is then:
+\begin{equation}
+    \begin{split}
+        E_{\text{min}} & = \sqrt{\left(0.510999~\unit{\mega eV\per c\squared}\right)^2c^4 + \left(98.7318~\unit{\mega eV\per c}\right)c^2} \\
+        & = 98.7331~\unit{\mega eV}
+    \end{split}
+\end{equation}
+\clearpage
+
+\problem[\textit{Introduction to Elementary Particles} (Griffiths, 2e) Exercise 1.7]
+\subproblem{(a)}
+The decays where charge and strangeness are conserved are:
+\begin{equation}
+    \begin{split}
+        \Delta^{++} & \to p^{+} + \pi^{+} \\
+        \Delta^{-} & \to n + \pi^{-} \\
+        & \to \Sigma^{-} + K^{0} \\
+        \Sigma^{*+} & \to \Sigma^{0} + \pi^{+} \\
+        & \to \Lambda + \pi^{+} \\
+        & \to \Xi^{0} + K^{+} \\
+        & \to p + \bar{K}^{0} \\
+        & \to \Sigma^{+} + \pi^{0} \\
+        & \to \Sigma^{+} + \eta \\
+        \Xi^{*-} & \to \Sigma^{-} + \bar{K}^0 \\
+        & \to \Xi^{-} + \pi^{0} \\
+        & \to \Xi^{-} + \eta \\
+        & \to \Sigma^{0} + K^{-} \\
+        & \to \Lambda + K^{-} \\
+        & \to \Xi^{0} + \pi^{-} \\
+    \end{split}
+\end{equation}
+\subproblem{(b)}
+The decays where the reactant mass exceeds the product mass are:
+\begin{equation}
+    \begin{split}
+        \Delta^{++} & \to p^{+} + \pi^{+} \\
+        \Delta^{-} & \to n + \pi^{-} \\
+        \Sigma^{*+} & \to \Sigma^{0} + \pi^{+} \\
+        & \to \Lambda + \pi^{+} \\
+        & \to \Sigma^{+} + \pi^{0} \\
+        \Xi^{*-} & \to \Xi^{-} + \pi^{0} \\
+        & \to \Xi^{0} + \pi^{-} \\
+    \end{split}
+\end{equation}
+
+\clearpage
+
+\problem[\textit{Introduction to Elementary Particles} (Griffiths, 2e) Exercise 1.8]
+The decays where charge and strangeness are conserved are:
+\begin{equation}
+    \begin{split}
+        \Omega^{-} & \to \Xi^{-} + \bar{K}^{0} \\
+        & \to \Xi^{0} + \bar{K}^{-} \\
+    \end{split}
+\end{equation}
+However, both decays have the reactant mass exceeding the product mass and are therefore kinematically forbidden.
+
+\clearpage
+
+\problem
+\subproblem{(a)}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+    \hline
+    & Reactants ($\pi^{+} + p^{+}$) & Products ($K^{+} + \Sigma^{0}$) \\
+    \hline
+    $A$ & $0 + 1 = 1$ & $0 + 1 = 1$ \\
+    \hline
+    $S$ & $0 + 0 = 0$ & $1 + -1 = 0$ \\
+    \hline
+    $L_{\mu}$ & $0 + 0 = 0$ & $0 + 0 = 0$ \\
+    \hline
+    $L_{e}$ & $0 + 0 = 0$ & $0 + 0 = 0$ \\
+    \hline
+    $q$ & $1 + 1 = 2$ & $1 + 0 = 1$ \\
+    \hline
+    $E$ & $139.570 + 938.272 = 1077.842$ & $493.68 + 1192.64 = 1686.32$\\
+    \hline
+\end{tabular}
+\end{center}
+Charge and energy are not conserved.
+\subproblem{(b)}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+    \hline
+    & Reactants ($\pi^{-} + p^{+}$) & Products ($\Lambda + \Sigma^{0}$) \\
+    \hline
+    $A$ & $0 + 1 = 1$ & $1 + 1 = 2$ \\
+    \hline
+    $S$ & $0 + 0 = 0$ & $-1 + -1 = -2$ \\
+    \hline
+    $L_{\mu}$ & $0 + 0 = 0$ & $0 + 0 = 0$ \\
+    \hline
+    $L_{e}$ & $0 + 0 = 0$ & $0 + 0 = 0$ \\
+    \hline
+    $q$ & $-1 + 1 = 0$ & $0 + 0 = 0$ \\
+    \hline
+    $E$ & $139.570 + 938.272 = 1077.842$ & $1115.68 + 1192.64 = 2308.32$\\
+    \hline
+\end{tabular}
+\end{center}
+Baryon number, strangeness, and energy are not conserved.
+\subproblem{(c)}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+    \hline
+    & Reactants ($\pi^{-}$) & Products ($\mu^{-} + \nu_{\mu}$) \\
+    \hline
+    $A$ & $0$ & $0 + 0 = 0$ \\
+    \hline
+    $S$ & $0$ & $0 + 0 = 0$ \\
+    \hline
+    $L_{\mu}$ & $0$ & $1 + 1 = 2$ \\
+    \hline
+    $L_{e}$ & $0$ & $0 + 0 = 0$ \\
+    \hline
+    $q$ & $-1$ & $-1 + 0 = -1$ \\
+    \hline
+    $E$ & $139.570$ & $105.659 + 0 = 105.659$\\
+    \hline
+\end{tabular}
+\end{center}
+Muon number is not conserved.
+\subproblem{(d)}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+    \hline
+    & Reactants ($p^{+}$) & Products ($\Delta^{++} + \pi^{-}$) \\
+    \hline
+    $A$ & $1$ & $1 + 0 = 1$ \\
+    \hline
+    $S$ & $0$ & $0 + 0 = 0$ \\
+    \hline
+    $L_{\mu}$ & $0$ & $0 + 0 = 0$ \\
+    \hline
+    $L_{e}$ & $0$ & $0 + 0 = 0$ \\
+    \hline
+    $q$ & $1$ & $2 + -1 = 1$ \\
+    \hline
+    $E$ & $938.272$ & $1232 + 139.570 = 1371.570$\\
+    \hline
+\end{tabular}
+\end{center}
+Energy is not conserved.
+\subproblem{(e)}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+    \hline
+    & Reactants ($\mu^{-}$) & Products ($e^{-} + \nu_{\mu}$) \\
+    \hline
+    $A$ & $0$ & $0 + 0 = 0$ \\
+    \hline
+    $S$ & $0$ & $0 + 0 = 0$ \\
+    \hline
+    $L_{\mu}$ & $1$ & $0 + 1 = 1$ \\
+    \hline
+    $L_{e}$ & $0$ & $1 + 0 = 1$ \\
+    \hline
+    $q$ & $-1$ & $-1 + 0 = -1$ \\
+    \hline
+    $E$ & $139.570$ & $105.659 + 0 = 105.659$\\
+    \hline
+\end{tabular}
+\end{center}
+Electron number is not conserved.
+\subproblem{(f)}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+    \hline
+    & Reactants ($K^{0}$) & Products ($\pi^{+} + \pi^{-}$) \\
+    \hline
+    $A$ & $0$ & $0 + 0 = 0$ \\
+    \hline
+    $S$ & $1$ & $0 + 0 = 0$ \\
+    \hline
+    $L_{\mu}$ & $0$ & $0 + 0 = 0$ \\
+    \hline
+    $L_{e}$ & $0$ & $0 + 0 = 0$ \\
+    \hline
+    $q$ & $0$ & $1 + -1 = 0$ \\
+    \hline
+    $E$ & $497.65$ & $139.570 + 139.570 = 279.140$\\
+    \hline
+\end{tabular}
+\end{center}
+Strangeness is not conserved.
+\clearpage
+
+\problem
+\subproblem{(a)}
+Weak interactions do not need to conserve strangeness, so $K^{0} \to \pi^{+} + \pi^{-}$ is allowed.
+\subproblem{(b)}
+Applying crossing symmetry and detailed balance to transform $p^{+} \to \Delta^{++} + \pi^{-}$:
+\begin{equation}
+    \begin{split}
+        p^{+} & \to \Delta^{++} + \pi^{-} \\
+        p^{+} + \pi^{+} & \to \Delta^{++} \\
+        \pi^{+} & \to \bar{p}^{-} + \Delta^{++} \\
+        \pi^{+} + \bar{\Delta}^{--} & \to \bar{p}^{-} \\
+    \end{split}
+\end{equation}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+    \hline
+    & Reactants ($\pi^{+} + \bar{\Delta}^{--}$) & Products ($\bar{p}^{-}$) \\
+    \hline
+    $A$ & $0 + -1 = -1$ & $-1$ \\
+    \hline
+    $S$ & $0 + 0 = 0$ & $0$ \\
+    \hline
+    $L_{\mu}$ & $0 + 0 = 0$ & $0$ \\
+    \hline
+    $L_{e}$ & $0 + 0 = -$ & $0$ \\
+    \hline
+    $q$ & $1 + -2 = -1$ & $-1$ \\
+    \hline
+    $E$ & $1232 + 139.570 = 1371.570$ & $938.272$ \\
+    \hline
+\end{tabular}
+\end{center}
+All quantities are conserved, so this process is allowed.
+
+\end{document}

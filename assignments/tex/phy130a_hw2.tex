@@ -1,0 +1,235 @@
+\documentclass{article}
+\usepackage{assignment_preamble}
+
+\title{Homework 2}
+\author{Ravi Kini}
+\date{February 21, 2024}
+
+\begin{document}
+
+\maketitle
+
+\problem[\textit{Introduction to Elementary Particles} (Griffiths, 2e) Exercise 3.7]
+\begin{equation}
+    \begin{split}
+        x^{\mu} & = M_{\nu}^{\mu}{x^{\nu}}' \\
+        M & = \begin{pmatrix}
+            \gamma & \gamma\beta & 0 & 0 \\
+            \gamma\beta & \gamma & 0 & 0 \\
+            0 & 0 & 1 & 0 \\
+            0 & 0 & 0 & 1 \\
+        \end{pmatrix} \\
+        \Lambda M & = \begin{pmatrix}
+            \gamma & -\gamma\beta & 0 & 0 \\
+            -\gamma\beta & \gamma & 0 & 0 \\
+            0 & 0 & 1 & 0 \\
+            0 & 0 & 0 & 1 \\
+        \end{pmatrix}\begin{pmatrix}
+            \gamma & \gamma\beta & 0 & 0 \\
+            \gamma\beta & \gamma & 0 & 0 \\
+            0 & 0 & 1 & 0 \\
+            0 & 0 & 0 & 1 \\
+        \end{pmatrix} \\
+        & = \begin{pmatrix}
+            \gamma^2(1 - \beta^2) & 0 & 0 & 0 \\
+            0 & \gamma^2(1 - \beta^2) & 0 & 0 \\
+            0 & 0 & 1 & 0 \\
+            0 & 0 & 0 & 1 \\
+        \end{pmatrix} \\
+        & = \begin{pmatrix}
+            1 & 0 & 0 & 0 \\
+            0 & 1 & 0 & 0 \\
+            0 & 0 & 1 & 0 \\
+            0 & 0 & 0 & 1 \\
+        \end{pmatrix} = I
+    \end{split}
+\end{equation}
+$M$ is then the matrix inverse of the Lorentz transformation matrix $\Lambda$.
+\clearpage
+
+\problem[\textit{Introduction to Elementary Particles} (Griffiths, 2e) Exercise 3.12]
+Applying the Lorentz transformation:
+\begin{equation}
+    \begin{split}
+        p_A^{\mu} + p_B^{\mu} & = p_C^{\mu} + p_D^{\mu} \\
+        \Lambda_{\nu}^{\mu}\left(p_A^{\mu} + p_B^{\mu}\right) & = \Lambda_{\nu}^{\mu}\left(p_C^{\mu} + p_D^{\mu}\right) \\
+        {p_A^{\nu}}' + {p_B^{\nu}}' & = {p_C^{\nu}}' + {p_D^{\mu}}' \\
+    \end{split}
+\end{equation}
+Energy and momentum are conserved in $S'$.
+\clearpage
+
+\problem[\textit{Introduction to Elementary Particles} (Griffiths, 2e) Exercise 3.15]
+By conservation of the energy-momentum 4-vector:
+\begin{equation}
+    \begin{split}
+        p_{\pi} & = p_{\mu} + p_{\nu} \\
+        p_{\mu} & = p_{\pi} - p_{\nu} \\
+        p_{\mu}^2 & = p_{\pi}^2 + p_{\nu}^2 - 2p_{\pi} \cdot p_{\nu} \\
+        m_{\mu}^2c^2 & = m_{\pi}^2c^2 - 2\left(\frac{E_{\pi}}{c}\frac{E_{\nu}}{c} - \mathbf{p}_{\pi} \cdot \mathbf{p}_{\nu}\right) \\
+        & = m_{\pi}^2c^2 - 2\frac{E_{\pi}E_{\nu}}{c^2} \\
+        & = m_{\pi}^2c^2 - 2\gamma m_{\pi}\left|\mathbf{p}_{\nu}\right|c \\
+        \left|\mathbf{p}_{\nu}\right| & = \frac{(m_{\pi}^2 - m_{\mu}^2)c}{2\gamma m_{\pi}} \\
+    \end{split}
+\end{equation}
+Calculating the scattering angle:
+\begin{equation}
+    \begin{split}
+        \tan\theta & = \frac{\left|\mathbf{p}_{\nu}\right|}{\left|\mathbf{p}_{\pi}\right|} = \frac{\frac{\left(m_{\pi}^2 - m_{\mu}^2\right)c}{2\gamma m_{\pi}}}{\gamma m_{\pi}\beta c} \\
+        & = \frac{m_{\pi}^2 - m_{\mu}^2}{2\beta \left(\gamma m_{\pi}\right)^2} \\
+        & = \frac{1 - \left(\frac{m_{\mu}}{m_{\pi}}\right)^2}{2\beta \gamma^2} \\
+        \theta & = \tan^{-1} \frac{1 - \left(\frac{m_{\mu}}{m_{\pi}}\right)^2}{2\beta \gamma^2}
+    \end{split}
+\end{equation}
+\clearpage
+
+\problem[\textit{Introduction to Elementary Particles} (Griffiths, 2e) Exercise 3.16]
+Before the collision:
+\begin{equation}
+    \begin{split}
+        p^{\mu} & = \left(\frac{E_A}{c} + m_Bc, \mathbf{p}_A\right) \\
+        p^2 & = \left(\frac{E_A}{c} + m_Bc\right)^2 -  \mathbf{p}_A^2 \\
+        & = \frac{E_A^2}{c^2} + 2E_am_B + m_B^2c^2 - \frac{1}{c^2}\left(E_A^2 - m_A^2c^4\right) \\
+        & = 2E_am_B + \left(m_B^2 + m_A^2\right)c^2 \\
+    \end{split}
+\end{equation}
+After the collision:
+\begin{equation}
+    \begin{split}
+        {p^{\mu}}' & = \left(\sum_{i=1}^n m_nc, \mathbf{0}\right) = \left(Mc, \mathbf{0}\right) \\
+    \end{split}
+\end{equation}
+Using the invariance of the dot product:
+\begin{equation}
+    \begin{split}
+        p^2 = {p^2}' & = M^2c^2 \\
+        E_a & = \frac{M^2 - m_B^2 - m_A^2}{2m_B}c^2
+    \end{split}
+\end{equation}
+\clearpage
+
+\problem[\textit{Introduction to Elementary Particles} (Griffiths, 2e) Exercise 3.17]
+\subproblem{(a)}
+Applying the previous results to $p + p \to p + p + \pi^0$:
+\begin{equation}
+    \begin{split}
+        E_p & = \frac{\left(2m_p + m_{\pi^0}\right)^2 - m_p^2 - m_p^2}{2m_p}c^2 \\
+        & \approx 1217.94~\unit{MeV}
+    \end{split}
+\end{equation}
+\subproblem{(b)}
+Applying the previous results to $p + p \to p + p + \pi^+ + \pi^-$:
+\begin{equation}
+    \begin{split}
+        E_p & = \frac{\left(2m_p + m_{\pi^+} + m_{\pi^-}\right)^2 - m_p^2 - m_p^2}{2m_p}c^2 \\
+        & \approx 1538.07~\unit{MeV}
+    \end{split}
+\end{equation}
+\subproblem{(c)}
+Applying the previous results to $\pi^- + p \to p + \bar{p} + n$:
+\begin{equation}
+    \begin{split}
+        E_{\pi^-} & = \frac{\left(m_p + m_{\bar{p}} + m_{n}\right)^2 - m_p^2 - m_{\pi^{-}}^2}{2m_p}c^2 \\
+        & \approx 3746.60~\unit{MeV}
+    \end{split}
+\end{equation}
+\subproblem{(d)}
+Applying the previous results to $\pi^- + p \to K^0 + \Sigma^0$:
+\begin{equation}
+    \begin{split}
+        E_{\pi^-} & = \frac{\left(m_{K^0} + m_{\Sigma^0}\right)^2 - m_p^2 - m_{\pi^{-}}^2}{2m_p}c^2 \\
+        & \approx 1042.94~\unit{MeV}
+    \end{split}
+\end{equation}
+\subproblem{(e)}
+Applying the previous results to $p + p \to p + \Sigma^+ + K^0$:
+\begin{equation}
+    \begin{split}
+        E_p & = \frac{\left(m_p + m_{\Sigma^+} + m_{K^0}\right)^2 - m_p^2 - m_p^2}{2m_p}c^2 \\
+        & \approx 2734.61~\unit{MeV}
+    \end{split}
+\end{equation}
+\clearpage
+
+\problem[\textit{Introduction to Elementary Particles} (Griffiths, 2e) Exercise 3.18]
+For the second collision:
+\begin{equation}
+    \begin{split}
+        E_{K^-} & = \frac{\left(m_{\Omega^-} + m_{K^0} + m_{K^+}\right)^2 - m_p^2 - m_{K^-}^2}{2m_p}c^2 \\
+        & \approx 3182.32~\unit{MeV} \\
+    \end{split}
+\end{equation}
+For the first collision, treating the non-$K^-$ products as a particle $P$:
+\begin{equation}
+    \begin{split}
+        p_{p_1} + p_{p_2} & = p_P + p_{K^-} \\
+        \left(p_{p_1} - p_{K^-}\right)^2 & = \left(p_P - p_{p_2}\right)^2 \\
+        & m_{p_1}^2c^2 + m_{K^-}^2c^2 -2\left(\frac{E_p}{c}\frac{E_{K^-}}{c} - \mathbf{p}_{p_1} \cdot \mathbf{p}_{K^-}\right) \\
+        & = m_{P}^2c^2 + m_{p_2}^2c^2 -2\left(\frac{E_P}{c}m_pc\right) \\
+        & m_{K^-}^2c^2 -2\left(\frac{E_pE_{K^-} - \sqrt{\left(E_p^2 - m_p^2c^4\right)\left(E_{K^-}^2 - m_{K^-}^2c^4\right)}}{c^2}\right) \\
+        & = m_{P}^2c^2 -2m_p(E_p + m_pc^2 - E_{K^-}) \\
+        & E_p\left(E_{K^-} - m_pc^2\right) + \frac{m_{P}^2 - m_{K^-}^2 - 2m_p^2 + 2m_p\frac{E_{K^-}}{c^2}}{2}c^4 \\
+        & = \sqrt{\left(E_p^2 - m_p^2c^4\right)\left(E_{K^-}^2 - (m_{K^-}c)^2\right)} \\
+    \end{split}
+\end{equation}
+Let $a = E_{K^-} - m_pc^2, b = \frac{m_{P}^2 - m_{K^-}^2 - 2m_p^2 + 2m_p\frac{E_{K^-}}{c^2}}{2}c^4, d = E_{K^-}^2 - \left(m_{K^-}c\right)^2, e = m_p^2c^4$.
+\begin{equation}
+    \begin{split}
+        a & = E_{K^-} - m_pc^2 \\
+        & \approx 2244.05~\unit{MeV} \\
+        b & = \frac{m_{P}^2 - m_{K^-}^2 - 2m_p^2 + 2m_p\frac{E_{K^-}}{c^2}}{2}c^4 \\
+        & \approx 4792636.24~\unit{MeV\squared} \\
+        d & = E_{K^-}^2 - (m_{K^-}c)^2 \\
+        & \approx 9883440.64~\unit{MeV\squared} \\
+        e & = (m_pc)^2 \\
+        & \approx 880350.59~\unit{MeV\squared} \\
+        aE_p + b & = \sqrt{(E_p^2 - (m_pc)^2)d} \\
+        a^2E_p^2 + 2abE_p + b^2 & = (E_p^2 - e)d \\
+        0 & = (a^2 - d)E_p^2 + (2ab)E_p + (b^2 + de) \\
+        E_p & = \frac{-2ab \pm \sqrt{(2ab)^2 - 4(a^2 - d)(b^2 + de)}}{2(a^2 - d)} \\
+        & = -1165.97, 5603.11~\unit{MeV}
+    \end{split}
+\end{equation}
+The incident proton has minimum kinetic energy $E_p - m_pc^2 = 5603.11 - 938.27 = 4664.84~\unit{MeV}$.
+\clearpage
+
+\problem[\textit{Introduction to Elementary Particles} (Griffiths, 2e) Exercise 3.21]
+Applying conservation of the energy-momentum 4-vector:
+\begin{equation}
+    \begin{split}
+        \mathbf{p}_{\pi^-} = 0 & = \mathbf{p}_{\mu^-} + \mathbf{p}_{\nu} \\
+        \mathbf{p}_{\mu^-} = \mathbf{p} & = -\mathbf{p}_{\nu} \\
+        E_{\pi^-} & = E_{\mu^-} + E_{\bar{\nu}_\mu} \\
+        m_{\pi^-}c^2 & = c\sqrt{(m_{\mu^-}c)^2 + \mathbf{p}^2} + |\mathbf{p}|c \\
+        |\mathbf{p}_\mu| = |\mathbf{p}| & = \frac{m_{\pi^-}^2 - m_{\mu^-}^2}{2m_{\pi^-}}c \\
+        E_\mu & = \sqrt{m_{\mu}^2c^4 + \mathbf{p}^2c^2} = \frac{m_{\pi^-}^2 + m_{\mu^-}^2}{2m_{\pi^-}}c^2 \\
+        v_\mu & = \frac{\mathbf{p}_{\mu}c^2}{E} = \frac{m_{\pi^-}^2 - m_{\mu^-}^2}{m_{\pi^-}^2 + m_{\mu^-}^2}c \\
+        \gamma & = \frac{1}{\sqrt{1 - (\frac{v}{c})^2}} = \frac{1}{\sqrt{1 - (\frac{m_{\pi^-}^2 - m_{\mu^-}^2}{m_{\pi^-}^2 + m_{\mu^-}^2})^2}} = \frac{m_{\pi^-}^2 + m_{\mu^-}^2}{2m_{\pi^-}m_{\mu^-}} \\
+        d & = v\gamma\tau = \frac{m_{\pi^-}^2 - m_{\mu^-}^2}{m_{\pi^-}^2 + m_{\mu^-}^2}c\frac{m_{\pi^-}^2 + m_{\mu^-}^2}{2m_{\pi^-}m_{\mu^-}}\tau \\
+        & = \frac{m_{\pi^-}^2 - m_{\mu^-}^2}{2m_{\pi^-}m_{\mu^-}}c\tau \approx 185.87~\unit{\meter}
+    \end{split}
+\end{equation}
+\clearpage
+
+\problem[\textit{Introduction to Elementary Particles} (Griffiths, 2e) Exercise 3.27]
+Applying conservation of the energy-momentum 4-vector:
+\begin{equation}
+    \begin{split}
+        p\sin\phi & = p_\gamma'\sin\theta \\
+        \sin\phi & = \frac{E'}{pc}\sin\theta \\
+        p_\gamma & = p\cos\phi + p_\gamma'\cos\theta \\
+        \frac{E}{c} & = p\sqrt{1 - (\frac{E'}{pc}\sin\theta)^2} + \frac{E'}{c}\cos\theta \\
+        & = \sqrt{p^2 - (\frac{E'}{c}\sin\theta)^2} + \frac{E'}{c}\cos\theta \\
+        p & = (\frac{E}{c} - \frac{E'}{c}\cos\theta)^2 + (\frac{E'}{c}\sin\theta)^2 \\
+        p^2c^2 & = E^2 - 2EE'\cos\theta + E'^2 \\
+        E + mc^2 & = \sqrt{m^2c^4 + p^2c^2} + E' \\
+        E + mc^2 - E' & = \sqrt{m^2c^4 + E^2 - 2EE'\cos\theta + E'^2} \\
+        -EE' + (E - E')mc^2 & = -EE'\cos\theta \\
+        E' & = \frac{Emc^2}{E(1 - \cos\theta) + mc^2} \\
+        \frac{hc}{\lambda'} & = \frac{\frac{hc}{\lambda}mc^2}{\frac{hc}{\lambda}(1 - \cos\theta) + mc^2} \\
+        \lambda' & = \frac{hc(1 - \cos\theta) + mc^2\lambda}{mc^2} \\
+        & = \lambda + \frac{h}{mc}(1 - \cos\theta)
+    \end{split}
+\end{equation}
+
+\end{document}

@@ -1,0 +1,1462 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="generator" content="mkdocs-1.6.0, mkdocs-terminal-4.4.0">
+     
+     
+    
+    <link rel="canonical" href="https://ravidosa.github.io/notes/notes/groups-i/"><link rel="icon" type="image/png" sizes="192x192" href="../../img/android-chrome-192x192.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="../../img/android-chrome-512x512.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="../../img/apple-touch-icon.png" />
+<link rel="shortcut icon" type="image/png" sizes="48x48" href="../../img/favicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="../../img/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="../../img/favicon-32x32.png" />
+
+
+    
+ 
+<title>Groups - notes</title>
+
+
+<link href="../../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+<link href="../../css/fontawesome/css/solid.min.css" rel="stylesheet">
+<link href="../../css/normalize.css" rel="stylesheet">
+<link href="../../css/terminal.css" rel="stylesheet">
+<link href="../../css/theme.css" rel="stylesheet">
+<link href="../../css/theme.tile_grid.css" rel="stylesheet">
+<link href="../../css/theme.footer.css" rel="stylesheet">
+<!-- dark color palette -->
+<link href="../../css/palettes/dark.css" rel="stylesheet">
+
+<!-- page layout -->
+<style>
+/* initially set page layout to a one column grid */
+.terminal-mkdocs-main-grid {
+    display: grid;
+    grid-column-gap: 1.4em;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+/*  
+*   when side navigation is not hidden, use a two column grid.  
+*   if the screen is too narrow, fall back to the initial one column grid layout.
+*   in this case the main content will be placed under the navigation panel. 
+*/
+@media only screen and (min-width: 70em) {
+    .terminal-mkdocs-main-grid {
+        grid-template-columns: 4fr 9fr;
+    }
+}</style>
+
+
+
+    
+    <link href="../../style.css" rel="stylesheet">  
+    
+    
+
+    
+    <!-- search css support -->
+<link href="../../css/search/bootstrap-modal.css" rel="stylesheet">
+<!-- search scripts -->
+<script>
+    var base_url = "../..",
+    shortcuts = "{}";
+</script>
+<script src="../../js/jquery/jquery-1.10.1.min.js" defer></script>
+<script src="../../js/bootstrap/bootstrap.min.js" defer></script>
+<script src="../../js/mkdocs/base.js" defer></script>
+    
+    
+    
+    
+    <script src="../../javascripts/mathjax.js"></script>
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    
+    <script src="../../search/main.js"></script>
+    
+
+    
+</head>
+
+<body class="terminal"><div class="container">
+    <div class="terminal-nav">
+        <header class="terminal-logo">
+            <div id="mkdocs-terminal-site-name" class="logo terminal-prompt"><a href="https://ravidosa.github.io/notes/" class="no-style">notes</a></div>
+        </header>
+        
+        <nav class="terminal-menu">
+            
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Home</span>
+                    </a>
+                    <meta property="position" content="0">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../course-list/" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Course List</span>
+                    </a>
+                    <meta property="position" content="1">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../../library/" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Library</span>
+                    </a>
+                    <meta property="position" content="2">
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                    
+                    
+
+
+<li property="itemListElement" typeof="ListItem">
+    <a href="#" class="menu-item" data-toggle="modal" data-target="#mkdocs_search_modal" property="item" typeof="SearchAction">
+        <i aria-hidden="true" class="fa fa-search"></i> <span property="name">Search</span>
+    </a>
+    <meta property="position" content="3">
+</li>
+                    
+            </ul>
+            
+        </nav>
+    </div>
+</div>
+        
+    <div class="container">
+        <div class="terminal-mkdocs-main-grid"><aside id="terminal-mkdocs-side-panel"><nav>
+  
+    <ul class="terminal-mkdocs-side-nav-items">
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../">Home</a>
+        
+    
+    
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../course-list/">Course List</a>
+        
+    
+    
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../library/">Library</a>
+        
+    
+    
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Fall 2022</span>
+        
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f22/lin1y/">LIN 1Y</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f22/phy9d/">PHY 9D</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f22/phy9ha/">PHY 9HA</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f22/phy40/">PHY 40</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f22/phy104a/">PHY 104A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f22/phy116a/">PHY 116A</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Winter 2023</span>
+        
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w23/lin103b/">LIN 103B</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w23/mat108/">MAT 108</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w23/mat119a/">MAT 119A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w23/phy45/">PHY 45</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w23/phy80/">PHY 80</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w23/phy105a/">PHY 105A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w23/phy110a/">PHY 110A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w23/phy116b/">PHY 116B</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Spring 2023</span>
+        
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s23/lin165/">LIN 165</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s23/mat127a/">MAT 127A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s23/mat128b/">MAT 128B</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s23/mat135a/">MAT 135A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s23/phy105b/">PHY 105B</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s23/phy108/">PHY 108</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s23/phy108/">PHY 108L</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s23/phy110b/">PHY 110B</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Summer 2023</span>
+        
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../m23/mat127b/">MAT 127B</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../m23/mat128a/">MAT 128A</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Fall 2023</span>
+        
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f23/lin112/">LIN 112</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f23/lin141/">LIN 141</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f23/mat150a/">MAT 150A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f23/mat168/">MAT 168</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f23/mat185a/">MAT 185A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f23/phy105c/">PHY 105C</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f23/phy112/">PHY 112</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f23/phy112/">PHY 112L</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../f23/phy115a/">PHY 115A</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Winter 2024</span>
+        
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w24/ecs120/">ECS 120</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w24/lin103a/">LIN 103A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w24/lin131/">LIN 131</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w24/lin152/">LIN 152</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w24/mat148/">MAT 148</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w24/mat150b/">MAT 150B</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w24/mat167/">MAT 167</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w24/phy115b/">PHY 115B</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w24/phy115b/">PHY 115L</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../w24/phy130a/">PHY 130A</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Spring 2024</span>
+        
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s24/ecs36c/">ECS 36C</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s24/ecs127/">ECS 127</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s24/mat127c/">MAT 127C</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s24/mat128c/">MAT 128C</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s24/mat185b/">MAT 185B</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s23/phy110b/">PHY 110L</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s24/phy122b/">PHY 122B</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s24/phy129a/">PHY 129A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../../s24/phy130b/">PHY 130B</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+    </ul>
+  
+</nav><hr>
+<nav>
+    <ul>
+        <li><a href="#groups">Groups</a></li>
+        <li><a href="#laws-of-composition">Laws of Composition</a></li><li><a href="#groups-and-subgroups">Groups and Subgroups</a></li><li><a href="#subgroups-of-additive-group-of-integers">Subgroups of Additive Group of Integers</a></li><li><a href="#cyclic-groups">Cyclic Groups</a></li><li><a href="#homomorphisms">Homomorphisms</a></li><li><a href="#isomorphisms">Isomorphisms</a></li><li><a href="#equivalence-relations-and-partitions">Equivalence Relations and Partitions</a></li><li><a href="#cosets">Cosets</a></li><li><a href="#modular-arithmetic">Modular Arithmetic</a></li><li><a href="#the-correspondence-theorem">The Correspondence Theorem</a></li><li><a href="#product-groups">Product Groups</a></li><li><a href="#quotient-groups">Quotient Groups</a></li>
+    </ul>
+</nav>
+</aside>
+            <main id="terminal-mkdocs-main-content">
+<section id="mkdocs-terminal-content">
+    <h1 id="groups">Groups<a class="headerlink" href="#groups" title="Permanent link">&para;</a></h1>
+<h2 id="laws-of-composition">Laws of Composition<a class="headerlink" href="#laws-of-composition" title="Permanent link">&para;</a></h2>
+<p>law of composition: maps <span class="arithmatex">\(S \times S \to S\)</span>
+    product/sum of <span class="arithmatex">\(a\)</span> and <span class="arithmatex">\(b\)</span>
+    associative: <span class="arithmatex">\((ab)c = a(bc)\)</span>
+    commutative: <span class="arithmatex">\(ab = ba\)</span>
+    identity: <span class="arithmatex">\(ea = ae = a\)</span>
+    inverse: <span class="arithmatex">\(aa^{-1} = a^{-1}a = e\)</span>
+        invertible if both left and right inverse
+        unique inverse
+        <span class="arithmatex">\((ab)^{-1} = b^{-1}a^{-1}\)</span></p>
+<h2 id="groups-and-subgroups">Groups and Subgroups<a class="headerlink" href="#groups-and-subgroups" title="Permanent link">&para;</a></h2>
+<p>group: set <span class="arithmatex">\(G\)</span> + law of composition <span class="arithmatex">\(\circ\)</span>
+    composition associative
+    identity element
+    every element has inverse
+    abelian: composition commutative
+        <span class="arithmatex">\(\mathbb{Z}^+, \mathbb{R}^+, \mathbb{R}^\times, \mathbb{C}^+, \mathbb{C}^\times\)</span>
+    order <span class="arithmatex">\(|G|\)</span>: number of elements in <span class="arithmatex">\(G\)</span>, aka cardinality
+        finite or infinite
+    cancellation: <span class="arithmatex">\(ab = ac\)</span> or <span class="arithmatex">\(ba = ca\)</span> implies <span class="arithmatex">\(b = c\)</span>
+    <span class="arithmatex">\(n \times n\)</span> general linear group <span class="arithmatex">\(GL_n\)</span>: set of all invertible <span class="arithmatex">\(n \times n\)</span> matrices
+    symmetric group <span class="arithmatex">\(S_n\)</span>: set of all permutations of <span class="arithmatex">\(\{1, 2, \ldots, n\}\)</span>
+subgroup: <span class="arithmatex">\(H \subseteq G\)</span>
+    closure
+    identity
+    inverses
+    circle group <span class="arithmatex">\(S^1\)</span>, <span class="arithmatex">\(n \times n\)</span> special linear group <span class="arithmatex">\(SL_n\)</span> (matrices with determinant <span class="arithmatex">\(1\)</span>)
+    intersection of subgroups is subgroup
+    order of subgroup divides order of group</p>
+<h2 id="subgroups-of-additive-group-of-integers">Subgroups of Additive Group of Integers<a class="headerlink" href="#subgroups-of-additive-group-of-integers" title="Permanent link">&para;</a></h2>
+<p>either trivial subgroup or form <span class="arithmatex">\(\mathbb{Z}a\)</span> where <span class="arithmatex">\(a\)</span> is smallest positive integer in subgroup
+euclidean algorithm for gcd
+relatively prime <span class="arithmatex">\(a, b\)</span>: <span class="arithmatex">\(ra + sb = 1\)</span> for integer <span class="arithmatex">\(r, s\)</span>
+    if prime <span class="arithmatex">\(p\)</span> divides <span class="arithmatex">\(ab\)</span>, <span class="arithmatex">\(p\)</span> divides <span class="arithmatex">\(a\)</span> or <span class="arithmatex">\(b\)</span></p>
+<h2 id="cyclic-groups">Cyclic Groups<a class="headerlink" href="#cyclic-groups" title="Permanent link">&para;</a></h2>
+<p>cyclic subgroup <span class="arithmatex">\(\langle x \rangle \subseteq G\)</span> generated by <span class="arithmatex">\(x\)</span>: <span class="arithmatex">\(\{\ldots, x^{-2}, x^{-1}, 1, x, x^2, \ldots\}\)</span>
+    <span class="arithmatex">\(S = \{k : x^k = 1\}\)</span> is subgroup of <span class="arithmatex">\(\mathbb{Z}^+\)</span>
+        <span class="arithmatex">\(x^r = x^s\)</span> iff <span class="arithmatex">\(x^{r-s} = 1\)</span>
+        <span class="arithmatex">\(S\)</span> not trivial subgroup, then <span class="arithmatex">\(S = \mathbb{Z}n\)</span>, <span class="arithmatex">\(\langle x \rangle\)</span> has order <span class="arithmatex">\(n\)</span>
+            order <span class="arithmatex">\(n\)</span>: <span class="arithmatex">\(n\)</span> is smallest positive integer such that <span class="arithmatex">\(x^n = 1\)</span>
+            if <span class="arithmatex">\(x^n \neq 1\)</span> for all <span class="arithmatex">\(n \neq 0\)</span>, infinite order,  infinite cyclic
+klein four group, quaternion group</p>
+<h2 id="homomorphisms">Homomorphisms<a class="headerlink" href="#homomorphisms" title="Permanent link">&para;</a></h2>
+<p>homomorphism: map <span class="arithmatex">\(G \to G'\)</span>, <span class="arithmatex">\(\varphi(ab) = \varphi(a)\varphi(b)\)</span>
+    determinant, sign homomorphism, exponential map, absolute value map
+    trivial homomorphism: maps everything to identity
+    inclusion map: subgroup to group, <span class="arithmatex">\(i(x) = x\)</span>
+    extendable to multiple: <span class="arithmatex">\(\varphi(a_1\ldots a_k) = \varphi(a_1)\ldots\varphi(a_k)\)</span>
+    maps identity to identity: <span class="arithmatex">\(\varphi(e_G) = e_{G'}\)</span>
+    maps inverses to inverses: <span class="arithmatex">\(\varphi(a^{-1}) = \varphi(a)^{-1}\)</span>
+    image <span class="arithmatex">\(\mathrm{im} \varphi = \{x \in G' : \exists a \in G (\varphi(a)  = x)\}\)</span>: image of domain, subgroup of <span class="arithmatex">\(G'\)</span>
+    kernel <span class="arithmatex">\(\mathrm{ker} \varphi = \{a \in G : \varphi(a) = 1\}\)</span>: elements mapped to identity, subgroup of <span class="arithmatex">\(G\)</span>
+        kernel of <span class="arithmatex">\(GL_n\)</span> is <span class="arithmatex">\(SL_n\)</span>, kernel of sign homomorphism <span class="arithmatex">\(S_n\)</span> is alternating group (<span class="arithmatex">\(A_n\)</span>, even permutations)
+cosets
+    left coset of <span class="arithmatex">\(H \leq G\)</span>: <span class="arithmatex">\(aH = \{g \in G : \exists h \in H (g = ah)\}\)</span> (similar for right coset)
+    <span class="arithmatex">\(\varphi(a) = \varphi(b)\)</span>,  <span class="arithmatex">\(a^{-1}b\)</span> in kernel <span class="arithmatex">\(K\)</span>, <span class="arithmatex">\(b\)</span> in <span class="arithmatex">\(aK\)</span>, <span class="arithmatex">\(bK = aK\)</span>
+    injective iff kernel is trivial subgroup
+normal subgroup <span class="arithmatex">\(N \unlhd G\)</span>
+    conjugate by <span class="arithmatex">\(g\)</span>: <span class="arithmatex">\(gag^{-1}\)</span>
+    all conjugates by element of <span class="arithmatex">\(G\)</span> are in <span class="arithmatex">\(N\)</span>
+    kernel is normal subgroup
+    all subgroups normal for abelian <span class="arithmatex">\(G\)</span></p>
+<h2 id="isomorphisms">Isomorphisms<a class="headerlink" href="#isomorphisms" title="Permanent link">&para;</a></h2>
+<p>isomorphism: bijective homomorphism
+    inverse map also isomorphism
+    isomorphic groups <span class="arithmatex">\(G \approx G'\)</span>: isomorphism exists between <span class="arithmatex">\(G\)</span> and <span class="arithmatex">\(G'\)</span>
+        isomorphism class of <span class="arithmatex">\(G\)</span>
+    endomorphism: homomorphism to self
+        automorphism: endo + iso
+commutator <span class="arithmatex">\(aba^{-1}b^{-1}\)</span>: elements commute iff commutator is identity
+    center of group: commutes with everything
+        set of diagonal matrices</p>
+<h2 id="equivalence-relations-and-partitions">Equivalence Relations and Partitions<a class="headerlink" href="#equivalence-relations-and-partitions" title="Permanent link">&para;</a></h2>
+<p>see <a href="../relations-partitions/">Relations and Partitions</a>
+equivalence classes of <span class="arithmatex">\(S\)</span> partition <span class="arithmatex">\(S\)</span></p>
+<h2 id="cosets">Cosets<a class="headerlink" href="#cosets" title="Permanent link">&para;</a></h2>
+<p>left/right cosets partition group
+all left/right cosets have same order
+    index <span class="arithmatex">\([G : H]\)</span>: number of cosets of <span class="arithmatex">\(H\)</span>
+    <span class="arithmatex">\(|G| = |H|[G : H]\)</span>
+        <span class="arithmatex">\([G : K] = [G : H][H : K]\)</span>
+    <span class="arithmatex">\(|G| = |\mathrm{ker}\varphi|\cdot|\mathrm{im}\varphi|\)</span>
+cyclic group of prime order generated by any non-identity element
+right cosets
+    <span class="arithmatex">\(H\)</span> is normal, <span class="arithmatex">\(gHg^{-1} = H\)</span>, <span class="arithmatex">\(gH = Hg\)</span>, left coset is also right coset
+    if single subgroup, then normal</p>
+<h2 id="modular-arithmetic">Modular Arithmetic<a class="headerlink" href="#modular-arithmetic" title="Permanent link">&para;</a></h2>
+<p>see</p>
+<h2 id="the-correspondence-theorem">The Correspondence Theorem<a class="headerlink" href="#the-correspondence-theorem" title="Permanent link">&para;</a></h2>
+<p>equivalence relation of elements mapped to same element (preimage)
+restriction map: restrict mapping <span class="arithmatex">\(\varphi\)</span> to homomorphism of <span class="arithmatex">\(H \unlhd G\)</span> as <span class="arithmatex">\(\varphi\vert_H\)</span>, kernel is <span class="arithmatex">\(\mathrm{ker}\varphi \cap H\)</span>, image is <span class="arithmatex">\(\varphi(H)\)</span></p>
+<p>correspondence theorem: surjective group homomorphism <span class="arithmatex">\(\varphi : G \to \mathcal{G}\)</span>, bijective map between subgroups of <span class="arithmatex">\(G\)</span> containing kernel <span class="arithmatex">\(K\)</span> and subgroups of <span class="arithmatex">\(\mathcal{G}\)</span>
+    <span class="arithmatex">\(\mathcal{H}\)</span> bijectively corresponds to <span class="arithmatex">\(H = \varphi^{-1}(\mathcal{H})\)</span>
+    corresponding subgroups <span class="arithmatex">\(H, \mathcal{H}\)</span>, <span class="arithmatex">\(H \unlhd G\)</span> iff <span class="arithmatex">\(\mathcal{H} \unlhd \mathcal{G}\)</span>, <span class="arithmatex">\(|H| = |\mathcal{H}||K|\)</span></p>
+<h2 id="product-groups">Product Groups<a class="headerlink" href="#product-groups" title="Permanent link">&para;</a></h2>
+<p>component-wise multiplication
+    <span class="arithmatex">\(i_A(a)=(a, 1)\)</span>
+    <span class="arithmatex">\(i_B(b) = (1, b)\)</span>
+    <span class="arithmatex">\(p_A(a, b) = a\)</span>
+    <span class="arithmatex">\(p_B(a, b) = b\)</span>
+relatively prime <span class="arithmatex">\(a, b\)</span>, cylic group of order <span class="arithmatex">\(ab\)</span> isormophic to product of cyclic <span class="arithmatex">\(a\)</span> and cyclic <span class="arithmatex">\(b\)</span>
+product groups <span class="arithmatex">\(HK\)</span> for <span class="arithmatex">\(H, K \leq G\)</span>
+    injective iff <span class="arithmatex">\(H \cap K =  \{e\}\)</span>
+    homomorphism iff commute
+    if <span class="arithmatex">\(H\)</span> normal,  product group is subgroup
+    isomorphism iff injective, <span class="arithmatex">\(HK = G\)</span>, <span class="arithmatex">\(H, K \unlhd G\)</span></p>
+<h2 id="quotient-groups">Quotient Groups<a class="headerlink" href="#quotient-groups" title="Permanent link">&para;</a></h2>
+<p>set of cosets of normal subgroup form group <span class="arithmatex">\(\overline{G} = G / N\)</span>
+    law of composition that turns <span class="arithmatex">\(\overline{G}\)</span> into group with surjective homomorphism canonical map <span class="arithmatex">\(\pi(g) = \overline{g}\)</span> with kernel <span class="arithmatex">\(N\)</span>
+    for cosets <span class="arithmatex">\(aN, bN\)</span>, <span class="arithmatex">\(abN = (aN)(bN)\)</span>
+first isomorphism theorem
+    for surjective homomorphism <span class="arithmatex">\(\varphi : G \to G'\)</span> with kernel <span class="arithmatex">\(N\)</span>, <span class="arithmatex">\(\overline{G}\)</span> isomorphic to <span class="arithmatex">\(G'\)</span> with unique isomorphism <span class="arithmatex">\(\overline{\varphi} : \overline{G} \to G'\)</span> with <span class="arithmatex">\(\varphi = \overline{\varphi} \circ \pi\)</span>
+    <span class="arithmatex">\(\varphi\)</span> factors through <span class="arithmatex">\(\overline{G}\)</span>
+    <span class="arithmatex">\(G / \mathrm{ker} \varphi \approx \mathrm{im} \varphi\)</span>, if <span class="arithmatex">\(\varphi\)</span> surjective <span class="arithmatex">\(G' \approx G / \mathrm{ker} \varphi\)</span></p>
+</section>
+
+            </main>
+        </div>
+        <hr><footer>
+    <div class="terminal-mkdocs-footer-grid">
+        <div id="terminal-mkdocs-footer-copyright-info">
+             Site built with <a href="http://www.mkdocs.org">MkDocs</a> and <a href="https://github.com/ntno/mkdocs-terminal">Terminal for MkDocs</a>.
+        </div>
+    </div>
+</footer>
+    </div>
+
+    
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="alertdialog" aria-modal="true" aria-labelledby="searchModalLabel">
+    <div class="modal-dialog modal-lg" role="search">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="searchModalLabel">Search</h5>
+                <button type="button" class="close btn btn-default btn-ghost" data-dismiss="modal"><span aria-hidden="true">x</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p id="searchInputLabel">Type to start searching</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" aria-labelledby="searchInputLabel" placeholder="" id="mkdocs-search-query" title="Please enter search terms here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No document matches found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</body>
+
+</html>

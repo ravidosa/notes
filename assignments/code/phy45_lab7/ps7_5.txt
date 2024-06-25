@@ -1,0 +1,46 @@
+Enter dimension of matrix to be diagonalized:
+Enter elements of row  1 (separated by spaces):
+Enter elements of row  2 (separated by spaces):
+Enter elements of row  3 (separated by spaces):
+Enter elements of row  4 (separated by spaces):
+
+Solving Eigenproblem for matrix:
+  7.000  0.000  0.000  2.000
+  0.000  0.000  4.000  0.000
+  0.000  4.000  0.000  0.000
+  2.000  0.000  0.000  7.000
+
+Number of Jacobi rotations:        2
+
+Eigenvalues:
+  5.000 -4.000  4.000  9.000
+
+Eigenvectors:
+  0.707  0.000  0.000  0.707
+  0.000  0.707  0.707  0.000
+  0.000 -0.707  0.707  0.000
+ -0.707  0.000  0.000  0.707
+
+determinant = 0 = (7 - lambda)(-lambda(-lambda)(7 - lambda) - (4)(4)(7 - lambda)) - 2(-(-lambda)(2)(lambda) + (4)(-8))
+= ((7 - lambda)^2 - 4)(lambda + 4)(lambda - 4)
+lambda = 5, -4, 4, 9
+
+for lambda = 5:
+7a + 2d = 5a, 4c = 5b, 4b = 5c, 2a + 7d = 5d
+a = -d; b, c = 0
+[sqrt(2)/2, 0, 0, -sqrt(2)/2]
+
+for lambda = -4:
+7a + 2d = -4a, 4c = -4b, 4b = -4c, 2a + 7d = -4d
+b = -c; a, d = 0
+[0, sqrt(2)/2, -sqrt(2)/2, 0]
+
+for lambda = 4:
+7a + 2d = 4a, 4c = 4b, 4b = 4c, 2a + 7d = 4d
+b = c; a, d = 0
+[0, sqrt(2)/2, sqrt(2)/2, 0]
+
+for lambda = 9:
+7a + 2d = 9a, 4c = 9b, 4b = 9c, 2a + 7d = 9d
+a = d; b, c = 0
+[sqrt(2)/2, 0, 0, sqrt(2)/2]

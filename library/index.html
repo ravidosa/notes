@@ -1,0 +1,1510 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="generator" content="mkdocs-1.6.0, mkdocs-terminal-4.4.0">
+     
+     
+    
+    <link rel="canonical" href="https://ravidosa.github.io/notes/library/"><link rel="icon" type="image/png" sizes="192x192" href="../img/android-chrome-192x192.png" />
+<link rel="icon" type="image/png" sizes="512x512" href="../img/android-chrome-512x512.png" />
+<link rel="apple-touch-icon" sizes="180x180" href="../img/apple-touch-icon.png" />
+<link rel="shortcut icon" type="image/png" sizes="48x48" href="../img/favicon.ico" />
+<link rel="icon" type="image/png" sizes="16x16" href="../img/favicon-16x16.png" />
+<link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png" />
+
+
+    
+ 
+<title>Library - notes</title>
+
+
+<link href="../css/fontawesome/css/fontawesome.min.css" rel="stylesheet">
+<link href="../css/fontawesome/css/solid.min.css" rel="stylesheet">
+<link href="../css/normalize.css" rel="stylesheet">
+<link href="../css/terminal.css" rel="stylesheet">
+<link href="../css/theme.css" rel="stylesheet">
+<link href="../css/theme.tile_grid.css" rel="stylesheet">
+<link href="../css/theme.footer.css" rel="stylesheet">
+<!-- dark color palette -->
+<link href="../css/palettes/dark.css" rel="stylesheet">
+
+<!-- page layout -->
+<style>
+/* initially set page layout to a one column grid */
+.terminal-mkdocs-main-grid {
+    display: grid;
+    grid-column-gap: 1.4em;
+    grid-template-columns: auto;
+    grid-template-rows: auto;
+}
+
+/*  
+*   when side navigation is not hidden, use a two column grid.  
+*   if the screen is too narrow, fall back to the initial one column grid layout.
+*   in this case the main content will be placed under the navigation panel. 
+*/
+@media only screen and (min-width: 70em) {
+    .terminal-mkdocs-main-grid {
+        grid-template-columns: 4fr 9fr;
+    }
+}</style>
+
+
+
+    
+    <link href="../style.css" rel="stylesheet">  
+    
+    
+
+    
+    <!-- search css support -->
+<link href="../css/search/bootstrap-modal.css" rel="stylesheet">
+<!-- search scripts -->
+<script>
+    var base_url = "..",
+    shortcuts = "{}";
+</script>
+<script src="../js/jquery/jquery-1.10.1.min.js" defer></script>
+<script src="../js/bootstrap/bootstrap.min.js" defer></script>
+<script src="../js/mkdocs/base.js" defer></script>
+    
+    
+    
+    
+    <script src="../javascripts/mathjax.js"></script>
+    
+    <script src="https://polyfill.io/v3/polyfill.min.js?features=es6"></script>
+    
+    <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    
+    <script src="https://unpkg.com/mermaid/dist/mermaid.min.js"></script>
+    
+    <script src="../search/main.js"></script>
+    
+
+    
+</head>
+
+<body class="terminal"><div class="container">
+    <div class="terminal-nav">
+        <header class="terminal-logo">
+            <div id="mkdocs-terminal-site-name" class="logo terminal-prompt"><a href="https://ravidosa.github.io/notes/" class="no-style">notes</a></div>
+        </header>
+        
+        <nav class="terminal-menu">
+            
+            <ul vocab="https://schema.org/" typeof="BreadcrumbList">
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Home</span>
+                    </a>
+                    <meta property="position" content="0">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="../course-list/" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Course List</span>
+                    </a>
+                    <meta property="position" content="1">
+                </li>
+                
+                
+                <li property="itemListElement" typeof="ListItem">
+                    <a href="./" class="menu-item " property="item" typeof="WebPage">
+                        <span property="name">Library</span>
+                    </a>
+                    <meta property="position" content="2">
+                </li>
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                
+                    
+                    
+
+
+<li property="itemListElement" typeof="ListItem">
+    <a href="#" class="menu-item" data-toggle="modal" data-target="#mkdocs_search_modal" property="item" typeof="SearchAction">
+        <i aria-hidden="true" class="fa fa-search"></i> <span property="name">Search</span>
+    </a>
+    <meta property="position" content="3">
+</li>
+                    
+            </ul>
+            
+        </nav>
+    </div>
+</div>
+        
+    <div class="container">
+        <div class="terminal-mkdocs-main-grid"><aside id="terminal-mkdocs-side-panel"><nav>
+  
+    <ul class="terminal-mkdocs-side-nav-items">
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../">Home</a>
+        
+    
+    
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../course-list/">Course List</a>
+        
+    
+    
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="./">Library</a>
+        
+    
+    
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Fall 2022</span>
+        
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../f22/lin1y/">LIN 1Y</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../f22/phy9d/">PHY 9D</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../f22/phy9ha/">PHY 9HA</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../f22/phy40/">PHY 40</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../f22/phy104a/">PHY 104A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../f22/phy116a/">PHY 116A</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Winter 2023</span>
+        
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../w23/lin103b/">LIN 103B</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../w23/mat108/">MAT 108</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../w23/mat119a/">MAT 119A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../w23/phy45/">PHY 45</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../w23/phy80/">PHY 80</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../w23/phy105a/">PHY 105A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../w23/phy110a/">PHY 110A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../w23/phy116b/">PHY 116B</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Spring 2023</span>
+        
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../s23/lin165/">LIN 165</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../s23/mat127a/">MAT 127A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../s23/mat128b/">MAT 128B</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../s23/mat135a/">MAT 135A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../s23/phy105b/">PHY 105B</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../s23/phy108/">PHY 108</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../s23/phy108/">PHY 108L</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../s23/phy110b/">PHY 110B</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Summer 2023</span>
+        
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../m23/mat127b/">MAT 127B</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../m23/mat128a/">MAT 128A</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Fall 2023</span>
+        
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../f23/lin112/">LIN 112</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../f23/lin141/">LIN 141</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../f23/mat150a/">MAT 150A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../f23/mat168/">MAT 168</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../f23/mat185a/">MAT 185A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../f23/phy105c/">PHY 105C</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../f23/phy112/">PHY 112</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../f23/phy112/">PHY 112L</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../f23/phy115a/">PHY 115A</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Winter 2024</span>
+        
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../w24/ecs120/">ECS 120</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../w24/lin103a/">LIN 103A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../w24/lin131/">LIN 131</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../w24/lin152/">LIN 152</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../w24/mat148/">MAT 148</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../w24/mat150b/">MAT 150B</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../w24/mat167/">MAT 167</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../w24/phy115b/">PHY 115B</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../w24/phy115b/">PHY 115L</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../w24/phy130a/">PHY 130A</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+          
+
+
+
+<li class="terminal-mkdocs-side-nav-li">
+    
+    
+        
+        
+
+        
+            
+    
+        
+        
+            
+            
+            <span class="
+        
+    
+
+    terminal-mkdocs-side-nav-item terminal-mkdocs-side-nav-section-no-index">Spring 2024</span>
+        
+    
+    
+        
+      
+        
+            <ul class="terminal-mkdocs-side-nav-li-ul">
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../s24/ecs36c/">ECS 36C</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../s24/ecs127/">ECS 127</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../s24/mat127c/">MAT 127C</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../s24/mat128c/">MAT 128C</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../s24/mat185b/">MAT 185B</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../s23/phy110b/">PHY 110L</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../s24/phy122b/">PHY 122B</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../s24/phy129a/">PHY 129A</a>
+        
+    
+    </li>
+            
+        
+            
+            
+
+             
+                <li class="terminal-mkdocs-side-nav-li-ul-li">
+    
+        
+        
+            <a class="
+
+    terminal-mkdocs-side-nav-item" href="../s24/phy130b/">PHY 130B</a>
+        
+    
+    </li>
+            
+            
+    </ul>
+        
+    
+  </li>
+        
+    </ul>
+  
+</nav><hr>
+<nav>
+    <ul>
+        <li><a href="#library">Library</a></li>
+        
+    </ul>
+</nav>
+</aside>
+            <main id="terminal-mkdocs-main-content">
+<section id="mkdocs-terminal-content">
+    <h1 id="library">Library<a class="headerlink" href="#library" title="Permanent link">&para;</a></h1>
+<ul>
+<li>Abstract Algebra (Dummit, Foote)</li>
+<li>Abstract Algebra (Herstein)</li>
+<li>Abstract Algebra (Hungerford)</li>
+<li>Abstract Algebra (Judson)</li>
+<li>Acoustic and Auditory Phonetics (Johnson)</li>
+<li>Algebra (Artin) {<a href="../f23/mat150a/">MAT 150A</a>, <a href="./w24/mat150b">MAT 150B</a>, <a href="./s24/mat150c">MAT 150C</a>}</li>
+<li><a href="https://tutorial.math.lamar.edu/Classes/Alg/Alg.aspx">Algebra</a> (Dawkins)</li>
+<li><a href="https://runestone.academy/ns/books/published/cppds/index.html">Algorithms and Data Structures Using C++</a> (Miller, Pearce, Ranum) {<a href="">ECS 36</a>}</li>
+<li>Analysis on Manifolds (Munkres) {<a href="../s24/mat127c/">MAT 127C</a>}</li>
+<li>The Art of Electronics (Horowitz, Hill)</li>
+<li>The Art of Proof (Beck, Geoghegan)</li>
+<li>Asian Art (Neave, Blanchard, Sardar)</li>
+<li>Atomic Physics (Foot)</li>
+<li><a href="https://www.people.vcu.edu/~rhammack/BookOfProof/Main.pdf">Book of Proof</a> (Hammack) {ECS 20}</li>
+<li><a href="https://tutorial.math.lamar.edu/Classes/CalcI/CalcI.aspx">Calculus I</a> (Dawkins)</li>
+<li><a href="https://tutorial.math.lamar.edu/Classes/CalcII/CalcII.aspx">Calculus II</a> (Dawkins)</li>
+<li><a href="https://tutorial.math.lamar.edu/Classes/CalcIII/CalcIII.aspx">Calculus III</a> (Dawkins)</li>
+<li>Classical Electrodynamics (Jackson)</li>
+<li>Classical Mechanics (Taylor)</li>
+<li>Classical Topology and Combinatorial Group Theory (Stillwell)</li>
+<li>Complex Analysis (Stein)</li>
+<li>Complex Variables and Applications (Brown, Churchill)</li>
+<li>Computability (Cutland)</li>
+<li>A Computational Introduction to Linguistics (Ojeda)</li>
+<li>Computational Physics (Giordano) {<a href="../w23/phy45/">PHY 45</a>}</li>
+<li>Computer Graphics with Open GL (Baker, Carithers, Hearn)</li>
+<li>Concrete Mathematics (Graham, Knuth, Patashnik)</li>
+<li>A Course in Phonetics (Ladefoged, Johnson)</li>
+<li><a href="https://csdiy.wiki/en/">CSDIY</a> (Zhong)</li>
+<li><a href="https://www.uoitc.edu.iq/images/documents/informatics-institute/Competitive_exam/DataStructures.pdf">Data Structures and Algorithm Analysis in C++</a> (Weiss)</li>
+<li>Deep Learning (Goodfellow, Bengio, Courville)</li>
+<li>The Development of Language (Gleason, Ratner)</li>
+<li><a href="https://tutorial.math.lamar.edu/Classes/DE/DE.aspx">Differential Equations</a> (Dawkins)</li>
+<li>Differential Geometry of Curves and Spaces (Do Carmo)</li>
+<li>Differential Topology (Guillemin, Pollack)</li>
+<li>Discrete Mathematics (Biggs) {<a href="../w24/mat148/">MAT 148</a>}</li>
+<li>Discrete Mathematics (Lovasz, Pelikan, Vesztergombi)</li>
+<li>Discrete Mathematics and Its Applications (Rosen)</li>
+<li>Elementary Analysis: The Theory of Calculus (Ross)</li>
+<li>Elementary Number Theory and Its Application (Rosen)</li>
+<li>Elements of Differential Geometry (Millman, Parker)</li>
+<li>Elements of Information Theory (Cover, Thomas)</li>
+<li>Elements of Set Theory (Enderton)</li>
+<li>English Grammar (Barry)</li>
+<li>Essentials of Linguistics (Anderson)</li>
+<li>Experimental Physics: Modern Methods (Dunlap)</li>
+<li>Experiments in Modern Physics (Melissinos, Napolitano) {PHY 122A, PHY 122B}</li>
+<li><a href="https://www.feynmanlectures.caltech.edu/">The Feynman Lectures on Physics</a> (Feynman, Leighton, Sands)</li>
+<li>Figurative Language (Dancygier, Sweetser)</li>
+<li>Foundations of Astrophysics (Ryden) {PHY 153}</li>
+<li>A First Course in Abstract Algebra (Fraleigh)</li>
+<li>A First Course in Probability (Ross) {<a href="../s23/mat135a/">MAT 135A</a>}</li>
+<li>A First Course in Wavelets with Fourier Analysis (Boggess, Narcowich)</li>
+<li>Foundations of 3D Computer Graphics (Gortler)</li>
+<li>The Four Pillars of Geometry (Stillwell)</li>
+<li>Fundamentals of Computer Graphics (Ashikhmin, Marschner, Shirley)</li>
+<li>Fundamentals in Nuclear Physics (Basdevant, Rich, Spiro)</li>
+<li><a href="https://toc.cryptobook.us/book.pdf">A Graduate Course in Applied Cryptography</a> (Boneh, Shoup)</li>
+<li>Galois Theory (Stewart)</li>
+<li>General Relativity (Carlip) {PHY 155}</li>
+<li><a href="https://emineter.wordpress.com/wp-content/uploads/2018/08/a-zee-group-theory-in-a-nutshell-for-physicists-2016-princeton-university-press.pdf">Group Theory in a Nutshell for Physicists</a> (Zee)</li>
+<li>Historical Linguistics (Campbell)</li>
+<li>Ideals, Varieties, and Algorithms (Cox, Little, O'Shea)</li>
+<li>Insight Through Computing (Van Loan, Fan)</li>
+<li><a href="https://files.boazbarak.org/crypto/lnotes_book.pdf">An Intensive Introduction to Cryptography</a> (Barak)</li>
+<li>Interactive Computer Graphics: A Top Down Approach With Shader-Based Open GL (Angel, Schreiner)</li>
+<li>Introduction to Automata Theory, Languages, and Computation (Hopcroft, Ullman, Motwani)</li>
+<li>Introduction to Classical Mechanics (Morin) {<a href="../w23/phy105a/">PHY 105A</a>, <a href="../s23/phy105b/">PHY 105B</a>}</li>
+<li>Introduction to Cosmology (Ryden) {PHY 153}</li>
+<li>Introduction to Electrodynamics (Griffiths) {<a href="../w23/phy110a/">PHY 110A</a>, <a href="../s23/phy110b/">PHY 110B</a>}</li>
+<li>Introduction to Elementary Particles (Griffiths) {<a href="../w24/phy130a/">PHY 130A</a>}</li>
+<li>Introduction to High Energy Physics (Perkins)</li>
+<li>An Introduction to Mathematical Cryptography (Hoffstein, Pipher, Silverman)</li>
+<li>An Introduction to Modern Astrophysics (Carroll, Ostlie)</li>
+<li><a href="https://web.cs.ucdavis.edu/~rogaway/classes/227/spring05/book/main.pdf">Introduction to Modern Cryptography</a> (Bellare, Rogaway) {ECS 227}</li>
+<li>Introduction to Numerical Analysis (Stoer, Bulirsch, et al.)</li>
+<li>Introduction to Optics (Pedrotti) {<a href="../s23/phy108/">PHY 108</a>}</li>
+<li>Introduction to Partial Differential Equations (Olver)</li>
+<li>Introduction to Plasma Physics (Chen)</li>
+<li>Introduction to Quantum Field Theory (Peskin, Schroeder)</li>
+<li>Introduction to Quantum Mechanics (Griffiths, Schroeter) {<a href="../f23/phy115a/">PHY 115A</a>, <a href="../w24/phy115b/">PHY 115B</a>}</li>
+<li>Introduction to Solid State Physics (Kittel) {PHY 140A, PHY 140B}</li>
+<li><a href="https://introtcs.org/public/">Introduction to Theoretical Computer Science</a> (Barak)</li>
+<li>Introduction to the Theory of Computation (Sipser)</li>
+<li>An Introduction to Thermal Physics (Schroeder) {<a href="../f23/phy112/">PHY 112</a>}</li>
+<li>An Introduction to the Theory of Numbers (Niven, Zuckerman, Montgomery)</li>
+<li>Introduction to Topology (Mendelson)</li>
+<li>Introduction to Typology: The Unity and Diversity of Language (Whaley) {<a href="../w24/lin152/">LIN 152</a>}</li>
+<li>Introductory Nuclear Physics (Krane)</li>
+<li>Introductory Nuclear Physics (Wong)</li>
+<li><a href="https://eecoppock.info/bootcamp/semantics-boot-camp.pdf">Invitation to Formal Semantics</a> (Coppock, Champollion) {<a href="../f23/lin141/">LIN 141</a>}</li>
+<li>Language Files (OSU) {<a href="../f22/lin1y/">LIN 1Y</a>}</li>
+<li><a href="https://upload.wikimedia.org/wikipedia/commons/2/2d/LaTeX.pdf">LaTeX</a></li>
+<li>Linear Algebra (Friedberg, Insel, Spence)</li>
+<li><a href="http://www.math.ucdavis.edu/~anne/linear_algebra/mat67_course_notes.pdf">Linear Algebra as an Introduction to Abstract Mathematics</a> (Lankham, Nachtergaele, Schilling) {MAT 67} </li>
+<li>Linear Algebra and Its Applications (Lay, Lay, McDonald)</li>
+<li>Linear Programming (Vanderbei) {<a href="../f23/mat168/">MAT 168</a>}</li>
+<li>A Mathematical Introduction to Logic (Enderton)</li>
+<li>Mathematical Methods in the Physical Sciences (Boas) {<a href="../f22/phy104a/">PHY 104A</a>}</li>
+<li>Mathematical Methods for Physicists (Arfken, Weber)</li>
+<li><a href="http://www-mdp.eng.cam.ac.uk/web/library/enginfo/textbooks_dvd_only/nearing/math_methods.pdf">Mathematical Tools for Physics</a> (Nearing) {<a href="../f22/phy104a/">PHY 104A</a>}</li>
+<li><a href="https://raw.githubusercontent.com/alexchandler100/MAT_180/main/00_Course_Files/MAT%20180%20Textbook/main.pdf">Mathematics of Machine Learning</a> (Chandler) {MAT 180}</li>
+<li><a href="https://eng.libretexts.org/Bookshelves/Computer_Science/Programming_and_Computation_Fundamentals/Mathematics_for_Computer_Science_(Lehman_Leighton_and_Meyer)">Mathematics for Computer Science</a> (Lehman, Leighton, Meyer) {ECS 20}</li>
+<li>Mathematics for Physics: A Guided Tour for Graduate Students (Goldbart)</li>
+<li>Metaphors We Live By (Lakoff, Johnson)</li>
+<li>Methods of Mathematical Economics (Franklin)</li>
+<li>Microelectronic Circuits (Sedra, Smith, Carusone, Gaudet)</li>
+<li><a href="https://cs.brown.edu/people/jsavage/book/pdfs/ModelsOfComputation.pdf">Models of Computation</a> (Savage)</li>
+<li>Modern Electrodynamics (Zangwill) {PHY 200C}</li>
+<li>Modern Particle Physics (Thomson) {<a href="../s24/phy130b/">PHY 130B</a>}</li>
+<li>Modern Physics (Harris) {<a href="../f22/phy9d/">PHY 9D</a>}</li>
+<li>Modern Quantum Mechanics (Sakurai) {PHY 215B}</li>
+<li>Modern Supersymmetry (Terning) {PHY 246A}</li>
+<li>More than Cool Reason (Lakoff, Turner)</li>
+<li>Multivariable Calculus (Stewart)</li>
+<li><a href="http://www.stat.ucla.edu/~ywu/QFT0.pdf">No-Nonsense Quantum Field Theory</a> (Schwichtenberg)</li>
+<li>Nonlinear Dynamics with Chaos (Strogatz) {<a href="../w23/mat119a/">MAT 119A</a>}</li>
+<li>Nonlinear Optics (Boyd, Prato)</li>
+<li>Nuclear and Particle Physics: An Introduction (Martin)</li>
+<li>Nuclear Physics: Principles and Applications (Lilley)</li>
+<li>Numerical Analysis (Burden, Faires, et al.) {<a href="../m23/mat128a/">MAT 128A</a>, <a href="../s23/mat128b/">MAT 128B</a>, <a href="../s24/mat128c/">MAT 128C</a>}</li>
+<li>Numerical Analysis (Sauer)</li>
+<li>Numerical Methods for Physics (Garcia) {<a href="../w23/phy45/">PHY 45</a>}</li>
+<li>Numerical Methods in Physics with Python (Gezerlis) {<a href="../f22/phy40/">PHY 40</a>}</li>
+<li>Partial Differential Equations (Evans)</li>
+<li>Particle Physics (Martin, Shaw)</li>
+<li>Philosophy in the Flesh (Lakoff, Johnson)</li>
+<li>Phonetics (Reetz, Jongman) {<a href="../f23/lin112/">LIN 112</a>}</li>
+<li>Physics (Giancoli)</li>
+<li>Physics for Scientists and Engineers (Giancoli)</li>
+<li>Practical Electronics for Inventors (Scherz, Monk) {<a href="../f22/phy116a/">PHY 116A</a>, <a href="../w23/phy116b/">PHY 116B</a>}</li>
+<li>Principles of Continuum Mechanics (Reddy)</li>
+<li>Principles of Quantum Mechanics (Shankar) {PHY 215B}</li>
+<li>Probability and Random Processes (Grimmett, Stirzaker)</li>
+<li>The Qualitative Theory of Ordinary Differential Equations (Brauer, Nohel)</li>
+<li><a href="https://web.physics.ucsb.edu/~mark/ms-qft-DRAFT.pdf">Quantum Field Theory</a> (Srednicki)</li>
+<li><a href="http://home.ustc.edu.cn/~gengb/200923/A.%20Zee,%20Quantum%20Field%20Theory%20in%20a%20Nutshell.pdf">Quantum Field Theory in a Nutshell</a> (Zee)</li>
+<li>Quantum Field Theory and the Standard Model (Schwartz)</li>
+<li>Quantum Mechanics (Commins) {PHY 215B}</li>
+<li><a href="https://web1.eng.famu.fsu.edu/~dommelen/quantum/">Quantum Mechanics for Engineers</a> (Dommelen)</li>
+<li>Real Mathematical Analysis (Pugh)</li>
+<li>Single Variable Calculus (Stewart)</li>
+<li>Solid State Basics (Simon)</li>
+<li>Solid State Physics (Ashcroft, Mermin)</li>
+<li>The Sounds of Language: An Introduction to Phonetics and Phonology (Zsiga) {<a href="../w24/lin103a/">LIN 103A</a>}</li>
+<li>Spacetime and Geometry (Carroll)</li>
+<li>Subatomic Physics (Garcia, Henley) {<a href="../s24/phy129a/">PHY 129A</a>}</li>
+<li>Statistical Physics of Particles (Kardar) {PHY 219A}</li>
+<li>Syntactic Constructions in English (Kim, Michaelis) {<a href="../w23/lin103b/">LIN 103B</a>, <a href="../w24/lin131/">LIN 131</a>}</li>
+<li>Syntax (Carnie)</li>
+<li><a href="https://canvas.ucdavis.edu/courses/845987/files/23253366">Theory of Computation</a> (Doty) {<a href="../w24/ecs120/">ECS 120</a>}</li>
+<li>Thermal Physics (Kittel, Kroemer)</li>
+<li>Think Julia (Lauwens, Downey)</li>
+<li>A Transition to Advanced Mathematics (Smith, Eggen, Andre) {<a href="../w23/mat108/">MAT 108</a>}</li>
+<li>Undergraduate Algebraic Geometry (Reid)</li>
+<li>Undergraduate Commutative Algebra (Reid)</li>
+<li>Understanding Analysis (Abbott) {<a href="../s23/mat127a/">MAT 127A</a>, <a href="../m23/mat127b/">MAT 127B</a>}</li>
+<li>Understanding Phonology (Gussenhoven)</li>
+<li>University Physics (Young, Freedman)</li>
+<li>Visual Complex Analysis (Needham)</li>
+</ul>
+</section>
+
+            </main>
+        </div>
+        <hr><footer>
+    <div class="terminal-mkdocs-footer-grid">
+        <div id="terminal-mkdocs-footer-copyright-info">
+             Site built with <a href="http://www.mkdocs.org">MkDocs</a> and <a href="https://github.com/ntno/mkdocs-terminal">Terminal for MkDocs</a>.
+        </div>
+    </div>
+</footer>
+    </div>
+
+    
+    <div class="modal" id="mkdocs_search_modal" tabindex="-1" role="alertdialog" aria-modal="true" aria-labelledby="searchModalLabel">
+    <div class="modal-dialog modal-lg" role="search">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="searchModalLabel">Search</h5>
+                <button type="button" class="close btn btn-default btn-ghost" data-dismiss="modal"><span aria-hidden="true">x</span><span class="sr-only">Close</span></button>
+            </div>
+            <div class="modal-body">
+                <p id="searchInputLabel">Type to start searching</p>
+                <form>
+                    <div class="form-group">
+                        <input type="search" class="form-control" aria-labelledby="searchInputLabel" placeholder="" id="mkdocs-search-query" title="Please enter search terms here">
+                    </div>
+                </form>
+                <div id="mkdocs-search-results" data-no-results-text="No document matches found"></div>
+            </div>
+            <div class="modal-footer">
+            </div>
+        </div>
+    </div>
+</div>
+    
+    
+</body>
+
+</html>
