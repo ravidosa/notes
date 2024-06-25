@@ -1,4 +1,5 @@
-# C Syntax
+# C
+## Syntax
 ```
 int main() {
 	...

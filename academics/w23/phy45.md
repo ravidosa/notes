@@ -3,7 +3,7 @@ TR9: Young 184, LEC
 TR5.5: Physics 285, LAB
 ## Notes
 1. [Computing Capabilities](../notes/computing-capabilities.md)
-2. [C Syntax](../notes/c-syntax.md)
+2. [C Syntax](../notes/c-language.md#syntax)
 ## Assignments
 - [x] [LAB 1](https://github.com/ravidosa/notes/tree/main/academics/assignments/code/phy45_lab1) (1/14)
 - [x] [LAB 2](https://github.com/ravidosa/notes/tree/main/academics/assignments/code/phy45_lab2) (1/21)

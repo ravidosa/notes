@@ -1,5 +1,7 @@
 site_name: notes
 
+site_url: https://ravidosa.github.io/notes/
+
 docs_dir: academics
 
 extra_css:
