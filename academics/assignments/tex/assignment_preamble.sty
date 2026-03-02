@@ -2,6 +2,8 @@
 \usepackage{enumitem}
 \usepackage{multirow}
 \usepackage{amsmath, amssymb, amsthm}
+\usepackage{turnstile,adjustbox}
+\usepackage{gauss}
 \usepackage{tikz, tikz-cd, tikz-dimline, pgfplots}
 \usetikzlibrary{decorations.markings, angles, quotes, scopes}
 \usepackage{pgfplots}
@@ -10,7 +12,10 @@
 \usepackage{tikz-feynman}
 \usepackage{xcolor}
 \usepackage{verbatim}
+\usepackage{listings}
 \usepackage{graphicx}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
 \usepackage{hyperref}
 \usepackage{xifthen}
 \makeatletter
@@ -21,6 +26,7 @@
 \usepackage{mhchem}
 \usepackage{gb4e}
 \usepackage{qtree}
+\usepackage{matlab-prettifier}
 \noautomath
 
 \newcounter{pnum}
@@ -65,6 +71,8 @@ Code available on \href{#1}{Github}.\vspace{5pt}\hrule\vspace{5pt}
 \newcommand{\F}{\mathbb{F}} % random field
 \newcommand{\Isom}{\mathrm{Isom}} % isometries group
 
+\newcommand{\wt}{\mathrm{wt}} % hamming weight
+
 \makeatletter
 \newcommand*{\diff}%
 {\@ifnextchar^{\DIfF}{\DIfF^{}}}
@@ -89,3 +97,60 @@ Code available on \href{#1}{Github}.\vspace{5pt}\hrule\vspace{5pt}
 \newcommand*{\pderiv}[3][]{%
 \frac{\partial^{#1}#2}%
 {\partial #3^{#1}}}
+
+\renewcommand{\makehor}[4]
+  {\ifthenelse{\equal{#1}{n}}{\hspace{#3}}{}
+   \ifthenelse{\equal{#1}{s}}{\rule[-0.5#2]{#3}{#2}}{}
+   \ifthenelse{\equal{#1}{d}}{\setlength{\lengthvar}{#2}
+     \addtolength{\lengthvar}{0.5#4}
+     \rule[-\lengthvar]{#3}{#2}
+     \hspace{-#3}
+     \rule[0.5#4]{#3}{#2}}{}
+   \ifthenelse{\equal{#1}{t}}{\setlength{\lengthvar}{1.5#2}
+     \addtolength{\lengthvar}{#4}
+     \rule[-\lengthvar]{#3}{#2}
+     \hspace{-#3}
+     \rule[-0.5#2]{#3}{#2}
+     \hspace{-#3}
+     \setlength{\lengthvar}{0.5#2}
+     \addtolength{\lengthvar}{#4}
+     \rule[\lengthvar]{#3}{#2}}{}
+   \ifthenelse{\equal{#1}{w}}{% New wavy $\sim$ definition
+     \setbox0=\hbox{$\sim$}%
+     \raisebox{-.6ex}{\hspace*{-.05ex}\adjustbox{width=#3,height=\height}{\clipbox{0.75 0 0 0}{\usebox0}}}}{}
+  }
+
+  \lstset{
+    aboveskip={1.3\baselineskip},
+    basicstyle=\scriptsize\ttfamily\linespread{4},
+    breaklines=false,
+    columns=flexible,
+    commentstyle=\color[rgb]{0.127,0.427,0.514}\ttfamily\itshape,
+    escapechar=@,
+    extendedchars=true,
+    frame=single,
+    identifierstyle=\color{black},
+    inputencoding=latin1,
+    keywordstyle=\color[HTML]{228B22}\bfseries,
+    language=Python,
+    ndkeywordstyle=\color[HTML]{228B22}\bfseries,
+    numbers=left,
+    numberstyle=\tiny,
+    prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+    stringstyle=\color[rgb]{0.639,0.082,0.082}\ttfamily,
+    upquote=true,
+    showstringspaces=false,
+}
+
+\lstset{literate=%
+   *{0}{{{\color{darkgray}0}}}1
+    {1}{{{\color{darkgray}1}}}1
+    {2}{{{\color{darkgray}2}}}1
+    {3}{{{\color{darkgray}3}}}1
+    {4}{{{\color{darkgray}4}}}1
+    {5}{{{\color{darkgray}5}}}1
+    {6}{{{\color{darkgray}6}}}1
+    {7}{{{\color{darkgray}7}}}1
+    {8}{{{\color{darkgray}8}}}1
+    {9}{{{\color{darkgray}9}}}1
+} 

@@ -1,0 +1,184 @@
+\documentclass{article}
+\usepackage{../assignment_preamble}
+
+\title{Homework 1}
+\author{Ravi Kini}
+\date{October 6, 2025}
+
+\begin{document}
+
+\maketitle
+
+\problem{}
+\subproblem{(a)}
+Suppose $0 \mid 10$. There then exists some $c \in \mathbb{Z}$ such that $0 \cdot c = 10$. However, $0 \cdot c = 0$ for all $c$. This is a contradiction; therefore $0 \nmid 10$.
+
+\subproblem{(b)}
+Since $15 \cdot c = 2025$ for $c = 135 \in \mathbb{Z}$, $15 \mid 2025$.
+
+\subproblem{(c)}
+Note that $-285714$ can be uniquely expressed as $17 \cdot -16806 + 5$. Since $5 \neq 0$, $17 \nmid -285714$.
+
+\clearpage
+
+\problem{}
+\subproblem{(a)}
+Consider the case where $a = 2, b = 4, c = 3, d = 9$. Note that $a \mid b$ and $c \mid d$. However, $5 \nmid 13$, so $a + c \nmid b + d$. Therefore it is not necessarily the case that for $a, b, c, d \in \mathbb{Z}$ such that $a \mid b$ and $c \mid d$, that $a + c \mid b + d$.
+
+\subproblem{(b)}
+Consider the case where $a = 9, b = 3, c = 6$. Note that $a \mid bc$. However, $9 \nmid 3$ and $9 \nmid 6$, so $a \nmid b$ and $a \nmid c$. Therefore it is not necessarily the case that for $a, b, c, d \in \mathbb{Z}$ such that $a \mid bc$, that $a \mid b$ or $a \mid c$.
+
+\subproblem{(c)}
+Consider the case where $a = 3, b = 4, c = 6$. Note that $a \nmid b$ and $b \nmid c$. However, $3 \mid 6$, so $a \mid c$. Therefore it is not necessarily the case that for $a, b, c, d \in \mathbb{Z}$ such that $a \nmid b$ and $b \nmid c$, that $a \nmid c$.
+
+
+\clearpage
+
+\problem{}
+Let $n \in \mathbb{Z}$. Then $n = 5 \cdot q + r$ where $0 leq r < 5$ for unique $q, r \in \mathbb{Z}$. Then:
+\begin{align*}
+    n^5 - n & = {(5q + r)}^5 - (5q + r) \\
+    & = {(5q)}^5 + 5{(5q)}^4r + 10{(5q)}^3r^2 + 10{(5q)}^2r^3 + (5q)r^4 + r^5 - 5q - r \\
+    & = 3125q^5 + 3125q^4r + 1250q^3r^2 + 250q^2r^3 + 5qr^4 + r^5 - 5q - r \\
+    & = 5(625q^5 + 625q^4r + 250q^3r^2 + 50q^2r^3 + qr^4 - q) + r^5 - r
+\end{align*}
+Suppose $r = 0$; then $r^5 - r = 0$, and $5 \mid 0$. 
+Suppose $r = 1$; then $r^5 - r = 0$, and $5 \mid 0$.
+Suppose $r = 2$; then $r^5 - r = 30$, and $5 \mid 30$.
+Suppose $r = 3$; then $r^5 - r = 240$, and $5 \mid 240$.
+Suppose $r = 4$; then $r^5 - r = 1020$, and $5 \mid 1020$. In all cases, $r^5 - r = 5 \cdot c$ for some $c \in \mathbb{Z}$. Then:
+\begin{align*}
+    n^5 - n & = 5(625q^5 + 625q^4r + 250q^3r^2 + 50q^2r^3 + qr^4 - q) + 5c \\
+    & = 5(625q^5 + 625q^4r + 250q^3r^2 + 50q^2r^3 + qr^4 - q + c)
+\end{align*}
+Consequently, $5 \mid n^5 - n$.
+
+\clearpage
+\problem{}
+\subproblem{(a)}
+The primes less than $\sqrt{201}$ are $2, 3, 5, 7, 11, 13$.
+\begin{center}
+    \begin{tabular}{|c|c|}
+        \hline
+        $p$ & $pq + r = 201$ \\
+        \hline
+        $2$ & $2 \cdot 100 + 1$ \\
+        \hline
+        $3$ & $3 \cdot 67 + 0$ \\
+        \hline
+        $5$ & $5 \cdot 40 + 1$ \\
+        \hline
+        $7$ & $7 \cdot 28 + 5$ \\
+        \hline
+        $11$ & $11 \cdot 18 + 3$ \\
+        \hline
+        $13$ & $13 \cdot 15 + 6$ \\
+        \hline
+    \end{tabular}
+\end{center}
+Since $3 \mid 201$, $201$ is not prime.
+
+\subproblem{(b)}
+The primes less than $\sqrt{211}$ are $2, 3, 5, 7, 11, 13$.
+\begin{center}
+    \begin{tabular}{|c|c|}
+        \hline
+        $p$ & $pq + r = 201$ \\
+        \hline
+        $2$ & $2 \cdot 105 + 1$ \\
+        \hline
+        $3$ & $3 \cdot 70 + 1$ \\
+        \hline
+        $5$ & $5 \cdot 42 + 1$ \\
+        \hline
+        $7$ & $7 \cdot 30 + 1$ \\
+        \hline
+        $11$ & $11 \cdot 19 + 2$ \\
+        \hline
+        $13$ & $13 \cdot 16 + 3$ \\
+        \hline
+    \end{tabular}
+\end{center}
+Since $p \nmid 211$ for all prime $p < \sqrt{211}$, $211$ is prime.
+
+\subproblem{(c)}
+The primes less than $\sqrt{213}$ are $2, 3, 5, 7, 11, 13$.
+\begin{center}
+    \begin{tabular}{|c|c|}
+        \hline
+        $p$ & $pq + r = 201$ \\
+        \hline
+        $2$ & $2 \cdot 106 + 1$ \\
+        \hline
+        $3$ & $3 \cdot 71 + 0$ \\
+        \hline
+        $5$ & $5 \cdot 42 + 3$ \\
+        \hline
+        $7$ & $7 \cdot 30 + 3$ \\
+        \hline
+        $11$ & $11 \cdot 19 + 4$ \\
+        \hline
+        $13$ & $13 \cdot 16 + 5$ \\
+        \hline
+    \end{tabular}
+\end{center}
+Since $3 \mid 213$, $213$ is not prime.
+
+\subproblem{(d)}
+The primes less than $\sqrt{221}$ are $2, 3, 5, 7, 11, 13$.
+\begin{center}
+    \begin{tabular}{|c|c|}
+        \hline
+        $p$ & $pq + r = 201$ \\
+        \hline
+        $2$ & $2 \cdot 110 + 1$ \\
+        \hline
+        $3$ & $3 \cdot 73 + 2$ \\
+        \hline
+        $5$ & $5 \cdot 44 + 1$ \\
+        \hline
+        $7$ & $7 \cdot 31 + 4$ \\
+        \hline
+        $11$ & $11 \cdot 20 + 1$ \\
+        \hline
+        $13$ & $13 \cdot 17$ \\
+        \hline
+    \end{tabular}
+\end{center}
+Since $13 \mid 221$, $221$ is not prime.
+
+\clearpage
+
+\problem{}
+Suppose $p = 3n + 1$ for some $n \in \mathbb{N}$. Suppose $n$ is odd, and so $n = 2k + 1$ for some $k \in \mathbb{N}$. Then:
+\begin{align*}
+    p & = 3n + 1 \\
+    & = 3(2k + 1) + 1 \\
+    & = 6k + 3 + 1 = 6k + 4 \\
+    & = 2(3k + 2)
+\end{align*}
+Consequently, $2 \mid p$ and so $p$ is even. However, the only even prime is $2$, which is impossible since that means that $n = \frac{1}{3}$. This is a contradiction; therefore $n$ is even and so $n = 2k$ for some $k \in \mathbb{N}$. Then:
+\begin{align*}
+    p & = 3n + 1 \\
+    & = 3(2k) + 1 \\
+    & = 6k + 1
+\end{align*}
+Consequently, $p = 6n + 1$ for some $n \in \mathbb{N}$.
+
+\clearpage
+
+\problem{}
+Let $a, n \in \mathbb{N}$ such that $a, n > 1$ and $a^n - 1$ is prime. We first show that for $k, s \in \mathbb{N}$, $a^k - 1 \mid a^{ks} - 1$ for all $s$.
+
+Clearly the base case where $s = 1$ holds, as $a^k - 1 \mid a^k - 1$. Suppose $a^k - 1 \mid a^{ks} - 1$ for some $s \in \mathbb{N}$ and so $a^{ks} - 1 = (a^k - 1) \cdot c$ for some $c \in \mathbb{Z}$. Then:
+\begin{align*}
+    a^{k(s+1)} - 1 & = a^{k(s+1)} - a^{ks} + a^{ks} - 1 \\
+    & = a^{ks}(a^k - 1) + (a^k - 1) \cdot c \\
+    & = (a^k - 1)(a^{ks} + c)
+\end{align*}
+Therefore $a^k - 1 \mid a^{k(s+1)} - 1$ and by induction, $a^k - 1 \mid a^{ks} - 1$ for all $s$.
+
+If $a^n - 1$ is prime, since the only divisors of $n$ are $1$ and itself, it must be the case that $a - 1 \mid a^n - 1$. Note that if $a \neq 2$, some integer greater than $1$ ($a - 1$) divides $a^n - 1$ and so $a^n - 1$ cannot be prime. Therefore for $a^n - 1$ to be prime, $a = 2$.
+
+Now suppose $n$ is composite; then $n = ks$ for some $k, s \in \mathbb{Z}$ such that $1 < k, s < n$. Then $a^k - 1 \mid a^n - 1$. Since $a = 2$ and $k > 1$, $a^k - 1 > 1$. Then some integer greater than $1$ ($a - 1$) divides $a^n - 1$ and so $a^n - 1$ cannot be prime. This is a contradiction; therefore $n$ is prime.
+\end{document}

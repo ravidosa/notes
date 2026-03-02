@@ -84,3 +84,33 @@
 [PHY 122B: Advanced Lab in Particle Physics](./s24/phy122b.md) (Citron, Yu)
 [PHY 129A: Introduction to Nuclear Physics](./s24/phy129a.md) (Calderon de la Barca Sanchez)
 [PHY 130B: Elementary Particle Physics](./s24/phy130b.md) (Chertok)
+
+## Fall '24
+### Computer Science
+[ECS 122A: Algorithm Design & Analysis](./f24/ecs122a.md) (Frid)
+[ECS 189A: Sublinear Algorithms for Big Data](./f24/ecs189a.md) (Lee)
+[ECS 289A: Classical and Quantum Low-Density Parity Check Codes](./f24/ecs289a.md) (Kim)
+### Linguistics
+[LIN 127: Text Processing and Corpus Linguistics](./f24/lin127) (Sagae)
+[LIN 182: Multilingualism](./f24/lin182.md) (Filipović)
+LIN 194H: Honors Thesis (Russell)
+### Mathematics
+[MAT 165: Mathematics & Computers](./f24/mat165.md) (Torres)
+### Physics
+[PHY 104C: Intermediate Methods of Mathematical Physics](./f24/phy104c.md) (Zieve)
+### Other
+GEL 186: Facilitating Learning in STEM Classrooms (Stevenson)
+
+## Winter '25
+### Computer Science
+[ECS 50: Computer Organization & Machine-Dependent Programming](./w25/ecs50.md) (Weaver)
+[ECS 232: Theory of Molecular Computation](./w25/ecs232.md) (Doty)
+[ECS 289A: Theoretical Computer Science Survival Skills](./w25/ecs289a.md) (Lee)
+### Linguistics
+[LIN 111: Introduction to Phonological Theory](./w25/lin111.md) (Zellou)
+### Mathematics
+[MAT 111: History of Mathematics](./w25/mat111.md) (Tavernetti)
+[MAT 135B: Stochastic Processes](./w25/mat135b.md) (Morris)
+### Physics
+[PHY 155: General Relativity](./w25/phy155.md) (Wittman)
+[PHY 256A: Physics of Information](./w25/phy256a.md) (Crutchfield)

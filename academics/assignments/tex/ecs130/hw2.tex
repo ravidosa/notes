@@ -1,0 +1,392 @@
+\documentclass{article}
+\usepackage{../assignment_preamble}
+
+\title{Homework 2}
+\author{Ravi Kini}
+\date{October 17, 2025}
+
+\begin{document}
+
+\maketitle
+
+\problem{}
+\begin{align*}
+    \begin{bmatrix}
+        1 & 2 & 7 \\
+        3 & 5 & -1 \\
+        6 & 1 & 4
+    \end{bmatrix}
+\end{align*}
+Putting the matrix in row echelon form using Gaussian elimination:
+\begin{align*}
+    & \begin{gmatrix}[b]
+        1 & 2 & 7 \\
+        3 & 5 & -1 \\
+        6 & 1 & 4
+    \rowops
+    \add[-3][]{0}{1}
+    \add[-6][]{0}{2}
+    \end{gmatrix}  \\
+    & \begin{gmatrix}[b]
+        1 & 2 & 7 \\
+        0 & -1 & -22 \\
+        0 & -11 & -38
+    \rowops
+    \add[-11][]{1}{2}
+    \end{gmatrix}   \\
+    & \begin{gmatrix}[b]
+        1 & 2 & 7 \\
+        0 & -1 & -22 \\
+        0 & 0 & 204
+    \end{gmatrix} 
+\end{align*}
+The LU factorization of the matrix is then:
+\begin{align*}
+    \begin{bmatrix}
+        1 & 2 & 7 \\
+        3 & 5 & -1 \\
+        6 & 1 & 4
+    \end{bmatrix}
+    & =
+    \begin{bmatrix}
+        1 & 0 & 0 \\
+        3 & 1 & 0 \\
+        6 & 11 & 1
+    \end{bmatrix}
+    \begin{bmatrix}
+        1 & 2 & 7 \\
+        0 & -1 & -22 \\
+        0 & 0 & 204
+    \end{bmatrix}
+\end{align*}
+
+\clearpage
+
+\problem{}
+Let $A \in \mathbb{C}^{n\times n}$ and $b, x \in \mathbb{C}^n$. Solving for $x$ in $Ax = b$ can be done using only real-valued matrices and vectors as follows:
+
+Note that $A$ can be decomposed into two real-valued matrices as $A_{\textrm{Re}} + iA_{\textrm{Im}}$. Similarly, $b$ and $x$ can be decomposed as $b_{\textrm{Re}} + ib_{\textrm{Im}}$ and $x_{\textrm{Re}} + ix_{\textrm{Im}}$. Then $Ax = b$ can be rewritten as:
+\begin{align*}
+    (A_{\textrm{Re}} + iA_{\textrm{Im}})(x_{\textrm{Re}} + ix_{\textrm{Im}}) & = b_{\textrm{Re}} + ib_{\textrm{Im}} \\
+    (A_{\textrm{Re}}x_{\textrm{Re}} - A_{\textrm{Im}}x_{\textrm{Im}}) + i(A_{\textrm{Re}}x_{\textrm{Im}} + A_{\textrm{Im}}x_{\textrm{Re}}) & = 
+\end{align*}
+This can be modelled as the following linear system, which uses only real-valued matrices:
+\begin{align*}
+    \begin{bmatrix}
+        A_{\textrm{Re}} & -A_{\textrm{Im}} \\
+        A_{\textrm{Im}} & A_{\textrm{Re}}
+    \end{bmatrix}
+    \begin{bmatrix}
+        x_{\textrm{Re}} \\ x_{\textrm{Im}}
+    \end{bmatrix}
+    & = 
+    \begin{bmatrix}
+        b_{\textrm{Re}} \\ b_{\textrm{Im}}
+    \end{bmatrix}
+\end{align*}
+
+\clearpage
+
+\problem{}
+Let $L$ be an invertible $2\times 2$ lower triangular matrix. It then has the form:
+\begin{align*}
+    L & = \begin{bmatrix}
+        l_{1,1} & 0 \\
+        l_{2,1} & l_{2,2} \\
+    \end{bmatrix}
+\end{align*}
+Its inverse $L^{-1}$ then has the form:
+\begin{align*}
+    L^{-1} & = (l_{1,1}l_{2,2})^{-1}\begin{bmatrix}
+        l_{2,2} & 0 \\
+        -l_{2,1} & l_{1,1} \\
+    \end{bmatrix}
+\end{align*}
+$L^{-1}$ is then also a lower triangular matrix. Now suppose that for all invertible $n\times n$ lower triangular matrices, the inverse is also lower triangular. Then let $L$ be an invertible $(n + 1) \times (n + 1)$ lower triangular matrix. It then has the form:
+\begin{align*}
+    L & = \begin{bmatrix}
+        L' & 0 \\
+        L'' & l_{n + 1, n + 1} \\
+    \end{bmatrix}
+\end{align*}
+where $L'$ is an invertible $n \times n$ lower triangular matrix and $L''$ is a $1\times n$ matrix. Its inverse $L^{-1}$ then has the form:
+\begin{align*}
+    L^{-1} & = \begin{bmatrix}
+        (L')^{-1} & 0 \\
+        -l_{n + 1, n + 1}^{-1}L''{L'}^{-1} & l_{n + 1, n + 1}^{-1} \\
+    \end{bmatrix}
+\end{align*}
+$L^{-1}$ is then also a lower triangular matrix. By induction, for all invertible lower triangula matrices, the inverse is lower triangular.
+
+\clearpage
+
+\problem{}
+\begin{align*}
+    M & = \begin{bmatrix}
+        A & B \\ C & D
+    \end{bmatrix}
+\end{align*}
+\subproblem{(a)}
+Consider the matrix product:
+\begin{align*}
+    \begin{bmatrix}
+        I & 0 \\ CA^{-1} & I
+    \end{bmatrix}
+    \begin{bmatrix}
+        A & 0 \\ 0 & D - CA^{-1}B
+    \end{bmatrix}
+    \begin{bmatrix}
+        I & A^{-1}B \\ 0 & I
+    \end{bmatrix}
+\end{align*}
+It can be simplified as follows:
+\begin{align*}
+    \begin{bmatrix}
+        I & 0 \\ CA^{-1} & I
+    \end{bmatrix}
+    \begin{bmatrix}
+        A & 0 \\ 0 & D - CA^{-1}B
+    \end{bmatrix}
+    \begin{bmatrix}
+        I & A^{-1}B \\ 0 & I
+    \end{bmatrix} & = \begin{bmatrix}
+        A & 0 \\ C & D - CA^{-1}B
+    \end{bmatrix}
+    \begin{bmatrix}
+        I & A^{-1}B \\ 0 & I
+    \end{bmatrix} \\
+    & = \begin{bmatrix}
+        A & B \\ C & D
+    \end{bmatrix} = M
+\end{align*}
+
+\subproblem{(b)}
+Let $A$ have the LU factorization $L_1U_1$ and $D - CA^{-1}B$ have the LU factorization $L_2U_2$. $M$ can then be rewritten as:
+\begin{align*}
+    M & = \begin{bmatrix}
+        I & 0 \\ CA^{-1} & I
+    \end{bmatrix}
+    \begin{bmatrix}
+        L_1U_1 & 0 \\ 0 & L_2U_2
+    \end{bmatrix}
+    \begin{bmatrix}
+        I & A^{-1}B \\ 0 & I
+    \end{bmatrix} \\
+    & = \begin{bmatrix}
+        I & 0 \\ CA^{-1} & I
+    \end{bmatrix}
+    \begin{bmatrix}
+        L_1 & 0 \\ 0 & L_2
+    \end{bmatrix}
+    \begin{bmatrix}
+        U_1 & 0 \\ 0 & U_2
+    \end{bmatrix}
+    \begin{bmatrix}
+        I & A^{-1}B \\ 0 & I
+    \end{bmatrix} \\
+    & = \begin{bmatrix}
+        L_1 & 0 \\ CA^{-1}L_1 & L_2
+    \end{bmatrix}
+    \begin{bmatrix}
+        U_1 & U_1A^{-1}B \\ 0 & U_2
+    \end{bmatrix} \\
+\end{align*}
+The matrices are lower triangular and upper triangular, respectively. The LU factorization of $M$ is then:
+\begin{align*}
+    M & = \begin{bmatrix}
+        L_1 & 0 \\ CA^{-1}L_1 & L_2
+    \end{bmatrix}
+    \begin{bmatrix}
+        U_1 & U_1A^{-1}B \\ 0 & U_2
+    \end{bmatrix} \\
+\end{align*}
+\subproblem{(c)}
+The following recursive algorithm finds the LU factorization of a matrix $M$:\
+\begin{algorithm}
+\caption{LU}
+\begin{algorithmic}
+\State $n \gets \textrm{size}(M)$
+\State $\begin{bmatrix} A & B \\ C & D \end{bmatrix} \gets M$
+\State $L_1, U_1 \gets \textrm{LU}(A)$
+\State $L_2, U_2 \gets \textrm{LU}(D - CA^{-1}B)$
+\State $L \gets \begin{bmatrix} L_1 & 0 \\ CA^{-1}L_1 & L_2 \end{bmatrix}$
+\State $U \gets \begin{bmatrix}U_1 & U_1A^{-1}B \\ 0 & U_2\end{bmatrix}$
+\end{algorithmic}
+\end{algorithm}
+LU factorization vis Gaussian elimination has a time complexity of $O(n^3)$. Block LU factorization also has a time complexity of $O(n^3)$, mainly due to having to perform matrix inversion.
+
+\clearpage
+
+\problem{}
+Suppose $A$ has two different LU factorizations, $L_1U_1$ and $L_2U_2$. Then:
+\begin{align*}
+    L_1U_1 & = L_2U_2 \\
+    L_2^{-1}L_1U_1 & = U_2 \\
+    L_2^{-1}L_1 & = U_2U_1^{-1} \\
+\end{align*}
+Since the product of two unit lower triangular matrices is unit lower triangular, and likewise for upper triangular matrices, $L_2^{-1}L_1 = U_2U_1^{-1}$ must be both upper and lower triangular. The only matrix that is both upper and lower triangular is $I$, which means that $L_2^{-1}L_1 = U_2U_1^{-1} = I$. For this to be true, $L_1 = L_2$ and $U_1 = U_2$; consequently, each matrix permits a unique LU factorization.
+
+\clearpage
+
+\problem{}
+\subproblem{(a)}
+Suppose $A$ is symmetric positive definite. Let $A$ have the LU factorization $LU$. Since $A$ is symmetric $A = A^T$, and so $A = LU = U^TL^T$. $U^T$ is lower triangular; for some diagonal $D$, it can be written as ${U'}^TD$, where ${U'}^T$ is unit lower triangular. ${L'}^T = DL^T$ is then upper triangular, so ${U'}^T{L'}^T$ is also a LU factorization of $A$. By the uniqueness of the LU factorization, $L = {U'}^T$ and $U = {L'}^T$. Since $A$ is positive definite, for any $x \neq 0$:
+\begin{align*}
+    x^TAx & = x^T(LDL^T)x \\
+    & = (L^Tx)^T D (L^Tx) \\
+    & = y^T Dy > 0
+\end{align*} 
+For this to be the case, the diagonal entries of $D$ must be positive. We can then define $D'$ such that ${D'}^2 = D$. Then:
+\begin{align*}
+    A & = LDL^T \\
+    & = L{D'}^2L^T \\
+    & = (LD')(D'^TL^T) \\
+    & = (LD')(LD')^T \\
+\end{align*}
+Since $L$ is lower riangular and $D'$ is diagonal, $LD'$ is lower triangular.
+
+Suppose $A = LL^T$ for some lower triangular $L$. Then:
+\begin{align*}
+    A^T & = (LL^T)^T \\
+    & = LL^T = A
+\end{align*}
+Therefore, $A$ is symmetric. Further, for $x \neq 0$:
+\begin{align*}
+    x^T(LL^T)x & = (L^Tx)^T(L^Tx) \\
+    & = ||L^Tx||^2 > 0
+\end{align*}
+Therefore $A$ is positive definite, and so it is symmetric positive definite.
+\subproblem{(b)}
+\begin{lstlisting}
+function L = cholesky(A)
+    L = A;
+    n = size(A, 1);
+    for k = 1:n
+        for i = 1:k - 1
+            s = 0;
+            for j = 1:i - 1
+                s = s + L(i, j) * L(k, j);
+            end
+            L(k, i) = (L(k, i) - s) / L(i, i);
+        end
+        v = 0;
+        for j = 1:k - 1
+            v = v + L(k, j) ^ 2;
+        end
+        L(k, k) = sqrt(L(k, k) - v);
+        for i = k+1:n
+            L(k, i) = 0;
+        end
+    end
+end
+\end{lstlisting}
+\subproblem{(c)}
+For $n = 3$, $A$ and $L$ are:
+\begin{align*}
+    A & = \begin{bmatrix}
+        1.0000 & 0.5000 & 0.3333 \\
+        0.5000 & 0.3333 & 0.2500 \\
+        0.3333 & 0.2500 & 0.2000 \\
+    \end{bmatrix} \\
+    L & = \begin{bmatrix}
+        1.0000 & 0.0000 & 0.0000 \\
+        0.5000 & 0.2887 & 0.0000 \\
+        0.3333 & 0.2887 & 0.0745 \\
+    \end{bmatrix}
+\end{align*}
+
+For $n = 4$, $A$ and $L$ are:
+\begin{align*}
+    A & = \begin{bmatrix}
+        1.0000 & 0.5000 & 0.3333 & 0.2500 \\
+        0.5000 & 0.3333 & 0.2500 & 0.2000 \\
+        0.3333 & 0.2500 & 0.2000 & 0.1667 \\
+        0.2500 & 0.2000 & 0.1667 & 0.1429
+    \end{bmatrix} \\
+    L & = \begin{bmatrix}
+        1.0000 & 0.0000 & 0.0000 & 0.0000 \\
+        0.5000 & 0.2887 & 0.0000 & 0.0000 \\
+        0.3333 & 0.2887 & 0.0745 & 0.0000 \\
+        0.2500 & 0.2598 & 0.1118 & 0.0189 \\
+    \end{bmatrix}
+\end{align*}
+
+For $n = 5$, $A$ and $L$ are:
+\begin{align*}
+    A & = \begin{bmatrix}
+        1.0000 & 0.5000 & 0.3333 & 0.2500 & 0.2000 \\
+        0.5000 & 0.3333 & 0.2500 & 0.2000 & 0.1667 \\
+        0.3333 & 0.2500 & 0.2000 & 0.1667 & 0.1429 \\
+        0.2500 & 0.2000 & 0.1667 & 0.1429 & 0.1250 \\
+        0.2000 & 0.1667 & 0.1429 & 0.1250 & 0.1111 \\
+    \end{bmatrix} \\
+    L & = \begin{bmatrix}
+        1.0000 & 0.0000 & 0.0000 & 0.0000 & 0.0000 \\
+        0.5000 & 0.2887 & 0.0000 & 0.0000 & 0.0000 \\
+        0.3333 & 0.2887 & 0.0745 & 0.0000 & 0.0000 \\
+        0.2500 & 0.2598 & 0.1118 & 0.0189 & 0.0000 \\
+        0.2000 & 0.2309 & 0.1278 & 0.0378 & 0.0048 \\
+    \end{bmatrix}
+\end{align*}
+
+\clearpage
+
+\problem{}
+Let $||\cdot||$ be a vector norm on $\mathbb{R}^n$ and let $A \in \mathbb{R}^{n\times n}$ such that $\mathrm{rank}(A) = n$. Let $||x||_A = ||Ax||$. Then, for $x, y \in \mathbb{R}^n$:
+
+Since $|| \cdot ||$ is a vector norm, $||x||_A = ||Ax|| > 0$ and $||\mathbf{0}|| = ||A \mathbf{0}|| = 0$. Further, for $\alpha \in \mathbb{R}$, $||\alpha x||_A = ||A(\alpha x)|| = |\alpha| \cdot ||Ax|| = |\alpha| \cdot ||x||_A$. Finally, $||A(x + y)|| = ||Ax + Ay|| \leq ||Ax|| + ||Ay||$, so $||x + y||_A \leq ||x||_A + ||y||_A$. Therefore $||x||_A$ is a vector norm on $\mathbb{R}^n$.
+
+\clearpage
+
+\problem{}
+\subproblem{(a)}
+Let $A$, $x$, $\hat{x}$, $b$, $\hat{b}$ such that $Ax = b$, $A\hat{x} = \hat{b}$, and $A$ is invertible. Then:
+\begin{align*}
+    A(x - \hat{x}) & = b - \hat{b} \\
+    x - \hat{x} & = A^{-1}(b - \hat{b}) \\
+    ||x - \hat{x}||_\infty & = ||A^{-1}(b - \hat{b})||_\infty \\
+    & \leq ||A^{-1}||_\infty \cdot ||b - \hat{b}||_\infty
+\end{align*}
+Additionally, note that:
+\begin{align*}
+    ||Ax||_\infty & = ||b||_\infty \\
+    ||A||_\infty \cdot ||x||_\infty & \geq \\
+    \frac{1}{||x||_\infty} & \leq \frac{||A||_\infty}{||b||_\infty}
+\end{align*}
+Combining the inequalities:
+\begin{align*}
+    \frac{||x - \hat{x}||_\infty}{||x||_\infty} & \leq ||A||_\infty||A^{-1}||_\infty \cdot \frac{||b - \hat{b}||_\infty}{||b||_\infty} \\
+    & \leq \kappa(A)\frac{||b - \hat{b}||_\infty}{||b||_\infty}
+\end{align*}
+\subproblem{(b)}
+\begin{align*}
+    A & = \begin{bmatrix}
+        1 & 1.01 \\ 0.99 & 1
+    \end{bmatrix} \\
+    b & = \begin{bmatrix}
+        2.01 \\ 1.99
+    \end{bmatrix} \\
+    \hat{b} & = \begin{bmatrix}
+        2 \\ 2
+    \end{bmatrix}
+\end{align*}
+The matrix $A$ is very close to singular; the inverse $A^{-1}$ is:
+\begin{align*}
+    A^{-1} & = \frac{1}{1 \cdot 1 - 1.01 \cdot 0.99}\begin{bmatrix}
+        1 & -1.01 \\ -0.99 & 1
+    \end{bmatrix} \\
+    & = \begin{bmatrix}
+        10000 & -10100 \\ -9900 & 10000
+    \end{bmatrix}
+\end{align*}
+While $||A||_\infty = 2.01$, $||A^{-1}||_\infty = 20100$ and so $\kappa(A) = 40401$. This indicates that the relative error in $x$ can be up to $40401$ times the relative error in $b$. Even for a small perturbation of $0.01$ in $b$, this can result in a very large perturbation in $A$. Computing $x$ and $\bar{x}$:
+\begin{align*}
+    x & = \begin{bmatrix}
+        1 \\ 1
+    \end{bmatrix} \\
+    \hat{x} & = \begin{bmatrix}
+        -200 \\ 200
+    \end{bmatrix}
+\end{align*}
+While the actual perturbation in $x$ is not as large as the upper bound, it is still hundreds of times larger than the perturbation in $b$.
+\end{document}

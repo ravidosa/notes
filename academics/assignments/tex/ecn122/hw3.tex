@@ -1,0 +1,88 @@
+\documentclass{article}
+\usepackage{../assignment_preamble}
+
+\title{Homework 3}
+\author{Ravi Kini}
+\date{January 30, 2026}
+
+\begin{document}
+
+\maketitle
+
+\problem{}
+Let the other player name an amount $x$. Note that the player can always get $10 - x$ by naming $10 - x$ as their amount since the total does not exceed $10$. Suppose $x \leq 5$. Even if they name any $y$ such that $x + y > 10$, since this implies that $y > x$, they will still receive $10 - x$. The best choice is then to name any $y \geq 10 - x$, receiving $10 - x$. Now suppose $x > 5$. If they name any amount between $10 - x$ and $x$, not including $x$, they will receive that amount. If they name $x$, they will receive $5$. If they name any amount between $x$ and $10$, they will receive $10 - x$. The best choice is then to name $x - 1$, receiving $x - 1$ (except when $x = 6$, where they could also name $6$).
+
+\begin{center}
+    \begin{tabular}{|c|c|}
+        \hline
+        $x$ & Best $y$ \\
+        \hline
+        $0$ & $\{10\}$ \\
+        \hline
+        $1$ & $\{9, 10\}$ \\
+        \hline
+        $2$ & $\{8, 9, 10\}$ \\
+        \hline
+        $3$ & $\{7, 8, 9, 10\}$ \\
+        \hline
+        $4$ & $\{6, 7, 8, 9, 10\}$ \\
+        \hline
+        $5$ & $\{5, 6, 7, 8, 9, 10\}$ \\
+        \hline
+        $6$ & $\{5, 6\}$ \\
+        \hline
+        $7$ & $\{6\}$ \\
+        \hline
+        $8$ & $\{7\}$ \\
+        \hline
+        $9$ & $\{8\}$ \\
+        \hline
+        $10$ & $\{9\}$ \\
+        \hline
+    \end{tabular}
+\end{center}
+
+\begin{center}
+    \begin{tabular}{|c|ccccccccccc|}
+        \hline
+        & 0 & 1 & 2 & 3 & 4 & 5 & 6 & 7 & 8 & 9 & 10 \\
+        \hline
+        0 & & & & & & & & & & & $\cdot$ \\
+        1 & & & & & & & & & & $\cdot$ & $\cdot$ \\
+        2 & & & & & & & & & $\cdot$ & $\cdot$ & $\cdot$ \\
+        3 & & & & & & & & $\cdot$ & $\cdot$ & $\cdot$ & $\cdot$ \\
+        4 & & & & & & & $\cdot$ & $\cdot$ & $\cdot$ & $\cdot$ & $\cdot$ \\
+        5 & & & & & & $\odot$ & $\odot$ & $\cdot$ & $\cdot$ & $\cdot$ & $\cdot$ \\
+        6 & & & & & $\circ$ & $\odot$ & $\odot$ & $\circ$ & & & \\
+        7 & & & & $\circ$ & $\circ$ & $\circ$ & $\cdot$ & & $\circ$ & & \\
+        8 & & & $\circ$ & $\circ$ & $\circ$ & $\circ$ & & $\cdot$ & & $\circ$ & \\
+        9 & & $\circ$ & $\circ$ & $\circ$ & $\circ$ & $\circ$ & & & $\cdot$ & & $\circ$ \\
+        10 & $\circ$ & $\circ$ & $\circ$ & $\circ$ & $\circ$ & $\circ$ & & & & $\cdot$ & \\
+        \hline
+    \end{tabular}
+\end{center}
+There are four Nash equilibria: $(5, 5)$, $(5, 6)$, $(6, 5)$, and $(6, 6)$.
+
+\clearpage
+\problem{}
+\begin{center}
+    \begin{tabular}{|c|c|c|c|}
+        \hline
+        & $L$ & $C$ & $R$ \\
+        \hline
+        $T$ & $0, 0$ & $1, 0$ & $1, 1$ \\
+        \hline
+        $M$ & $1, 1$ & $1, 1$ & $3, 0$ \\
+        \hline
+        $B$ & $1, 1$ & $2, 1$ & $2, 2$ \\
+        \hline
+    \end{tabular}
+\end{center}
+For Player 1, $M$ weakly dominates $T$ and $B$ strictly dominates $T$. For Player 2, no action is weakly or strictly dominated. The only Nash equilibrium is $(M, L)$; the equilibrium is not strict, since they would have the same payoff by switching to $(M, C)$ or $(B, L)$.
+
+\clearpage
+\problem{}
+Suppose citizens are voting for $k$ candidates using the approval voting system. Let $\alpha_i$ be the action where citizen $i$ votes for their least preferred candidate (without loss of generality, let it be $C_i$). Consider the action $\alpha_i'$, where the only difference is that citizen $i$ does not vote for $C_i$. Either $C_i$ is a winner with both $\alpha_i$ and $\alpha_i'$, or $A$ is a winner with $\alpha_i$ but not $\alpha_i'$; $\alpha_i'$ then weakly dominates $\alpha_i$ since $C_i$ is citizen $i$'s least preferred candidate. Any action that includes a vote for a citizen's least preferred candidate is then weakly dominated; by symmetry, the same applies for any action that does not include a vote for a citizen's most favrotie candidate.
+
+Now let citizen $i$ rank the $k$ candidates as $1 > 2 > \ldots > k$. Let $\alpha$ be the action where they vote only for candidate $1$ and $k - 1$. Now, let $\beta$ be any action where citizen $i$ does not vote for candidate $1$, and consider the scenario where candidates $1$ and $2$ are tied as winners; switching to $\alpha$ would then have a better payoff since candidate $1$ would be the winner, which means that $\alpha$ is not weakly dominated by $\beta$. Similarly, let $\gamma$ be any action where citizen $i$ does not vote for candidate $k - 1$, and consider the scenario where candidates $k - 1$ and $k$ are tied as winners; switching to $\alpha$ would then have a better payoff since candidate $k$ would not be a winner, which means that $\alpha$ is not weakly dominated by $\gamma$. Now, let $\delta$ be an action where citizen $i$ votes for candidates $1$ and $k - 1$ in addition to some other candidate $j$; and consider the scanerio where candidates $1$ and $j$ are tied as winners; switching to $\alpha$ would then have a better payoff since candidate $1$ would be the winner, which means that $\alpha$ is not weakly dominated by $\delta$. Consequently, $\alpha$ is not weakly dominated by any action.
+\end{document}

@@ -1,0 +1,97 @@
+\documentclass{article}
+\usepackage{../assignment_preamble}
+
+\title{Homework 3}
+\author{Ravi Kini}
+\date{October 15, 2025}
+
+\begin{document}
+
+\maketitle
+
+\problem{}
+\begin{center}
+\begin{tikzpicture}[
+       decoration = {markings,
+                     mark=at position .5 with {\arrow{Stealth[length=2mm]}}},
+       dot/.style = {circle, fill, inner sep=2.4pt, node contents={},
+                     label=#1},
+every edge/.style = {draw, postaction=decorate}
+                        ]
+\node (a) at (1.5,0) [dot=above:$A$];
+\node (b) at (-1.5,0) [dot=above:$B$];
+\node (c) at (0,-1) [dot=right:$C$];
+\node (d) at (2,-1) [dot=right:$D$];
+\node (h) at (-2,-1) [dot=left:$H$];
+\node (e) at (-1.5,-2) [dot=below:$E$];
+\node (f) at (0,-2) [dot=below:$F$];
+\node (g) at (1.5,-2) [dot=below:$G$];
+%
+\path
+(a) edge (h)    (h) edge (f)
+(a) edge (c)    (c) edge (e)
+(a) edge (c)    (c) edge (f)     
+(b) edge (c)    (c) edge (f) 
+(b) edge (d)    (d) edge (f)  
+(b) edge (d)    (d) edge (g);
+\end{tikzpicture}
+\end{center}
+\begin{align*}
+    A & = \{0, 1\} \to 0 \\
+    B & = \{0, 1\} \to 1 \\
+    C & = \max(A, B) \to 1 \ \\
+    D & = B \to 1 \\
+    E & = C \to 1 \\
+    F & = \min(H, 1 - \max(C, D)) \to 0 \\
+    G & = D \to 1 \\
+    H & = 1 - A \to 1 \\
+\end{align*}
+\subproblem{(a)}
+Changing $B$ potentially affects the values of $C$, $D$, $F$, and $G$. If $B = 0$, $C = \max(0, 0) = 0$ and $D = 0$. Consequently, $F = \min(1, 1 - \max(0, 0)) = 1$.
+\subproblem{(b)}
+Changing $B$ and $D$ potentially affects the values of $C$, $F$, and $G$. If $B = 0$ and $D = 1$, $C = \max(0, 0) = 0$. Consequently, $F = \min(1, 1 - \max(0, 1)) = 0$.
+\clearpage
+
+\problem{}
+\subproblem{(a)}
+If your PhD application is a good fit for the program you apply to, you are highly likely to get admitted. However, if your application is a good fit and there are several other applicants with similar profiles, it is not highly likely that you will get admitted.
+
+\subproblem{(b)}
+Let $X$ represent the quality of your PhD application ($0$ if a bad fit, $1$ if a good fit) and $Z$ represent the amount of strong competition you face ($0$ if low, $1$ if high). Letting $Y$ represent the likelihood of you being admitted ($0$ if low, $1$ if high), this can be modelled as $Y = \min(X, 1 - Z)$. In the original causal world, let $Z = 0$. If $X = 1$, $Y = \min(1, 1 - 0) = 1$. However, if $X = 1$ and $Z = 1$, $Y = \min(1, 1 - 1) = 0$.
+
+\clearpage
+
+\problem{}
+If $X = 0$, then $Y = 0$ and $Z = \min(0, 1 - 0) = 0$. If $X = 0$ and $Y = 0$, then $Z = \min(0, 1 - 0) = 0$. If $X = 1$, then $Y = 0$ and $Z = \min(1, 1 - 0) = 1$. If $X = 1$ and $Y = 0$, then $Z = \min(1, 1 - 0) = 0$. In both cases, the conclusion holds based on the premises. Note that it is impossible for $X = 1$ and $Y = 1$ or $X = 0$ and $Y = 1$, as that would violate the second premise. As it is always th case that the conclusion is true or one of the premises is false, the causal world fails to be a formal counterexample to cautious monotonicity.
+
+\clearpage
+
+\problem{}
+\begin{center}
+\begin{tikzpicture}[
+       decoration = {markings,
+                     mark=at position .5 with {\arrow{Stealth[length=2mm]}}},
+       dot/.style = {circle, fill, inner sep=2.4pt, node contents={},
+                     label=#1},
+every edge/.style = {draw, postaction=decorate}
+                        ]
+\node (d) at (0,0) [dot=above:$D$];
+\node (a) at (-1,-1) [dot=left:$A$];
+\node (b) at (1,-1) [dot=right:$B$];
+\node (e) at (0,-2) [dot=below:$E$];
+%
+\path
+(d) edge (a)    (a) edge (e)
+(d) edge (b)    (b) edge (e);
+\end{tikzpicture}
+\end{center}
+
+$D$ takes on values in the range $[0, 1]$. Under the top left mapping, with weight $-34.4$ and bias $2.14$, this is mapped to a range of $[-32.26, 2.14]$. Under the softplus function, the top variable ($A$) takes on values in the range $[9.780 \cdot 10^{-15}, 2.251]$. Under the top right mapping, with weight $-1.30$, this is mapped to a range of $[-2.927, -1.270 \cdot 10^{-14}]$. Under the bottom left mapping, with weight $-2.52$ and bias $1.29$, this is mapped to a range of $[-1.23, 1.29]$. Under the softplus function, the bottom variable ($B$) taken on values in the range $[0.256, 1.533]$. Under the bottom right mapping, with weight $2.28$, this is mapped to a range of $[0.585, 3.496]$. Summing and adding the final bias of $-0.58$, $E$ takes on values in the range $[-2.922, 2.916]$.
+
+\begin{align*}
+    D & \in [0, 1] \\
+    A & = \ln(1 + e^{-34.4 \cdot A + 2.14}) \\
+    B & = \ln(1 + e^{-2.52 \cdot A + 1.29}) \\
+    E & = -1.30 \cdot A + 2.28 \cdot B + -0.58 \\
+\end{align*}
+\end{document}

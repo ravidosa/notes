@@ -15,3 +15,6 @@ semantics
 ## Equivalence
 [NFA](nondeterministic-finite-automaton.md)
 	NFA with no $\varepsilon$-transitions
+## Examples
+matching brackets
+	[dyck words](https://en.wikipedia.org/wiki/Dyck_language)

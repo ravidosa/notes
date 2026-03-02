@@ -1,0 +1,135 @@
+\documentclass{article}
+\usepackage{../assignment_preamble}
+
+\title{Homework 4}
+\author{Ravi Kini}
+\date{November 7, 2025}
+
+\begin{document}
+
+\maketitle
+
+\problem{}
+\subproblem{(a)}
+We seek to solve the following system of linear congruences:
+\begin{align*}
+    x & \equiv 1 \bmod 2 \\
+    x & \equiv 2 \bmod 3 \\
+    x & \equiv 3 \bmod 5 \\
+    x & \equiv 4 \bmod 7 \\
+\end{align*}
+Let $M = 2 \cdot 3 \cdot 5 \cdot 7 = 210$. Then $M_1 = \frac{210}{2} = 105$, $M_2 = \frac{210}{3} = 70$, $M_3 = \frac{210}{5} = 42$, and $M_4 = \frac{210}{7} = 30$. We now solve the congruences:
+\begin{align*}
+    105x_1 & \equiv 1 \bmod 2 \\
+    70x_2 & \equiv 1 \bmod 3 \\
+    42x_3 & \equiv 1 \bmod 5 \\
+    30x_4 & \equiv 1 \bmod 7 \\ 
+\end{align*}
+Equivalently:
+\begin{align*}
+    x_1 & \equiv 1 \bmod 2 \\
+    x_2 & \equiv 1 \bmod 3 \\
+    2x_3 & \equiv 1 \bmod 5 \\
+    2x_4 & \equiv 1 \bmod 7 \\   
+\end{align*}
+We see that we have the solution $(x_1, x_2, x_3, x_4) = (1, 1, 3, 4)$. Then:
+\begin{align*}
+    x = 1 \cdot 105 \cdot 1 + 2 \cdot 70 \cdot 1 + 3 \cdot 42 \cdot 3 + 4 \cdot 30 \cdot 4 = 1103
+\end{align*}
+\subproblem{(b)}
+We seek to solve the following system of linear congruences:
+\begin{align*}
+    3x & \equiv 2 \bmod 4 \\
+    4x & \equiv 1 \bmod 5 \\
+    6x & \equiv 3 \bmod 9 \\
+\end{align*}
+Equivalently:
+\begin{align*}
+    x & \equiv 2 \bmod 4 \\
+    x & \equiv 4 \bmod 5 \\
+    x & \equiv 2 \bmod 3 \\
+\end{align*}
+Let $M = 4 \cdot 5 \cdot 3 = 60$. Then $M_1 = \frac{60}{4} = 15$, $M_2 = \frac{60}{5} = 12$, and $M_3 = \frac{60}{3} = 20$. We now solve the congruences:
+\begin{align*}
+    15x_1 & \equiv 1 \bmod 4 \\
+    12x_2 & \equiv 1 \bmod 5 \\
+    20x_3 & \equiv 1 \bmod 3 \\
+\end{align*}
+Equivalently:
+\begin{align*}
+    3x_1 & \equiv 1 \bmod 4 \\
+    2x_2 & \equiv 1 \bmod 5 \\
+    2x_3 & \equiv 1 \bmod 3 \\  
+\end{align*}
+We see that we have the solution $(x_1, x_2, x_3) = (3, 3, 2)$. Then:
+\begin{align*}
+    x = 2 \cdot 15 \cdot 3 + 4 \cdot 12 \cdot 3 + 2 \cdot 20 \cdot 2 = 314
+\end{align*}
+\subproblem{(c)}
+We seek to solve the following system of linear congruences:
+\begin{align*}
+    x & \equiv 3 \bmod 6 \\
+    x & \equiv 7 \bmod 10 \\
+    x & \equiv 9 \bmod 15 \\
+\end{align*}
+However, note that $(10, 15) \nmid (9 - 7)$; therefore no solution exists.
+
+\clearpage
+\problem{}
+\subproblem{(a)}
+By Wilson's theorem, $30! \equiv (31 - 1)! \equiv 30 \bmod 31$.
+\subproblem{(b)}
+By Wilson's theorem, $22! \equiv (23 - 2)! \equiv 1 \bmod 23$.
+\subproblem{(c)}
+Note that $\frac{31!}{22!} \bmod 11$ can be simplified as follows:
+\begin{align*}
+    \frac{31!}{22!} & \equiv 31 \cdot 30 \cdot 29 \cdot 28 \cdot 27 \cdot 26 \cdot 25 \cdot 24 \cdot 23 \bmod 11 \\
+    & \equiv 9 \cdot 8 \cdot 7 \cdot 6 \cdot 5 \cdot 4 \cdot 3 \cdot 2 \cdot 1 \bmod 11 \\
+    & \equiv 9! \bmod 11 \\
+\end{align*}
+By Wilson's theorem, $\frac{31!}{22!} \equiv 9! \equiv (11 - 2)! \equiv 1 \bmod 11$.
+
+\clearpage
+\problem{}
+\subproblem{(a)}
+Let $p$ be an odd prime number. By Wilson's theorem, $(p - 1)! \equiv -1 \bmod p$. Furthermore:
+\begin{align*}
+    (p - 1)! & = \prod_{i=1}^{p-1} i \\
+    & = \prod_{i=1}^{(p-1)/2} i \cdot \prod_{i=(p+1)/2}^{p-1} i \\
+    & = \prod_{i=1}^{(p-1)/2} i \cdot \prod_{i=1}^{(p-1)/2} (p - i) \\
+    & = \prod_{i=1}^{(p-1)/2} (i \cdot (p - i))
+\end{align*}
+Then:
+\begin{align*}
+    (p - 1)! & \equiv \prod_{i=1}^{(p-1)/2} (i \cdot (p - i)) \bmod p \\
+    & \equiv \prod_{i=1}^{(p-1)/2} (i \cdot -i) \bmod p \\
+    & \equiv {(-1)}^{(p-1)/2}{\left(\prod_{i=1}^{(p-1)/2} i\right)}^2 \bmod p \\
+    -1 & \equiv {(-1)}^{(p-1)/2}{\left(\left(\frac{p-1}{2}\right)!\right)}^2 \bmod p \\
+    -{(-1)}^{(p-1)/2} & \equiv {\left(\left(\frac{p-1}{2}\right)!\right)}^2 \bmod p \\
+    {(-1)}^{(p+1)/2} & \equiv {\left(\left(\frac{p-1}{2}\right)!\right)}^2 \bmod p \\
+\end{align*}
+\subproblem{(b)}
+Suppose $p \equiv 1 \bmod 4$. Then:
+\begin{align*}
+    p & = 4k + 1 \\
+    p + 1 & = 4k + 2 \\
+    \frac{p + 1}{2} & = 2k + 1 \\
+\end{align*}
+Then $\frac{p+1}{2} \equiv 1 \bmod 2$, and so ${(-1)}^{(p+1)/2} = -1$. Then:
+\begin{align*}
+    \equiv {\left(\left(\frac{p-1}{2}\right)!\right)}^2 \equiv -1 \bmod p
+\end{align*}
+Consequently, $\left(\frac{p-1}{2}\right)!$ is a solution of the quadratic congruence $x^2 \equiv -1 \bmod p$.
+\subproblem{(c)}
+Suppose $p \equiv 3 \bmod 4$. Then:
+\begin{align*}
+    p & = 4k + 3 \\
+    p + 1 & = 4k + 4 \\
+    \frac{p + 1}{2} & = 2(k + 2) \\
+\end{align*}
+Then $\frac{p+1}{2} \equiv 0 \bmod 2$, and so ${(-1)}^{(p+1)/2} = 1$. Then:
+\begin{align*}
+    \equiv {\left(\left(\frac{p-1}{2}\right)!\right)}^2 \equiv 1 \bmod p
+\end{align*}
+Consequently, $\left(\frac{p-1}{2}\right)!$ is a solution of the quadratic congruence $x^2 \equiv 1 \bmod p$.
+\end{document}

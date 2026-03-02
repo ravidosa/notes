@@ -1,0 +1,50 @@
+\documentclass{article}
+\usepackage{../assignment_preamble}
+
+\title{Homework 6}
+\author{Ravi Kini}
+\date{February 20, 2026}
+
+\begin{document}
+
+\maketitle
+
+\problem{}
+Let the game have the following payoff matrix (rows for the kicker, columns for the goalkeeper).
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+    \hline
+     & Left & Center & Right \\
+     \hline
+     Left & $0.60, 0.40$ & $0.95, 0.05$ & $0.95, 0.05$ \\
+     \hline
+     Center & $0.95, 0.05$ & $0.00, 1.00$ & $0.95, 0.05$ \\
+     \hline
+     Right & $0.95, 0.05$ & $0.95, 0.05$ & $0.60, 0.40$ \\
+     \hline
+\end{tabular}
+\end{center}
+Note that the Left and Right strategies are identical; this indicates that the Nash equilibrium, the kicker has the mixed strategy $(p, 1 - 2p, p)$ and the kicker has $(q, 1 - 2q, q)$ for some $0 \leq p, q \leq 1$.
+
+If the goalkeeper chooses left or right, the expected payoff for the kicker is:
+\begin{align*}
+    0.60q + 0.95(1 - 2q) + 0.95q & = 0.95 - 0.35q
+\end{align*}
+and if the goalkeeper chooses center, it is:
+\begin{align*}
+    0.95q + 0.00(1 - 2q) + 0.95q & = 1.90q
+\end{align*}
+In the Nash equilibrium, the payoffs are equal; this means that $q = \frac{19}{45} \approx 0.42$. The goalkeeper then has a mixed strategy $(0.42, 0.16, 0.42)$ in the Nash equilibrium.
+
+If the kicker chooses left or right, the expected payoff for the goalkeeper is:
+\begin{align*}
+    0.40p + 0.05(1 - 2p) + 0.05p & = 0.05 + 0.35q
+\end{align*}
+and if the kicker chooses center, it is:
+\begin{align*}
+    0.05p + 1.00(1 - 2q) + 0.05q & = 1.00 - 1.90q
+\end{align*}
+In the Nash equilibrium, the payoffs are equal; this means that $p = \frac{19}{45} \approx 0.42$. The kicker then also has a mixed strategy $(0.42, 0.16, 0.42)$ in the Nash equilibrium.
+
+If the kicker kicks into the left corner, the best response of the goalkeeper would to choose left as well.
+\end{document}

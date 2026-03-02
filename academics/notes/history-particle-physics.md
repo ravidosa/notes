@@ -93,6 +93,7 @@ meson nonet
 | $s\bar{u}$ | $-1$ | $-1$ | $K^{-}$ |
 | $s\bar{d}$ | $0$ | $-1$ | $\bar{K}^0$ |
 | $s\bar{s}$ | $0$ | $0$ | $\eta'$ |
+
 ## The November Revolution and Its Aftermath
 (1974-1983, 1995)
 psi meson

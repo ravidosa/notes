@@ -15,7 +15,7 @@ M12: Art 204, DIS
 	2. [Red-Black Trees]
 	4. [Suffix Arrays and Suffix Trees]
 *Algorithms and Data Structures Using C++* (Miller, Pearce, Ranum)
-2. [Analysis](time-complexity.m) 
+2. [Analysis](time-complexity.md) 
 4. [Linear Linked Structures](../notes/linked-list.md)
 6. [Searching] and [Hashing]
 7. [Sorting]

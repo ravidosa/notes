@@ -1,0 +1,117 @@
+\documentclass{article}
+\usepackage{../assignment_preamble}
+
+\title{Homework 5}
+\author{Ravi Kini}
+\date{November 14, 2025}
+
+\begin{document}
+
+\maketitle
+
+\problem{}
+\subproblem{(a)}
+Since $29 \bmod 13 = 3$:
+\begin{align*}
+    29^{202} & \equiv 3^{202} \bmod 13 \\
+\end{align*}
+Since $202 \bmod 12 = 10$, by Fermat's Little Theorem:
+\begin{align*}
+    29^{202} & \equiv 3^{10} \bmod 13 \\
+    & \equiv 3 \bmod 13 \\
+\end{align*}
+\subproblem{(b)}
+Since $79 \bmod 9 = 7$:
+\begin{align*}
+    79^{79} & \equiv 7^{79} \bmod 9 \\
+\end{align*}
+Since $79 \bmod 8 = 7$, by Fermat's Little Theorem:
+\begin{align*}
+    79^{79} & \equiv 7^7 \bmod 9 \\
+    & \equiv 7 \bmod 9 \\
+\end{align*}
+\subproblem{(c)}
+Since $99 \bmod 26 = 21$:
+\begin{align*}
+    99^{99999} & \equiv 21^{99999} \bmod 26 \\
+\end{align*}
+Since $26 = 2 \cdot 13$, $\phi(26) = 12$. Then, since $99999 \bmod 12 = 3$, by Euler's Theorem:
+\begin{align*}
+    99^{99999} & \equiv 21^3 \bmod 26 \\
+    & \equiv 5 \bmod 26 \\
+\end{align*}
+
+\clearpage
+\problem{}
+Clearly, $645 = 3 \cdot 5 \cdot 43$ is composite. Furthermore, since $644 \bmod 2 = 0$:
+\begin{align*}
+    2^{644} & \equiv 2^0 \bmod 3 \\
+    & \equiv 1 \bmod 3
+\end{align*}
+Then, since $644 \bmod 4 = 0$:
+\begin{align*}
+    2^{644} & \equiv 2^0 \bmod 5 \\
+    & \equiv 1 \bmod 5
+\end{align*}
+Then, since $644 \bmod 42 = 14$:
+\begin{align*}
+    2^{644} & \equiv 2^{14} \bmod 43 \\
+    & \equiv 1 \bmod 43
+\end{align*}
+By the Chinese Remainder Theorem, $2^{644} \equiv 1 \bmod 645$, so $645$ is a pseudoprime to the base $2$.
+
+\clearpage
+\problem{}
+Clearly, $2821 = 7 \cdot 13 \cdot 31$ is composite. We seek to show that $a^{2821} \equiv a \bmod 2821$ for all $a$; by the Chinese Remainder Theorem, it is sufficient to prove the congruence modulo $7$, $13$, and $31$. Then, since $2821 \bmod 6 = 1$:
+\begin{align*}
+    a^{2821} & \equiv a^1 \bmod 7 \\
+    & \equiv a \bmod 7
+\end{align*}
+Then, since $2821 \bmod 12 = 1$:
+\begin{align*}
+    a^{2821} & \equiv a^1 \bmod 13 \\
+    & \equiv a \bmod 13
+\end{align*}
+Then, since $2821 \bmod 30 = 1$:
+\begin{align*}
+    a^{2821} & \equiv a^1 \bmod 31 \\
+    & \equiv a \bmod 31
+\end{align*}
+Consequently, $2821$ is a Carmichael number.
+
+\clearpage
+\problem{}
+Let $p, q$ be prime. Note that $(p, q) = 1$, and that $p - 1, q - 1 \geq 1$. By Fermat's Little Theorem, $p^{q - 1} \equiv 1 \bmod q$ and $q^{p - 1} \equiv 1 \bmod p$. Then:
+\begin{align*}
+    p^{q - 1} + q^{p - 1} & \equiv p^{q - 1} \bmod q \\
+    & \equiv 1 \bmod q
+\end{align*}
+Similarly:
+\begin{align*}
+    p^{q - 1} + q^{p - 1} & \equiv q^{p - 1} \bmod p \\
+    & \equiv 1 \bmod p
+\end{align*}
+Consequently:
+\begin{align*}
+    p^{q - 1} + q^{p - 1} & \equiv 1 \bmod pq \\
+\end{align*}
+
+\clearpage
+\problem{}
+Let $p$ be prime. Suppose $2^p - 1$ is composite. By Fermat's Little Theorem, $2^p \equiv 2 \bmod p$, so $2^p - 2 = np$ for some integer $n$. Then:
+\begin{align*}
+    2^{(2^p - 1) - 1} & \equiv 2^{2^p - 2} \bmod (2^p - 1) \\
+    & \equiv 2^{np} \bmod (2^p - 1)
+\end{align*}
+Further, since $2^p \equiv 1 \bmod (2^p - 1)$:
+\begin{align*}
+    2^{(2^p - 1) - 1} & \equiv {(2^p)}^n  \bmod (2^p - 1) \\
+    & \equiv 1^n  \bmod (2^p - 1) \\
+    & \equiv 1 \bmod (2^p - 1)
+\end{align*}
+Therefore $2^p - 1$ is pseudoprime to the base $2$, and so $2^p - 1$ is either prime or pseudoprime to the base $2$.
+
+\clearpage
+\problem{}
+Let $n$ be an integer such that $3 \nmid n$. Since $63 = 7 \cdot 9$, to show that $n^7 \equiv n \bmod 63$, by the Chinese Remainder Theorem, it is sufficient to show that the congruence holds modulo $7$ and $9$. Suppose $n \equiv 0 \bmod 7$; then clearly $0^7 \equiv 0 \mod 63$. Otherwise, if $n \not\equiv 0 \bmod 7$, note that $(n, 7) = 1$. Then, by Fermat's Little Theorem, $n^7 \equiv n \bmod 7$. In either case, $n^7 \equiv n \bmod 7$. Now note that $\phi(9) = 6$. Then, by Euler's Theorem, $n^6 \equiv 1 \bmod 9$, so $n^7 \equiv n \bmod 9$. Consequently, $n^7 \equiv n \bmod 63$ for all $n$.
+\end{document}

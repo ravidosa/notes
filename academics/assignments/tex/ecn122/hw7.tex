@@ -1,0 +1,87 @@
+\documentclass{article}
+\usepackage{../assignment_preamble}
+
+\title{Homework 7}
+\author{Ravi Kini}
+\date{February 27, 2026}
+
+\begin{document}
+
+\maketitle
+
+\problem{}
+Suppose you cheat on the first homework. If Professor Schipper checks the homework (which you believe happens with probability $\mu$); the payoff on the first homework is $-c$, and on the second homework, it is $0$, as you have learned Professor Schipper checks the homework and so will not cheat again. If Professor Schipper does not check the homework, the payoff is $1$ for both homeworks, as you have learned Professor Schipper does not check the homework. The expected payoff from cheating on the first homework is then:
+\begin{align*}
+    \mu(-c + 0) + (1 - \mu)(1 + 1) = -\mu c + 2(1 - \mu)
+\end{align*}
+This is true regardless of your friend's actions. Now suppose you do not cheat on the first homework (getting a payoff of $0$). If Professor Schipper checks the homework and your friend cheats (which you believe happens with probability $\mu$), the payoff on the second homework is $0$, as you have learned Professor Schipper checks the homework and so will not cheat. If Professor Schipper does not check the homework and your friend cheats (which you believe happens with probability $1 - \mu$), the payoff on the second homework is $1$, as you have learned Professor Schipper does not check the homework. The expected payoff for if your friend cheats is then $\mu \cdot 0 + (1 - \mu) \cdot 1 = 1 - \mu$. If your friend does not cheat (probability $1 - p$), the payoff on the second homework is $\max\{-\mu c + 1 - \mu, 0\}$, as you learn nothing and continue to believe that Professor Schipper checks the homework with probability $\mu$. We then have the following payoff matrix (the payoffs for your friend are symmetric to yours):
+\begin{center}
+\begin{tabular}{|c|c|c|}
+    \hline
+     & Don't Cheat & Cheat \\
+     \hline
+     Don't Cheat & $\max\{-\mu c + 1 - \mu, 0\}$ & $1 - \mu$ \\
+     \hline
+     Cheat & $-\mu c + 2(1 - \mu)$ & $-\mu c + 2(1 - \mu)$ \\
+     \hline
+\end{tabular}
+\end{center}
+
+We first note that if $-\mu c + 1 - \mu > 0$, or equivalently, that $c < (1 - \mu)/\mu$, then:
+\begin{align*}
+    -\mu c + 2(1 - \mu) & > \mu \cdot -(1 - \mu)/\mu + 2(1 - \mu) \\
+    & > (1 - \mu) \\
+    & > -\mu c + 1 - \mu
+\end{align*}
+Cheating is then the best response to both of your friend's actions, and so both you and your friend have the mixed strategy $(0, 1)$ in the unique Nash equilibrium.
+
+Alternatively, if $-\mu c + 2(1 - \mu) < 0$, or equivalently, that $c > 2(1 - \mu)/\mu$, then:
+\begin{align*}
+    \max\{-\mu c + 1 - \mu, 0\} & \geq 0 > -\mu c + 2(1 - \mu) \\
+    1 - \mu & \geq 0 > -\mu c + 2(1 - \mu)
+\end{align*}
+Not cheating is then the best response to both of your friend's actions, and so both you and your friend have the mixed strategy $(1, 0)$ in the unique Nash equilibrium.
+
+Now, if $c = (1 - \mu)/\mu$, the payoff matrix is:
+\begin{center}
+\begin{tabular}{|c|c|c|}
+    \hline
+     & Don't Cheat & Cheat \\
+     \hline
+     Don't Cheat & $0$ & $1 - \mu$ \\
+     \hline
+     Cheat & $1 - \mu$ & $1 - \mu$ \\
+     \hline
+\end{tabular}
+\end{center}
+The Nash equilbrium is not unique; either your or your friend has the mixed strategy $(1, 0)$, although not necessarily both. Similarly, if $c = 2(1 - \mu)/\mu$, the payoff matrix is:
+\begin{center}
+\begin{tabular}{|c|c|c|}
+    \hline
+     & Don't Cheat & Cheat \\
+     \hline
+     Don't Cheat & $0$ & $1 - \mu$ \\
+     \hline
+     Cheat & $0$ & $0$ \\
+     \hline
+\end{tabular}
+\end{center}
+The Nash equilbrium is not unique; either your or your friend has the mixed strategy $(0, 1)$, although not necessarily both.
+
+We finally consider the case where $-\mu c + 1 - \mu < 0$ and $-\mu c + 2(1 - \mu) < 0$, or equivalently, that $(1 - \mu)/\mu < c < 2(1 - \mu)/\mu$. Then:
+\begin{align*}
+    -\mu c + 2(1 - \mu) & < \mu \cdot -(1 - \mu)/\mu + 2(1 - \mu) \\
+    & < (1 - \mu) \\
+     -\mu c + 2(1 - \mu) & > \max\{-\mu c + 1 - \mu, 0\}
+\end{align*}
+The optimal response to your friend cheating is not to cheat, and vice versa, yielding two Nash equilibria where exactly one of you has the strategy $(0, 1)$, and the other has the strategy $(1, 0)$. Now suppose your friend cheats with probability $p$. Your expected payoff for cheating is still $-\mu c + 2(1 - \mu)$, while your payoff for not cheating is $p(1 - \mu)$. In the Nash equilibrium, the payoffs are equal; this means that:
+\begin{align*}
+    p(1 - \mu) & = -\mu c + 2(1 - \mu) \\
+    p & = 2 - \frac{\mu c}{1 - \mu}
+\end{align*}
+Both you and your friend then have the mixed strategy $(\frac{\mu c}{1 - \mu} - 1, 2 - \frac{\mu c}{1 - \mu})$ in the Nash equilibrium.
+
+If you were alone, the payoff for cheating on the first homework would be $-\mu c + 2(1 - \mu)$ and the payoff for not cheating would be $\max\{-\mu c + 1 - \mu, 0\}$. If $c > 2(1 - \mu)/\mu$, it would be optimal not to cheat on either homework. If$c < 2(1 - \mu)/\mu$, it would be optimal to cheat.
+
+If your friend exists, it would be optimal to cheat if $c < (1 - \mu)/\mu$, and not to cheat if $c > 2(1 - \mu)/\mu$; this is identical to the optimal response when alone. If $(1 - \mu)/\mu < c < 2(1 - \mu)/\mu$, there are three equilibria: one where you cheat and your friend does not, one where your friend cheats and you do not, and one where you both cheat with some probability. Comparing to your behavior when alone, where it would be optimal to cheat, the presenc of your friend either decreases the probability of cheating or has no effect on the likelihood of you cheating.
+\end{document}

@@ -1,0 +1,122 @@
+\documentclass{article}
+\usepackage{../assignment_preamble}
+
+\title{Homework 7}
+\author{Ravi Kini}
+\date{December 11, 2025}
+
+\begin{document}
+
+\maketitle
+
+\problem{}
+Let $n = 4861$ and $x = 11$. Since $4860 = 2^{12} + 2^9 + 2^7 + 2^6 + 2^5 + 2^4 + 2^3 + 2^2$, we see that:
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+    \hline
+    $k$ & $11^{2^k} \bmod 4861$ & $k$ & $11^{2^k} \bmod 4861$ \\
+    \hline
+    $0$ & $11$ & $7$ & $4240^2 \bmod 4861 = 1622$ \\
+    $1$ & $11^2 \bmod 4861 = 121$ & $8$ & $1622^2 \bmod 4861 = 1083$ \\
+    $2$ & $121^2 \bmod 4861 = 58$ & $9$ & $1083^2 \bmod 4861 = 1388$ \\
+    $3$ & $58^2 \bmod 4861 = 3364$ & $10$ & $1388^2 \bmod 4861 = 1588$ \\
+    $4$ & $3364^2 \bmod 4861 = 88$ & $11$ & $1588^2 \bmod 4861 = 3746$ \\
+    $5$ & $88^2 \bmod 4861 = 2883$ & $12$ & $3746^2 \bmod 4861 = 3670$ \\
+    $6$ & $2883^2 \bmod 4861 = 4240$ & & \\
+    \hline
+\end{tabular}
+\end{center}
+\begin{align*}
+    11^{4860} & = 11^{2^{12} + 2^9 + 2^7 + 2^6 + 2^5 + 2^4 + 2^3 + 2^2} \bmod 4861 \\
+    & = 11^{2^{12}} \cdot 11^{2^9} \cdot 11^{2^7} \cdot 11^{2^6} \cdot 11^{2^5} \cdot 11^{2^4} \cdot 11^{2^3} \cdot 11^{2^2} \bmod 4861 \\
+    & = 3670 \cdot 1388 \cdot 11^{2^7} \cdot 11^{2^6} \cdot 11^{2^5} \cdot 11^{2^4} \cdot 11^{2^3} \cdot 11^{2^2} \bmod 4861 \\
+    & = 4493 \cdot 1622 \cdot 11^{2^6} \cdot 11^{2^5} \cdot 11^{2^4} \cdot 11^{2^3} \cdot 11^{2^2} \bmod 4861 \\
+    & = 1007 \cdot 4240 \cdot 11^{2^5} \cdot 11^{2^4} \cdot 11^{2^3} \cdot 11^{2^2} \bmod 4861 \\
+    & = 1722 \cdot 2883 \cdot 11^{2^4} \cdot 11^{2^3} \cdot 11^{2^2} \bmod 4861 \\
+    & = 1445 \cdot 88 \cdot 11^{2^3} \cdot 11^{2^2} \bmod 4861 \\
+    & = 774 \cdot 3364 \cdot 11^{2^2} \bmod 4861 \\
+    & = 3101 \cdot 58 \bmod 4861 \\
+    & = 1
+\end{align*}
+Then, since $4860/2 = 2^{11} + 2^8 + 2^6 + 2^5 + 2^4 + 2^3 + 2^2 + 2^1$:
+\begin{align*}
+    11^{4860/2} & = 11^{2^{11} + 2^8 + 2^6 + 2^5 + 2^4 + 2^3 + 2^2 + 2^1} \bmod 4861 \\
+    & = 11^{2^{11}} \cdot 11^{2^8} \cdot 11^{2^6} \cdot 11^{2^5} \cdot 11^{2^4} \cdot 11^{2^3} \cdot 11^{2^2} \cdot 11^{2^1} \bmod 4861 \\
+    & = 3746 \cdot 1083 \cdot 11^{2^6} \cdot 11^{2^5} \cdot 11^{2^4} \cdot 11^{2^3} \cdot 11^{2^2} \cdot 11^{2^1} \bmod 4861 \\
+    & = 2844 \cdot 4240 \cdot 11^{2^5} \cdot 11^{2^4} \cdot 11^{2^3} \cdot 11^{2^2} \cdot 11^{2^1} \bmod 4861 \\
+    & = 3280 \cdot 2883 \cdot 11^{2^4} \cdot 11^{2^3} \cdot 11^{2^2} \cdot 11^{2^1} \bmod 4861 \\
+    & = 1595 \cdot 88 \cdot 11^{2^3} \cdot 11^{2^2} \cdot 11^{2^1} \bmod 4861 \\
+    & = 4252 \cdot 3364 \cdot 11^{2^2} \cdot 11^{2^1} \bmod 4861 \\
+    & = 2666 \cdot 58 \cdot 11^{2^1} \bmod 4861 \\
+    & = 3937 \cdot 121 \bmod 4861 \\
+    & = 4860
+\end{align*}
+Since $4860/3 = 2^{10} + 2^9 + 2^6 + 2^4 + 2^2$:
+\begin{align*}
+    11^{4860/3} & = 11^{2^{10} + 2^9 + 2^6 + 2^4 + 2^2} \bmod 4861 \\
+    & = 11^{2^{10}} \cdot 11^{2^9} \cdot 11^{2^6} \cdot 11^{2^4} \cdot 11^{2^2} \bmod 4861 \\
+    & = 1588 \cdot 1388 \cdot 11^{2^6} \cdot 11^{2^4} \cdot 11^{2^2} \bmod 4861 \\
+    & = 2111 \cdot 4240 \cdot 11^{2^4} \cdot 11^{2^2} \bmod 4861 \\
+    & = 1539 \cdot 88 \cdot 11^{2^2} \bmod 4861 \\
+    & = 4185 \cdot 58 \bmod 4861 \\
+    & = 4541
+\end{align*}
+Since $4860/5 = 2^9 + 2^8 + 2^7 + 2^6 + 2^3 + 2^2$:
+\begin{align*}
+    11^{4860/5} & = 11^{2^9 + 2^8 + 2^7 + 2^6 + 2^3 + 2^2} \bmod 4861 \\
+    & = 11^{2^9} \cdot 11^{2^8} \cdot 11^{2^7} \cdot 11^{2^6} \cdot 11^{2^3} \cdot 11^{2^2} \bmod 4861 \\
+    & = 1388 \cdot 1083 \cdot 11^{2^7} \cdot 11^{2^6} \cdot 11^{2^3} \cdot 11^{2^2} \bmod 4861 \\
+    & = 1155 \cdot 1622 \cdot 11^{2^6} \cdot 11^{2^3} \cdot 11^{2^2} \bmod 4861 \\
+    & = 1925 \cdot 4240 \cdot 11^{2^3} \cdot 11^{2^2} \bmod 4861 \\
+    & = 381 \cdot 3364 \cdot 11^{2^2} \bmod 4861 \\
+    & = 3241 \cdot 58 \bmod 4861 \\
+    & = 3260
+\end{align*}
+Since $11^{4860} = 1 \bmod 4861$, and for all prime factors $q \in \{2, 3, 5\}$ of $4860$, $11^{4860/q} \neq 1 \bmod 4861$, $4861$ is prime.
+
+\clearpage
+\problem{}
+Since E ($4$) and T ($19$) are the most common letters in the Englis alphabet, they are the most likely to be mapped to W ($22$) and B ($1$). Then, by the affine transformation:
+\begin{align*}
+    4a + b & = 22 \bmod 26
+    19a + b & = 1 \bmod 26
+\end{align*}
+It follows that:
+\begin{align*}
+    15a & = 5 \bmod 26 \\
+    a & = 15^{-1} \cdot 5 = 7 \cdot 5 = 11 \bmod 26
+    4 \cdot 11 + b & = 22 \bmod 26 \\
+    b & = 22 - 4 \cdot 11 = 4 \bmod 26
+\end{align*}
+We se that $a = 11, b = 4$.
+
+\clearpage
+\problem{}
+Using modular exponentiation with $p = 29, e = 17$, $d = 5$ since $\phi(29) = 28$ and $17 \cdot 5 = 1 \bmod 28$. If $C = (13~11~11~02)$
+\begin{align*}
+    P & = C^d \bmod p \\
+    & = {(13~11~11~02)}^5 \bmod 29 \\
+    & = (06~14~14~03)
+\end{align*}
+The plaintext $(06~14~14~03)$ translates to the message GOOD.
+
+\clearpage
+\problem{}
+BEST translates to $(01~04~18~19)$. Using RSA encryption with $n = 77$ and $e = 7$:
+\begin{align*}
+    C & = P^e \bmod n \\
+    & = {(01~04~18~19)}^7 \bmod 77 \\
+    & = (01~60~39~68)
+\end{align*}
+The ciphertext is $(01~60~39~68)$.
+
+\clearpage
+\problem{}
+Using RSA encryption with $n = 77, e = 43$, $d = 7$ since $\phi(77) = 60$ and $43 \cdot 7 = 1 \bmod 60$. If $C = (01~49~49~10)$
+\begin{align*}
+    P & = C^d \bmod n \\
+    & = {(01~49~49~10)}^7 \bmod 77 \\
+    & = (01~14~14~10)
+\end{align*}
+The plaintext $(01~14~14~10)$ translates to the message BOOK.
+\end{document}

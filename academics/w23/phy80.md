@@ -4,8 +4,8 @@ TR12.5: Roessler 152, LAB
 ## Notes
 1. [Direct Current Circuits and Resistance](../notes/dc-circuit-analysis.md)
 2. [Alternating Current Circuits and Impedance](../notes/ac-circuit-analysis.md)
-1. [Statistical Distributions](../notes/statistical-distributions.md)
-2. [Experimental Uncertainties](../notes/experimental-uncertainties.md)
+3. [Statistical Distributions](../notes/random-variable.md)
+4. [Experimental Uncertainties](../notes/experimental-uncertainties.md)
 ## Assignments
 - [x] [LAB 1](../assignments/code/phy80_lab1.ipynb) (1/10)
 - [x] [LAB 2](../assignments/code/phy80_lab2.ipynb) (1/12)

@@ -22,11 +22,17 @@
 - Complex Analysis (Stein)
 - Complex Variables and Applications (Brown, Churchill)
 - Computability (Cutland)
+- Computability and Complexity Theory (Homer, Selman)
+- Computability and Unsolvability (Davis)
+- Computational Complexity: A Modern Approach (Arora, Barak)
+- Computation Geometry in C (O'Rourke)
 - A Computational Introduction to Linguistics (Ojeda)
 - Computational Physics (Giordano) {[PHY 45](./w23/phy45.md)}
+- Computational Physics (Hjorth-Jensen)
 - Computer Graphics with Open GL (Baker, Carithers, Hearn)
 - Concrete Mathematics (Graham, Knuth, Patashnik)
 - A Course in Phonetics (Ladefoged, Johnson)
+- [Crafting Interpreters](https://craftinginterpreters.com) (Robert Nystrom)
 - [CSDIY](https://csdiy.wiki/en/) (Zhong)
 - [Data Structures and Algorithm Analysis in C++](https://www.uoitc.edu.iq/images/documents/informatics-institute/Competitive_exam/DataStructures.pdf) (Weiss)
 - Deep Learning (Goodfellow, Bengio, Courville)
@@ -43,6 +49,7 @@
 - Elements of Information Theory (Cover, Thomas)
 - Elements of Set Theory (Enderton)
 - English Grammar (Barry)
+- [Essential Coding Theory](https://cse.buffalo.edu/faculty/atri/courses/coding-theory/book/web-coding-book.pdf) (Guruswami, Rudra, Sudan)
 - Essentials of Linguistics (Anderson)
 - Experimental Physics: Modern Methods (Dunlap)
 - Experiments in Modern Physics (Melissinos, Napolitano) {PHY 122A, PHY 122B}
@@ -51,6 +58,7 @@
 - Foundations of Astrophysics (Ryden) {PHY 153}
 - A First Course in Abstract Algebra (Fraleigh)
 - A First Course in Probability (Ross) {[MAT 135A](./s23/mat135a.md)}
+- [A First Course in Randomized Algorithms](https://www.cs.ubc.ca/~nickhar/Book1.pdf) (Harvey)
 - A First Course in Wavelets with Fourier Analysis (Boggess, Narcowich)
 - Foundations of 3D Computer Graphics (Gortler)
 - The Four Pillars of Geometry (Stillwell)
@@ -78,7 +86,9 @@
 - Introduction to Optics (Pedrotti) {[PHY 108](./s23/phy108.md)}
 - Introduction to Partial Differential Equations (Olver)
 - Introduction to Plasma Physics (Chen)
+- [Introduction to Property Testing](https://www.wisdom.weizmann.ac.il/~oded/PDF/pt-v3.pdf) (Goldreich)
 - Introduction to Quantum Field Theory (Peskin, Schroeder)
+- [Introduction to Quantum Information Science](https://qubit.guide/) (Ekert, Hosgood, Kay, and Macchiavello)
 - Introduction to Quantum Mechanics (Griffiths, Schroeter) {[PHY 115A](./f23/phy115a.md), [PHY 115B](./w24/phy115b.md)}
 - Introduction to Solid State Physics (Kittel) {PHY 140A, PHY 140B}
 - [Introduction to Theoretical Computer Science](https://introtcs.org/public/) (Barak)
@@ -92,18 +102,21 @@
 - [Invitation to Formal Semantics](https://eecoppock.info/bootcamp/semantics-boot-camp.pdf) (Coppock, Champollion) {[LIN 141](./f23/lin141.md)}
 - Language Files (OSU) {[LIN 1Y](./f22/lin1y.md)}
 - [LaTeX](https://upload.wikimedia.org/wikipedia/commons/2/2d/LaTeX.pdf)
+- Lectures on Discrete Geometry (Matousek)
 - Linear Algebra (Friedberg, Insel, Spence)
 - [Linear Algebra as an Introduction to Abstract Mathematics](http://www.math.ucdavis.edu/~anne/linear_algebra/mat67_course_notes.pdf) (Lankham, Nachtergaele, Schilling) {MAT 67} 
 - Linear Algebra and Its Applications (Lay, Lay, McDonald)
 - Linear Programming (Vanderbei) {[MAT 168](./f23/mat168.md)}
+- [Markov Chains and Mixing Times](https://pages.uoregon.edu/dlevin/MARKOV/markovmixing.pdf) (Levin, Peres, and Wilmer)
 - A Mathematical Introduction to Logic (Enderton)
-- Mathematical Methods in the Physical Sciences (Boas) {[PHY 104A](./f22/phy104a.md)}
+- Mathematical Methods in the Physical Sciences (Boas) {[PHY 104A](./f22/phy104a.md), [PHY 104C](./f24/phy104c.md)}
 - Mathematical Methods for Physicists (Arfken, Weber)
 - [Mathematical Tools for Physics](http://www-mdp.eng.cam.ac.uk/web/library/enginfo/textbooks_dvd_only/nearing/math_methods.pdf) (Nearing) {[PHY 104A](./f22/phy104a.md)}
 - [Mathematics of Machine Learning](https://raw.githubusercontent.com/alexchandler100/MAT_180/main/00_Course_Files/MAT%20180%20Textbook/main.pdf) (Chandler) {MAT 180}
 - [Mathematics for Computer Science](https://eng.libretexts.org/Bookshelves/Computer_Science/Programming_and_Computation_Fundamentals/Mathematics_for_Computer_Science_(Lehman_Leighton_and_Meyer)) (Lehman, Leighton, Meyer) {ECS 20}
 - Mathematics for Physics: A Guided Tour for Graduate Students (Goldbart)
 - Metaphors We Live By (Lakoff, Johnson)
+- [A Methods Focused Guide to Quantum Error Correction and Fault-Tolerant Quantum Computation](https://abdullahkhalid.com/qecft/index.html) (Khalid)
 - Methods of Mathematical Economics (Franklin)
 - Microelectronic Circuits (Sedra, Smith, Carusone, Gaudet)
 - [Models of Computation](https://cs.brown.edu/people/jsavage/book/pdfs/ModelsOfComputation.pdf) (Savage)
@@ -111,6 +124,7 @@
 - Modern Particle Physics (Thomson) {[PHY 130B](./s24/phy130b.md)}
 - Modern Physics (Harris) {[PHY 9D](./f22/phy9d.md)}
 - Modern Quantum Mechanics (Sakurai) {PHY 215B}
+- [Modern Robotics: Mechanics, Planning, and Control](https://hades.mech.northwestern.edu/images/2/25/MR-v2.pdf) (Lynch, Park)
 - Modern Supersymmetry (Terning) {PHY 246A}
 - More than Cool Reason (Lakoff, Turner)
 - Multivariable Calculus (Stewart)
@@ -133,19 +147,25 @@
 - Principles of Continuum Mechanics (Reddy)
 - Principles of Quantum Mechanics (Shankar) {PHY 215B}
 - Probability and Random Processes (Grimmett, Stirzaker)
+- Program Proofs (Rustan, Leino)
+- Programming Languages (Lambert, Louden)
+- [Purely Functional Data Structures](https://www.cs.cmu.edu/~rwh/students/okasaki.pdf) (Okazaki)
 - The Qualitative Theory of Ordinary Differential Equations (Brauer, Nohel)
+- [Quantum Computation](https://www.preskill.caltech.edu/ph229/) (Preskill)
 - [Quantum Field Theory](https://web.physics.ucsb.edu/~mark/ms-qft-DRAFT.pdf) (Srednicki)
 - [Quantum Field Theory in a Nutshell](http://home.ustc.edu.cn/~gengb/200923/A.%20Zee,%20Quantum%20Field%20Theory%20in%20a%20Nutshell.pdf) (Zee)
 - Quantum Field Theory and the Standard Model (Schwartz)
 - Quantum Mechanics (Commins) {PHY 215B}
 - [Quantum Mechanics for Engineers](https://web1.eng.famu.fsu.edu/~dommelen/quantum/) (Dommelen)
 - Real Mathematical Analysis (Pugh)
+- The Rising Sea: Foundations of Algebraic Geometry (Vakil)
 - Single Variable Calculus (Stewart)
 - Solid State Basics (Simon)
 - Solid State Physics (Ashcroft, Mermin)
 - The Sounds of Language: An Introduction to Phonetics and Phonology (Zsiga) {[LIN 103A](./w24/lin103a.md)}
 - Spacetime and Geometry (Carroll)
 - Subatomic Physics (Garcia, Henley) {[PHY 129A](./s24/phy129a.md)}
+- [Surviving as a Quantum Computer in a Classical World](https://www.cs.umd.edu/class/spring2024/cmsc858G/QECCbook-2024-ch1-15.pdf) (Gottesman)
 - Statistical Physics of Particles (Kardar) {PHY 219A}
 - Syntactic Constructions in English (Kim, Michaelis) {[LIN 103B](./w23/lin103b.md), [LIN 131](./w24/lin131.md)}
 - Syntax (Carnie)
@@ -153,6 +173,7 @@
 - Thermal Physics (Kittel, Kroemer)
 - Think Julia (Lauwens, Downey)
 - A Transition to Advanced Mathematics (Smith, Eggen, Andre) {[MAT 108](./w23/mat108.md)}
+- Tveberg-Type Theorems with Altered Intersection Patterns (De Loera)
 - Undergraduate Algebraic Geometry (Reid)
 - Undergraduate Commutative Algebra (Reid)
 - Understanding Analysis (Abbott) {[MAT 127A](./s23/mat127a.md), [MAT 127B](./m23/mat127b.md)}

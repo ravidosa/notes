@@ -1,0 +1,21 @@
+# ECS 122A
+## Notes
+*Introduction to Algorithms* (Cormen, Leiserson, Rivest, and Stein, 3e)
+3. [Characterizing Running Times](../notes/time-complexity.md#asymptotic-analysis) 
+4. [Divide and Conquer](../notes/time-complexity.md#divide-and-conquer) 
+## Assignments
+- [x] QUIZ 1 (10/3)
+- [x] HW 1 (10/9)
+- [x] QUIZ 2 (10/10)
+- [x] HW 2 (10/15)
+- [x] MIDTERM 1 (10/17)
+- [x] QUIZ 3 (10/24)
+- [x] HW 3 (10/30)
+- [x] QUIZ 4 (10/31)
+- [x] QUIZ 5 (11/7)
+- [x] MIDTERM 2 (11/14)
+- [x] QUIZ 6 (11/21)
+- [x] HW 4 (11/26)
+- [x] HW 5 (12/5)
+- [x] QUIZ 7 (12/5)
+- [x] FINAL (12/13)
