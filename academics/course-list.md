@@ -93,17 +93,15 @@
 ### Linguistics
 [LIN 127: Text Processing and Corpus Linguistics](./f24/lin127) (Sagae)
 [LIN 182: Multilingualism](./f24/lin182.md) (Filipović)
-LIN 194H: Honors Thesis (Russell)
 ### Mathematics
 [MAT 165: Mathematics & Computers](./f24/mat165.md) (Torres)
 ### Physics
 [PHY 104C: Intermediate Methods of Mathematical Physics](./f24/phy104c.md) (Zieve)
-### Other
-GEL 186: Facilitating Learning in STEM Classrooms (Stevenson)
 
 ## Winter '25
 ### Computer Science
 [ECS 50: Computer Organization & Machine-Dependent Programming](./w25/ecs50.md) (Weaver)
+[ECS 220: Theory of Computation](./w25/ecs220.md) (Doty)
 [ECS 232: Theory of Molecular Computation](./w25/ecs232.md) (Doty)
 [ECS 289A: Theoretical Computer Science Survival Skills](./w25/ecs289a.md) (Lee)
 ### Linguistics
@@ -114,3 +112,45 @@ GEL 186: Facilitating Learning in STEM Classrooms (Stevenson)
 ### Physics
 [PHY 155: General Relativity](./w25/phy155.md) (Wittman)
 [PHY 256A: Physics of Information](./w25/phy256a.md) (Crutchfield)
+
+## Spring '25
+### Linguistics
+[LIN 121: Morphology](./s25/lin121.md) (Aranovich)
+[LIN 151: Historical Linguistics](./s25/lin151.md) (Hawkins)
+[LIN 177: Computational Linguistics](./s25/lin177.md) (Sagae)
+### Mathematics
+[MAT 119B:  Ordinary Differential Equations](./s25/mat119b.md) (Goldsmith)
+[MAT 146: Algebraic Combinatorics](./s25/mat146.md) (Carlsson)
+### Philosophy
+[PHI 112: Intermediate Symbolic Logic](./s25/phi112.md) (Martínez-Aviña)
+### Physics
+[PHY 256B: Physics of Computation](./s25/phy256b.md) (Crutchfield)
+
+## Fall '25
+### Computer Science
+[ECS 130: Scientific Computation](./f25/ecs130.md) (Bai)
+[ECS 140A: Programming Languages](./f25/ecs140a.md) (Rubio-Gonzalez)
+[ECS 154A: Computer Architecture](./f25/ecs154a.md) (Farrens)
+### Mathematics
+[MAT 115A; Number Theory](./f25/mat115a.md) (Li)
+[MAT 226A: Numerical Methods: Fundamentals](./f25/mat226a.md) (Guy)
+### Philosophy
+[PHY 133: Logic, Probability & Artificial Intelligence](./f25/phi133.md) (Kao)
+
+## Winter '26
+### Computer Science
+[ECS 150: Operating Systems & System Programming](./w26/ecs150.md) (Porquet-Lupine)
+[ECS 175: Computer Graphics](./w26/ecs175.md) (Ma)
+[ECS 189C: Software Correctness](./w26/ecs189c.md) (Stanford)
+### Economics
+[ECN 122: Theory of Games & Strategic Behavior](./w26/ecn122.md) (Schipper)
+### Mathematics
+[MAT 226B: Numerical Methods: Large-Scale Matrix Computation](./w26/mat226b.md) (Gopal)
+
+## Spring '26
+### Computer Science
+[ECS 154B: Computer Architecture](./s26/ecs154b.md) (Farrens)
+### English
+[ENL 173: Science Fiction](./s26/enl173.md) (Milburn)
+### Philosophy
+[PHI 135: Alternative Logics](./s26/phi135.md) (French)

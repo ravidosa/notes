@@ -31,6 +31,7 @@
 - Computational Physics (Giordano) {[PHY 45](./w23/phy45.md)}
 - Computational Physics (Hjorth-Jensen)
 - Computer Graphics with Open GL (Baker, Carithers, Hearn)
+- Computer Organization and Design (Patterson, Hennessy) {[ECS 154A](./f25/ecs154a.md), [ECS 154B](./s26/ecs154b.md)}
 - Concrete Mathematics (Graham, Knuth, Patashnik)
 - A Course in Phonetics (Ladefoged, Johnson)
 - [Crafting Interpreters](https://craftinginterpreters.com) (Robert Nystrom)

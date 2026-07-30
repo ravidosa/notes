@@ -2,6 +2,12 @@
 MWF12: Wellman 26, LEC
 T11: Wellman 202, DIS
 ## Notes  
+*Computer Organization and Design* (Patterson and Hennessy, 6e)
+1. [Computer Abstractions](../notes/computer-architecture.md)
+2. [Instructions](../notes/instruction-set-architecture.md)
+3. [The Processor](../notes/processor.md)
+4. [Exploiting Memory Hierarchy](../notes/memory.md)
+5. [Parallel Processors](../notes/processor.md)
 ## Assignments
 - [x] HW 1 (4/10)
 - [x] MIDTERM 1 (4/17)
