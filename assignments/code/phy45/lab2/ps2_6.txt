@@ -1,0 +1,4 @@
+The trapezoidal rule is a closer approximation to the exact answer of 39,
+returning 39.045 as opposed to the original implementation's 35.895 for N=10 and 39.00045 to the original's 38.68545 for N=100.
+A trapezoid approximates the area under the curve more closely than a rectangle.
+Using SImpson's and Boole's rules further improve on this result.

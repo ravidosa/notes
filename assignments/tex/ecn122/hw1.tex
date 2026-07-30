@@ -1,0 +1,131 @@
+\documentclass{article}
+\usepackage{../assignment_preamble}
+
+\title{Homework 1}
+\author{Ravi Kini}
+\date{January 16, 2026}
+
+\begin{document}
+
+\maketitle
+
+\problem{}
+Let person 1 attach $2x$ units of value to her own income and $x$ to person 2's income. The outcome $(1, 4)$ then has a payoff of $1 \cdot 2x + 4 \cdot x = 6x$. Similarly, $(2, 1)$ has a payoff of $2 \cdot 2x + 1 \cdot x = 5x$ and $(3, 0)$ has a payoff of $3 \cdot 2x + 0 \cdot x = 6x$.
+\begin{align*}
+    (1, 4) = (3, 0) > (2, 1)
+\end{align*}
+The payoff function $p(i_1, i_2) = 2i_1 + i_2$ would be consistent with these preferences.
+
+\clearpage
+\problem{}
+In the prisoner's dilemma, player 1 ranks the outcomes as following:
+\begin{align*}
+    (C, N) > (N, N) > (C, C) > (N, C)
+\end{align*}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+    \hline
+     & $X$ & $Y$ \\
+     \hline
+     $X$ & $3, 3$ & $1, 5$ \\
+     \hline
+     $Y$ & $5, 1$ & $0, 0$ \\
+     \hline
+\end{tabular}
+\end{center}
+In this game, player 1 would rank the outcomes as following:
+\begin{align*}
+    (Y, X) > (X, X) > (X, Y) > (Y, Y)
+\end{align*}
+This is not equivalent to the prisoner's dilemma, regardless of how the actions are named.
+\begin{center}
+\begin{tabular}{|c|c|c|}
+    \hline
+     & $X$ & $Y$ \\
+     \hline
+     $X$ & $2, 1$ & $0, 5$ \\
+     \hline
+     $Y$ & $3, -2$ & $1, -1$ \\
+     \hline
+\end{tabular}
+\end{center}
+In this game, player 1 would rank the outcomes as following:
+\begin{align*}
+    (Y, X) > (X, X) > (Y, Y) > (X, Y)
+\end{align*}
+This is equivalent to the prisoner's dilemma, with $Y = C$ and $X = N$.
+
+\clearpage
+\problem{}
+Let $P$ be the action of choosing to insist on a preferred role and $V$ be the action of mating in either role. We then have the following strategic game:
+\begin{center}
+\begin{tabular}{|c|c|c|}
+    \hline
+     & $V$ & $P$ \\
+     \hline
+     $V$ & $\frac{1}{2}(H + L), \frac{1}{2}(H + L)$ & $L, H$ \\
+     \hline
+     $P$ & $H, L$ & $S, S$ \\
+     \hline
+\end{tabular}
+\end{center}
+For this game to be equivalent to the prisoner's dilemma, it must be the case that for player 1:
+\begin{align*}
+    (P, V) > (V, V) > (P, P) > (V, P)
+\end{align*}
+with $C = P$ and $N = V$. Alternately, we could have had $C = V$ and $N = P$. For this to be true:
+\begin{align*}
+    H > \frac{1}{2}(H + L) > S > L
+\end{align*}
+Since $H > L$, this simplifies to:
+\begin{align*}
+    \frac{1}{2}(H + L) > S > L
+\end{align*}
+
+\clearpage
+\problem{}
+\subproblem{(a)}
+Let $Q$ be the quiet action and $F$ be the fink action. In the case where $\alpha = 1$, we have the strategic game:
+\begin{center}
+\begin{tabular}{|c|c|c|}
+    \hline
+     & $Q$ & $F$ \\
+     \hline
+     $Q$ & $4, 4$ & $3, 3$ \\
+     \hline
+     $F$ & $3, 3$ & $2, 2$ \\
+     \hline
+\end{tabular}
+\end{center}
+In this game, player 1 would rank the outcomes as following:
+\begin{align*}
+    (Q, Q) > (Q, F) = (F, Q) > (F, F)
+\end{align*}
+This is not equivalent to the prisoner's dilemma, regardless of how the actions are named.
+\subproblem{(b)}
+For an arbitrary $\alpha > 0$, we have the strategic game:
+\begin{center}
+\begin{tabular}{|c|c|c|}
+    \hline
+     & $Q$ & $F$ \\
+     \hline
+     $Q$ & $2 + 2\alpha, 2 + 2\alpha$ & $3\alpha, 3$ \\
+     \hline
+     $F$ & $3, 3\alpha$ & $1 + \alpha, 1 + \alpha$ \\
+     \hline
+\end{tabular}
+\end{center}
+For this game to be equivalent to the prisoner's dilemma, it must be the case that for player 1:
+\begin{align*}
+    (F, Q) > (Q, Q) > (F, F) > (Q, F)
+\end{align*}
+with $C = F$ and $N = Q$. Alternately, we could have had $C = Q$ and $N = F$. For this to be true:
+\begin{align*}
+    3 > 2 + 2\alpha > 1 + \alpha > 3\alpha
+\end{align*}
+Since $\alpha > 0$, this simplifies to:
+\begin{align*}
+    3 > 2 + 2\alpha > 3\alpha
+\end{align*}
+Consequently, $\alpha < 0.5$. When $\alpha = 0.5$, $(F, Q) = (Q, Q)$ and $(F, F) = (Q, F)$, so all four outcomes are Nash equilibria. When $\alpha > 0.5$, $(Q, Q) > (F, Q)$, so only $(Q, Q)$ is a Nash equilibrium.
+\end{document}

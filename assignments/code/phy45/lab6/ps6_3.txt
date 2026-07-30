@@ -1,0 +1,8 @@
+The code takes more iterations to get a good result because it takes more iterations for the boundary
+potential to percolate to the other side, as the number of boxes to travel through has been increased.
+For 10000 iterations, the code takes around fifty seconds to run.
+This makes sense, as on the order of (3/0.01*2/0.01)*(2*100000+2) operations are performed,
+which would result in a 3 GHz processor taking on the order of 4.00004 seconds to run the code.
+For dx = 0.001, it shold take 1000000 iterations to get a good result.
+As on the order of (3/0.001*2/0.001)*(2*10000000+2) operations are performed,
+a 3 GHz processor should take on the order of 40000.004 seconds to run the code.

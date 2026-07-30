@@ -1,0 +1,19 @@
+Root approximation using bisection Method:
+For f(x) = 5(x-3):
+Guessed number of roots and guesses for interval bounds: 
+1 0 5
+root from (0.000000, 5.000000) => 3.000000 
+
+For f(x) = (x-1)(x-4):
+Guessed number of roots and guesses for interval bounds: 
+2 0 3 3.5 5
+root from (0.000000, 3.000000) => 1.000000 
+root from (3.500000, 5.000000) => 4.000000
+
+For f(x) = x * tan(x) - sqrt(100 - x^2):
+Guessed number of roots and guesses for interval bounds: 
+4 1.0 2.0 4.0 5.0 7.0 8.0 9.0 10.0
+root from (1.000000, 2.000000) => 1.427552 
+root from (4.000000, 5.000000) => 4.271095
+root from (7.000000, 8.000000) => 7.068891
+root from (9.000000, 10.000000) => 9.678884

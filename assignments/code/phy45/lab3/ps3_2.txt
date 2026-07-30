@@ -1,0 +1,10 @@
+The period of oscillation is approximately 1, which makes sense as the period of the sine function in the analytical solution is:
+2pi/(sqrt(k/m - (b/2m)^2))
+= 2pi/(sqrt(10/0.25 - (0.15/2*0.25)^2))
+= 0.9946
+The peaks of the oscillations also fall off as the exponential function in the analytical solution:
+e^(-b/2m)
+= e^(-0.15/2*0.25)
+= e^-0.3
+x starts off at 3 and begins to oscillate between negative and positive values,
+but due to damping, never reaches the maximum amplitude of 3 again.

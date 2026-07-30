@@ -1,0 +1,4 @@
+// matches { x in {0,1}* | x[|x| − 5] = x[|x| − 3] }
+
+char = (0|1);   // subexpression matching any character
+char* 0 char 0 char char char|char* 1 char 1 char char char

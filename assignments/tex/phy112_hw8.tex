@@ -1,0 +1,294 @@
+\documentclass{article}
+\usepackage{assignment_preamble}
+
+\title{Homework 8}
+\author{Ravi Kini}
+\date{December 7, 2023}
+
+\begin{document}
+
+\maketitle
+
+\problem[\textit{An Introduction to Thermal Physics} (Schroeder, 1e) Exercise 7.33 (partial)]
+\subproblem{(a)}
+The density of states is seen to be symmetric about $\epsilon_F$. Further, as:
+\begin{equation}
+    \begin{split}
+        \overline{n}_{FD}\left(\epsilon\right) = \frac{1}{e^{\frac{\epsilon - \mu}{k_BT}} + 1} & = 1 - \frac{e^{\frac{\epsilon - \mu}{k_BT}}}{e^{\frac{\epsilon - \mu}{k_BT}} + 1} \\
+        & = 1 - \frac{1}{1 + e^{-\frac{\epsilon - \mu}{k_BT}}} \\
+        & = 1 - \frac{1}{e^{\frac{(2\mu-\epsilon) - \mu}{k_BT}} + 1} \\
+        & = 1 - \overline{n}_{FD}(2\mu - \epsilon)
+    \end{split}
+\end{equation}
+Evidently, the probability of a state at $\epsilon$ being occupied is equal to the probability of a state at $2\mu - \epsilon$ being unoccupied. These states are symmetric about $\mu$. For a semiconductor at nonzero temperatures, there will be some electrons in the conduction band and an equal number of holes in the valence band. Consequently, letting $\epsilon_c = \epsilon_F + \epsilon'$:
+\begin{equation}
+    \begin{split}
+        \int_{\epsilon_F + \epsilon'}^{\infty} g_0\sqrt{\epsilon - \left(\epsilon_F + \epsilon'\right)}\overline{n}_{FD}(\epsilon) \, \diff{\epsilon} & = -\int_{\epsilon_F - \epsilon'}^{-\infty} g_0\sqrt{\left(\epsilon_F - \epsilon'\right) - \epsilon}\left(1 - \overline{n}_{FD}\left(\epsilon\right)\right) \, \diff{\epsilon} \\
+        & = \int_{2\mu - \epsilon_F + \epsilon'}^{\infty} g_0\sqrt{\epsilon - \left(2\mu - \epsilon_F + \epsilon'\right)}\left(1 - \overline{n}_{FD}\left(2\mu - \epsilon\right)\right) \, \diff{\epsilon}
+    \end{split}
+\end{equation}
+This is only true when $\epsilon_F + \epsilon' = 2\mu - \epsilon_F + \epsilon'$, or $\mu = \epsilon_F$, which means that the chemical potential is exactly in the middle of the gap.
+\subproblem{(b)}
+For gap width $\delta\epsilon = 2\epsilon'$:
+\begin{equation}
+    \begin{split}
+        N & = \int_{\epsilon_c}^{\infty} g\left(\epsilon\right) \overline{n}_{FD}\left(\epsilon\right) \, \diff{\epsilon} \\
+        & = g_0\int_{\epsilon_c}^{\infty} \sqrt{\epsilon - \epsilon_c}\frac{1}{e^{\frac{\epsilon - \epsilon_F}{k_BT}} + 1} \, \diff{\epsilon} \\
+        & \approx g_0\int_{\epsilon_c}^{\infty} \sqrt{\epsilon - \epsilon_c}e^{-\frac{\epsilon - \epsilon_F}{k_BT}} \, \diff{\epsilon} \\
+        & \approx g_0e^{-\frac{\epsilon'}{k_BT}}\int_{\epsilon_c}^{\infty} \sqrt{\epsilon - \epsilon_c}e^{-\frac{\epsilon - \epsilon_c}{k_BT}} \, \diff{\epsilon} \\
+        & \approx g_0e^{-\frac{\epsilon'}{k_BT}}(k_BT)^{\frac{3}{2}}\int_{\epsilon_c}^{\infty} \sqrt{x}e^{-x} \, \diff{\epsilon} \\
+        & \approx \frac{\pi(8m)^{\frac{3}{2}}}{2h^3}Ve^{-\frac{\epsilon'}{k_BT}}{\left(k_BT\right)}^{\frac{3}{2}}\sqrt{\pi}{2} \\
+        \frac{N}{V} & \approx 2(\frac{2\pi k_BTm}{h^2})^{\frac{3}{2}}e^{-\frac{\epsilon'}{k_BT}} \\
+        & \approx \frac{2}{v_Q}e^{-\frac{\delta\epsilon}{2k_BT}}
+    \end{split}
+\end{equation}
+\subproblem{(c)}
+\begin{equation}
+    \begin{split}
+        \frac{N}{V}_{\ce{Si}} & \approx 2{\left(\frac{2\pi k_BTm}{h^2}\right)}^{\frac{3}{2}}e^{-\frac{\delta\epsilon_{\ce{Si}}}{2k_BT}} \\
+        & \approx 2{\left(\frac{2\pi \cdot 1.381 \cdot 10^{-23}~\unit{\joule\per\kelvin} \cdot 298~\unit{\kelvin} \cdot 9.11 \cdot 10^{-31}~\unit{\kilo\gram}}{{\left(6.63 \cdot 10^{-34}~\unit{\joule\second}\right)}^2}\right)}^{\frac{3}{2}}e^{-\frac{1.11~\unit{eV}}{2\cdot 8.617 \cdot 10^{-5}~\unit{eV\per\kelvin} \cdot 298~\unit{\kelvin}}} \\
+        & \approx 1.018 \cdot 10^{16}~\unit{\frac{e}{\meter\cubed}}\approx 1.018 \cdot 10^{10}~\unit{\frac{e}{\centi\meter\cubed}} \\
+        \frac{N}{V}_{Cu} & \approx \frac{N_A}{V_{\unit{\mol}}} \approx \frac{6.022 \cdot 10^{23}}{\frac{63.5}{8.93}~\unit{\centi\meter\cubed}} \approx 8.469 \cdot 10^{22}~\unit{\frac{e}{\centi\meter\cubed}}
+    \end{split}
+\end{equation}
+Conduction electrons are far more dense in copper in comparison to silicon, so copper conducts electricity several times better than silicon.
+
+\clearpage
+
+\problem[\textit{An Introduction to Thermal Physics} (Schroeder, 1e) Exercise 7.41]
+\subproblem{(a)}
+The number of atoms $N_1$ in state $s_1$ obeys the differential equation:
+\begin{equation}
+    \begin{split}
+        \deriv{N_1}{t} & = AN_2 - Bu\left(f\right)N_1 + B'u\left(f\right)N_2
+    \end{split}
+\end{equation}
+\subproblem{(b)}
+At equilibrium, $\frac{dN_1}{dt} = \frac{dN_2}{dt} = 0$, with $\frac{N_2}{N_1} = e^{-\frac{E(s_2) - E(s_1)}{k_BT}} = e^{-\frac{\epsilon}{k_BT}} = e^{-\frac{hf}{k_BT}}$. 
+    \begin{equation}
+        \begin{split}
+            \frac{dN_1}{dt} = 0 & = AN_2 - Bu\left(f\right)N_1 + B'u\left(f\right)N_2 \\
+            \frac{N_1}{N_2} = e^{\frac{hf}{k_BT}} & = \frac{A + B'u\left(f\right)}{Bu\left(f\right)} \\
+            & = \frac{\frac{A}{u\left(f\right)} + B'}{B} \\
+            \frac{A}{Be^{\frac{hf}{k_BT}} - B'} & = \frac{8\pi h}{c^3}\frac{f^3}{e^{\frac{hf}{k_BT}} - 1} \\    
+            \frac{A}{B}\frac{1}{e^{\frac{hf}{k_BT}} - \frac{B'}{B}} & = \frac{8\pi hf^3}{c^3}\frac{1}{e^{\frac{hf}{k_BT}} - 1} \\
+        \end{split}
+    \end{equation}
+    Evidently, $\frac{A}{B} = \frac{8\pi hf^3}{c^3}$ and $B = B'$.
+
+\clearpage
+
+\problem[\textit{An Introduction to Thermal Physics} (Schroeder, 1e) Exercise 7.44]
+\subproblem{(a)}
+The number of photons in equilibrium $N$ in a box of volume $V$ and temperature $T$ is:
+\begin{equation}
+    \begin{split}
+        N & = 2\sum_{n_x,n_y,n_z} \frac{1}{e^{\frac{hcn}{2Lk_BT}} - 1} \\
+        & = 2(\frac{4\pi}{8})\int_0^{\infty} \frac{n^2}{e^{\frac{hcn}{2Lk_BT}} - 1} \, \diff{n} \\
+        & = \pi{\left(\frac{2Lk_BT}{hc}\right)}^3\int_0^{\infty} \frac{x^2}{e^x - 1} \, \diff{x} \\
+        & = 8\pi V{\left(\frac{k_BT}{hc}\right)}^3\int_0^{\infty} \frac{x^2}{e^x - 1} \, \diff{x} \\
+    \end{split}
+\end{equation}
+\subproblem{(b)}
+The entropy per photon $\frac{S}{N}$ is:
+\begin{equation}
+    \begin{split}
+        \frac{S}{N} & = \frac{\frac{32\pi^5}{45} Vk_B{\left(\frac{k_BT}{hc}\right)}^3}{8\pi V{\left(\frac{k_BT}{hc}\right)}^3\int_0^{\infty} \frac{x^2}{e^x - 1} \, \diff{x}} \\
+        & = k_B\frac{\frac{4\pi^4}{45}}{\int_0^{\infty} \frac{x^2}{e^x - 1} \, \diff{x}} \\
+        & \approx 3.602k_B
+    \end{split}
+\end{equation}
+There is about $3.602k_B$ entropy per photon.
+\subproblem{(c)}
+The photons per cubic meter at $300~\unit{\kelvin}$ is:
+\begin{equation}
+    \begin{split}
+        \frac{N}{V}\left(T = 300~\unit{\kelvin}\right) & = 8\pi {\left(\frac{k_BT}{hc}\right)}^3\int_0^{\infty} \frac{x^2}{e^x - 1} \, \diff{x} \\
+        & \approx 8\pi {\left(\frac{1.381 \cdot 10^{-23}~\unit{\joule\per\kelvin} \cdot 300~\unit{\kelvin}}{6.63 \cdot 10^{-34}~\unit{\joule\second} \cdot 3 \cdot 10^8~\unit{\meter\per\second}}\right)}^3\left(2.404\right) \\
+        & \approx 5.460 \cdot 10^{14}~\unit{\frac{\gamma}{\meter\cubed}}  \\
+    \end{split}
+\end{equation}
+The photons per cubic meter at $1500~\unit{\kelvin}$ is:
+\begin{equation}
+    \begin{split}
+        \frac{N}{V}\left(T = 1500~\unit{\kelvin}\right) & = 8\pi {\left(\frac{k_BT}{hc}\right)}^3\int_0^{\infty} \frac{x^2}{e^x - 1} \, \diff{x} \\
+        & \approx 8\pi {\left(\frac{1.381 \cdot 10^{-23}~\unit{\joule\per\kelvin} \cdot 1500~\unit{\kelvin}}{6.63 \cdot 10^{-34}~\unit{\joule\second} \cdot 3 \cdot 10^8~\unit{\meter\per\second}}\right)}^3\left(2.404\right) \\
+        & \approx 6.825 \cdot 10^{16}~\unit{\frac{\gamma}{\meter\cubed}}  \\
+    \end{split}
+\end{equation}
+The photons per cubic meter at $2.73~\unit{\kelvin}$ is:
+\begin{equation}
+    \begin{split}
+        \frac{N}{V}\left(T = 2.73~\unit{\kelvin}\right) & = 8\pi {\left(\frac{k_BT}{hc}\right)}^3\int_0^{\infty} \frac{x^2}{e^x - 1} \, \diff{x} \\
+        & \approx 8\pi {\left(\frac{1.381 \cdot 10^{-23}~\unit{\joule\per\kelvin} \cdot 2.73~\unit{\kelvin}}{6.63 \cdot 10^{-34}~\unit{\joule\second} \cdot 3 \cdot 10^8~\unit{\meter\per\second}}\right)}^3\left(2.404\right) \\
+        & \approx 4.115 \cdot 10^{8}~\unit{\frac{\gamma}{\meter\cubed}}  \\
+    \end{split}
+\end{equation}
+
+\clearpage
+
+\problem[\textit{An Introduction to Thermal Physics} (Schroeder, 1e) Exercise 7.51 (partial)]
+\subproblem{(a)}
+The surface area of the filament $A$ is:
+\begin{equation}
+    \begin{split}
+        P & = \sigma e AT^4 \\
+        A & = \frac{P}{\sigma e T^4} \\
+        & = \frac{100~\unit{\watt}}{5.67 \cdot 10^{-8}~\unit{\watt\per\meter\squared\per\kelvin\tothe{4}} \cdot \frac{1}{3} \cdot {\left(3000~\unit{\kelvin}\right)}^4} \\
+        & \approx 6.532 \cdot 10^{-5}~\unit{\meter\squared}
+    \end{split}
+\end{equation}
+\subproblem{(b)}
+The peak in the bulb's spectrum occurs at an energy $\epsilon$ of:
+\begin{equation}
+    \begin{split}
+        \epsilon & = 2.82k_BT \\
+        & = 2.82 \cdot 1.381 \cdot 10^{-23}~\unit{\joule\per\kelvin} \cdot 3000~\unit{\kelvin} \\
+        & \approx 1.168 \cdot 10^{-19}~\unit{\joule} \approx 0.729~\unit{eV} \\
+        \lambda & = \frac{hc}{\epsilon} \\
+        & = \frac{1230~\unit{eV \nano\meter}}{0.729~\unit{eV}} \\
+        & \approx 1687.243~\unit{\nano\meter} \approx 1.687~\unit{\micro\meter}
+    \end{split}
+\end{equation}
+\subproblem{(c)}
+The shaded area in the plot is the visible light spectrum.
+\begin{center}
+    \begin{tikzpicture}
+        \begin{axis}[samples=200,xlabel=$\epsilon$,ylabel=$u(\epsilon)$,ytick={0},xtick={0},xmin=0,xmax=5]
+        \addplot[name path=f,color=red,domain=0.01:5]{x^3/(e^(x/0.26) - 1)};
+        \path[name path=axis] (axis cs:0,0) -- (axis cs:5,0);
+        \addplot [
+            thick,
+            color=red,
+            fill=red, 
+            fill opacity=0.5
+        ]
+        fill between[
+            of=f and axis,
+            soft clip={domain=1.757:3.075},
+        ];
+        \end{axis}
+    \end{tikzpicture} 
+\end{center}
+\subproblem{(d)}
+The fraction of energy that comes out as visible light $p_{\text{vis}}$ is:
+\begin{equation}
+    \begin{split}
+        x_r = \frac{\epsilon_r}{k_BT} & = \frac{\frac{1230~\unit{eV\nano\meter}}{700~\unit{\nano\meter}}}{8.617 \cdot 10^{-5}~\unit{eV\per\kelvin} \cdot 3000~\unit{\kelvin}} \approx 6.797 \\
+        x_v = \frac{\epsilon_v}{k_BT} & = \frac{\frac{1230~\unit{eV\nano\meter}}{400~\unit{\nano\meter}}}{8.617 \cdot 10^{-5}~\unit{eV\per\kelvin} \cdot 3000~\unit{\kelvin}}  \approx 11.895 \\
+        p_{\text{vis}} & = \frac{\int_{x_r}^{x_v} \frac{x^3}{e^x - 1} \, \diff{x}}{\int_{0}^{\infty} \frac{x^3}{e^x - 1} \, \diff{x}} \\
+        & \approx \frac{\int_{6.797}^{11.895} \frac{x^3}{e^x - 1} \, \diff{x}}{\int_{0}^{\infty} \frac{x^3}{e^x - 1} \, \diff{x}} \\
+        & \approx 0.084
+    \end{split}
+\end{equation}
+About $8\%$ of the light is visible, which matches with the plot.
+\subproblem{(e)}
+Increasing the temperature would move the peak to the right and closer to the range of visible light.
+
+\clearpage
+
+\problem[\textit{An Introduction to Thermal Physics} (Schroeder, 1e) Exercise 7.66]
+The theoretical Debye temperature $T_{D,\text{theoretical}}$ is:
+\begin{equation}
+    \begin{split}
+        T_{D,\text{theoretical}} & = \frac{hc_s}{2k_B}{\left(\frac{6}{\pi}\frac{N}{V}\right)}^{\frac{1}{3}} \\
+        & \approx \frac{6.626 \cdot 10^{-34}~\unit{\joule\second} \cdot 3560~\unit{\meter\per\second}}{2 \cdot 1.381 \cdot 10^{-23}~\unit{\joule\per\second}}{\left(\frac{6}{\pi} \cdot 8.469 \cdot 10^{28}~\unit{\per\meter\cubed}\right)}^{\frac{1}{3}} \\
+        & \approx 465.324~\unit{\kelvin} \\
+    \end{split}
+\end{equation}
+The experimental Debye temperature $T_{D,\text{experimental}}$ is:
+\begin{equation}
+    \begin{split}
+        C_V & = \frac{12\pi^4}{5} {\left(\frac{T}{T_{D,\text{experimental}}}\right)}^3 Nk_B \\
+        \frac{C_V}{T} & = \frac{12\pi^4 Nk_B}{T_{D,\text{experimental}}^3} \cdot T^2 \\
+        \frac{12\pi^4 Nk_B}{T_{D,\text{experimental}}^3} & = m \approx \frac{1}{18} \cdot 10^{-3}~\unit{\kilo\gram} \\
+        T_{D,\text{experimental}} & \approx {\left(\frac{12\pi^4 Nk_B}{5m}\right)}^{\frac{1}{3}} \\
+        & \approx {\left(\frac{12\pi^4 12\pi^4 \cdot 6.022 \cdot 10^{23} \cdot 1.381 \cdot 10^{-23}~\unit{\joule\per\kelvin}}{5 \cdot \frac{1}{18} \cdot 10^{-3}~\unit{\kilo\gram}}\right)}^{\frac{1}{3}} \\
+        & \approx 327.094~\unit{\kelvin} \\
+    \end{split}
+\end{equation}
+The theoretical Debye temperature is about $50\%$ larger than the experimental Debye temperature.
+
+\clearpage
+
+\problem[\textit{An Introduction to Thermal Physics} (Schroeder, 1e) Exercise 7.73 (partial)]
+\subproblem{(a)}
+The energy of the ground state $\epsilon_0$ is:
+\begin{equation}
+    \begin{split}
+        \epsilon_0 & = \frac{3h^2}{8mL^2} \\
+        & = \frac{3{\left(6.63 \cdot 10^{-34}~\unit{\joule\second}\right)}^2}{8 \cdot 87 \cdot 1.66 \cdot 10^{-27}~\unit{\kilo\gram} \cdot {\left(10^{-5}~\unit{\meter}\right)}^2} \\
+        & \approx 1.141 \cdot 10^{-32}~\unit{\joule} \approx 7.122 \cdot 10^{-14}~\unit{eV}
+    \end{split}
+\end{equation}
+\subproblem{(b)}
+The condensation temperature $T_c$ is:
+\begin{equation}
+    \begin{split}
+        T_c & = \frac{0.527}{k_B}\frac{h^2}{2\pi m}{\left(\frac{N}{V}\right)}^{\frac{2}{3}} \\
+        & = \frac{0.527}{1.381 \cdot 10^{-23}~\unit{\joule\per\kelvin}}\frac{{\left(6.63 \cdot 10^{-34}~\unit{\joule\second}\right)}^2}{2\pi \cdot 87 \cdot 1.66 \cdot 10^{-27}~\unit{\kilo\gram}}{\left(\frac{10000}{{\left(10^{-5}~\unit{\meter}\right)}^3}\right)}^{\frac{2}{3}} \\
+        & \approx 8.580 \cdot 10^{-8}~\unit{\kelvin} \\
+    \end{split}
+\end{equation}
+Consequently, $k_BT_c \approx 1.185 \cdot 10^{-30}~\unit{\joule} \approx 100\epsilon_0$.
+\subproblem{(c)}
+When $T = 0.9T_c$:
+\begin{equation}
+    \begin{split}
+        N_0 & = \left(1 - \frac{T}{T_c}^{\frac{3}{2}}\right)N \\
+        & = \left(1 - 0.9^{\frac{3}{2}}\right) \cdot 10000 \approx 1462~\unit{atoms} \\
+        \epsilon_0 - \mu & = \frac{k_BT}{N_0} \\
+        & = \frac{8.617 \cdot 10^{-5} \cdot 0.9 \cdot 8.580 \cdot 10^{-8}}{1462} \approx 4.551 \cdot 10^{-15}~\unit{eV} \\
+        \epsilon_1 & = \frac{2^2 + 1^2 + 1^2}{3}\epsilon_0 = 2\epsilon_0 \\
+        N_1 & = \frac{1}{e^{\frac{\epsilon_1 - \mu}{k_BT}} - 1} \\
+        & = \frac{1}{e^{\frac{4.551 \cdot 10^{-15}~\unit{eV} + 7.122 \cdot 10^{-14}~\unit{eV}}{8.617 \cdot 10^{-5}~\unit{eV\per\kelvin} \cdot 0.9 \cdot 8.580 \cdot 10^{-8}~\unit{\kelvin} }} - 1} \approx 87
+    \end{split}
+\end{equation}
+There are $87$ atoms in each of the three first excited states, for a total of $3 \cdot 87 = 261$ atoms in the first excited state.
+\subproblem{(d)}
+For $N = 10^6~\unit{atoms}$:
+\begin{equation}
+    \begin{split}
+        T_c & = \frac{0.527}{k_B}\frac{h^2}{2\pi m}{\left(\frac{N}{V}\right)}^{\frac{2}{3}} \\
+        & = \frac{0.527}{1.381 \cdot 10^{-23}~\unit{\joule\per\kelvin}}\frac{{\left(6.63 \cdot 10^{-34}~\unit{\joule\second}\right)}^2}{2\pi \cdot 87 \cdot 1.66 \cdot 10^{-27}~\unit{\kilo\gram}}{\left(\frac{10^6}{{\left(10^{-5}~\unit{\meter}\right)}^3}\right)}^{\frac{2}{3}} \\
+        & \approx 1.848 \cdot 10^{-6}~\unit{\kelvin} \\
+    \end{split}
+\end{equation}
+Consequently, $k_BT_c \approx 2.552 \cdot 10^{-29}~\unit{\joule} \approx 100\epsilon_0$. When $T = 0.9T_c$:
+\begin{equation}
+    \begin{split}
+        N_0 & = \left(1 - \frac{T}{T_c}^{\frac{3}{2}}\right)N \\
+        & = \left(1 - 0.9^{\frac{3}{2}}\right) \cdot 10^6 \approx 1.462 \cdot 10^5~\unit{atoms} \\
+        \epsilon_0 - \mu & = \frac{k_BT}{N_0} \\
+        & = \frac{8.617 \cdot 10^{-5} \cdot 0.9 \cdot 8.580 \cdot 10^{-8}}{1462} \approx 9.802 \cdot 10^{-16}~\unit{eV} \\
+        \epsilon_1 & = \frac{2^2 + 1^2 + 1^2}{3}\epsilon_0 = 2\epsilon_0 \\
+        N_1 & = \frac{1}{e^{\frac{\epsilon_1 - \mu}{k_BT}} - 1} \\
+        & = \frac{1}{e^{\frac{9.802 \cdot 10^{-16}~\unit{eV} + 7.122 \cdot 10^{-14}~\unit{eV}}{8.617 \cdot 10^{-5}~\unit{eV\per\kelvin} \cdot 0.9 \cdot 8.580 \cdot 10^{-8}~\unit{\kelvin} }} - 1} \approx 1985
+    \end{split}
+\end{equation}
+There are $1985$ atoms in each of the three first excited states, for a total of $3 \cdot 1985 = 5955$ atoms in the first excited state. The number of atoms in the ground state is much greater than the number of atoms in the first excited state for large $N$ within a range of temperatures that gets wider as $N$ increases, for fixed $\frac{T}{T_c}$.
+
+\clearpage
+
+\problem
+\subproblem{(a)}
+For $n \gg 1$, the degeneracy is approximately $\frac{n^2}{2}$. The density of states $g\left(\epsilon\right)$ is then:
+\begin{equation}
+    \begin{split}
+        g\left(\epsilon\right) & = \frac{\frac{n^2}{2}}{hf} \\
+        & = \frac{n^2}{2hf} = \frac{\epsilon^2}{2{\left(hf\right)}^3}
+    \end{split}
+\end{equation}
+\subproblem{(b)}
+The condensation temperature $T_c$ is then:
+\begin{equation}
+    \begin{split}
+        N & = \int_0^{\infty} g\left(\epsilon\right)\frac{1}{e^{\frac{\epsilon - \mu}{k_BT_c}} - 1} \, \diff{\epsilon} \\
+        & = \frac{1}{2{\left(hf\right)}^3}\int_0^{\infty} \frac{\epsilon^2}{e^{\frac{\epsilon - \mu}{k_BT_c}} - 1} \, \diff{\epsilon} \\
+        & = \frac{1}{2}{\left(\frac{k_BT_c}{hf}\right)}^3\int_0^{\infty} \frac{x^2}{e^x - 1} \, \diff{x} \\
+        T_c & = {\left(\frac{2N}{\int_0^{\infty}\frac{x^2}{e^x - 1} \, \diff{x}}\right)}^{\frac{1}{3}}\left(\frac{hf}{k_B}\right) \\
+        & \approx \frac{hf}{k_B}{\left(\frac{N}{1.202}\right)}^{\frac{1}{3}}
+    \end{split}
+\end{equation}
+
+\end{document}

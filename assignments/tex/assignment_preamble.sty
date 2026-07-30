@@ -1,0 +1,254 @@
+\usepackage[utf8]{inputenc}
+\usepackage{enumitem}
+\usepackage{multirow}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{turnstile,adjustbox}
+\usepackage{gauss}
+\usepackage{tikz, tikz-cd, tikz-dimline, pgfplots}
+\usetikzlibrary{decorations.markings, angles, quotes, scopes}
+\usepackage{pgfplots}
+\usepgfplotslibrary{fillbetween}
+\usepackage{braket}
+\usepackage{tikz-feynman}
+\usepackage{xcolor}
+\usepackage{verbatim}
+\usepackage{listings}
+\usepackage{graphicx}
+\usepackage{algorithm}
+\usepackage{algpseudocode}
+\usepackage{hyperref}
+\usepackage{xifthen}
+\makeatletter
+\def\new@fontshape{}
+\makeatother
+\usepackage{siunitx}
+\sisetup{per-mode = symbol}
+\usepackage{mhchem}
+\usepackage{gb4e}
+\usepackage{qtree}
+\usepackage{matlab-prettifier}
+\usepackage{fitch}
+\noautomath
+\allowdisplaybreaks
+
+\newcounter{pnum}
+\newcommand{\problem}[1][]{
+\stepcounter{pnum} 
+\section*{Exercise \thepnum}
+\ifthenelse{\isempty{#1}}%
+    {}
+    {\textbf{#1}\vspace{5pt}\hrule\vspace{5pt}}
+}
+\newcommand{\skipproblem}{
+    \stepcounter{pnum}
+}
+\newcommand{\subproblem}[1]{
+\subsection*{Part #1}
+}
+\newcommand{\repository}[1]{
+Code available on \href{#1}{Github}.\vspace{5pt}\hrule\vspace{5pt}
+}
+
+% COMMANDS
+\newcommand{\solution}{{\color{blue} \textsc{\ \\ Solution.\ \ }}}
+\newcommand{\Z}{\mathbb{Z}} % the integers
+\newcommand{\N}{\mathbb{N}} % natural numbers
+\newcommand{\R}{\mathbb{R}} % real numbers
+\newcommand{\C}{\mathbb{C}} % complex numbers
+\newcommand{\Q}{\mathbb{Q}} % rational numbers
+\newcommand{\st}{ \ : \ } % such that
+\newcommand{\inv}{^{-1}} % inverse
+\newcommand{\into}{\hookrightarrow}  % injection
+\newcommand{\onto}{\twoheadrightarrow} % surjection
+\newcommand{\map}[1]{\xrightarrow{#1}} % named map
+\newcommand{\id}{\mathrm{id}} % identity map
+\newcommand{\Frac}{\mathrm{Frac}} % fraction field
+\newcommand{\normal}{\unlhd} % normal subgroup of
+
+\DeclareMathOperator{\img}{im} % image
+\DeclareMathOperator{\sgn}{sgn} % sign of permutation
+\DeclareMathOperator{\ord}{ord} % order of group element
+\DeclareMathOperator{\lcm}{lcm} % least common multiple
+% \DeclareMathOperator{\gcd}{gcd} % greatest common divisor
+\newcommand{\F}{\mathbb{F}} % random field
+\newcommand{\Isom}{\mathrm{Isom}} % isometries group
+
+\newcommand{\wt}{\mathrm{wt}} % hamming weight
+
+\makeatletter
+\newcommand*{\diff}%
+{\@ifnextchar^{\DIfF}{\DIfF^{}}}
+\def\DIfF^#1{%
+\mathop{\mathrm{\mathstrut d}}%
+\nolimits^{#1}\gobblespace}
+\def\gobblespace{%
+\futurelet\diffarg\opspace}
+\def\opspace{%
+\let\DiffSpace\!%
+\ifx\diffarg(%
+\let\DiffSpace\relax
+\else
+\ifx\diffarg[%
+\let\DiffSpace\relax
+\else
+\ifx\diffarg\{%
+\let\DiffSpace\relax
+\fi\fi\fi\DiffSpace}
+\newcommand*{\deriv}[3][]{%
+\frac{\diff^{#1}#2}{\diff #3^{#1}}}
+\newcommand*{\pderiv}[3][]{%
+\frac{\partial^{#1}#2}%
+{\partial #3^{#1}}}
+
+\renewcommand{\makehor}[4]
+  {\ifthenelse{\equal{#1}{n}}{\hspace{#3}}{}
+   \ifthenelse{\equal{#1}{s}}{\rule[-0.5#2]{#3}{#2}}{}
+   \ifthenelse{\equal{#1}{d}}{\setlength{\lengthvar}{#2}
+     \addtolength{\lengthvar}{0.5#4}
+     \rule[-\lengthvar]{#3}{#2}
+     \hspace{-#3}
+     \rule[0.5#4]{#3}{#2}}{}
+   \ifthenelse{\equal{#1}{t}}{\setlength{\lengthvar}{1.5#2}
+     \addtolength{\lengthvar}{#4}
+     \rule[-\lengthvar]{#3}{#2}
+     \hspace{-#3}
+     \rule[-0.5#2]{#3}{#2}
+     \hspace{-#3}
+     \setlength{\lengthvar}{0.5#2}
+     \addtolength{\lengthvar}{#4}
+     \rule[\lengthvar]{#3}{#2}}{}
+   \ifthenelse{\equal{#1}{w}}{% New wavy $\sim$ definition
+     \setbox0=\hbox{$\sim$}%
+     \raisebox{-.6ex}{\hspace*{-.05ex}\adjustbox{width=#3,height=\height}{\clipbox{0.75 0 0 0}{\usebox0}}}}{}
+  }
+
+  \lstset{
+    aboveskip={1.3\baselineskip},
+    basicstyle=\scriptsize\ttfamily\linespread{4},
+    breaklines=false,
+    columns=flexible,
+    commentstyle=\color[rgb]{0.127,0.427,0.514}\ttfamily\itshape,
+    escapechar=@,
+    extendedchars=true,
+    frame=single,
+    identifierstyle=\color{black},
+    inputencoding=latin1,
+    keywordstyle=\color[HTML]{228B22}\bfseries,
+    language=Python,
+    ndkeywordstyle=\color[HTML]{228B22}\bfseries,
+    numbers=left,
+    numberstyle=\tiny,
+    prebreak = \raisebox{0ex}[0ex][0ex]{\ensuremath{\hookleftarrow}},
+    stringstyle=\color[rgb]{0.639,0.082,0.082}\ttfamily,
+    upquote=true,
+    showstringspaces=false,
+}
+
+\lstset{literate=%
+   *{0}{{{\color{darkgray}0}}}1
+    {1}{{{\color{darkgray}1}}}1
+    {2}{{{\color{darkgray}2}}}1
+    {3}{{{\color{darkgray}3}}}1
+    {4}{{{\color{darkgray}4}}}1
+    {5}{{{\color{darkgray}5}}}1
+    {6}{{{\color{darkgray}6}}}1
+    {7}{{{\color{darkgray}7}}}1
+    {8}{{{\color{darkgray}8}}}1
+    {9}{{{\color{darkgray}9}}}1
+} 
+\newcommand{\strongkleene}{
+  \ndrules
+  \def\dn##1{\by{$\lnot\lnot$I}{##1}}
+  \def\mci##1{\by{mcI}{##1}}
+  \def\mce##1{\by{mcE}{##1}}
+  \def\nmci##1{\by{$\lnot$mcI}{##1}}
+  \def\nmce##1{\by{$\lnot$mcE}{##1}}
+  \def\nci##1{\by{$\lnot\land$I}{##1}}
+  \def\nce##1{\by{$\lnot\land$E}{##1}}
+  \def\ndi##1{\by{$\lnot\lor$I}{##1}}
+  \def\nde##1{\by{$\lnot\lor$E}{##1}}
+}
+
+\newcommand{\lukasiewicz}{
+  \ndrules
+  \def\dn##1{\by{$\lnot\lnot$I}{##1}}
+  \def\nci##1{\by{$\lnot\land$I}{##1}}
+  \def\nce##1{\by{$\lnot\land$E}{##1}}
+  \def\ndi##1{\by{$\lnot\lor$I}{##1}}
+  \def\nde##1{\by{$\lnot\lor$E}{##1}}
+  \def\condi##1{\by{$L_3\Rightarrow$I}{##1}}
+  \def\condd##1{\by{$L_3$D}{##1}}
+  \def\condmt##1{\by{MT}{##1}}
+  \def\nconde##1{\by{$L_3\lnot\Rightarrow$E}{##1}}
+  \def\ncondi##1{\by{$L_3\lnot\Rightarrow$I}{##1}}
+}
+
+\newcommand{\lukasiewiczmodified}{
+  \ndrules
+  \def\dn##1{\by{$\lnot\lnot$I}{##1}}
+  \def\nci##1{\by{$\lnot\land$I}{##1}}
+  \def\nce##1{\by{$\lnot\land$E}{##1}}
+  \def\ndi##1{\by{$\lnot\lor$I}{##1}}
+  \def\nde##1{\by{$\lnot\lor$E}{##1}}
+  \def\condi##1{\by{$L_3\Rightarrow$I}{##1}}
+  \def\condd##1{\by{$L_3$D}{##1}}
+  \def\condmt##1{\by{MT}{##1}}
+  \def\nconde##1{\by{$L_3\lnot\Rightarrow$E}{##1}}
+  \def\ncondi##1{\by{$L_3\lnot\Rightarrow$I}{##1}}
+  \def\tdiam##1{\by{T$\diamond$}{##1}}
+  \def\weaken##1{\by{W}{##1}}
+}
+
+\newcommand{\paradox}{
+  \ndrules
+  \def\dn##1{\by{$\lnot\lnot$I}{##1}}
+  \def\mci##1{\by{mcI}{##1}}
+  \def\mce##1{\by{mcE}{##1}}
+  \def\nmci##1{\by{$\lnot$mcI}{##1}}
+  \def\nmce##1{\by{$\lnot$mcE}{##1}}
+  \def\nci##1{\by{$\lnot\land$I}{##1}}
+  \def\nce##1{\by{$\lnot\land$E}{##1}}
+  \def\ndi##1{\by{$\lnot\lor$I}{##1}}
+  \def\nde##1{\by{$\lnot\lor$E}{##1}}
+  \def\tnd##1{\by{TND}{##1}}
+}
+
+\newcommand{\godel}{
+  \ndrules
+  \def\gt##1{\by{G3}{##1}}
+}
+
+\newcommand{\fde}{
+  \ndrules
+  \def\dn##1{\by{$\lnot\lnot$I}{##1}}
+  \def\mci##1{\by{mcI}{##1}}
+  \def\mce##1{\by{mcE}{##1}}
+  \def\nmci##1{\by{$\lnot$mcI}{##1}}
+  \def\nmce##1{\by{$\lnot$mcE}{##1}}
+  \def\nci##1{\by{$\lnot\land$I}{##1}}
+  \def\nce##1{\by{$\lnot\land$E}{##1}}
+  \def\ndi##1{\by{$\lnot\lor$I}{##1}}
+  \def\nde##1{\by{$\lnot\lor$E}{##1}}
+}
+
+\newcommand{\relevant}{
+  \ndrules
+  \def\condi##1{\by{$\to_R$I}{##1}}
+  \def\conde##1{\by{$\to_R$E}{##1}}
+  \def\sqi##1{\by{$\square$I}{##1}}
+  \def\sqe##1{\by{$\square$E}{##1}}
+  \def\cii##1{\by{$\circ$I}{##1}}
+  \def\cie##1{\by{$\circ$E}{##1}}
+}
+
+\newcommand{\connexive}{
+  \ndrules
+  \def\dn##1{\by{$\lnot\lnot$I}{##1}}
+  \def\nci##1{\by{$\lnot\land$I}{##1}}
+  \def\nce##1{\by{$\lnot\land$E}{##1}}
+  \def\ndi##1{\by{$\lnot\lor$I}{##1}}
+  \def\nde##1{\by{$\lnot\lor$E}{##1}}
+  \def\tnd##1{\by{TND}{##1}}
+  \def\nconde##1{\by{$\lnot\Rightarrow$E}{##1}}
+  \def\ncondi##1{\by{$\lnot\Rightarrow$I}{##1}}
+}

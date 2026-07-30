@@ -1,0 +1,38 @@
+\documentclass{article}
+\usepackage{../assignment_preamble}
+
+\title{Weekly Problem 1}
+\author{Ravi Kini}
+\date{April 6, 2026}
+
+\begin{document}
+
+\maketitle
+
+\problem
+\subproblem{(a)}
+\begin{equation*}
+\begin{nd}
+\hypo {1} {p \lor q}
+\open
+\hypo {2} {\lnot p}
+\open
+\hypo {3} {p}
+\have {4} {\bot} \ne{2,3}
+\have {5} {q} \be{4}
+\close 
+\open
+\hypo {6} {q}
+\have {7} {q} \r{6}
+\close 
+\have {8} {q} \oe{1,3-5,6-7}
+\close
+\have {9} {\lnot p \Rightarrow q} \ii{2-8}
+\end{nd}
+\end{equation*}
+We then see that $p \lor q \vdash \lnot p \Rightarrow q$ is a valid argument in classical logic.
+
+\subproblem{(b)}
+Let $p = 1$, $q = 0$, and $r = 1$. We see that $q \lor r = 1$, so $p \Rightarrow (q \lor r) = 1$. However, $\lnot p = 0$. Consequently, the argument $p \Rightarrow (q \lor r), \lnot q \vdash \lnot p$ is an invalid argument in classical logic.
+
+\end{document}

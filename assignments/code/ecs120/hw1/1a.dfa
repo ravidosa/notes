@@ -1,0 +1,35 @@
+// DFA recognizing { w in {0,1}* | w begins with 010 and ends with a 0 }
+
+states = {e,        // epsilon
+          0,        // first bit 0
+          01,       // first two bits 01
+          010q0,    // first three bits 010, last bit 0
+          010q1,    // first three bits 010, last bit 1
+          Q}        // first three bits not 010
+
+input_alphabet = {0,1}
+
+// epsilon (string of length zero) when we start
+start_state =    e
+
+// accept if first three bits 010 and last bit 0
+accept_states =  {010q0}
+
+delta =
+    // if first three bits 010, first condition satisfied
+    e,0         -> 0;
+    0,1         -> 01;
+    01,0        -> 010q0;
+    
+    // if first three bits not 010, reject
+    e,1         -> Q;
+    0,0         -> Q;
+    01,1        -> Q;
+    Q,0         -> Q;
+    Q,1         -> Q;
+
+    // when first condition satisfied, keep track of last bit
+    010q0,0     -> 010q0;
+    010q0,1     -> 010q1;
+    010q1,0     -> 010q0;
+    010q1,1     -> 010q1;

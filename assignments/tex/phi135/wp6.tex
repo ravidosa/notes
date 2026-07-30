@@ -1,0 +1,20 @@
+\documentclass{article}
+\usepackage{../assignment_preamble}
+
+\title{Weekly Problem 6}
+\author{Ravi Kini}
+\date{May 14, 2026}
+
+\begin{document}
+
+\maketitle
+
+\problem
+Let there be a Kripke model with moments $0$, $1$, and $2$ where $0 \leq 1$ and $0 \leq 2$. Let $p$ be verified at $\{0, 2\}$ and $q$ be verified at $\{2\}$.
+
+For $p \Rightarrow q$ to be verified at $0$, for all $v$ such that $0 \leq v$, if $p$ is verified at $0$, then $q$ is verified at $v$. However, we see that $0 \leq 1$, but $p$ is verified at $0$ and $q$ is not verified at $1$. Consequently, $p \Rightarrow q$ is not verified at $0$.
+
+For $\lnot \lnot p$ to be verified at $0$, for all $v$ such that $0 \leq v$ and all $w$ such that $v \leq w$, $p$ is verified at $w$. Equivalently, by transitivity, for all $v$ such that $0 \leq v$, $p$ is verified at $v$. However, we see that $0 \leq 1$, and $p$ is not verified at $1$. Consequently, $\lnot \lnot p$ is not verified at $0$.
+
+For $\lnot p \lor q$ to be verified at $0$, either $p$ is not verified at $0$ or $q$ is verified at $0$. However, we see that $p$ is verified at $0$ $q$ is not verified at $0$. Consequently, $\lnot p \lor q$ is not verified at $0$.
+\end{document}

@@ -1,0 +1,106 @@
+\documentclass{article}
+\usepackage{../assignment_preamble}
+
+\title{Homework 2}
+\author{Ravi Kini}
+\date{October 15, 2025}
+
+\begin{document}
+
+\maketitle
+
+\problem{}
+Let $a, b, c \in \mathbb{Z}$ such that $(a, b) = (a, c) = 1$. Suppose $(a, bc) = n$ where $n > 1$. Let $p$ be the largest prime factor of $n$. Since $n \mid a$ and $p \mid n$, $p \mid a$. Likewise, $p \mid bc$. Consequently, either $p \mid b$ or $p \mid c$. If $p \mid b$, then $(a, b) \neq 1$, since $p > 1$ divides both $a$ and $b$. Similarly, if $p \mid c$, $(a, c) \neq 1$. In either case, this is a contradiction; therefore $(a, bc) = 1$.
+
+\clearpage
+
+\problem{}
+\subproblem{(a)}
+Let $a, b, c \in \mathbb{Z}$ such that $(a, b) = 1$, $a \mid c$, and $b \mid c$. By Bezout's theorem, there exist $m, n \in \mathbb{Z}$ such that $ma + nb = 1$. Then:
+\begin{align*}
+    ma + nb & = 1 \\
+    mac + nbc & = c \\
+\end{align*}
+If $a \mid c$, there exists $p \in \mathbb{Z}$ such that $ap = c$. Likewise, there exists some $q \in \mathbb{Z}$ such that $bq = c$. Then:
+\begin{align*}
+    ma + nb & = 1 \\
+    ma(bq) + nb(ap) & = c \\
+    ab(mq + np) & = c \\
+\end{align*}
+Consequently, $ab \mid c$.
+
+However, this is not true if $(a, b) \neq 1$. Note the case where $a = 6$, $b = 9$, and $c = 18$. Clearly, $a \mid c$ and $b \mid c$, but $ab \nmid c$.
+\subproblem{(b)}
+Let $a, b, c \in \mathbb{Z}$ such that $(a, b) = 1$ and $a \mid bc$. By Bezout's theorem, there exist $m, n \in \mathbb{Z}$ such that $ma + nb = 1$. Then:
+\begin{align*}
+    ma + nb & = 1 \\
+    mac + nbc & = c \\
+\end{align*}
+If $a \mid c$, there exists $p \in \mathbb{Z}$ such that $ap = c$. Then:
+\begin{align*}
+    ma + nb & = 1 \\
+    ma + nb(ap) & = c \\
+    a(m + nbp) & = c \\
+\end{align*}
+Consequently, $a \mid c$.
+
+However, this is not true if $(a, b) \neq 1$. Note the case where $a = 6$, $b = 3$, and $c = 4$. Clearly, $a \mid bc$, but $a \nmid c$.
+
+\clearpage
+
+\problem{}
+\subproblem{(a)}
+Applying the division algorithm repeatedly:
+\begin{align*}
+    1234 & = 981 \cdot 1 + 253 \\
+    981 & = 253 \cdot 3 + 222 \\
+    253 & = 222 \cdot 1 + 31 \\
+    222 & = 31 \cdot 7 + 5 \\
+    31 & = 5 \cdot 6 + 1 \\
+    5 & = 1 \cdot 5 + 0 \\
+\end{align*}
+Consequently, $(981, 1234) = 1$. Expressing the GCD as a linear combination:
+\begin{align*}
+    1 & = 5 \cdot -6 + 31 \\
+    & = (31 \cdot -7 + 222) \cdot -6 + 31 = 31 \cdot 43 + 222 \cdot -6 \\
+    & = (222 \cdot -1 + 253) \cdot 43 + 222 \cdot -6 = 222 \cdot -49 + 253 \cdot 43 \\
+    & = (253 \cdot -3 + 981) \cdot -49 + 253 \cdot 43 = 253 \cdot 190 + 981 \cdot -49 \\
+    & = (981 \cdot -1 + 1234) \cdot 190 + 981 \cdot -49 = 981 \cdot -239 + 1234 \cdot 190 \\
+\end{align*}
+The GCD can be expressed as $1 = 981 \cdot -239 + 1234 \cdot 190$.
+\subproblem{(b)}
+Applying the division algorithm repeatedly:
+\begin{align*}
+    100313 & = 34709 \cdot 2 + 30895 \\
+    34709 & = 30895 \cdot 1 + 3814 \\
+    30895 & = 3814 \cdot 8 + 383 \\
+    3814 & = 383 \cdot 9 + 367 \\
+    383 & = 367 \cdot 1 + 16 \\
+    367 & = 16 \cdot 22 + 15 \\
+    16 & = 15 \cdot 1 + 1 \\
+    15 & = 1 \cdot 15 + 0 \\
+\end{align*}
+Consequently, $(34709, 100313) = 1$. Expressing the GCD as a linear combination:
+\begin{align*}
+    1 & = 15 \cdot -1 + 16 \\
+    & = (16 \cdot -22 + 367) \cdot -1 + 16 = 16 \cdot 23 + 367 \cdot -1 \\
+    & = (367 \cdot -1 + 383) \cdot 23 + 367 \cdot -1 = 367 \cdot -24 + 383 \cdot 23 \\
+    & = (383 \cdot -9 + 3814) \cdot -24 + 383 \cdot 23 = 383 \cdot 239 + 3814 \cdot -24 \\
+    & = (3814 \cdot -8 + 30895) \cdot 239 + 3814 \cdot -24 = 3814 \cdot -1936 + 30895 \cdot 239 \\
+    & = (30895 \cdot -1 + 34709) \cdot -1936 + 30895 \cdot 239 = 30895 \cdot 2175 + 34709 \cdot -1936 \\
+    & = (34709 \cdot -2 + 100313) \cdot 2175 + 34709 \cdot -1936 = 34709 \cdot -2414 + 100313 \cdot 2175 \\
+\end{align*}
+The GCD can be expressed as $1 = 34709 \cdot -2414 + 100313 \cdot 2175$.
+
+\clearpage
+
+\problem{}
+Let $n \in \mathbb{N}$. Since $(2n^2 + 6n - 4) - (2n^2 + 4n - 3) = 2n - 1 > 0$, $2n^2 + 6n - 4 > 2n^2 + 4n - 3$. Applying the division algorithm repeatedly:
+\begin{align*}
+    2n^2 + 6n - 4 & = (2n^2 + 4n - 3) \cdot 1 + (2n - 1) \\
+    2n^2 + 4n - 3 & = (2n - 1) \cdot (n + 2) + (n - 1) \\
+    2n - 1 & = (n - 1) \cdot 2 + 1 \\
+    n - 1 & = 1 \cdot (n - 1) + 0 \\
+\end{align*}
+Consequently, $(2n^2 + 6n - 4, 2n^2 + 4n - 3) = 1$.
+\end{document}

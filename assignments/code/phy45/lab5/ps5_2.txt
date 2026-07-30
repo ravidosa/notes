@@ -1,0 +1,7 @@
+For N = 100, M/N = 0.79000000.
+For N = 10000, M/N = 0.77840000.
+For N = 1000000, M/N = 0.78477100.
+For N = 100000000, M/N = 0.78533816.
+The graph of all positive numbers that fulfill x^2 + y^2 < 1 is a quarter-circle with radius 1.
+The area of this quarter-circle would be 1^2*pi/4, which is around 0.78539816339.
+As the number of points taken increases, the ratio of M/N approaches this value.

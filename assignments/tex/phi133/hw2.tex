@@ -1,0 +1,70 @@
+\documentclass{article}
+\usepackage{../assignment_preamble}
+
+\title{Homework 2}
+\author{Ravi Kini}
+\date{October 8, 2025}
+
+\begin{document}
+
+\maketitle
+
+\problem
+\begin{align*}
+    \Delta = \{A/C, B/C\}
+\end{align*}
+\subproblem{(a)}
+\begin{center}
+    \begin{tabular}{|c|c|p{50mm}|}
+        \hline
+        Theory & Default & Justification \\
+        \hline
+        $T_0 = \{A\}$ & $A/C$ & $T_0 \vDash A$ \newline $T_0 \not\vDash \lnot C$ \newline $T_0 \not\vDash C$ \\
+        \hline
+        $T_1 = \{A, C\}$ & none & $T_1 \vDash C$ violates $A/C$ \newline $T_1 \not\vDash B$ violates $B/C$ \\
+        \hline
+    \end{tabular}
+\end{center}
+Therefore $\{A\} \turnstile{s}{w}{}{}{n}_\Delta C$.
+\subproblem{(b)}
+\begin{center}
+    \begin{tabular}{|c|c|p{50mm}|}
+        \hline
+        Theory & Default & Justification \\
+        \hline
+        $T_0 = \{B\}$ & $B/C$ & $T_0 \vDash B$ \newline $T_0 \not\vDash \lnot C$ \newline $T_0 \not\vDash C$ \\
+        \hline
+        $T_1 = \{B, C\}$ & none & $T_1 \not\vDash A$ violates $A/C$ \newline $T_1 \vDash C$ violates $B/C$ \\
+        \hline
+    \end{tabular}
+\end{center}
+Therefore $\{B\} \turnstile{s}{w}{}{}{n}_\Delta C$.
+\subproblem{(c)}
+\begin{center}
+    \begin{tabular}{|c|c|p{50mm}|}
+        \hline
+        Theory & Default & Justification \\
+        \hline
+        $T_0 = \{A \lor B\}$ & none & $T_0 \not\vDash A$ violates $A/C$ \newline $T_0 \not\vDash B$ violates $B/C$ \\
+        \hline
+    \end{tabular}
+\end{center}
+Therefore $\{A \lor B\} \not\turnstile{s}{w}{}{}{n}_\Delta C$.
+
+\clearpage
+
+\problem
+In part (c) of the previous problem, we showed that $\{A \lor B\} \not\turnstile{s}{w}{}{}{n}_\Delta C$ despite $\{A\} \turnstile{s}{w}{}{}{n}_\Delta C$ and $\{B\} \turnstile{s}{w}{}{}{n}_\Delta C$. However, if $T_0 \vDash A \lor B$, it is either the case that $T_0 \vDash A$ or $T_0 \vDash B$. From the Principle of Case Reasoning, since in both cases we can infer $C$, we can infer $C$ from the premise $A \lor B$. If this principle is true, as common sense suggests, the logic covered in this unit is inadequate.
+
+\clearpage
+
+\problem
+\begin{align*}
+    \Delta & = \{\textrm{HasFunding}/\textrm{Admit}, \\
+    & \textrm{MeetsGPARequirements}/\textrm{Admit}, \\
+    & \textrm{ResearchExperience}/\textrm{Admit}\} \\
+    \textrm{HasFunding}/\textrm{Admit} & > \textrm{ResearchExperience}/\textrm{Admit} \\
+    \textrm{ResearchExperience}/\textrm{Admit} & > \textrm{MeetsGPARequirements}/\textrm{Admit}
+\end{align*}
+For this strict partial ordering, I considered which factors a graduate admissions committee prioritizes when deciding whether or not to admit a student. If $T = \{\textrm{HasFunding}, \textrm{MeetsGPARequirements}, \textrm{ResearchExperience}, \lnot \textrm{Admit}\}$, none of the defaults are applicable since $T \vDash \lnot\textrm{Admit}$. The set of skeptical nonmonotonic consequences is then $\textrm{Cn}(T)$.
+\end{document}

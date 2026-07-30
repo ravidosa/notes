@@ -1,0 +1,3 @@
+For 1000 iterations, the code takes less than a second to run.
+This makes sense, as on the order of (3/0.1*2/0.1)*(2*1000+2) operations are performed,
+which would result in a 3 GHz processor taking on the order of 0.0004 seconds to run the code.

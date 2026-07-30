@@ -1,0 +1,85 @@
+\documentclass{article}
+\usepackage{assignment_preamble}
+
+\title{Homework 8}
+\author{Ravi Kini}
+\date{December 5, 2023}
+
+\begin{document}
+
+\maketitle
+
+\problem[\textit{Algebra} (Artin, 2e) Exercise 6.8.1]
+Let $P * A := PAP^T$ for $P \in GL_n, A \in M_{n\times n}$. The identity of $GL_n$ is $I$; since $IAI^T = IAI = AI = A$ for arbitrary $A \in M_{n \times n}$, the identity property is satisfied. Let $P_1, P_2 \in GL_n$ and $A \in M_{n \times n}$. Then:
+\begin{equation}
+    \begin{split}
+        \left(P_1P_2\right) * A & = \left(P_1P_2\right)A\left(P_1P_2\right)^T \\
+        & = \left(P_1P_2\right)A\left(P_2^TP_1^T\right) \\
+        & = P_1\left(P_2AP_2^T\right)P_1^T \\
+        & = P_1\left(P_2 * A\right)P_1^T \\
+        & = P_1 * \left(P_2 * A\right)
+    \end{split}
+\end{equation}
+Consequently, the associativity property is fulfilled; $*$ is therefore an operation of $GL_n$ on $M_{n \times n}$. 
+
+\clearpage
+
+\problem[\textit{Algebra} (Artin, 2e) Exercise 6.8.2]
+Let group $G, H \leq G$, and consider the operation of $G$ on $G/H$. Let some arbitary $k \in aHa^{-1}$. Then $k = aha^{-1}$ for some $h \in H$. Then:
+\begin{equation}
+    \begin{split}
+        kaH & = aha^{-1}aH \\
+        & = ahH \\
+        & = aH
+    \end{split}
+\end{equation}
+Evidently $k$ is a stabilizer of $aH$, so $aHa^{-1} \subseteq \mathrm{stab}_G\left(aH\right)$. Now let some arbitrary $l \in \mathrm{stab}_G\left(aH\right)$. Then:
+\begin{equation}
+    \begin{split}
+        laH & = aH \\
+        a^{-1}laH & = H
+    \end{split}
+\end{equation}
+Consequently, $a^{-1}la = h$ for some $h \in H$, which means that $l = aha^{-1}$ and $\mathrm{stab}_G\left(aH\right) \subseteq aHa^{-1}$. Evidently, $\mathrm{stab}_G\left(aH\right) = aHa^{-1}$.
+
+\clearpage
+
+\problem[\textit{Algebra} (Artin, 2e) Exercise 6.8.3]
+Let $G$ be the dihedral group $D_4$ and $S$ be the set of vertices of a square. A given vertex $s$ has two stabilizers: $e$ and either $yx$ or $yx^3$ (the identity transformation and reflection about the diagonal through the vertex). Without loss of generality, let the second stabilizer be $yx$. A similar proof proceeds if the second stabilizer is $yx^3$. The cosets of $H$ are then:
+\begin{equation}
+    \begin{split}
+        eH = H \quad & \quad xH = \left\{x, y\right\} \\
+        x^2H = \left\{x^2, yx^3\right\} \quad & \quad x^3H = \left\{x^3, yx^2\right\} \\
+        yH = \left\{x, y\right\} \quad & \quad yxH = H \\
+        yx^2H = \left\{x^3, yx^2\right\} \quad & \quad yx^3H = \left\{x^2, yx^3\right\} \\
+    \end{split}
+\end{equation}
+Consequently, we define $D_4 / 4 = \left\{\overline{e}, \overline{x}, \overline{x^3}, \overline{x^4}\right\}$, noting that each coset has exactly one element that can be reduced to a form that does not contain $y$. The orbit of the vertex $O_s$ is $S$, as it can be mapped to any other vertex through an arbitrary number of rotations,  such that $S = \left\{s, xs, x^2s, x^3s\right\}$. We then construct the bijective mapping $\varepsilon : D_4 / H \to S$ that maps $\overline{d} \to ds$.
+
+\clearpage
+
+\problem[\textit{Algebra} (Artin, 2e) Exercise 6.9.2 (extended)]
+\subproblem{(a)}
+Let $G$ be the group of \textbf{rotational symmetries} of the cube. Let $V$, $E$, and $F$ denote the sets of vertices, edges, and faces of the cube, respectively. Then:
+\begin{equation}
+    \left|V\right| = 8 \quad \left|E\right| = 12 \quad \left|F\right| = 6.
+\end{equation}
+The stabilizer of a particular vertex $G_v$ is the group of rotations by multiples of $\frac{2\pi}{3}$ about the vertex, which has order $3$. The orbit of a particular vertex is the set of all vertices, which has order $8$. The stabilizer of a particular edge $G_e$ is the group of rotations by multiples of $\frac{2\pi}{2} = \pi$ about the center of the edge, which has order $2$. The orbit of a particular edge is the set of all edges, which has order $12$. The stabilizer of a particular face $G_f$ is the group of rotations by multiples of $\frac{2\pi}{4} = \frac{\pi}{2}$ about the center of the face, which has order $4$. The orbit of a particular face is the set of all faces, which has order $6$. By the counting formula, $\left|G\right| = 3 \cdot 8 = 2 \cdot 12 = 4 \cdot 6 = 24$.
+\subproblem{(b)}
+Let $G_v, G_e, G_f$ be the stabilizers of a vertex $v$, and edge $e$, and a face $f$ of the cube. Let the columns $G_v, G_e, G_f$ be the groups and the rows $V, E, F$ be the sets in the group action. Each cell represents the partition of the set in the corresponding row into orbits under the group action of the group in the corresponding column on the set in the corresponding row.
+    
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+    \hline
+     & $G_v$ & $G_e$ & $G_f$ \\
+    \hline
+    $V$ & $8 = 1 + 1 + 3 + 3$ & $8 = 2 + 2 + 2 + 2$ & $8 = 4 + 4$ \\ 
+    \hline
+    $E$ & $12 = 3 + 3 + 3 + 3$ & $12 = 1 + 1 + 2 + 2 + 2 + 2 + 2$ & $12 = 4 + 4 + 4$ \\ 
+    \hline
+    $F$ & $6 = 3 + 3$ & $6 = 2 + 2 + 2$ & $6 = 1 + 1 + 4$ \\ 
+    \hline
+\end{tabular}
+\end{center}
+
+\end{document}

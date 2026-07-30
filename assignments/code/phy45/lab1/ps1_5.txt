@@ -1,0 +1,5 @@
+The nth partial sum of a geometric series is given by (a_1(1-r^n))/(1-r) for first term a_1 and ratio r.
+In this program, that would translate to (1-a^N)/(1-a).
+The correct answer for a = 0.3, N = 10 is (1-0.3**10)/(1-0.3) = 1.428562993, while the code outputs 1.428562993.
+The correct answer for a = 0.8, N = 10 is (1-0.8**10)/(1-0.8) = 4.463129088, while the code outputs 4.463129088.
+The computer-calculated partial sums are fairly accurate, although not exactly so due to limits in memory storage for floating point numbers and round-off error.

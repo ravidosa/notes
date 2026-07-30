@@ -1,0 +1,4 @@
+Most of the eigenvalues are the same, except for the highest value,
+which is significantly higher in the system with the defect, which makes sense,
+as the spring with the defect has a significantly higher spring constant,
+resulting in a higher frequency of oscillation for the system.

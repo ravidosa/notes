@@ -1,0 +1,2 @@
+a) the initial values make sense because the mass starts off at x=5 and is beginning to move towards the equilibrium at 0.
+b) the part where the value changes signs is when the mass passes the equilibrium point at x=0 and continues to move past it into negative x-values*/

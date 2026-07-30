@@ -1,0 +1,424 @@
+\documentclass{article}
+\usepackage{../assignment_preamble}
+
+\title{Homework 5}
+\author{Ravi Kini}
+\date{November 5, 2025}
+
+\begin{document}
+
+\maketitle
+
+\problem{}
+Consider the Bayesian network with the following DAG over Boolean variables:
+\begin{center}
+\begin{tikzpicture}[
+       decoration = {markings,
+                     mark=at position .5 with {\arrow{Stealth[length=2mm]}}},
+       dot/.style = {circle, fill, inner sep=2.4pt, node contents={},
+                     label=#1},
+every edge/.style = {draw, postaction=decorate}
+                        ]
+\node (a) at (-3,0) [dot=above:$A$ (HasChange)];
+\node (b) at (3,0) [dot=above:$B$ (Hungry)];
+\node (c) at (-5,-1) [dot=right:$C$ (SelectsDrink)];
+\node (d) at (0,-1) [dot=right:$D$ (SelectsChips)];
+\node (e) at (5,-1) [dot=right:$E$ (StealsLabmatesLunch)];
+\node (f) at (-3,-2) [dot=below:$F$ (ReceivesDrink)];
+\node (g) at (3,-2) [dot=below:$G$ (ReceivesChips)];
+%
+\path
+(a) edge (c)    (c) edge (f)
+(a) edge (d)    (d) edge (g) 
+(b) edge (d)    (d) edge (g) 
+(b) edge (e);
+\end{tikzpicture}
+\end{center}
+with the following probability tables:
+\begin{center}
+\begin{tabular}{|c|c|}
+    \hline
+    $P(A = 0)$ & $P(A = 1)$ \\
+    \hline
+    $7/10$ & $3/10$ \\
+    \hline
+\end{tabular}
+\begin{tabular}{|c|c|}
+    \hline
+    $P(B = 0)$ & $P(B = 1)$ \\
+    \hline
+    $9/10$ & $1/10$ \\
+    \hline
+\end{tabular}
+\end{center}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+    \hline
+    $a$ & $P(C = 0 | A = a)$ & $P(C = 1 | A = a)$ \\
+    \hline
+    $0$ & $1$ & $0$ \\
+    \hline
+    $1$ & $7/10$ & $3/10$ \\
+    \hline
+\end{tabular}
+\end{center}
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+    \hline
+    $a$ & $b$ & $P(D = 0 | A = a, B = b)$ & $P(D = 1 | A = a, B = b)$ \\
+    \hline
+    $0$ & $0$ & $1$ & $0$ \\
+    \hline
+    $0$ & $1$ & $1$ & $0$ \\
+    \hline
+    $1$ & $0$ & $1/5$ & $4/5$ \\
+    \hline
+    $1$ & $1$ & $9/10$ & $1/10$ \\
+    \hline
+\end{tabular}
+\end{center}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+    \hline
+    $b$ & $P(E = 0 | B = b)$ & $P(E = 1 | B = b)$ \\
+    \hline
+    $0$ & $999999/1000000$ & $1/1000000$ \\
+    \hline
+    $1$ & $19/20$ & $1/20$ \\
+    \hline
+\end{tabular}
+\end{center}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+    \hline
+    $c$ & $P(F = 0 | C = c)$ & $P(F = 1 | C = c)$ \\
+    \hline
+    $0$ & $1$ & $0$ \\
+    \hline
+    $1$ & $1/10$ & $9/10$ \\
+    \hline
+\end{tabular}
+\end{center}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+    \hline
+    $d$ & $P(G = 0 | D = d)$ & $P(G = 1 | D = d)$ \\
+    \hline
+    $0$ & $1$ & $0$ \\
+    \hline
+    $1$ & $1/10$ & $9/10$ \\
+    \hline
+\end{tabular}
+\end{center}
+Then, applying the Markov condition:
+\begin{align*}
+    P(G = 1 | D = 1, E = 1) & = P(G = 1 | D = 1) \\
+    & = 9/10
+\end{align*}
+
+Storing the probability function $P$ in terms of its joint distribution over all seven variables would involve keeping track of probabilities for $2^7 = 128$ possible combinations of values for the variables. Since the probabilities must sum to $1$, it is sufficient to keep track of $2^7 - 1 = 127$ real numbers. However, to specify the above Bayesian network, it is sufficent to keep track of only $2 \cdot (2 \cdot 2^0 + 4 \cdot 2^1 + 1 \cdot 2^2) = 28$ possible combinations of values for the variables. Since the probabilities must sum to $1$, it is further sufficient to keep track of $2 \cdot 2^1 + 4 \cdot 2^1 + 1 \cdot 2^2 = 14$ real numbers.
+
+\clearpage
+\problem{}
+Considering the Bayesian network from Problem 1, we seek to simplify:
+\begin{align*}
+    P(E = 1, D = 1, B = 1, A = 1)
+\end{align*}
+Applying the chain rule:
+\begin{align*}
+    P(E = 1, | D = 1, B = 1, A = 1)P(D = 1, B = 1, A = 1)
+\end{align*}
+Applying the chain rule:
+\begin{align*}
+    P(E = 1, | D = 1, B = 1, A = 1)P(D = 1 | B = 1, A = 1)P(B = 1, A = 1)
+\end{align*}
+Applying the chain rule:
+\begin{align*}
+    P(E = 1, | D = 1, B = 1, A = 1)P(D = 1 | B = 1, A = 1)P(B = 1 | A = 1)P(A = 1)
+\end{align*}
+Applying the Markov condition (since $B$ is not a descendant of $A$):
+\begin{align*}
+    P(E = 1, | D = 1, B = 1, A = 1)P(D = 1 | B = 1, A = 1)P(B = 1)P(A = 1)
+\end{align*}
+Applying the Markov condition (since $E$ is not a descendant of $A$):
+\begin{align*}
+    P(E = 1, | D = 1, B = 1)P(D = 1 | B = 1, A = 1)P(B = 1)P(A = 1)
+\end{align*}
+Applying the Markov condition (since $E$ is not a descendant of $D$):
+\begin{align*}
+    P(E = 1, | B = 1)P(D = 1 | B = 1, A = 1)P(B = 1)P(A = 1)
+\end{align*}
+
+\clearpage
+\problem{}
+Consider the Bayesian network with the following DAG over Boolean variables:
+\begin{center}
+\begin{tikzpicture}[
+       decoration = {markings,
+                     mark=at position .5 with {\arrow{Stealth[length=2mm]}}},
+       dot/.style = {circle, fill, inner sep=2.4pt, node contents={},
+                     label=#1},
+every edge/.style = {draw, postaction=decorate}
+                        ]
+\node (x) at (0,0) [dot=above:$X$ (GeneActivation)];
+\node (y) at (-2,-1) [dot=left:$Y$ (HormoneLevel)];
+\node (z) at (0,-2) [dot=right:$Z$ (DiseaseDevelops)];
+%
+\path
+(x) edge (y)    (y) edge (z)
+(x) edge (z);
+\end{tikzpicture}
+\end{center}
+with the following probability tables:
+\begin{center}
+\begin{tabular}{|c|c|}
+    \hline
+    $P(X = 0)$ & $P(X = 1)$ \\
+    \hline
+    $1/2$ & $1/2$ \\
+    \hline
+\end{tabular}
+\end{center}
+\begin{center}
+\begin{tabular}{|c|c|c|}
+    \hline
+    $x$ & $P(Y = 0 | X = x)$ & $P(Y = 1 | X = x)$ \\
+    \hline
+    $0$ & $1/5$ & $4/5$ \\
+    \hline
+    $1$ & $4/5$ & $1/5$ \\
+    \hline
+\end{tabular}
+\end{center}
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+    \hline
+    $x$ & $y$ & $P(Z = 0 | X = x, Y = y)$ & $P(Z = 1 | X = x, Y = y)$ \\
+    \hline
+    $0$ & $0$ & $1$ & $0$ \\
+    \hline
+    $0$ & $1$ & $7/8$ & $1/8$ \\
+    \hline
+    $1$ & $0$ & $1/4$ & $3/4$ \\
+    \hline
+    $1$ & $1$ & $1/2$ & $1/2$ \\
+    \hline
+\end{tabular}
+\end{center}
+Then, note that by the factorization rule:
+\begin{align*}
+    P(X = x, Y = y, Z = z) & = P(Z = z | X = x, Y = y)P(X = x, Y = y) \\
+    & = P(Z = z | X = x, Y = y)P(Y = y | X = x)P(X = x)
+\end{align*}
+Using this factorization:
+\begin{align*}
+    P(X = 0, Y = 0, Z = 0) & = 1 \cdot 1/5 \cdot 1/2 = 1/10 \\
+    P(X = 0, Y = 0, Z = 1) & = 0 \cdot 1/5 \cdot 1/2 = 0 \\
+    P(X = 0, Y = 1, Z = 0) & = 1/8 \cdot 4/5 \cdot 1/2 = 1/20 \\
+    P(X = 0, Y = 1, Z = 1) & = 7/8 \cdot 4/5 \cdot 1/2 = 7/20 \\
+    P(X = 1, Y = 0, Z = 0) & = 1/4 \cdot 4/5 \cdot 1/2 = 1/10 \\
+    P(X = 1, Y = 0, Z = 1) & = 3/4 \cdot 4/5 \cdot 1/2 = 3/10 \\
+    P(X = 1, Y = 1, Z = 0) & = 1/2 \cdot 1/5 \cdot 1/2 = 1/20 \\
+    P(X = 1, Y = 1, Z = 1) & = 1/2 \cdot 1/5 \cdot 1/2 = 1/20 \\
+\end{align*}
+We see that $P(Z = 1) = 0 + 7/20 + 3/10 + 1/20 = 7/10$.
+
+To find the probability that the disease develops given that the hormone level is low ($P(Z = 1 | \mathrm{do}(Y = 0))$), we modify the causal Bayesian network as follows:
+\begin{center}
+\begin{tikzpicture}[
+       decoration = {markings,
+                     mark=at position .5 with {\arrow{Stealth[length=2mm]}}},
+       dot/.style = {circle, fill, inner sep=2.4pt, node contents={},
+                     label=#1},
+every edge/.style = {draw, postaction=decorate}
+                        ]
+\node (x) at (0,0) [dot=above:$X$ (GeneActivation)];
+\node (y) at (-2,-1) [dot=left:$Y$ (HormoneLevel)];
+\node (z) at (0,-2) [dot=right:$Z$ (DiseaseDevelops)];
+%
+\path
+(y) edge (z)
+(x) edge (z);
+\end{tikzpicture}
+\end{center}
+with the following probability tables:
+\begin{center}
+\begin{tabular}{|c|c|}
+    \hline
+    $P(X = 0)$ & $P(X = 1)$ \\
+    \hline
+    $1/2$ & $1/2$ \\
+    \hline
+\end{tabular}
+\end{center}
+\begin{center}
+\begin{tabular}{|c|c|}
+    \hline
+    $P(Y = 0)$ & $P(Y = 1)$ \\
+    \hline
+    $1$ & $0$ \\
+    \hline
+\end{tabular}
+\end{center}
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+    \hline
+    $x$ & $y$ & $P(Z = 0 | X = x, Y = y)$ & $P(Z = 1 | X = x, Y = y)$ \\
+    \hline
+    $0$ & $0$ & $1$ & $0$ \\
+    \hline
+    $0$ & $1$ & $7/8$ & $1/8$ \\
+    \hline
+    $1$ & $0$ & $1/4$ & $3/4$ \\
+    \hline
+    $1$ & $1$ & $1/2$ & $1/2$ \\
+    \hline
+\end{tabular}
+\end{center}
+Then, note that by the factorization rule:
+\begin{align*}
+    P(X = x, Y = y, Z = z) & = P(Z = z | X = x, Y = y)P(X = x, Y = y) \\
+    & = P(Z = z | X = x, Y = y)P(Y = y | X = x)P(X = x) \\
+    & = P(Z = z | X = x, Y = y)P(Y = y)P(X = x) \\
+\end{align*}
+Using this factorization:
+\begin{align*}
+    P(X = 0, Y = 0, Z = 0) & = 1 \cdot 1 \cdot 1/2 = 1/2 \\
+    P(X = 0, Y = 0, Z = 1) & = 0 \cdot 1 \cdot 1/2 = 0 \\
+    P(X = 0, Y = 1, Z = 0) & = 1/8 \cdot 0 \cdot 1/2 = 0 \\
+    P(X = 0, Y = 1, Z = 1) & = 7/8 \cdot 0 \cdot 1/2 = 0 \\
+    P(X = 1, Y = 0, Z = 0) & = 1/4 \cdot 1 \cdot 1/2 = 1/8 \\
+    P(X = 1, Y = 0, Z = 1) & = 3/4 \cdot 1 \cdot 1/2 = 3/8 \\
+    P(X = 1, Y = 1, Z = 0) & = 1/2 \cdot 0 \cdot 1/2 = 0 \\
+    P(X = 1, Y = 1, Z = 1) & = 1/2 \cdot 0 \cdot 1/2 = 0 \\
+\end{align*}
+We see that $P(Z = 1 | \mathrm{do}(Y = 0)) = 0 + 0 + 3/8 + 0 = 3/8$, and so $P(Z) > P(Z = 1 | \mathrm{do}(Y = 0))$. Lowering the hormone level is then a reasonable measure to cure the disease.
+
+\clearpage
+\problem{}
+Consider the Bayesian network with the following DAG over Boolean variables:
+\begin{center}
+\begin{tikzpicture}[
+       decoration = {markings,
+                     mark=at position .5 with {\arrow{Stealth[length=2mm]}}},
+       dot/.style = {circle, fill, inner sep=2.4pt, node contents={},
+                     label=#1},
+every edge/.style = {draw, postaction=decorate}
+                        ]
+\node (x) at (-2,0) [dot=above:$X$ (GeneActivation)];
+\node (y) at (0,-1) [dot=left:$Y$ (HormoneLevel)];
+\node (z) at (2,0) [dot=right:$Z$ (DiseaseDevelops)];
+%
+\path
+(x) edge (y)
+(z) edge (y);
+\end{tikzpicture}
+\end{center}
+with the following probability tables:
+\begin{center}
+\begin{tabular}{|c|c|}
+    \hline
+    $P(X = 0)$ & $P(X = 1)$ \\
+    \hline
+    $1/2$ & $1/2$ \\
+    \hline
+\end{tabular}
+\begin{tabular}{|c|c|}
+    \hline
+    $P(Z = 0)$ & $P(Z = 1)$ \\
+    \hline
+    $3/10$ & $7/10$ \\
+    \hline
+\end{tabular}
+\end{center}
+\begin{center}
+\begin{tabular}{|c|c|c|c|}
+    \hline
+    $x$ & $z$ & $P(Y = 0 | X = x, Z = z)$ & $P(Y = 1 | X = x, Z = z)$ \\
+    \hline
+    $0$ & $0$ & $2/3$ & $1/3$ \\
+    \hline
+    $0$ & $1$ & $0$ & $1$ \\
+    \hline
+    $1$ & $0$ & $2/3$ & $1/3$ \\
+    \hline
+    $1$ & $1$ & $6/7$ & $1/7$ \\
+    \hline
+\end{tabular}
+\end{center}
+Then, note that by the factorization rule:
+\begin{align*}
+    P(X = x, Y = y, Z = z) & = P(Y = y | X = x, Z = z)P(X = x, Z = z) \\
+    & = P(Y = y | X = x, Z = z)P(X = x | Z = z)P(Z = z) \\
+    & = P(Y = y | X = x, Z = z)P(X = x)P(Z = z) \\
+\end{align*}
+Using this factorization:
+\begin{align*}
+    P(X = 0, Y = 0, Z = 0) & = 2/3 \cdot 1/2 \cdot 3/10 = 1/10 \\
+    P(X = 0, Y = 0, Z = 1) & = 0 \cdot 1/2 \cdot 7/10 = 0 \\
+    P(X = 0, Y = 1, Z = 0) & = 1/3 \cdot 1/2 \cdot 3/10 = 1/20 \\
+    P(X = 0, Y = 1, Z = 1) & = 1 \cdot 1/2 \cdot 7/10 = 7/20 \\
+    P(X = 1, Y = 0, Z = 0) & = 2/3 \cdot 1/2 \cdot 3/10 = 1/10 \\
+    P(X = 1, Y = 0, Z = 1) & = 6/7 \cdot 1/2 \cdot 7/10 = 3/10 \\
+    P(X = 1, Y = 1, Z = 0) & = 1/3 \cdot 1/2 \cdot 3/10 = 1/20 \\
+    P(X = 1, Y = 1, Z = 1) & = 1/7 \cdot 1/2 \cdot 7/10 = 1/20 \\
+\end{align*}
+We see that $P(Z = 1) = 0 + 7/20 + 3/10 + 1/20 = 7/10$.
+
+To find the probability that the disease develops given that the hormone level is low ($P(Z = 1 | \mathrm{do}(Y = 0))$), we modify the causal Bayesian network as follows:
+\begin{center}
+\begin{tikzpicture}[
+       decoration = {markings,
+                     mark=at position .5 with {\arrow{Stealth[length=2mm]}}},
+       dot/.style = {circle, fill, inner sep=2.4pt, node contents={},
+                     label=#1},
+every edge/.style = {draw, postaction=decorate}
+                        ]
+\node (x) at (-2,0) [dot=above:$X$ (GeneActivation)];
+\node (y) at (0,-1) [dot=left:$Y$ (HormoneLevel)];
+\node (z) at (2,0) [dot=right:$Z$ (DiseaseDevelops)];;
+\end{tikzpicture}
+\end{center}
+with the following probability tables:
+\begin{center}
+\begin{tabular}{|c|c|}
+    \hline
+    $P(X = 0)$ & $P(X = 1)$ \\
+    \hline
+    $1/2$ & $1/2$ \\
+    \hline
+\end{tabular}
+\begin{tabular}{|c|c|}
+    \hline
+    $P(Y = 0)$ & $P(Y = 1)$ \\
+    \hline
+    $1$ & $0$ \\
+    \hline
+\end{tabular}
+\begin{tabular}{|c|c|}
+    \hline
+    $P(Z = 0)$ & $P(Z = 1)$ \\
+    \hline
+    $3/10$ & $7/10$ \\
+    \hline
+\end{tabular}
+\end{center}
+Then, note that by the factorization rule:
+\begin{align*}
+    P(X = x, Y = y, Z = z) & = P(Y = y | X = x, Z = z)P(X = x, Z = z) \\
+    & = P(Y = y | X = x, Z = z)P(X = x | Z = z)P(Z = z) \\
+    & = P(Y = y)P(X = x)P(Z = z) \\
+\end{align*}
+Using this factorization:
+\begin{align*}
+    P(X = 0, Y = 0, Z = 0) & = 1 \cdot 1/2 \cdot 3/10 = 3/20 \\
+    P(X = 0, Y = 0, Z = 1) & = 1 \cdot 1/2 \cdot 7/10 = 7/20 \\
+    P(X = 0, Y = 1, Z = 0) & = 0 \cdot 1/2 \cdot 3/10 = 0 \\
+    P(X = 0, Y = 1, Z = 1) & = 0 \cdot 1/2 \cdot 7/10 = 0 \\
+    P(X = 1, Y = 0, Z = 0) & = 1 \cdot 1/2 \cdot 3/10 = 3/20 \\
+    P(X = 1, Y = 0, Z = 1) & = 1 \cdot 1/2 \cdot 7/10 = 7/20 \\
+    P(X = 1, Y = 1, Z = 0) & = 0 \cdot 1/2 \cdot 3/10 = 0 \\
+    P(X = 1, Y = 1, Z = 1) & = 0 \cdot 1/2 \cdot 7/10 = 0 \\
+\end{align*}
+We see that $P(Z = 1 | \mathrm{do}(Y = 0)) = 7/20 + 0 + 7/20 + 0 = 7/10$, and so $P(Z) = P(Z = 1 | \mathrm{do}(Y = 0))$. Lowering the hormone level is then not a reasonable measure to cure the disease.
+\end{document}

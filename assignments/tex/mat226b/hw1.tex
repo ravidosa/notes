@@ -1,0 +1,226 @@
+\documentclass{article}
+\usepackage{../assignment_preamble}
+
+\title{Homework 1}
+\author{Ravi Kini}
+\date{February 4, 2026}
+
+\begin{document}
+
+\maketitle
+
+\problem{}
+\subproblem{(a)}
+Let $A$ be a $1 \times 1$ complex matrix. Clearly, $A$ is upper triangular, so $A$ can be factorized as $QTQ^*$, where $Q = I$ and $T = A$, and so $A$ has a Schur factorization. Now suppose that all $n\times n$ complex matrices have Schur factorizations. Let $A$ be a $(n + 1)\times(n + 1)$ complex matrix, and let $v_1$ be a normalized eigenvector of $A$ (with corresponding eigenvalue $\lambda_1$). We can construct an orthonormalized basis $\{v_1, \ldots v_{n+1}\}$ of $\mathbb{C}^{n+1}$ (using Gram-Schmidt, for instance). We now define $U$ such that:
+\begin{align*}
+    U = \begin{bmatrix}
+        v_1 & \cdots & v_{n+1}
+    \end{bmatrix} = \begin{bmatrix}
+        v_1 & V_2
+    \end{bmatrix}
+\end{align*}
+Clearly, $U$ is unitary. We then see that:
+\begin{align*}
+    UAU^* & = \begin{bmatrix}
+        v_1^* \\ V_2^*
+    \end{bmatrix}A\begin{bmatrix}
+        v_1 & V_2
+    \end{bmatrix} \\
+    & = \begin{bmatrix}
+        v_1^* \\ V_2^*
+    \end{bmatrix}\begin{bmatrix}
+        \lambda_1v_1 & AV_2
+    \end{bmatrix} \\
+    & = \begin{bmatrix}
+        \lambda_1 & v_1^*AV_2 \\ 0 & V_2^*AV_2
+    \end{bmatrix}
+\end{align*}
+Let $B = V_2^*AV_2$ and $u = v_1^*AV_2$; since $B$ is a $n \times n$ complex matrix, it has a Schur decomposition. Let that decomposition be $B = Q'T'Q'^*$. It then follows that:
+\begin{align*}
+    UAU^* & = \begin{bmatrix}
+        \lambda_1 & u \\ 0 & B
+    \end{bmatrix} \\
+    & = \begin{bmatrix}
+        1 & 0^* \\ 0 & Q'
+    \end{bmatrix}\begin{bmatrix}
+        \lambda_1 & u \\ 0 & T'
+    \end{bmatrix}\begin{bmatrix}
+        1 & 0^* \\ 0 & Q'^*
+    \end{bmatrix} \\
+    A & = U^*\begin{bmatrix}
+        1 & 0^* \\ 0 & Q'
+    \end{bmatrix}\begin{bmatrix}
+        \lambda_1 & u \\ 0 & T'
+    \end{bmatrix}\begin{bmatrix}
+        1 & 0^* \\ 0 & Q'^*
+    \end{bmatrix}U
+\end{align*}
+We then see that $A$ has the Schur factorization $A = QTQ^*$ where:
+\begin{align*}
+    Q & = U^*\begin{bmatrix}
+        1 & 0^* \\ 0 & Q'
+    \end{bmatrix} \\
+    T & = \begin{bmatrix}
+        \lambda_1 & u \\ 0 & T'
+    \end{bmatrix}
+\end{align*}
+since the products of unitary matrices are unitary. By induction, all square complex matrices have Schur factorizations.
+
+\subproblem{(b)}
+Let $A$ be a Hermitian complex matrix with Schur factorization $A = QTQ^*$. Then $A^* = (QTQ^*)^* = QT^*Q$. For this to be true, $T = T^*$, which means that $T$ is a diagonal matrix with real entries. Since the eigenvalues of $A$ are the diagonal entries of $T$, $A$ has real eigenvalues.
+
+Now let $A$ have eigenvalues $\lambda_1, \lambda_2$ where $\lambda_1 \neq \lambda_2$ with corresponding eigenvectors $v_1, v_2$. Then:
+\begin{align*}
+    \lambda_1(v_1^*v_2) & = (Av_1)^*v_2 \\
+    & = v_1^*A^*v_2 \\
+    & = v_1^*Av_2 \\
+    & = v_1^*\lambda_2 v_2 = \lambda_2(v_1^*v_2) \\
+\end{align*}
+It follows that $(\lambda_1 - \lambda_2)(v_1^*v_2) = 0$; since $\lambda_1 \neq \lambda_2$, $v_1^*v_2 = 0$, and so th eigenvectors are orthogonal.
+
+\clearpage
+\problem{}
+\subproblem{(a)}
+Let $A \in \mathbb{R}^{m \times n}$, with SVD $A = U\Sigma V^T$. We then see that:
+\begin{align*}
+    A^TA & = (U\Sigma V^T)^T(U\Sigma V^T) \\
+    & = V\Sigma^T U^TU\Sigma V^T \\
+    & = V\Sigma^T \Sigma V^T \\
+    & = V\Sigma^2 V^T \\
+\end{align*}
+Since $\Sigma$ is a diagonal matrix, $\Sigma^2$ must also b a diagonal matrix, with the diagonal entries being the squares of the diagonal entries of $\Sigma$. It follows that $A^TA$ has the SVD $V\Sigma^2 V^T$. Similarly:
+\begin{align*}
+    AA^T & = (U\Sigma V^T)(U\Sigma V^T)^T \\
+    & = U\Sigma V^TV\Sigma^T U^T \\
+    & = U\Sigma \Sigma^T U^T \\
+    & = U\Sigma^2 U^T \\
+\end{align*}
+We see that $AA^T$ then has the SVD $U\Sigma^2 U^T$.
+\subproblem{(b)}
+Computing the SVD using $A^TA$ is numerically unstable. If $A$ has condition number $\kappa$, $A^TA$ will have condition number $\kappa^2$, so for ill-conditioned matrices, eigenvalue algorithms will perform poorly.
+\subproblem{(c)}
+Let $B$ such that:
+\begin{align*}
+    B = \begin{bmatrix}
+    0 & A^T \\ A & 0
+    \end{bmatrix}
+\end{align*}
+Let $v$ be a right singular vector of $A$ and $u$ be the corresponding left singular vector (and therefore right singular vector of $A^T$), with singular value $\sigma$. Then:
+\begin{align*}
+    x & = \begin{bmatrix}
+        v \\ u
+    \end{bmatrix} \\
+    Bx & = \begin{bmatrix}
+    0 & A^T \\ A & 0
+    \end{bmatrix}\begin{bmatrix}
+        v \\ u
+    \end{bmatrix} \\
+    & = \begin{bmatrix}
+        A^Tu \\ Av
+    \end{bmatrix} \\
+    & = \begin{bmatrix}
+        \sigma v \\ \sigma u
+    \end{bmatrix} = \sigma x \\
+\end{align*}
+Similarly:
+\begin{align*}
+    y & = \begin{bmatrix}
+        v \\ -u
+    \end{bmatrix} \\
+    By & = \begin{bmatrix}
+    0 & A^T \\ A & 0
+    \end{bmatrix}\begin{bmatrix}
+        v \\ -u
+    \end{bmatrix} \\
+    & = \begin{bmatrix}
+        -A^Tu \\ Av
+    \end{bmatrix} \\
+    & = \begin{bmatrix}
+        -\sigma v \\ \sigma u
+    \end{bmatrix} = -\sigma y \\
+\end{align*}
+If $A$ has singular values $\sigma_1, \ldots, \sigma_n$, $B$ then has eigenvalues $\pm\sigma_1, \ldots, \pm\sigma_n$. The eigenvectors of $B$ are as shown above. Additionally, the condition numbers of $A$ and $B$ are the same.
+
+\clearpage
+\problem{}
+\subproblem{(a)}
+Lt $A$ be a real symmetrix $n \times n$ matrix. For $p \neq q$, let $A^{(k)}_{pq}$ and $G(p, q, \theta)$ such that:
+\begin{align*}
+    A^{(k)}_{pq} & = \begin{bmatrix}
+        a & b \\ b & d
+    \end{bmatrix} \\
+    G(p, q, \theta) & = \begin{bmatrix}
+        \cos\theta & \sin\theta \\ -\sin\theta & \cos\theta
+    \end{bmatrix}
+\end{align*}
+Then:
+\begin{align*}
+    A^{(k+1)} & = G^TA^{(k)}G \\
+    & = \begin{bmatrix}
+        \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta
+    \end{bmatrix}\begin{bmatrix}
+        a & b \\ b & d
+    \end{bmatrix}\begin{bmatrix}
+        \cos\theta & \sin\theta \\ -\sin\theta & \cos\theta
+    \end{bmatrix} \\
+    & = \begin{bmatrix}
+        \cos\theta & -\sin\theta \\ \sin\theta & \cos\theta
+    \end{bmatrix}\begin{bmatrix}
+        a\cos\theta - b\sin\theta & a\sin\theta + b\cos\theta \\ b\cos\theta - d\sin\theta & b\sin\theta + d\cos\theta
+    \end{bmatrix} \\
+    & = \begin{bmatrix}
+        a\cos^2\theta - b\sin(2\theta) + d\sin^2\theta & -\left(b\cos(2\theta) + \frac{a-d}{2}\sin(2\theta)\right) \\ b\cos(2\theta) + \frac{a-d}{2}\sin(2\theta) & a\sin^2\theta + b\sin(2\theta) + d\cos^2\theta
+    \end{bmatrix} \\
+\end{align*}
+For the off-diagonal entries to be zero, it must be the case that:
+\begin{align*}
+    b\cos(2\theta) + \frac{a-d}{2}\sin(2\theta) & = 0 \\
+    \frac{a-d}{2}\sin(2\theta) & = -b\cos(2\theta) \\
+    \tan(2\theta) & = \frac{2b}{d - a} \\
+\end{align*}
+\subproblem{(b)}
+Let $\lambda$ be an eigenvalue of $A^{(k)}$ with eigenvector $v$. Then:
+\begin{align*}
+    A^{(k+1)}(G^Tv) & = G^TA^{(k)}GG^Tv \\
+    & = G^TA^{(k)}v \\
+    & = \lambda (G^Tv)
+\end{align*}
+We se that $\lambda$ is an eigenvalue of $A^{(k+1)}$ with the eigenvector $G^Tv$. It follows that all iterates $A^{(k)}$ have the same eigenvalues as $A$.
+\subproblem{(c)}
+Let $\mathrm{off}(A) = \sum_{i\neq j} a_{ij}^2$. Note that $\mathrm{off}(A^{(k+1)}) - \mathrm{off}(A^{(k)}) = \mathrm{off}(A_{pq}^{(k+1)}) - \mathrm{off}(A_{pq}^{(k)})$, since all other entries are unchanged, and the diagonal elements of $A_{pq}$ are also the diagonal elements of $A$. Then, since $\mathrm{off}(A_{pq}^{(k+1)}) 0$ and $\mathrm{off}(A_{pq}^{(k)}) = 2a_{pq}^2$, it follows that $\mathrm{off}(A^{(k+1)}) = \mathrm{off}(A^{(k)}) - 2a_{pq}^2$. It follows that $\mathrm{off}(A^{(k)})$ is monotonically decreasing.
+\subproblem{(d)}
+If $p, q$ are selected such that $|a_{pq}| = \underset{i \neq j}{\max} |a_{ij}|$, it follows that:
+\begin{align*}
+    a_{pq}^2 = \underset{i \neq j}{\max} a_{ij}^2 & = \frac{n(n - 1)}{n(n - 1)}\underset{i \neq j}{\max} a_{ij}^2 \\
+    & \geq \frac{1}{n(n - 1)}\sum_{i \neq j} a_{ij}^2 \\
+    & \geq \frac{1}{n(n - 1)}\mathrm{off}(A^{(k)})
+\end{align*}
+We then see that:
+\begin{align*}
+    \mathrm{off}(A^{(k+1)}) & = \mathrm{off}(A^{(k)}) - 2a_{pq}^2 \\
+    & \leq \mathrm{off}(A^{(k)}) - 2\left(\frac{1}{n(n - 1)}\mathrm{off}(A^{(k)})\right) \\
+    & \leq \mathrm{off}(A^{(k)})\left(1 - \frac{2}{n(n - 1)}\right) \\
+\end{align*}
+Since $0 < 1 - \frac{2}{n(n - 1)} < 1$, the Jacobi algorithm converges linearly.
+
+\clearpage
+\problem{}
+\begin{lstlisting}[language=Python]
+def householder(A):
+  m, n = A.shape
+  Q = np.eye(m)
+  R = A.copy()
+
+  for j in range(n):
+    x = R[j:, j]
+    e1 = np.zeros_like(x)
+    e1[0] = 1
+    v = x + np.sign(x[0]) * np.linalg.norm(x) * e1
+    v_norm = np.linalg.norm(v)
+    if v_norm > 1e-14:
+      v /= v_norm
+      R[j:, j:] -= 2 * np.outer(v, np.dot(v, R[j:, j:]))
+      Q[j:, :] -= 2 * np.outer(np.dot(Q[:, j:], v), v)
+  return Q[:, :n], R[:n, :]
+\end{lstlisting}
+\end{document}

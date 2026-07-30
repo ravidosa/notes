@@ -1,0 +1,11 @@
+The code runs over a period of 10 units, with the mass on a spring having a period of 2*pi*sqrt(0.5/2) = pi seconds.
+
+The position at step 785 (t = 0.785) is 0.0090 and the velocity = is -10.0000.
+At time step 785, the mass is around 1/4 of the way through the period. Since the mass begins at the crest of an oscillation,
+after 1/4 of a period it will have returned to the equilibrium point. This is reflected in the position being nearly 0 and the speed
+being 5*sqrt(2/0.5) = 10 in the negative x direction.
+
+The position at step 7854 (t = 7.854) is -5.0000 and the velocity is 0.0004.
+At time step 7854, the mass is around 10/4 of the way through the period. Since the mass begins at the crest of an oscillation,
+after 10/4 of a period it will be at the trough of an oscillation. This is reflected in the position being nearly -5 (-x[0]) and the speed
+being nearly 0 (v[0]).
