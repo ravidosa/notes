@@ -10,7 +10,7 @@ types of universals
 		common genetic origin: speculative, untestable
 		innateness: chomsky, empty claim
 			universal grammar: innate human language faculty
-				see [Views on Grammar](theory-english-syntax#views-on-grammar)
+				see [Views on Grammar](theory-english-syntax.md#views-on-grammar)
 		functional: certain universals make language more functional for human communication
 	detection
 		sampling

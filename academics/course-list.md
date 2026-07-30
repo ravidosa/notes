@@ -91,7 +91,7 @@
 [ECS 189A: Sublinear Algorithms for Big Data](./f24/ecs189a.md) (Lee)
 [ECS 289A: Classical and Quantum Low-Density Parity Check Codes](./f24/ecs289a.md) (Kim)
 ### Linguistics
-[LIN 127: Text Processing and Corpus Linguistics](./f24/lin127) (Sagae)
+[LIN 127: Text Processing and Corpus Linguistics](./f24/lin127.md) (Sagae)
 [LIN 182: Multilingualism](./f24/lin182.md) (Filipović)
 ### Mathematics
 [MAT 165: Mathematics & Computers](./f24/mat165.md) (Torres)

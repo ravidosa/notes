@@ -35,7 +35,7 @@ T6: Roessler 166, DIS
 	6. [The Hydrogen Atom](../notes/hydrogen-atom.md)
 	7. [Radial Probability](../notes/hydrogen-atom.md)
 	8. [Hydrogenlike Atoms](../notes/hydrogen-atom.md#hydrogenlike-atoms)
-8. [Spin and Atomic Physics](../notes/spin.md)
+8. [Spin and Atomic Physics](../notes/quantum-mechanics-3d.md)
 9. [Statistical Mechanics](../f23/phy112.md)
 10. [Bonding](../notes/bonding.md)
 11. [Nuclear Physics](../notes/nuclear-physics.md)

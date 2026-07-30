@@ -1,5 +1,5 @@
 # Basic Categories
-[parts of speech/lexical categories](lexical-phrasal-signs#lexical-signs), [semantic roles](syntactic-forms-grammatical-functions-semantic-roles.md#semantic-roles), [grammatical relations](syntactic-forms-grammatical-functions-semantic-roles.md#grammatical-functions) (mostly english)
+[parts of speech/lexical categories](lexical-phrasal-signs.md#lexical-signs), [semantic roles](syntactic-forms-grammatical-functions-semantic-roles.md#semantic-roles), [grammatical relations](syntactic-forms-grammatical-functions-semantic-roles.md#grammatical-functions) (mostly english)
 	independent of each other
 beyond english
 	lexical classes

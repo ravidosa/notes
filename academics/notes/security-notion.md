@@ -54,7 +54,7 @@ MAC security
 	adversary asks some queries to receive message-tag pairs, forges by getting valid message-tag pair not queried
 digital signature security
 	$\mathrm{Adv}_\pi^{sig}(\mathcal{A}, \mathcal{R}) = \mathrm{Pr}[(pk, sk) \twoheadleftarrow \mathcal{K}(k) : \mathcal{A}^{sg(sk, \cdot)}(pk) \text{ forges}]$
-decisional [diffie-hellman](key-exchange#diffie-hellman-key-exchange) (DDH)
+decisional [diffie-hellman](key-exchange.md#diffie-hellman-key-exchange) (DDH)
 	$\mathrm{Adv}^{dh-ddh}(\mathcal{A}) = \mathrm{Pr}[a, b \twoheadleftarrow [0, \ldots, p-2] : \mathcal{A}(g6a, g^b, g^{ab}) \to 1] - \mathrm{Pr}[a, b, c \twoheadleftarrow [0, \ldots, p-2] : \mathcal{A}(g^a, g^b, g^c) \to 1]$
 	not true in $\mathrm{Z}_p^\times$
 computational diffie-hellman

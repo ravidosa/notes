@@ -2,7 +2,7 @@
 MWF5: Olson 147
 ## Notes
 1. [Classical Linear Codes](../w24/mat148.md)
-2. [Quantum Linear Codes](../notes/quantum-linear-code)
+2. [Quantum Linear Codes](../notes/quantum-linear-code.md)
 3. [Stabilizer Formalism]
 ## Assignments
 - [x] HW 1 (10/4)

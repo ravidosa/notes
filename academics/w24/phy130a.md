@@ -18,7 +18,7 @@ MWF9: Physics 148, LEC
 	5. [Examples and Applications](collision.md#strategies-2)
 6. Feynman Calculus
 	1. [Decays](../notes/particle-decay.md) and [Scattering](../notes/scattering.md)
-	2. [The Golden Rule](../notes/fermi-s-golden-rule)
+	2. [The Golden Rule](../notes/fermi-s-golden-rule.md)
 	3. [Feynman Rules for a Toy Theory](../notes/feynman-diagram.md#feynman-rules)
 7. Quantum Electrodynamics
 	1. [The Dirac Equation](../notes/dirac-equation.md)

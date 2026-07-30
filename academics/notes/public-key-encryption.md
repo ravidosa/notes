@@ -4,7 +4,7 @@ encryption scheme $\pi = (\mathcal{G}, \mathcal{E}, \mathcal{D})$
 	probabilistic key generation algorithm $\mathcal{G} \to (pk, sk)$, probabilistic encryption algorithm $\mathcal{E}_{pk}(M) \to C$, deterministic decryption algorithm $\mathcal{D}_{sk}(C) \to M$
 	correctness: if $\mathcal{E}_{pk}(M) = C$, $\mathcal{D}_{sk}(C) = M$
 	[security notion](security-notion.md)
-	ephemeral public key for [diffie hellman](key-exchange#diffie-hellman-key-exchange)
+	ephemeral public key for [diffie hellman](key-exchange.md#diffie-hellman-key-exchange)
 [computational and decisional diffie hellman](security-notion.md)
 	elgamal
 		key generation: generator $g$ of cyclic group $G$ with order $q$, compute $h = g^x$ for random $x$, public key $(G, q, g, h)$, secret key $x$

@@ -4,7 +4,7 @@
 - Abstract Algebra (Hungerford)
 - Abstract Algebra (Judson)
 - Acoustic and Auditory Phonetics (Johnson)
-- Algebra (Artin) {[MAT 150A](./f23/mat150a.md), [MAT 150B](./w24/mat150b), [MAT 150C](./s24/mat150c)}
+- Algebra (Artin) {[MAT 150A](./f23/mat150a.md), [MAT 150B](./w24/mat150b.md), [MAT 150C](./s24/mat150c.md)}
 - [Algebra](https://tutorial.math.lamar.edu/Classes/Alg/Alg.aspx) (Dawkins)
 - [Algorithms and Data Structures Using C++](https://runestone.academy/ns/books/published/cppds/index.html) (Miller, Pearce, Ranum) {[ECS 36]()}
 - Analysis of Boolean Functions (O'Donnell)
