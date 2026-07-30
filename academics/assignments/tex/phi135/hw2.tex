@@ -1,0 +1,316 @@
+\documentclass{article}
+\usepackage{../assignment_preamble}
+
+\title{Homework 2}
+\author{Ravi Kini}
+\date{June 5, 2026}
+
+\begin{document}
+
+\maketitle
+
+\problem
+\subproblem{(a)}
+\begin{center}
+\begin{tabular}{|c|c||c|c|c|}
+    \hline
+    $p$ & $q$ & $q \lor \lnot q$ & $p \Rightarrow (q \lor \lnot q)$ & $p \lor (p \Rightarrow (q \lor \lnot q))$ \\
+    \hline
+	$0$ & $0$ & $1$ & $1$ & $1$ \\
+	$0$ & $i$ & $i$ & $1$ & $1$ \\
+	$0$ & $1$ & $1$ & $1$ & $1$ \\
+	$i$ & $0$ & $1$ & $1$ & $1$ \\
+	$i$ & $i$ & $i$ & $1$ & $1$ \\
+	$i$ & $1$ & $1$ & $1$ & $1$ \\
+	$1$ & $0$ & $1$ & $1$ & $1$ \\
+	$1$ & $i$ & $i$ & $i$ & $1$ \\
+	$1$ & $1$ & $1$ & $1$ & $1$ \\
+    \hline
+\end{tabular}
+\end{center}
+The formula is a tautology in Godel logic, with the following derivation.
+\begin{equation*}
+\begin{nd}[rules=godel,justformat=just]
+\open
+\hypo {1} {p}
+\have {2} {p \lor (p \Rightarrow (q \lor \lnot q))} \oi{1}
+\close
+\open
+\hypo {3} {\lnot (q \lor \lnot q)}
+\open
+\hypo {4} {q}
+\have {5} {q \lor \lnot q} \oi{4}
+\have {6} {\lnot (q \lor \lnot q)} \r{3}
+\close
+\have {7} {\lnot q} \ni{4-6}
+\have {8} {q \lor \lnot q} \oi{7}
+\have {9} {p \lor (p \Rightarrow (q \lor \lnot q))} \ne{3,8}
+\close
+\open
+\hypo {10} {p \Rightarrow (q \lor \lnot q)}
+\have {11} {p \lor (p \Rightarrow (q \lor \lnot q))} \oi{10}
+\close
+\have {12} {p \lor (p \Rightarrow (q \lor \lnot q))} \gt{1-2,3-9,10-11}
+\end{nd}
+\end{equation*}
+Since the derivation uses the G3 rule, the formula is not valid in intuitionistic logic.
+
+We consider the Kripke model $\langle \{i, j, k\}, i, \leq, V\rangle$ where we have $i \leq j \leq k$, $V(j) = \{p\}$, and $V(k) = \{p, q\}$. Since $p$ is not verified at $i$, for $p \lor (p \Rightarrow (q \lor \lnot q))$ to be verified at $i$, $p \Rightarrow (q \lor \lnot q)$ must be verified at $i$. For that to be true, for all $v$ such that $i \leq v$, if $p$ is verified at $v$, then $q \lor \lnot q$ must be verified at $v$. At $j$, $p$ is verified. We see that $q$ is not verified at $j$, so for $q \lor \lnot q$ to be verified at $j$, $\lnot q$ must be verified at $j$. For that to be true, for all $w$ such that $j \leq w$, $q$ must not be verified at $w$. However, $q$ is verified at $k$. It then follows that $p \lor (p \Rightarrow (q \lor \lnot q))$ is not verified at $i$. This tells us that the formula is not valid in intuitionistic logic.
+
+\subproblem{(b)}
+\begin{center}
+\begin{tabular}{|c|c||c|c|c|c|}
+    \hline
+    $p$ & $q$ & $p \land \lnot p$ & $q \land \lnot q$ & $(p \land \lnot p) \Rightarrow (q \land \lnot q)$ & $\lnot\lnot((p \land \lnot p) \Rightarrow (q \land \lnot q))$ \\
+    \hline
+	$0$ & $0$ & $0$ & $0$ & $1$ & $1$ \\
+	$0$ & $i$ & $0$ & $0$ & $1$ & $1$ \\
+	$0$ & $1$ & $0$ & $0$ & $1$ & $1$ \\
+	$i$ & $0$ & $0$ & $0$ & $1$ & $1$ \\
+	$i$ & $i$ & $0$ & $0$ & $1$ & $1$ \\
+	$i$ & $1$ & $0$ & $0$ & $1$ & $1$ \\
+	$1$ & $0$ & $0$ & $0$ & $1$ & $1$ \\
+	$1$ & $i$ & $0$ & $0$ & $1$ & $1$ \\
+	$1$ & $1$ & $0$ & $0$ & $1$ & $1$ \\
+    \hline
+\end{tabular}
+\end{center}
+The formula is a tautology in Godel logic, with the following derivation.
+\begin{equation*}
+\begin{nd}[rules=godel,justformat=just]
+\open
+\hypo {1} {p \lor \lnot p}
+\have {2} {p} \ae{1}
+\have {3} {\lnot p} \ae{2}
+\have {4} {q \land \lnot q} \ne{2,3}
+\close
+\have {5} {(p \land \lnot p) \Rightarrow (q \land \lnot q)} \ii{1-4}
+\open
+\hypo {6} {\lnot((p \land \lnot p) \Rightarrow (q \land \lnot q))}
+\have {7} {(p \land \lnot p) \Rightarrow (q \land \lnot q)} \r{5}
+\have {8} {\lnot((p \land \lnot p) \Rightarrow (q \land \lnot q))} \r{6}
+\close
+\have {9} {\lnot\lnot((p \land \lnot p) \Rightarrow (q \land \lnot q))} \ni{6-8}
+\end{nd}
+\end{equation*}
+Since the derivation does not use the G3 rule, the formula is valid in intuitionistic logic.
+
+We consider the Kripke model $\langle \{i, j, k\}, i, \leq, V\rangle$ where we have $i \leq j \leq k$, $V(j) = \{p\}$, and $V(k) = \{p, q\}$. For $\lnot\lnot((p \land \lnot p) \Rightarrow (q \land \lnot q))$ to be verified at $i$, it must be true that for all $v$ such that $i \leq v$, if $p \land \lnot p$ is verified at $v$, then $q \land \lnot q$ must be verified at $v$. At $j$, $p$ is verified, but since $p$ is verified at $j$, $\lnot p$ is not verified at $j$, and so $p \land \lnot p$ is not verified at $j$. A similar argument holds at $k$. It then follows that $(p \land \lnot p) \Rightarrow (q \land \lnot q)$ is verified at $i$, and so that $\lnot\lnot((p \land \lnot p) \Rightarrow (q \land \lnot q))$ is verified at $i$. This tells us that the formula is valid in intuitionistic logic.
+
+\subproblem{(c)}
+\begin{center}
+\begin{tabular}{|c|c||c|c|}
+    \hline
+    $p$ & $q$ & $p \Rightarrow q$ & $p \lor (p \Rightarrow q)$ \\
+    \hline
+	$0$ & $0$ & $1$ & $1$ \\
+	$0$ & $i$ & $1$ & $1$ \\
+	$0$ & $1$ & $1$ & $1$ \\
+	$i$ & $0$ & $0$ & $i$ \\
+	$i$ & $i$ & $1$ & $1$ \\
+	$i$ & $1$ & $1$ & $1$ \\
+	$1$ & $0$ & $0$ & $1$ \\
+	$1$ & $i$ & $i$ & $1$ \\
+	$1$ & $1$ & $1$ & $1$ \\
+    \hline
+\end{tabular}
+\end{center}
+The formula is not a tautology in Godel logic. The formula is then invalid in intuitionistic logic.
+
+We consider the Kripke model $\langle \{i, j, k\}, i, \leq, V\rangle$ where we have $i \leq j \leq k$, $V(j) = \{p\}$, and $V(k) = \{p, q\}$. Since $p$ is not verified at $i$, for $p \lor (p \Rightarrow (q \lor \lnot q))$ to be verified at $i$, $p \Rightarrow q$ must be verified at $i$. For that to be true, for all $v$ such that $i \leq v$, if $p$ is verified at $v$ then $q$ must be verified at $v$. We see that $p$ is verified at $j$, but $q$ is not verified at $j$. It follows that $p \lor (p \Rightarrow (q \lor \lnot q))$ is not verified at $i$. This tells us that the formula is not valid in intuitionistic logic.
+
+\clearpage
+\problem
+\subproblem{(a)}
+\begin{equation*}
+\begin{nd}[rules=relevant,justformat=just]
+\hypo {1} {\square (p \land q)}
+\have {2} {((p \land q) \Rightarrow (p \land q)) \Rightarrow (p \land q)} \sqe{1}
+\open
+\hypo {3} {p \Rightarrow p}
+\open
+\hypo {4} {p \land q}
+\have {5} {p \land q} \r{4}
+\close
+\have {6} {(p \land q) \Rightarrow (p \land q)} \ii{4-5}
+\have {7} {p \land q} \ie{1,6}
+\have {8} {p} \ae{7}
+\close
+\have {9} {(p \Rightarrow p) \Rightarrow p} \ii{3-8}
+\have {10} {\square p} \sqi{9}
+\open
+\hypo {11} {q \Rightarrow q}
+\open
+\hypo {12} {p \land q}
+\have {13} {p \land q} \r{12}
+\close
+\have {14} {(p \land q) \Rightarrow (p \land q)} \ii{12-13}
+\have {15} {p \land q} \ie{1,14}
+\have {16} {q} \ae{15}
+\close
+\have {17} {(q \Rightarrow q) \Rightarrow q} \ii{11-16}
+\have {18} {\square q} \sqi{17}
+\have {19} {\square p \land \square q} \ai{10,19}
+\end{nd}
+\end{equation*}
+We then see that $\square (p \land q) \vdash \square p \land \square q$ is a valid argument in relevant logic.
+
+This derivation does not satisfy the entailment restriction since $p \land q$ was reiterated into a subproof on lines $5$ and $13$.
+
+\subproblem{(b)}
+\begin{equation*}
+\begin{nd}[rules=relevant,justformat=just]
+\hypo {1} {(p \Rightarrow q) \circ (r \Rightarrow p)}
+\open
+\hypo {2} {p \Rightarrow q}
+\open
+\hypo {3} {r \Rightarrow p}
+\open
+\hypo {4} {r}
+\have {5} {p} \ie{3,4}
+\have {6} {q} \ie{2,5}
+\close
+\have {7} {r \Rightarrow q} \ii{4-6}
+\close
+\have {8} {(r \Rightarrow p) \Rightarrow (r \Rightarrow q)} \ii{3-7}
+\close
+\have {9} {(p \Rightarrow q) \Rightarrow ((r \Rightarrow p) \Rightarrow (r \Rightarrow q))} \ii{2-8}
+\have {10} {r \Rightarrow q} \cie{1,9}
+\end{nd}
+\end{equation*}
+We then see that $(p \Rightarrow q) \circ (r \Rightarrow p) \vdash r \Rightarrow q$ is a valid argument in relevant logic.
+
+This derivation satisfies the entailment restriction since only formulas of the form $A \Rightarrow B$ have been reiterated into subproofs.
+
+\clearpage
+\problem
+Consider the semi-lattice $S = \{0, a, b, c\}$ and the following semi-lattice operation:
+\begin{center}
+\begin{tabular}{|c||c|c|c|c|}
+    \hline
+    $\sqcup$ & $0$ & $a$ & $b$ & $c$ \\
+    \hline
+    \hline
+    $0$ & $0$ & $a$ & $b$ & $c$ \\
+    \hline
+    $a$ & $a$ & $a$ & $c$ & $c$ \\
+    \hline
+    $b$ & $b$ & $c$ & $b$ & $c$ \\
+    \hline
+    $c$ & $c$ & $c$ & $c$ & $c$ \\
+    \hline
+\end{tabular}
+\end{center}
+
+We want the formulas $p \Rightarrow (p \Rightarrow p)$ and $(q \Rightarrow q) \Rightarrow (p \Rightarrow p)$ to simultaneously fail to hold. Let $V(p) = \{a, b\}$ and $V(q) = \{a\}$.
+
+For $p \Rightarrow (p \Rightarrow p)$ to fail at $0$, there must exist some $v$ such that $v \vdash p$ and $0 \sqcup v \not\vdash (p \Rightarrow p)$. For the latter to hold, there must exist some $w$ such that $w \vdash p$ and $v \sqcup w \not\vdash p$. Let $v = a$ and $w = b$. We see that $a \vdash p$ and $b \vdash p$; however, $a \sqcup b = c$ and $c \not\vdash p$, so $p \Rightarrow (p \Rightarrow p)$ fails at $0$.
+
+For $(q \Rightarrow q) \Rightarrow (p \Rightarrow p)$ to fail at $0$, there must exist some $v$ such that $v \vdash (q \Rightarrow q)$ and $0 \sqcup v \not\vdash (p \Rightarrow p)$. For the former to hold, for all $u$ such that $u \vdash q$, $v \sqcup u \vdash q$. For the latter to hold, there must exist some $w$ such that $w \vdash p$ and $v \sqcup w \not\vdash p$. Let $v = a$ and $w = b$. We see that only $a \vdash q$, and since $a \sqcup a = a$, $a \sqcup a \vdash q$ and so the former holds. We see that $a \vdash p$ and $b \vdash p$; however, $a \sqcup b = c$ and $c \not\vdash p$, so $p \Rightarrow (p \Rightarrow p)$ fails at $0$.
+
+\clearpage
+\problem
+\subproblem{(a)}
+\begin{center}
+\begin{tabular}{|c|c||c|c|c|c|}
+    \hline
+    $p$ & $q$ & $p \Rightarrow q$ & $p \Rightarrow \lnot p$ & $(p \Rightarrow \lnot p) \Rightarrow q$ & $q$ \\
+    \hline
+	$0$ & $0$ & $i$ & $i$ & $0$ & $0$ \\
+	$0$ & $i$ & $i$ & $i$ & $i$ & $i$ \\
+	$0$ & $1$ & $i$ & $i$ & $1$ & $1$ \\
+	$i$ & $0$ & $0$ & $i$ & $0$ & $0$ \\
+	$i$ & $i$ & $i$ & $i$ & $i$ & $i$ \\
+	$i$ & $1$ & $1$ & $i$ & $1$ & $1$ \\
+	$1$ & $0$ & $0$ & $0$ & $i$ & $0$ \\
+	$1$ & $i$ & $i$ & $0$ & $i$ & $i$ \\
+	$1$ & $1$ & $1$ & $0$ & $i$ & $1$ \\
+    \hline
+\end{tabular}
+\end{center}
+The argument is valid in connexive logic. The following derivation works for connexive logic.
+\begin{equation*}
+\begin{nd}[rules=connexive,justformat=just]
+\hypo {1} {p \Rightarrow q}
+\hypo {2} {(p \Rightarrow \lnot p) \Rightarrow q}
+\open
+\hypo {3} {p}
+\have {4} {q} \ie{1,3}
+\close
+\open
+\hypo {5} {\lnot p}
+\open
+\hypo {6} {p}
+\have {7} {\lnot p} \r{5}
+\close
+\have {8} {p \Rightarrow \lnot p} \ii{6-7}
+\have {9} {q} \ie{2,8}
+\close
+\have {10} {q} \tnd{3-4,5-9}
+\end{nd}
+\end{equation*}
+
+\subproblem{(b)}
+\begin{center}
+\begin{tabular}{|c|c||c|c|}
+    \hline
+    $p$ & $q$ & $\lnot q$ & $\lnot (p \Rightarrow q)$ \\
+    \hline
+	$0$ & $0$ & $1$ & $i$ \\
+	$0$ & $i$ & $i$ & $i$ \\
+	$0$ & $1$ & $0$ & $i$ \\
+	$i$ & $0$ & $1$ & $1$ \\
+	$i$ & $i$ & $i$ & $i$ \\
+	$i$ & $1$ & $0$ & $0$ \\
+	$1$ & $0$ & $1$ & $1$ \\
+	$1$ & $i$ & $i$ & $i$ \\
+	$1$ & $1$ & $0$ & $0$ \\
+    \hline
+\end{tabular}
+\end{center}
+The argument is valid in connexive logic. The following derivation works for connexive logic.
+\begin{equation*}
+\begin{nd}[rules=connexive,justformat=just]
+\hypo {1} {\lnot q}
+\open
+\hypo {2} {p}
+\have {3} {\lnot q} \r{1}
+\close
+\have {4} {\lnot (p \Rightarrow q)} \ncondi{2-3}
+\end{nd}
+\end{equation*}
+
+\subproblem{(c)}
+\begin{center}
+\begin{tabular}{|c||c|c|c|}
+    \hline
+    $p$ & $p \Rightarrow \lnot p$ & $\lnot (p \Rightarrow \lnot p) \Rightarrow p$ & $p$ \\
+    \hline
+	$0$ & $i$ & $0$ & $0$ \\
+	$i$ & $i$ & $i$ & $i$ \\
+	$1$ & $0$ & $1$ & $1$ \\
+    \hline
+\end{tabular}
+\end{center}
+The argument is valid in connexive logic. The following derivation works for connexive logic.
+\begin{equation*}
+\begin{nd}[rules=connexive,justformat=just]
+\hypo {1} {\lnot (p \Rightarrow \lnot p) \Rightarrow p}
+\open
+\hypo {2} {p}
+\have {3} {p} \r{2}
+\close
+\open
+\hypo {4} {\lnot p}
+\open
+\hypo {5} {p}
+\have {6} {\lnot\lnot p} \dn{5}
+\close
+\have {7} {\lnot (p \Rightarrow \lnot p)} \ncondi{5-6}
+\have {8} {p} \ie{1,7}
+\close
+\have {9} {p} \tnd{2-3,4-8}
+\end{nd}
+\end{equation*}
+
+\end{document}

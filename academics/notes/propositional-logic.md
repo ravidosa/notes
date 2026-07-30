@@ -28,3 +28,18 @@ $L_{\text{Prop}}$
 	semantics
 		$[[p]]^{I} = I(p)$
 		semantics of complex formulas from truth tables
+logical consequence
+	validity = truth preservation (true premise, true consequence)
+	truth functionality (truth value of whole is function of parts)
+	truth bivalence (either true or false)
+	truth exclusivity (can't be both true and false)
+	tautology (1 on every valuation)
+	classically valid (if arguments are 1, conclusion is 1)
+	consequence relations
+rules: reiteration, conjunction, disjunction, conditional, negation
+soundness (proving) vs completeness (disproving)
+classical logic pros and cons
+	pro: strongest possible
+	con: bivalence does not match real life
+		statements about future, nonsense, presupposition failure, undefinedness, vagueness, semantic paradox
+	[many-valued logics]((../notes/many-valued-logic.md): truth values, designated values, functions/tables

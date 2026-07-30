@@ -27,7 +27,9 @@
 \usepackage{gb4e}
 \usepackage{qtree}
 \usepackage{matlab-prettifier}
+\usepackage{fitch}
 \noautomath
+\allowdisplaybreaks
 
 \newcounter{pnum}
 \newcommand{\problem}[1][]{
@@ -154,3 +156,99 @@ Code available on \href{#1}{Github}.\vspace{5pt}\hrule\vspace{5pt}
     {8}{{{\color{darkgray}8}}}1
     {9}{{{\color{darkgray}9}}}1
 } 
+\newcommand{\strongkleene}{
+  \ndrules
+  \def\dn##1{\by{$\lnot\lnot$I}{##1}}
+  \def\mci##1{\by{mcI}{##1}}
+  \def\mce##1{\by{mcE}{##1}}
+  \def\nmci##1{\by{$\lnot$mcI}{##1}}
+  \def\nmce##1{\by{$\lnot$mcE}{##1}}
+  \def\nci##1{\by{$\lnot\land$I}{##1}}
+  \def\nce##1{\by{$\lnot\land$E}{##1}}
+  \def\ndi##1{\by{$\lnot\lor$I}{##1}}
+  \def\nde##1{\by{$\lnot\lor$E}{##1}}
+}
+
+\newcommand{\lukasiewicz}{
+  \ndrules
+  \def\dn##1{\by{$\lnot\lnot$I}{##1}}
+  \def\nci##1{\by{$\lnot\land$I}{##1}}
+  \def\nce##1{\by{$\lnot\land$E}{##1}}
+  \def\ndi##1{\by{$\lnot\lor$I}{##1}}
+  \def\nde##1{\by{$\lnot\lor$E}{##1}}
+  \def\condi##1{\by{$L_3\Rightarrow$I}{##1}}
+  \def\condd##1{\by{$L_3$D}{##1}}
+  \def\condmt##1{\by{MT}{##1}}
+  \def\nconde##1{\by{$L_3\lnot\Rightarrow$E}{##1}}
+  \def\ncondi##1{\by{$L_3\lnot\Rightarrow$I}{##1}}
+}
+
+\newcommand{\lukasiewiczmodified}{
+  \ndrules
+  \def\dn##1{\by{$\lnot\lnot$I}{##1}}
+  \def\nci##1{\by{$\lnot\land$I}{##1}}
+  \def\nce##1{\by{$\lnot\land$E}{##1}}
+  \def\ndi##1{\by{$\lnot\lor$I}{##1}}
+  \def\nde##1{\by{$\lnot\lor$E}{##1}}
+  \def\condi##1{\by{$L_3\Rightarrow$I}{##1}}
+  \def\condd##1{\by{$L_3$D}{##1}}
+  \def\condmt##1{\by{MT}{##1}}
+  \def\nconde##1{\by{$L_3\lnot\Rightarrow$E}{##1}}
+  \def\ncondi##1{\by{$L_3\lnot\Rightarrow$I}{##1}}
+  \def\tdiam##1{\by{T$\diamond$}{##1}}
+  \def\weaken##1{\by{W}{##1}}
+}
+
+\newcommand{\paradox}{
+  \ndrules
+  \def\dn##1{\by{$\lnot\lnot$I}{##1}}
+  \def\mci##1{\by{mcI}{##1}}
+  \def\mce##1{\by{mcE}{##1}}
+  \def\nmci##1{\by{$\lnot$mcI}{##1}}
+  \def\nmce##1{\by{$\lnot$mcE}{##1}}
+  \def\nci##1{\by{$\lnot\land$I}{##1}}
+  \def\nce##1{\by{$\lnot\land$E}{##1}}
+  \def\ndi##1{\by{$\lnot\lor$I}{##1}}
+  \def\nde##1{\by{$\lnot\lor$E}{##1}}
+  \def\tnd##1{\by{TND}{##1}}
+}
+
+\newcommand{\godel}{
+  \ndrules
+  \def\gt##1{\by{G3}{##1}}
+}
+
+\newcommand{\fde}{
+  \ndrules
+  \def\dn##1{\by{$\lnot\lnot$I}{##1}}
+  \def\mci##1{\by{mcI}{##1}}
+  \def\mce##1{\by{mcE}{##1}}
+  \def\nmci##1{\by{$\lnot$mcI}{##1}}
+  \def\nmce##1{\by{$\lnot$mcE}{##1}}
+  \def\nci##1{\by{$\lnot\land$I}{##1}}
+  \def\nce##1{\by{$\lnot\land$E}{##1}}
+  \def\ndi##1{\by{$\lnot\lor$I}{##1}}
+  \def\nde##1{\by{$\lnot\lor$E}{##1}}
+}
+
+\newcommand{\relevant}{
+  \ndrules
+  \def\condi##1{\by{$\to_R$I}{##1}}
+  \def\conde##1{\by{$\to_R$E}{##1}}
+  \def\sqi##1{\by{$\square$I}{##1}}
+  \def\sqe##1{\by{$\square$E}{##1}}
+  \def\cii##1{\by{$\circ$I}{##1}}
+  \def\cie##1{\by{$\circ$E}{##1}}
+}
+
+\newcommand{\connexive}{
+  \ndrules
+  \def\dn##1{\by{$\lnot\lnot$I}{##1}}
+  \def\nci##1{\by{$\lnot\land$I}{##1}}
+  \def\nce##1{\by{$\lnot\land$E}{##1}}
+  \def\ndi##1{\by{$\lnot\lor$I}{##1}}
+  \def\nde##1{\by{$\lnot\lor$E}{##1}}
+  \def\tnd##1{\by{TND}{##1}}
+  \def\nconde##1{\by{$\lnot\Rightarrow$E}{##1}}
+  \def\ncondi##1{\by{$\lnot\Rightarrow$I}{##1}}
+}

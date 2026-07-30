@@ -2,3 +2,6 @@
 .obsidian/*
 Books/*
 *.canvas
+*.cov
+*.s
+*.o

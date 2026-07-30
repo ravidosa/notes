@@ -1,0 +1,17 @@
+{
+    "name": "p2-2.uthreadsync",
+    "image": "mcr.microsoft.com/devcontainers/cpp:ubuntu-24.04",
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "files.eol": "\n",
+                "files.trimFinalNewlines": false,
+                "editor.defaultFormatter": "ms-vscode.cpptools"
+            },
+            "extensions": [
+            "ms-vscode.cpptools",
+            "ms-vscode.makefile-tools"
+            ]
+        }
+    }
+}

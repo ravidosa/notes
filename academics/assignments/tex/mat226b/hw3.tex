@@ -1,0 +1,234 @@
+\documentclass{article}
+\usepackage{../assignment_preamble}
+
+\title{Homework 3}
+\author{Ravi Kini}
+\date{March 13, 2026}
+
+\begin{document}
+
+\maketitle
+
+\problem{}
+\subproblem{(a)}
+Let $C \in \mathbb{C}^{n\times n}$ be a circulant matrix, with $C_{j,k} = c_{(j - k) \bmod n}$. The $n \times n$ discrete Fourier transform matrix $\mathcal{F}_n \in \mathbb{C}^{n\times n}$ is such that $(\mathcal{F}_n)_{j,k} = \omega^{jk}$ where $\omega = e^{-2\pi i/n}$. Consider the $k$-th column of $\mathcal{F}_n$, $(\mathcal{F}_n)_{\cdot,k}$. We then see that:
+\begin{align*}
+    \left(C(\mathcal{F}_n)_{\cdot,k}\right)_j & = \sum_{l=0}^{n-1} C_{j,l}(\mathcal{F}_n)_{l,k} = \sum_{l=0}^{n-1} C_{j,l}\omega^{lk}
+\end{align*}
+Letting $m = (j - l) \mod n$:
+\begin{align*}
+    \left(C(\mathcal{F}_n)_{\cdot,k}\right)_j & = \sum_{m=0}^{n-1} c_m\omega^{(j - m)k} = \omega^{jk}\sum_{m=0}^{n-1} c_m\omega^{-mk} = (\mathcal{F}_n)_{j,k}\sum_{m=0}^{n-1} c_m\omega^{-mk}
+\end{align*}
+It follows that $\left(C(\mathcal{F}_n)_{\cdot,k}\right)_j = \left(\sum_{m=0}^{n-1} c_m\omega^{-mk}\right)(\mathcal{F}_n)_{\cdot,k}$, and so that the $k$-th column of the discrete Fourier transform matrix is an eigenvector of $C$.
+
+\subproblem{(b)}
+As seen in the previous part, the columns of the discrete Fourier transform matrix are the eigenvectors of $C$, with column $k$ having the corresponding eigenvalue $\sum_{m=0}^{n-1} c_m\omega^{-mk}$. Letting $c$ be the first column of $C$, we see that:
+\begin{align*}
+    (\mathcal{F}_n c)_k & = \sum_{m=0}^{n-1} (\mathcal{F}_n)_{k,m}c_m = \sum_{m=0}^{n-1} \omega^{-km}c_m
+\end{align*}
+This quantity is identical to the eigenvalues found in the previous part.
+
+\subproblem{(c)}
+To compute the $n$ eigenvalues of $C$, we only need to compute $\mathcal{F}_n c$. Naively, this would require $O(n^2)$ floating point operations. However, multiplication using FFT requires only $O(n \log n)$ floating point operations. By exploiting the existing structure of $\mathcal{F}_n$, computation can be sped up considerably.
+
+\subproblem{(d)}
+Let $T$ be a Toeplitz matrix with first column $(c_0, c_1, \ldots, c_{n-1})$ and first row $(c_0, r_1, \ldots, r_{n-1})$. We then define the $2n \times 2n$ circulant matrix $C$ with the first column $(c_0, c_1, \ldots, c_{n-1}, 0, r_{n-1}, \ldots, r_1)$. The upper left block of this new matrix is $T$. To see this, for $j, k$ where $0 \leq j, k \leq n - 1$, when $j \geq k$:
+\begin{align*}
+    C_{j,k} = c_{j-k} = T_{j,k}
+\end{align*}
+and when $j < k$:
+\begin{align*}
+    C_{j,k} = r_{k-j} = T_{j,k}
+\end{align*}
+To do $O(n \log n)$ matrix-vector product $Tx$ given a $n \times n$ Toeplitz matrix $T$, we first construct $C$ as described above and $y = (x_0, \ldots, x_{n-1}, 0)$. Using the FFT, we can compute $Cy$ using $O(n \log n)$ floating point operations; to find $Tx$, we only need to extract the first $n$ entries of $Cy$.
+
+\clearpage
+\problem{}
+\subproblem{(a)}
+Let there be $N$ source particles in the interval $D = [-\frac{1}{2}, \frac{1}{2}]$, with particle $j$ at position $s_j$ and with charge $q_j$. The potential at a target point outside $D$ is:
+\begin{align*}
+    \Phi(x) = \sum_{j=1}^N \frac{q_j}{x - s_j}
+\end{align*}
+For $x$ such that $|x| > |s_j|$, we see that:
+\begin{align*}
+    \frac{1}{x - s_j} & = \frac{1}{x} \cdot \frac{1}{1 - s_j/x} = \frac{1}{x} \sum_{k=0}^\infty \left(\frac{s_j}{x}\right)^k = \sum_{k=0}^\infty \frac{s_j^k}{x^{k+1}} \\
+\end{align*}
+Consequently:
+\begin{align*}
+    \Phi(x) & = \sum_{j=1}^N q_j\sum_{k=0}^\infty \frac{s_j^k}{x^{k+1}} \\
+    & = \sum_{k=0}^\infty \frac{\sum_{j=1}^N q_j s_j^k}{x^{k+1}} = \sum_{k=0}^\infty \frac{M_k}{x^{k+1}}
+\end{align*}
+where $M_k = \sum_{j=1}^N q_j s_j^k$.
+
+\subproblem{(b)}
+Let $\Phi_p(x) = \sum_{k=0}^{p-1} \frac{M_k}{x^{k+1}}$ be the $p$-term approximtion of the potential. Let $Q = \sum_{j=1}^N |q_j|$ and $s_{\text{max}} = \max |s_j|$. We see that
+\begin{align*}
+    |M_k| = \left|\sum_{j=1}^N q_j s_j^k\right| & \leq \sum_{j=1}^N |q_j| |s_j|^k \leq Qs_{\text{max}}^k
+\end{align*}
+Then the error term is bounded by:
+\begin{align*}
+    |\Phi(x) - \Phi_p(x)| & = \left| \sum_{k=p}^\infty \frac{M_k}{x^{k+1}} \right| \leq \sum_{k=p}^\infty \frac{|M_k|}{|x^{k+1}|} \\
+    & \leq \sum_{k=p}^\infty \frac{Qs_{\text{max}}^k}{|x^{k+1}|} = \frac{Q}{|x|} \sum_{k=p}^\infty \left(\frac{s_{\text{max}}}{|x|}\right)^k \\
+    & \leq \frac{Q}{|x|} \cdot \frac{(s_{\text{max}}/|x|)^p}{1 - s_{\text{max}}/|x|} = \frac{Q}{|x| - s_{\text{max}}}\left(\frac{s_{\text{max}}}{|x|}\right)^p
+\end{align*}
+
+\subproblem{(c)}
+We seek $\tilde{M}_l$ such that $\Phi(x) = \sum_{l=0}^\infty \frac{\tilde{M}_l}{(x - x_c)^{l + 1}}$. We first note that:
+\begin{align*}
+    \frac{1}{x - s_j} = \frac{1}{(x - x_c) + (x_c - s_j)} & = \frac{1}{x - x_c} \cdot \frac{1}{1 + \frac{x_c - s_j}{x - x_c}} \\
+    & = \frac{1}{x - x_c}\sum_{l=0}^{\infty} \left(-\frac{x_c - s_j}{x - x_c}\right)^l \\
+    & = \sum_{l=0}^{\infty} \frac{(-1)^l(x_c - s_j)^l}{(x - x_c)^{l+1}}
+\end{align*}
+Consequently, substituting into the formula for the potential:
+\begin{align*}
+    \Phi(x) & = \sum_{j=1}^N q_j \sum_{l=0}^{\infty} \frac{(-1)^l(x_c - s_j)^l}{(x - x_c)^{l+1}} \\
+    & = \sum_{l=0}^{\infty} \frac{\sum_{j=1}^N q_j (-1)^l(x_c - s_j)^l}{(x - x_c)^{l+1}} = \sum_{l=0}^{\infty} \frac{\tilde{M}_l}{(x - x_c)^{l+1}}
+\end{align*}
+where $\tilde{M}_l = \sum_{j=1}^N q_j (-1)^l(x_c - s_j)^l$. To see the relationship between $\tilde{M}_l$ and $M_k$:
+\begin{align*}
+    \tilde{M}_l & = \sum_{j=1}^N q_j (-1)^l(x_c - s_j)^l \\
+    & = \sum_{j=1}^N q_j (-1)^l\sum_{k=0}^l {l \choose k}x_c^{l-k}(-s_j)^k \\
+    & = \sum_{k=0}^l {l \choose k}2^{l-k}(-1)^{l+k} M_k
+\end{align*}
+
+If $x_c = 2$:
+\begin{align*}
+    \tilde{M}_l & = \sum_{k=0}^l {l \choose k}x_c^{l-k}(-1)^{l+k} M_k
+\end{align*}
+
+\subproblem{(d)}
+Let $\mu = [M_0, \ldots, M_{p-1}]^T$ and $\tilde{\mu} = [\tilde{M}_0, \ldots, \tilde{M}_{p-1}]^T$. The $p \times p$ translation operator $T$ transforms the vector of old moments to the vector of new moments, with $\tilde{\mu} = T\mu$; we see that it has entries such that:
+\begin{align*}
+    T_{l,k} = {l \choose k}x_c^{l-k}(-1)^{l+k}
+\end{align*}
+
+\subproblem{(e)}
+For all target points such that $|x| > 10$, for the truncation error to be at most $10^{-6}$:
+\begin{align*}
+    10^{-6} & \leq \frac{Q}{10 - 0.5}\left(\frac{0.5}{10}\right)^p \\
+    -6 & \leq \log(Q/9.5) + p\log(0.05) \\
+    p & \geq \frac{-6 - \log(Q/9.5)}{\log(0.05)}
+\end{align*}
+The bound is highest when $Q = 1$ (there is only a single charge), which yields an lower bound of $p \geq 3.86$; at least $4$ terms are then needed in the approximation.
+
+\clearpage
+\problem{}
+\subproblem{(a)}
+Let $A \in \mathbb{C}^{n \times n}$ be a diagonalizable matrix with diagonalization $A = V\Lambda V^{-1}$. We apply GMRES to solve $Ax = b$, with initial guess $x_0 \in \mathbb{C}^n$. Let $r_k = b - Ax_k$. On the $k$th iteration, GMRES will find the iterate $x_k \in x_0 + \mathcal{K}_k(A, r_0)$ that minimizes $||r_k||_2$. We can write $x_k - x_0 = q_{k-1}(A)r_0$ where $q_{k-1}$ is a polynomial of degree at most $k - 1$; it then follows that:
+\begin{align*}
+    r_k & = b - Ax_k = b - A(x_0 + q_{k-1}(A)r_0) \\
+    & = r_0 - q_{k-1}(A)r_0 \\
+    & = (I - Aq_{k-1}(A))r_0 = p_k(A)r_0
+\end{align*}
+where $p_k(\lambda) = 1 - Xq_{k-1}(\lambda)$. Note that it is a polynomial of degree $k$ such that $p_k(0) = 1$. It is then equivalent to state that GMRES finds $x_k$ that minimizes $||r_k||_2 = \underset{p \in \mathcal{P}_k, p(0) = 1}{\min} ||p(A)r_0||_2$. We then see that:
+\begin{align*}
+    ||p_k(A)r_0||_2 & = ||Vp(\Lambda)V^{-1}r_0||_2 \\
+    & \leq ||V||_2 \cdot ||p(\Lambda)||_2 \cdot ||V^{-1}||_2 \cdot ||r_0||_2 \\
+    & \leq \kappa(V)||r_0||_2 \cdot ||p(\Lambda)||_2
+\end{align*}
+Note that since $\Lambda$ is a diagonal matrix, $p(\Lambda) = \mathrm{diag}(p(\lambda_1), \ldots, p(\lambda_n))$, and so $||q(\Lambda)||_2 = \max_i |p(\lambda_i)|$. Consequently:
+\begin{align*}
+    ||r_k||_2 & \leq \underset{p \in \mathcal{P}_k, p(0) = 1}{\min} \kappa(V)||r_0||_2 \cdot \max_i |p(\lambda_i)|  \\
+    & \leq \underset{p \in \mathcal{P}_k, p(0) = 1}{\min} \kappa(V)||r_0||_2 \max_{\lambda \in \sigma(A)} |p(\lambda)| \\
+    \frac{||r_k||_2}{||r_0||_2} & \leq \kappa(V)\underset{p \in \mathcal{P}_k, p(0) = 1}{\min} \max_{\lambda \in \sigma(A)} |p(\lambda)|
+\end{align*}
+
+\subproblem{(b)}
+Consider the $n \times n$ matrix:
+\begin{align*}
+    A = \begin{bmatrix}
+        0 & 0 & \ldots & 0 & 1 \\
+        1 & 0 & \ldots & 0 & 0 \\
+        0 & 1 & \ldots & 0 & 0 \\
+        \vdots & \vdots & & \vdots & \vdots \\
+        0 & 0 & \ldots & 1 & 0
+    \end{bmatrix}
+\end{align*}
+Suppose we wish to solve $Ax = b$ where $b = (1, 0, \ldots, 0)^T$ using GMRES with $x_0 = 0$. Note that the solution is $x^* = e_n$. Since $r_0 = e_1$, $\mathcal{K}_k(A, r_0) = \mathrm{span}\{e_1, Ae_1 \ldots, A^{k-1}e_1\} = \mathrm{span}\{e_1, e_2, \ldots, e_k\}$. For all $k < n$, $e_n$ then cannot be in the Krylov subspace, which means that it takes $n$ iterations for GMRES to converge.
+
+\subproblem{(c)}
+\begin{lstlisting}
+def zeros(n):
+    return [[0.0 for i in range(n)] for j in range(n)]
+
+def m_v_prod(A, x):
+    n = len(A)
+    return [sum(A[i][j] * x[j] for j in range(n)) for i in range(n)]
+
+def v_norm(x):
+    n = len(x)
+    return sum([x[j] ** 2 for j in range(n)]) ** 0.5
+
+def v_add(x, y):
+    n = len(x)
+    return [x[j] + y[j] for j in range(n)]
+
+def v_sub(x, y):
+    n = len(x)
+    return [x[j] - y[j] for j in range(n)]
+    
+def v_dot(x, y):
+    n = len(x)
+    return sum([x[j] * y[j] for j in range(n)])
+
+def v_prod(x, k):
+    n = len(x)
+    return [x[j] * k for j in range(n)]
+
+def givens(v1, v2):
+    t = (v1 ** 2 + v2 ** 2) ** 0.5
+    return v1 / t, v2 / t
+
+def GMRES(A, b, x0, tol=1e-10, max_iter=1000):
+    n = len(b)
+    m = max_iter
+    
+    b_norm = v_norm(b)
+    r0 = v_sub(b, m_v_prod(A, x0))
+    beta = v_norm(r0)
+    
+    q = [[0.0] * n for _ in range(m + 2)]
+    q[1] = v_prod(r0, 1.0 / beta)
+    
+    H = [[0.0] * (m + 1) for _ in range(m + 2)]
+    s = [0.0] * (m + 1)
+    c = [0.0] * (m + 1)
+    g = [0.0] * (m + 2)
+    g[1] = beta
+    
+    for k in range(1, m + 1):
+        w = m_v_prod(A, q[k])
+        
+        for j in range(1, k + 1):
+            H[j][k] = v_dot(w, q[j])
+            w = v_sub(w, v_prod(q[j], H[j][k]))
+        
+        H[k + 1][k] = v_norm(w)
+        q[k + 1] = v_prod(w, 1.0 / H[k + 1][k])
+        
+        for i in range(1, k):
+            H[i + 1][k], H[i][k] = -s[i] * H[i][k] + c[i] * H[i + 1][k], c[i] * H[i][k] + s[i] * H[i + 1][k]
+        
+        c[k], s[k] = givens(H[k][k], H[k + 1][k])
+        H[k][k] = c[k] * H[k][k] + s[k] * H[k + 1][k]
+        H[k + 1][k] = 0.0
+        
+        g[k + 1] = -s[k] * g[k]
+        g[k] = c[k] * g[k]
+        
+        if abs(g[k + 1]) / b_norm <= tol:
+            break
+    
+    alpha = [0.0] * (k + 1)
+    for i in range(k, 0, -1):
+        alpha[i] = g[i] - sum([H[i][j] * alpha[j] for j in range(i + 1, k + 1)])
+        alpha[i] /= H[i][i]
+    
+    xk = x0[:]
+    for j in range(1, k + 1):
+        xk = v_add(xk, v_prod(q[j], alpha[j]))
+    
+    return xk
+    
+\end{lstlisting}
+\end{document}

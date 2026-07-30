@@ -1,0 +1,102 @@
+\documentclass{article}
+\usepackage{../assignment_preamble}
+
+\title{Final}
+\author{Ravi Kini}
+\date{June 9, 2026}
+
+\begin{document}
+
+\maketitle
+
+\problem
+In classical logic, formulas take on exactly one of two truth values: ``true'' and ``false''. Consequently, it is an axiom of classic logic that either a formula is ``true'', or that its negation is, as a consequence of the formula being ``false''--the law of excluded middle. In contrast, intuitionistic logic recognizes that many propositions in real life lack concrete evidence of it having either truth value. Take, for example, a open conjecture $A$ in mathematics that has yet to be either proven or disproven. From a classical perspective, one would argue that the conjecture is already either ``true'' or ``false''; on the other hand, from a intuitionistic perspective, without a proof in either direction, we cannot say that that the disjunction $A \lor \lnot A$ holds. It is another axiom of classical logic that knowing that the negation of the negation of a formula is ``true'' is sufficient to show that the formula itself is ``true''--double negation elimination. Intuitionistic logic likewise recognizes that lacking a refutation is not equivalent to having a proof. Returning to the example of the open conjecture, from a classical perspective, if it is known that the conjecture is not ``false'', it must be ``true''. However, from an intuitionistic perspective, having a proof of $\lnot\lnot A$ is not the same as having a proof of $A$. Both of these ideas can be formalized using Kripke semantics. For the law of the excluded middle, to verify $A \lor \lnot A$ at some world $w$, straightforwardly either $A$ or $\lnot A$ must be verified at $w$. However, for the latter to hold, all downstream worlds $w'$ must not have $A$ be verified; it is easy to see that in a model where $A$ is not verified at $w$ but is at $w'$, the disjunction $A \lor \lnot A$ is not verified at $w$. Similarly, for double negation elimination, to verify $\lnot \lnot A$ at the world $w$, $A$ must be verified at all downstream worlds $w'$, and it is easy to see, using the previously described model, that $\lnot \lnot A$ can be verified at $w$ without verifying $A$. Many-valued logics try to circumvent this by introducing intermediate truth values to handle formulas that cannot be categorized as either "true" or "false". The logic of first-degree entailment, for example, likewise rejects classical logic's bivalence; propositions are permitted to be ``both'' true and false, or ``neither'' true or false. However, this misdiagnoses the fundamental issue: the problem with vagueness is not that truth values lie on a spectrum rather than a strict binary, but that propositions exist about which we lack any ground to make assertions about, regardless of the direction or of the degree. Intuitionistic logic is motivated by the idea that truth or falsity is not inherent to an proposition, but must be constructed using a proof. A proposition cannot be true or false independent of our ability to prove it. This motivation is most clearly seen in Godel's first incompleteness theorem; in any consistent system of axioms, there will exist theorems that can neither be proven nor disproven. In the framework of classical logic, we are forced to assert that such theorems are true or false, while conceding that we can never know which is actually the case. Intuitionistic logic, however, does not treat incompleteness as an anomaly, but as a natural consequence of requiring that a proof of a proposition exist for it to be ``true''. In this sense, intuitionistic logic is honest--truth is bounded by our capacity to verify it.
+
+\clearpage
+\problem
+\subproblem{(a)}
+Let $p = 1$ and $q = 0$. We then see that $p \Rightarrow q = 0$, so $(p \Rightarrow q) \Rightarrow q = 1$. However, $q = 0$. Consequently, the argument $(p \Rightarrow q) \Rightarrow q \vdash q \Rightarrow q$ is an invalid argument in both the Logic of First-Degree Entailment and Godel logic.
+
+This does not indicate anything about the relative strengths of the Logic of First-Degree Entailment and Godel logic, as the argument is invalid in both.
+
+\subproblem{(b)}
+Let $p = n$ and $q = 1$. We then see that $p \Rightarrow q = 1$ and $q \Rightarrow p = n$, so $(p \Rightarrow q) \Rightarrow (q \Rightarrow p) = n$. However, $((p \Rightarrow q) \Rightarrow (q \Rightarrow p)) \Rightarrow (q \Rightarrow p) = n$. Consequently, the argument $q \vdash ((p \Rightarrow q) \Rightarrow (q \Rightarrow p)) \Rightarrow (q \Rightarrow p)$ is an invalid argument in the Logic of First-Degree Entailment.
+
+
+\begin{equation*}
+\begin{nd}[rules=godel,justformat=just]
+\open
+\hypo {1} {q}
+\open
+    \hypo {2} {(p \Rightarrow q) \Rightarrow (q \Rightarrow p)}
+    \open
+        \hypo {3} {q}
+        \open
+            \hypo {4} {p}
+            \have {5} {p} \r{4}
+        \close
+        \open
+            \hypo {6} {\lnot q}
+            \have {7} {q} \r{3}
+            \have {8} {p} \ne{6,7}
+        \close
+        \open
+            \hypo {9} {p \Rightarrow q}
+            \have {10} {q \Rightarrow p} \ie{2,9}
+            \have {11} {p} \ie{10,3}
+        \close
+        \have {12} {p} \gt{4-5,6-8,9-11}
+    \close
+    \have {13} {q \Rightarrow p} \ii{3-12}
+\close
+\have {14} {((p \Rightarrow q) \Rightarrow (q \Rightarrow p)) \Rightarrow (q \Rightarrow p)} \ii{2-13}
+\end{nd}
+\end{equation*}
+We then see that $q \vdash ((p \Rightarrow q) \Rightarrow (q \Rightarrow p)) \Rightarrow (q \Rightarrow p)$ is a valid argument in Godel logic.
+
+This indicates that the Logic of First-Degree entailment cannot be stronger than Godel logic, as the argument was valid in the latter but not the former.
+
+\clearpage
+\problem
+Let there be a Kripke model with moments $0$, $1$, $2$, and $3$ where $0 \leq 1$, $0 \leq 2$, $1 \leq 3$, and $2 \leq 3$. Let $p$ be verified at $\{0, 1, 2, 3\}$ and $q$ be verified at $\{3\}$.
+
+For $\lnot q$ to be verified at $v$, $q$ must not be verified at all $w$ where $v \leq w$. However, since $q$ is verified at $3$ and $v \leq 3$ for all $v \in \{0, 1, 2, 3\}$, $\lnot q$ is not verified for all $v \in \{0, 1, 2, 3\}$.
+
+For $\lnot\lnot q$ to be verified at $v$, $\lnot q$ must not be verified at all $w$ where $v \leq w$. It then follows that $\lnot\lnot q$ is verified for all $v \in \{0, 1, 2, 3\}$.
+
+For $p \Rightarrow \lnot q$ to be verified at $v$, for all $w$ where $v \leq w$, if $p$ is verified at $w$, then $\lnot q$ is verified at $w$. However, since $p$ is verified and $\lnot q$ is not verified for all $v \in \{0, 1, 2, 3\}$, $p \Rightarrow \lnot q$ is not verified for all $v \in \{0, 1, 2, 3\}$.
+
+For $\lnot\lnot q \Rightarrow \lnot p$ to be verified at $v$, for all $w$ where $v \leq w$, if $\lnot\lnot q$ is verified at $w$, then $p$ is verified at $w$. Since $\lnot\lnot q$ and $p$ are verified for all $v \in \{0, 1, 2, 3\}$, $\lnot\lnot q \Rightarrow \lnot p$ is verified for all $v \in \{0, 1, 2, 3\}$.
+
+We then see that since $\lnot\lnot q \Rightarrow \lnot p$ is verified at $0$, $(p \Rightarrow \lnot q) \lor (\lnot\lnot q \Rightarrow \lnot p)$ is verified at $0$.
+
+\clearpage
+\problem
+\subproblem{(a)}
+\begin{equation*}
+\begin{nd}[rules=relevant,justformat=just]
+\open
+    \hypo {1} {(A \circ B)_{\{1\}}}
+    \open
+        \hypo {2} {A_{\{2\}}}
+        \open
+            \hypo {3} {B_{\{3\}}}
+            \have {4} {(B \circ A)_{\{2,3\}}} \cii{3,2}
+        \close
+        \have {5} {B \Rightarrow (B \circ A)_{\{3\}}} \ii{3-4}
+    \close
+    \have {5} {A \Rightarrow (B \Rightarrow (B \circ A))_{\varnothing}} \ii{2-5}
+    \have {6} {(B \circ A)_{\{1\}}} \cie{1,6}
+\close
+\have {7} {((A \circ B) \Rightarrow (B \circ A))_{\varnothing}} \ii{1-7}
+\end{nd}
+\end{equation*}
+We then see that $ \vdash (A \circ B) \Rightarrow (B \circ A)$ is a valid argument in relevant logic.
+\subproblem{(b)}
+The entailment restriction aims to capture relevance between the premises and the conclusion. By restricting when reiteration can be used, it forces every premise to play a role in deriving the conclusion. This invalidates arguments like $A, B \vdash A$, where $B$ is irrelevant to proving the concusion, that are valid in classical logic.
+
+This derivation satisfies the entailment restriction since only formulas of the form $A \Rightarrow B$ have been reiterated into subproofs. This indicates that the formula is also valid in the logic of entailment.
+
+\subproblem{(c)}
+The formula $(A \circ B) \Rightarrow A$ is not valid in relevant logic. If it were true, that would indicate that given two fused formulas, one can discard one of them; however, that would go against the principles of relevant logic, which require that every part of the premise play a role in deriving the conclusion.
+\end{document}

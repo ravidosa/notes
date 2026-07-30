@@ -168,43 +168,87 @@ def QR(T):
 \end{lstlisting}
 \subproblem{(c)}
 \begin{lstlisting}
-def leading(A):
-    n = len(A)
-    return [row[:-1] for row in A[:-1]]
-
 def zeros(n):
     return [[0.0 for i in range(n)] for j in range(n)]
-    
-def wilkinson(T):
-    n = len(T)
-    a, b, c = T[n - 2][n - 2], T[n - 2][n - 1], T[n - 1][n - 1]
-    delta = (a - c) / 2
-    sign = 1.0 if delta >= 0 else -1.0
-    return c - sign * b ** 2 / (abs(delta) + math.hypot(delta, b))
 
-def QR_iteration(T, tol=1e-10, max_iter=1000):
-    n = len(T)
-    T = copy(T)
-    eigs = []
-    while n > 1:
-        for _ in range(max_iter):
-            if abs(T[n - 1][n - 2] / (abs(T[n - 2][n - 2]) + abs(T[n - 1][n - 1]))) < tol:
-                eigs.append(T[n - 1][n - 1])
-                T = leading(T)
-                n -= 1
-                break
-            mu = wilkinson(T)
-            for i in range(n):
-                T[i][i] -= mu
-            Q, R = QR(T)
-            T = zeros(n)
-            for i in range(n):
-                for j in range(max(0, i - 1), min(n, i + 2)):
-                    for k in range(i, min(n, j + 2)):
-                        T[i][j] += R[i][k] * Q[k][j]
-            for i in range(n):
-                T[i][i] += mu
-    eigs.append(T[0][0])
-    return sorted(eigs, reverse=True)
+def m_v_prod(A, x):
+    n = len(A)
+    return [sum(A[i][j] * x[j] for j in range(n)) for i in range(n)]
+
+def v_norm(x):
+    n = len(x)
+    return sum([x[j] ** 2 for j in range(n)]) ** 0.5
+
+def v_add(x, y):
+    n = len(x)
+    return [x[j] + y[j] for j in range(n)]
+
+def v_sub(x, y):
+    n = len(x)
+    return [x[j] - y[j] for j in range(n)]
+    
+def v_dot(x, y):
+    n = len(x)
+    return sum([x[j] * y[j] for j in range(n)])
+
+def v_prod(x, k):
+    n = len(x)
+    return [x[j] * k for j in range(n)]
+
+def givens(v1, v2):
+    t = (v1 ** 2 + v2 ** 2) ** 0.5
+    return v1 / t, v2 / t
+
+def GMRES(A, b, x0, tol=1e-10, max_iter=1000):
+    n = len(b)
+    m = max_iter
+    
+    b_norm = v_norm(b)
+    r0 = v_sub(b, m_v_prod(A, x0))
+    beta = v_norm(r0)
+    
+    q = [[0.0] * n for _ in range(m + 2)]
+    q[1] = v_prod(r0, 1.0 / beta)
+    
+    H = [[0.0] * (m + 1) for _ in range(m + 2)]
+    s = [0.0] * (m + 1)
+    c = [0.0] * (m + 1)
+    g = [0.0] * (m + 2)
+    g[1] = beta
+    
+    for k in range(1, m + 1):
+        w = m_v_prod(A, q[k])
+        
+        for j in range(1, k + 1):
+            H[j][k] = v_dot(w, q[j])
+            w = v_sub(w, v_prod(q[j], H[j][k]))
+        
+        H[k + 1][k] = v_norm(w)
+        q[k + 1] = v_prod(w, 1.0 / H[k + 1][k])
+        
+        for i in range(1, k):
+            H[i + 1][k], H[i][k] = -s[i] * H[i][k] + c[i] * H[i + 1][k], c[i] * H[i][k] + s[i] * H[i + 1][k]
+        
+        c[k], s[k] = givens(H[k][k], H[k + 1][k])
+        H[k][k] = c[k] * H[k][k] + s[k] * H[k + 1][k]
+        H[k + 1][k] = 0.0
+        
+        g[k + 1] = -s[k] * g[k]
+        g[k] = c[k] * g[k]
+        
+        if abs(g[k + 1]) / b_norm <= tol:
+            break
+    
+    alpha = [0.0] * (k + 1)
+    for i in range(k, 0, -1):
+        alpha[i] = g[i] - sum([H[i][j] * alpha[j] for j in range(i + 1, k + 1)])
+        alpha[i] /= H[i][i]
+    
+    xk = x0[:]
+    for j in range(1, k + 1):
+        xk = v_add(xk, v_prod(q[j], alpha[j]))
+    
+    return xk
+    
 \end{lstlisting}
 \end{document}

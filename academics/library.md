@@ -7,6 +7,7 @@
 - Algebra (Artin) {[MAT 150A](./f23/mat150a.md), [MAT 150B](./w24/mat150b), [MAT 150C](./s24/mat150c)}
 - [Algebra](https://tutorial.math.lamar.edu/Classes/Alg/Alg.aspx) (Dawkins)
 - [Algorithms and Data Structures Using C++](https://runestone.academy/ns/books/published/cppds/index.html) (Miller, Pearce, Ranum) {[ECS 36]()}
+- Analysis of Boolean Functions (O'Donnell)
 - Analysis on Manifolds (Munkres) {[MAT 127C](./s24/mat127c.md)}
 - The Art of Electronics (Horowitz, Hill)
 - The Art of Proof (Beck, Geoghegan)
@@ -131,6 +132,8 @@
 - [No-Nonsense Quantum Field Theory](http://www.stat.ucla.edu/~ywu/QFT0.pdf) (Schwichtenberg)
 - Nonlinear Dynamics with Chaos (Strogatz) {[MAT 119A](./w23/mat119a.md)}
 - Nonlinear Optics (Boyd, Prato)
+- Nonlinear Programming (Mangasarian)
+- Nonmonotonic Logics (Schlecta)
 - Nuclear and Particle Physics: An Introduction (Martin)
 - Nuclear Physics: Principles and Applications (Lilley)
 - Numerical Analysis (Burden, Faires, et al.) {[MAT 128A](./m23/mat128a.md), [MAT 128B](./s23/mat128b.md), [MAT 128C](./s24/mat128c.md)}
@@ -150,6 +153,7 @@
 - Program Proofs (Rustan, Leino)
 - Programming Languages (Lambert, Louden)
 - [Purely Functional Data Structures](https://www.cs.cmu.edu/~rwh/students/okasaki.pdf) (Okazaki)
+- The Nature of Computation (Moore, Mertens) {ECS 220}
 - The Qualitative Theory of Ordinary Differential Equations (Brauer, Nohel)
 - [Quantum Computation](https://www.preskill.caltech.edu/ph229/) (Preskill)
 - [Quantum Field Theory](https://web.physics.ucsb.edu/~mark/ms-qft-DRAFT.pdf) (Srednicki)
@@ -180,3 +184,5 @@
 - Understanding Phonology (Gussenhoven)
 - University Physics (Young, Freedman)
 - Visual Complex Analysis (Needham)
+- Visual Group Theory (Carter)
+- Word Structure (Coates) {LIN 121}

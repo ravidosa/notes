@@ -1,0 +1,22 @@
+{
+    "name": "p3-1.fat150",
+    "image": "mcr.microsoft.com/devcontainers/cpp:ubuntu-24.04",
+    "features": {
+        "ghcr.io/rocker-org/devcontainer-features/apt-packages:1": {
+            "packages": "meson"
+        }
+    },
+    "customizations": {
+        "vscode": {
+            "settings": {
+                "files.eol": "\n",
+                "files.trimFinalNewlines": false,
+                "editor.defaultFormatter": "ms-vscode.cpptools"
+            },
+            "extensions": [
+                "ms-vscode.cpptools",
+                "mesonbuild.mesonbuild"
+            ]
+        }
+    }
+}
