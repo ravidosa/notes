@@ -63,6 +63,7 @@
 - [A First Course in Randomized Algorithms](https://www.cs.ubc.ca/~nickhar/Book1.pdf) (Harvey)
 - A First Course in Wavelets with Fourier Analysis (Boggess, Narcowich)
 - Foundations of 3D Computer Graphics (Gortler)
+- [Foundations of Computer Vision](https://visionbook.mit.edu/) (Freeman, Isola, Torralba)
 - The Four Pillars of Geometry (Stillwell)
 - Fundamentals of Computer Graphics (Ashikhmin, Marschner, Shirley)
 - Fundamentals in Nuclear Physics (Basdevant, Rich, Spiro)
@@ -102,6 +103,7 @@
 - Introductory Nuclear Physics (Krane)
 - Introductory Nuclear Physics (Wong)
 - [Invitation to Formal Semantics](https://eecoppock.info/bootcamp/semantics-boot-camp.pdf) (Coppock, Champollion) {[LIN 141](./f23/lin141.md)}
+- Language and Computers (Glass, Dickinson, Brew, Meurers) {[LIN 127](./f24/lin127.md)}
 - Language Files (OSU) {[LIN 1Y](./f22/lin1y.md)}
 - [LaTeX](https://upload.wikimedia.org/wikipedia/commons/2/2d/LaTeX.pdf)
 - Lectures on Discrete Geometry (Matousek)
@@ -163,7 +165,9 @@
 - Quantum Mechanics (Commins) {PHY 215B}
 - [Quantum Mechanics for Engineers](https://web1.eng.famu.fsu.edu/~dommelen/quantum/) (Dommelen)
 - Real Mathematical Analysis (Pugh)
+- [Reinforcement Learning: An Introduction](https://www.andrew.cmu.edu/course/10-703/textbook/BartoSutton.pdf) (Barto, Sutton)
 - The Rising Sea: Foundations of Algebraic Geometry (Vakil)
+- A Shorter Model Theory (Hodges)
 - Single Variable Calculus (Stewart)
 - Solid State Basics (Simon)
 - Solid State Physics (Ashcroft, Mermin)
