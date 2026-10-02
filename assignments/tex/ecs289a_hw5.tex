@@ -1,0 +1,85 @@
+\documentclass{article}
+\usepackage{assignment_preamble}
+
+\title{Homework 5}
+\author{Ravi Kini}
+\date{December 3, 2024}
+
+\begin{document}
+
+\maketitle
+
+\problem
+Let there be two quantum LDPC codes with parity check matrices $H_{X,1}, H_{Z,1}$ and $H_{X,2}, H_{Z,2}$, respectively. Since the codes are LDPC, we can bound the Hamming weight of their rows. For row/column of $H_{X,1}$ or $H_{Z,1}$ $h_1$ and row/column of $H_{X,2}$ or $H_{Z,2}$ $h_2$, let $\wt(h_1) \leq \ell_1$ and $\wt(h_2) \leq \ell_2$. Let $\ell = \max\{\ell_1, \ell_2\}$. We now consider the homological product of these codes, which has parity check matrices $H_X$ and $H_Z$ such that:
+\begin{align*}
+    H_Z^T & = \begin{pmatrix}
+        I \otimes H_{Z,1}^T \\
+        H_{Z,2}^T \otimes I \\
+    \end{pmatrix} \\
+    H_X & = \begin{pmatrix}
+        H_{Z,2}^T \otimes I & I \otimes H_{Z,1}^T \\
+        I \otimes H_{X,1} & H_{X,2} \otimes I \\
+    \end{pmatrix} \\
+\end{align*}
+We see that $H_XH_Z^T = 0$. We can alsoo then bound the Hamming weights of the rows and columns of $H_X$ and $H_Z$ by $2\ell$, as taking the direct product with the identity matrix does not change the Hamming weight, so the homological product is a quantum LDPC code.
+\clearpage
+
+\problem
+
+For a quantum code with parity check matrices $H_X, H_Z$ and parameters $[[n, k, d_X, d_Z]]$ and a classical code with parity matrix $H$ and parameters $[n_c, k_c, d_v]$, their homological product has parity check matrices $\tilde{H}_X$ and $\tilde{H}_Z$ such that:
+\begin{align*}
+    \tilde{H}_Z^T & = \begin{pmatrix}
+        I \otimes H^T \\
+        H_Z^T \otimes I \\
+    \end{pmatrix} \\
+    \tilde{H}_X & = \begin{pmatrix}
+        H_Z^T \otimes I & I \otimes H \\
+        0 & H_X \otimes I \\
+    \end{pmatrix} \\
+\end{align*}
+\subproblem{(a)}
+Letting the quantum code be represented by the chain complex $(C, \partial_C)$ and the classical code by the chain complex $(D, \partial_D)$, by the Kunneth formula, the number of encoded qubits is $\dim(H_1(C \times D)) = \dim(H_1(C)) \cdot \dim(H_1(D)) = kk_c$.
+\subproblem{(b)}
+Let $\ell_Z^{(i)}$ be an arbitrary $Z$-type logical operator of the quantum code, and $\ell_c^{(j)}$ be an arbitrary logical operator of the classical code. To show that $\begin{pmatrix} 0 \\ \ell_Z^{(i, j)}\end{pmatrix}$ is a logical operator of the homological product where $\ell_Z^{(i,j)} = \ell_Z^{(i)} \otimes \ell_c^{(j)}$, we need to show that it is in the kernel of the parity check matrix.
+\begin{align*}
+    H\begin{pmatrix} 0 \\ \ell_Z^{(i, j)}\end{pmatrix} & = \begin{pmatrix}
+        0 & \tilde{H}_Z \\
+        \tilde{H}_X & 0
+    \end{pmatrix}\begin{pmatrix} 0 \\ \ell_Z^{(i, j)}\end{pmatrix} \\
+    & = \tilde{H}_Z\ell_Z^{(i, j)} \\
+    & = \begin{pmatrix}
+        I \otimes H & H_Z \otimes I \\
+    \end{pmatrix}(\ell_Z^{(i)} \otimes \ell_c^{(j)}) \\
+    & = \begin{pmatrix}
+        \ell_Z^{(i)} \otimes H\ell_c^{(j)} & H_Z\ell_Z^{(i)} \otimes \ell_c^{(j)} \\
+    \end{pmatrix} \\
+    & = \begin{pmatrix}
+        \ell_Z^{(i)} \otimes 0 & 0 \otimes \ell_c^{(j)} \\
+    \end{pmatrix} \\
+    & = \begin{pmatrix}
+        0 & 0 \\
+    \end{pmatrix} = 0 \\
+\end{align*}
+Since $\begin{pmatrix} 0 \\ \ell_Z^{(i, j)}\end{pmatrix}$ is in the kernel of the parity check matrix, it is a logical operator.
+
+\subproblem{(c)}
+The $Z$-distance of the homological product code is upper bounded by the maximum weight of one of its logical operators. This would be equivalent to the weight of $\ell_Z^{(i, j)}$. Since $\ell_Z^{(i,j)} = \ell_Z^{(i)} \otimes \ell_c^{(j)}$ and the weights of $\ell_Z^{(i)}$ and $\ell_c^{(j)}$ are upper bounded by $d_Z$ and $d_c$, respectively, we take $i'$ and $j'$ such that $\wt(\ell_Z^{(i')}) = d_Z$ and $\wt(\ell_c^{(j')}) = d_c$. Then $\wt(\ell_Z^{(i', j')}) = \wt(\ell_Z^{(i')}) \cdot \wt(\ell_c^{(j')}) = d_Zd_c$, so the $Z$-distance is at most $d_Zd_c$.
+
+\subproblem{(d)}
+Let the sets $\{\ell_Z^{(i)}\}$ and $\{\ell_c^{(j)}\}$ be linearly independent. To show that the logical operators are linearly independent, it is sufficient to show that $\ell_Z^{(i, j)}$ are linearly independent. Then:
+\begin{align*}
+    \sum_{i,j} a_{i,j}\ell_Z^{(i, j)} & = 0 \\
+    \sum_{i,j} a_{i,j}(\ell_Z^{(i)} \otimes \ell_c^{(j)}) & = \\
+    \sum_{i} \ell_Z^{(i)} \otimes \sum_j a_{i,j}\ell_c^{(j)} & = \\
+\end{align*}
+Since $\{\ell_Z^{(i)}\}$ are linearly independent, $\sum_{i} \ell_Z^{(i)} \neq 0$. For a direct product to be zero, at least one of the matrices must be zero. Consequently, $\sum_j a_{i,j}\ell_c^{(j)} = 0$. Since $\{\ell_c^{(j)}\}$ are linearly independent, $a_{i,j} = 0$. Consequently, $\ell_Z^{(i, j)}$ are linearly independent.
+
+i have too many assignments due and don't want to do the rest of this :( please drop
+
+
+\clearpage
+
+\problem
+
+
+\end{document}

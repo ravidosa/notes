@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage{../assignment_preamble}
+
+\title{Weekly Problem 2}
+\author{Ravi Kini}
+\date{April 13, 2026}
+
+\begin{document}
+
+\maketitle
+
+\problem
+\subproblem{(a)}
+\begin{equation*}
+\begin{nd}[rules=strongkleene,justformat=just]
+\hypo {1} {\lnot p}
+\open
+\hypo {2} {p \land q}
+\have {3} {p} \ae{2}
+\have {4} {\lnot\lnot p} \dn{3}
+\have {5} {\lnot\lnot p \lor q} \oi{4}
+\have {6} {\lnot p \Rightarrow q} \mci{5}
+\close
+\have {7} {(p \land q) \Rightarrow (\lnot p \Rightarrow q)} \ii{2-6}
+\end{nd}
+\end{equation*}
+We then see that $\lnot p \vdash (p \land q) \Rightarrow (\lnot p \Rightarrow q)$ is a valid argument in Strong Kleene logic.
+
+\subproblem{(b)}
+\begin{equation*}
+\begin{nd}[rules=strongkleene,justformat=just]
+\hypo {1} {p \Rightarrow q}
+\hypo {2} {\lnot p \Rightarrow q}
+\hypo {3} {q \lor \lnot q}
+\open
+\hypo {4} {q}
+\have {5} {q} \r{4}
+\close
+\open
+\hypo {5} {\lnot q}
+\have {6} {\lnot p \lor q} \mce{1}
+\open
+\hypo {7} {\lnot p}
+\have {8} {q} \ie{2,7}
+\close
+\open
+\hypo {9} {q}
+\have {10} {q} \r{10}
+\close
+\have {11} {q} \oe{6,7-8,9-10} 
+\close
+\have {11} {q} \oe{3,4-5,6-11} 
+\end{nd}
+\end{equation*}
+We then see that $p \Rightarrow q, \lnot p \Rightarrow q, q \lor \lnot q \vdash q$ is a valid argument in Strong Kleene logic.
+
+\end{document}

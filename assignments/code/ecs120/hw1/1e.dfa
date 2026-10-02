@@ -1,0 +1,28 @@
+// DFA recognizing { w in {0,1}* | w is the binary expansion of n in N and n = 3 mod 5 }
+
+states = {q0,       // n = 0 mod 5 
+          q1,       // n = 1 mod 5
+          q2,       // n = 2 mod 5
+          q3,       // n = 3 mod 5
+          q4}       // n = 4 mod 5
+
+input_alphabet = {0,1}
+
+// epsilon = 0 = 0 mod 5
+start_state =    q0
+
+// accept if n = 3 mod 5
+accept_states =  {q3}
+
+delta =
+    // seeing next digit equivalent to multiplying by 2, adding next digit
+    q0,0    -> q0;  // 2 * 0 + 0 = 0 mod 5 
+    q0,1    -> q1;  // 2 * 0 + 1 = 1 mod 5 
+    q1,0    -> q2;  // 2 * 1 + 0 = 2 mod 5 
+    q1,1    -> q3;  // 2 * 1 + 1 = 3 mod 5 
+    q2,0    -> q4;  // 2 * 2 + 0 = 4 mod 5 
+    q2,1    -> q0;  // 2 * 2 + 1 = 0 mod 5 
+    q3,0    -> q1;  // 2 * 3 + 0 = 1 mod 5 
+    q3,1    -> q2;  // 2 * 3 + 1 = 2 mod 5 
+    q4,0    -> q3;  // 2 * 4 + 0 = 3 mod 5 
+    q4,1    -> q4;  // 2 * 4 + 1 = 4 mod 5 

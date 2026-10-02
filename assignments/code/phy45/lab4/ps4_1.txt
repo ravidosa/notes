@@ -1,0 +1,11 @@
+v[i+1]=v[i]+a*dt; computes the position at the next time step using the last computed values in the position and velocity arrays
+a=-k*x[i+1]/m; computes the acceleration at the next time step using the last computed value from the position array from the last step
+x[i+1]=x[i]+v[i]*dt; computes the velocity at the next time step using the corresponding value using the formerly last computed value
+from the position array and the last computed value from the velocity array
+
+v[i+1]=v[i]+a*dt; computes the position at the next time step using the last computed values in the position and velocity arrays
+a=-k*x[i]/m; computes the acceleration at the next time step using the formerly last computed value from the position array
+x[i+1]=x[i]+v[i]*dt; computes the velocity at the next time step using the corresponding value using the formerly last computed value
+from the position array and the last computed value from the velocity array
+
+The euler algorithm uses the current position to calculate the acceleration, while the leapfrog algorithm uses the computed next position.

@@ -1,0 +1,254 @@
+\documentclass{article}
+\usepackage{../assignment_preamble}
+
+\title{Homework 2}
+\author{Ravi Kini}
+\date{February 18, 2026}
+
+\begin{document}
+
+\maketitle
+
+\problem{}
+\subproblem{(a)}
+Let $A$ be a symmetric $3 \times 3$ matrix:
+\begin{align*}
+    A = \begin{bmatrix}
+        a_1 & b & c \\ b & a_2 & d \\ c & d & a_3
+    \end{bmatrix}
+\end{align*}
+To annihilate the $c$ entries (in row/column $3$ and column/row $1$), we use a Givens rotation that acts as the identity except in rows and columns $2, 3$. Letting $r = \sqrt{b^2 + c^2}$, the rotation matrix $Q$ has the form:
+\begin{align*}
+    Q & = \begin{bmatrix}
+        1 & 0 & 0 \\ 0 & b/r & c/r \\ 0 & -c/r & b/r
+    \end{bmatrix}
+\end{align*}
+Then, to see that it annihilates the $c$ entries:
+\begin{align*}
+    (QAQ_T)_{1,3} & = \sum_{i=1}^3 (QA)_{1,i}Q^T_{i,3} = \sum_{i=1}^3 \sum_{j=1}^3 Q_{1,j}A_{j,i}Q^T_{i,3} \\
+    & = \sum_{i=1}^3 Q_{1,1}A_{1,i}Q^T_{i,3} = \sum_{i=2}^3 Q_{1,1}A_{1,i}Q^T_{i,3} \\
+    & = 1 \cdot b \cdot -c/r + 1 \cdot c \cdot b/r = 0 \\
+    (QAQ_T)_{3,1} & = \sum_{i=1}^3 (QA)_{3,i}Q^T_{i,1} = \sum_{i=1}^3 \sum_{j=1}^3 Q_{3,j}A_{j,i}Q^T_{i,1} \\
+    & = \sum_{i=1}^3 \sum_{j=2}^3 Q_{3,j}A_{j,i}Q^T_{i,1} = \sum_{j=2}^3 Q_{3,j}A_{j,1}Q^T_{1,1} \\
+    & = -c/r \cdot b \cdot 1 + b/r \cdot c \cdot 1 = 0 \\
+\end{align*}
+\subproblem{(b)}
+Let $A$ be a symmetric $n \times n$ matrix where the leading $(n - 1) \times (n - 1)$ submatrix has been tridiagonalized:
+\begin{align*}
+    A = \begin{bmatrix}
+        a_1 & b_2 & & & & \\
+        b_2 & a_2 & b_3 & & & \\
+        & b_3 & a_3 & \ddots & & \\
+        & & \ddots & \ddots & b_{n-1} & d \\
+        & & & b_{n-1} & a_{n-1} & c \\
+        & & & d & c & a_n
+    \end{bmatrix}
+\end{align*}
+To annihilate the $d$ entries (in row/column $n$ and column/row $n - 2$), we use a Givens rotation that acts as the identity except in rows and columns $n - 1, n$. Letting $r = \sqrt{b_{n-1}^2 + d^2}$, the rotation matrix $Q$ has the form:
+\begin{align*}
+    Q & = \begin{bmatrix}
+        I_{n-2} & 0 & 0 \\ 0 & b_{n-1}/r & d/r \\ 0 & -d/r & b_{n-1}/r
+    \end{bmatrix}
+\end{align*}
+We see it is orthogonal, and that the product $QAQ^T$ would have the same leading $(n - 2) \times (n - 2)$ submatrix. Then, to see that it annihilates the $d$ entries:
+\begin{align*}
+    (QAQ_T)_{n-2,n} & = \sum_{i=1}^n (QA)_{n-2,i}Q^T_{i,n} = \sum_{i=1}^n \sum_{j=1}^n Q_{n-2,j}A_{j,i}Q^T_{i,n} \\
+    & = \sum_{i=1}^n Q_{n-2,n-2}A_{n-2,i}Q^T_{i,n} = \sum_{i=n-1}^n Q_{n-2,n-2}A_{n-2,i}Q^T_{i,n} \\
+    & = 1 \cdot b_{n-1} \cdot -d/r + 1 \cdot d \cdot b_{n-1}/r = 0 \\
+    (QAQ_T)_{n,n-2} & = \sum_{i=1}^n (QA)_{n,i}Q^T_{i,n-2} = \sum_{i=1}^n \sum_{j=1}^n Q_{n,j}A_{j,i}Q^T_{i,n-2} \\
+    & = \sum_{i=1}^n \sum_{j=n-1}^n Q_{n,j}A_{j,i}Q^T_{i,n-2} = \sum_{j=n-1}^n Q_{n,j}A_{j,n-2}Q^T_{n-2,n-2} \\
+    & = -d/r \cdot b_{n-1} \cdot 1 + b_{n-1}/r \cdot d \cdot 1 = 0 \\
+\end{align*}
+
+\clearpage
+\problem{}
+Let $T$ be a symmetric tridiagonal $n \times n$ matrix, with QR factorization $T = QR$. Consider the matrix $RQ$. We see that:
+\begin{align*}
+    R & = Q^T T \\
+    RQ & = Q^T T Q \\
+    (RQ)^T & = (Q^T T Q)^T \\
+    & = Q^T T^T Q = Q^T T Q = RQ
+\end{align*}
+Since $(RQ)^T = RQ$, we see that $RQ$ is symmetric.
+
+Now note that in QR factorization, column $k$ of $Q$ is column $k$ of $A$ orthogonalized with respect to the previous columns, and so can only have nonzero components in the span of those columns (and itself). Since the first $k$ columns of $A$ have zeros in rows $i$ where $i > k + 1$, it follows that column $k$ of $Q$ must also have a zero in such rows. Equivalently, $Q_{i,j} = 0$ for $i > j + 1$. In other words, $Q$ is zero below the first subdiagonal. Further, since $R$ is upper triangular, it is zero below the diagonal ($R_{i,j} = 0$ for $i > j$). We now consider $(RQ)_{i,j}$, with $i > j + 1$:
+\begin{align*}
+    (RQ)_{i,j} & = \sum_{k=1}^n R_{i,k}Q_{k,j} \\
+    & = \sum_{k=i}^n R_{i,k}Q_{k,j} \\
+    & = \sum_{k=i}^n R_{i,k} \cdot 0 = 0
+\end{align*}
+Since $(RQ)_{i,j} = 0$ for $i > j + 1$, it follows that $RQ$ is zero below the first subdiagonal. Since $RQ$ is symmetric, it must alo be zero above the first superdiagonal, which means that $RQ$ is tridiagonal symmetric.
+
+\clearpage
+\problem{}
+Consider the shifted QR iteration algorithm. Let $\underline{Q_k} = Q_1Q_2 \ldots Q_k$ and $\underline{R_k} = R_kR_{k-1} \ldots R_1$. We proceed by induction. For the base case where $k = 1$, we see that:
+\begin{align*}
+    Q_1R_1 & = A - \mu_1 I \\
+    A_1 & = R_1Q_1 + \mu_1 I \\
+    & = Q_1^TQ_1R_1Q_1 + \mu_1 I \\
+    & = Q_1^T(A - \mu_1 I)Q_1 + \mu_1 I \\
+    & = Q_1^TAQ_1 - \mu_1 I + \mu_1 I = Q_1AQ_1
+\end{align*}
+Now assume that for some $k$, $A_k = \underline{Q_k}^TA\underline{Q_k}$ and $(A - \mu_k I) \ldots (A - \mu_1 I) = \underline{Q_k}\underline{R_k}$. Then:
+\begin{align*}
+    Q_{k+1}R_{k+1} & = A_k - \mu_{k+1}I \\
+    \underline{Q_{k+1}}\underline{R_{k+1}} & = \underline{Q_k}Q_{k+1}R_{k+1}\underline{R_k} \\
+    & = \underline{Q_k}(A_k - \mu_{k+1}I)\underline{R_k} \\
+    & = \underline{Q_k}(\underline{Q_k}^TA\underline{Q_k} - \mu_{k+1}I)\underline{R_k} = (A\underline{Q_k} - \mu_{k+1}\underline{Q_k}I)\underline{R_k} \\
+    & = (A - \mu_{k+1}I)\underline{Q_k}\underline{R_k} \\
+    & = (A - \mu_{k+1} I)(A - \mu_k I) \ldots (A - \mu_1 I)
+\end{align*}
+Further:
+\begin{align*}
+    A_{k+1} & = R_{k+1}Q_{k+1} + \mu_{k+1} I \\
+    & = Q_{k+1}^TQ_{k+1}R_{k+1}Q_{k+1} + \mu_{k+1} I \\
+    & = Q_{k+1}^T(A_k - \mu_{k+1}I)Q_{k+1} + \mu_{k+1} I \\
+    & = Q_{k+1}^TA_kQ_{k+1} - \mu_{k+1}I + \mu_{k+1} I \\
+    & = Q_{k+1}^T\underline{Q_k}^TA\underline{Q_k}Q_{k+1} \\
+    & = \underline{Q_{k+1}}^TA\underline{Q_{k+1}}
+\end{align*}
+By induction, it follows that $A_k = \underline{Q_k}^TA\underline{Q_k}$ and $(A - \mu_k I) \ldots (A - \mu_1 I) = \underline{Q_k}\underline{R_k}$ for all $k$.
+
+\clearpage
+\problem{}
+\subproblem{(a)}
+\begin{lstlisting}[language=Python]
+import math
+EPS = 1e-15
+
+def eye(n):
+    return [[float(i == j) for i in range(n)] for j in range(n)]
+
+def copy(A):
+    return [row[:] for row in A]
+
+def givens_left(A, i, j, c, s):
+    n = len(A)
+    for k in range(n):
+        a, b = A[i][k], A[j][k]
+        A[i][k] = c * a + s * b
+        A[j][k] = -s * a + c * b
+
+def givens_right(A, i, j, c, s):
+    n = len(A)
+    for k in range(n):
+        a, b = A[k][i], A[k][j]
+        A[k][i] = c * a - s * b
+        A[k][j] = s * a + c * b
+
+def tridiagonalize(A):
+    n = len(A)
+    T = copy(A)
+    for i in range(n - 2):
+        for j in range(n - 1, i + 1, -1):
+            b = T[i + 1][i]
+            c = T[j][i]
+            if abs(c) < EPS:
+                continue
+            r = math.hypot(b, c)
+            givens_left(T, i + 1, j, b / r, c / r)
+            givens_right(T, i + 1, j, b / r, -c / r)
+    return T
+\end{lstlisting}
+\subproblem{(b)}
+\begin{lstlisting}
+def QR(T):
+    n = len(T)
+    Q = eye(n)
+    R = copy(T)
+    for k in range(n - 1):
+        a = R[k][k]
+        b = R[k + 1][k]
+        if abs(b) < EPS:
+            continue
+        r = math.hypot(a, b)
+        givens_left(R, k, k + 1, a / r, b / r)
+        givens_right(Q, k, k + 1, a / r, -b / r)
+    return Q, R
+\end{lstlisting}
+\subproblem{(c)}
+\begin{lstlisting}
+def zeros(n):
+    return [[0.0 for i in range(n)] for j in range(n)]
+
+def m_v_prod(A, x):
+    n = len(A)
+    return [sum(A[i][j] * x[j] for j in range(n)) for i in range(n)]
+
+def v_norm(x):
+    n = len(x)
+    return sum([x[j] ** 2 for j in range(n)]) ** 0.5
+
+def v_add(x, y):
+    n = len(x)
+    return [x[j] + y[j] for j in range(n)]
+
+def v_sub(x, y):
+    n = len(x)
+    return [x[j] - y[j] for j in range(n)]
+    
+def v_dot(x, y):
+    n = len(x)
+    return sum([x[j] * y[j] for j in range(n)])
+
+def v_prod(x, k):
+    n = len(x)
+    return [x[j] * k for j in range(n)]
+
+def givens(v1, v2):
+    t = (v1 ** 2 + v2 ** 2) ** 0.5
+    return v1 / t, v2 / t
+
+def GMRES(A, b, x0, tol=1e-10, max_iter=1000):
+    n = len(b)
+    m = max_iter
+    
+    b_norm = v_norm(b)
+    r0 = v_sub(b, m_v_prod(A, x0))
+    beta = v_norm(r0)
+    
+    q = [[0.0] * n for _ in range(m + 2)]
+    q[1] = v_prod(r0, 1.0 / beta)
+    
+    H = [[0.0] * (m + 1) for _ in range(m + 2)]
+    s = [0.0] * (m + 1)
+    c = [0.0] * (m + 1)
+    g = [0.0] * (m + 2)
+    g[1] = beta
+    
+    for k in range(1, m + 1):
+        w = m_v_prod(A, q[k])
+        
+        for j in range(1, k + 1):
+            H[j][k] = v_dot(w, q[j])
+            w = v_sub(w, v_prod(q[j], H[j][k]))
+        
+        H[k + 1][k] = v_norm(w)
+        q[k + 1] = v_prod(w, 1.0 / H[k + 1][k])
+        
+        for i in range(1, k):
+            H[i + 1][k], H[i][k] = -s[i] * H[i][k] + c[i] * H[i + 1][k], c[i] * H[i][k] + s[i] * H[i + 1][k]
+        
+        c[k], s[k] = givens(H[k][k], H[k + 1][k])
+        H[k][k] = c[k] * H[k][k] + s[k] * H[k + 1][k]
+        H[k + 1][k] = 0.0
+        
+        g[k + 1] = -s[k] * g[k]
+        g[k] = c[k] * g[k]
+        
+        if abs(g[k + 1]) / b_norm <= tol:
+            break
+    
+    alpha = [0.0] * (k + 1)
+    for i in range(k, 0, -1):
+        alpha[i] = g[i] - sum([H[i][j] * alpha[j] for j in range(i + 1, k + 1)])
+        alpha[i] /= H[i][i]
+    
+    xk = x0[:]
+    for j in range(1, k + 1):
+        xk = v_add(xk, v_prod(q[j], alpha[j]))
+    
+    return xk
+    
+\end{lstlisting}
+\end{document}

@@ -1,0 +1,93 @@
+\documentclass{article}
+\usepackage{../assignment_preamble}
+
+\title{Homework 6}
+\author{Ravi Kini}
+\date{November 28, 2025}
+
+\begin{document}
+
+\maketitle
+
+\problem{}
+Since $\phi(17) = 16$, we have that $\mathrm{ord}_{17} 9 | 16$. Considering the powers of $9$ that divide $16$:
+\begin{center}
+\begin{tabular}{|c|c|}
+    \hline
+    $k$ & $9^k \bmod 17$ \\
+    \hline
+    $1$ & $9$ \\
+    \hline
+    $2$ & $13$ \\
+    \hline
+    $4$ & $16$ \\
+    \hline
+    $8$ & $16$ \\
+    \hline
+\end{tabular}
+\end{center}
+Consequently, $\mathrm{ord}_{17} 9 = 8$.
+
+\clearpage
+\problem{}
+Since $\phi(18) = 6$, for $r$ to be a primitive root modulo $18$, $\mathrm{ord}_{18} r = 6$. The reduced residues are $1, 5, 7, 11, 13, 17$. Considering their powers that divide $6$:
+\begin{center}
+\begin{tabular}{|c|c|c|c|c|c|c|}
+    \hline
+    $k$ & $1^k \bmod 18$ & $5^k \bmod 18$ & $7^k \bmod 18$ & $11^k \bmod 18$ & $13^k \bmod 18$ & $17^k \bmod 18$ \\
+    \hline
+    $1$ & $1$ & $5$ & $7$ & $11$ & $13$ & $17$ \\
+    \hline
+    $2$ & & $7$ & $13$ & $13$ & $7$ & $1$ \\
+    \hline
+    $3$ & & $17$ & $1$ & $17$ & $1$ & \\
+    \hline
+    $6$ & & $1$ & & $1$ & & \\
+    \hline
+\end{tabular}
+\end{center}
+The primitive roots modulo $18$ are then $\{5, 11\}$.\
+
+\clearpage
+\problem{}
+\subproblem{(a)}
+Let $m \in \mathbb{N}$ and $a, b$ such that $(a, m) = (b, m) = 1$ and $(\mathrm{ord}_m a, \mathrm{ord}_m b) = 1$. Let $\mathrm{ord}_m a = i$, $\mathrm{ord}_m b = j$, and $\mathrm{ord}_m ab = k$. Then:
+\begin{align*}
+    {(ab)}^{ij} & = a^{ij} \cdot b^{ij} \\
+    & = {(a^i)}^j \cdot {(b^j)}^i \\
+    & = 1 \cdot 1 = 1
+\end{align*}
+Consequently, $k | ij$. Then:
+\begin{align*}
+    {(ab)}^k & = 1 \mod m \\
+    {(ab)}^{kj} & = 1 \mod m \\
+    a^{kj} \cdot b^{kj} & = \\
+    a^{kj} \cdot {(b^j)}^k & = \\
+    a^{kj} \cdot 1^k & = \\
+    a^{kj} & = \\
+\end{align*}
+Consequently, $i | kj$. Since $(i, j) = 1$, this means that $i | k$. We can similarly show that $j | k$, and so $ij | k$. As a result, $ij = k$, and so $\mathrm{ord}_m ab = \mathrm{ord}_m a \cdot \mathrm{ord}_m b$.
+\subproblem{(b)}
+Consider the case where $m = 7$, $a = 2$, and $b = 4$. By considering the powers of $a$ and $b$, we see that $\mathrm{ord}_7 2 = 6$ and $\mathrm{ord}_7 4 = 3$. Consequently, $(\mathrm{ord}_m a, \mathrm{ord}_m b) \neq 1$. Further, $\mathrm{ord}_7 8 = 1$, and so $\mathrm{ord}_m ab \neq \mathrm{ord}_m a \cdot \mathrm{ord}_m b$.
+
+\clearpage
+\problem{}
+Let $p$ be an odd prime. Suppose $r$ is a primitive root modulo $p$. Then $\mathrm{ord}_p r = \phi(p) = p - 1$. Suppose $q$ is a prime divisor of $p - 1$ and $r^{(p - 1)/q} = 1 \bmod p$. Note that $(p - 1)/q < p$. Then $\mathrm{ord}_p r = (p - 1)/q$ and so $r$ cannot be a primitive root. This is a contradiction; therefore $r^{(p - 1)/q} \neq 1 \bmod p$ for all prime divisors $q$ of $p - 1$. Conversely, suppose $r^{(p - 1)/q} \neq 1 \bmod p$ for all prime divisors $q$ of $p - 1$. Let $d = \mathrm{ord}_p r$. By Fermat's Little Theorem, $d | (p - 1)$. Suppose $d < p - 1$, and let $q'$ be some prime factor of $(p - 1)/d$, which mut also be a factor of $p - 1$. Note that $d | (p - 1)/q'$. However, letting $e = (p - 1)/q'd$, this means that $r^{(p - 1)/q'} = {(r^d)}^e = 1^e = 1 \bmod p$. This is a contradiction; therefore $\mathrm{ord}_p r = p - 1$ and so $r$ is a primitive root.
+
+\clearpage
+\problem{}
+Let $m \in \mathbb{N}$, and let $r$ be a primitive root modulo $m$. Let $\overline{r} = r^{-1} \bmod m$, and let $d = \mathrm{ord}_m \overline{r}$. Since $\mathrm{ord}_m r = \phi(m)$:
+\begin{align*}
+    {(r\overline{r})}^{\phi(m)} & = 1^{\phi(m)} \mod m \\
+    r^{\phi(m)} \cdot \overline{r}^{\phi(m)} & = 1 \mod m \\
+    \overline{r}^{\phi(m)} & =
+\end{align*}
+Consequently, $d | \phi(m)$. Then:
+\begin{align*}
+    \overline{r}^d & = 1 \mod m \\
+    r^d \cdot \overline{r}^d & = r^d \mod m \\
+    {(r\overline{r})}^d & = \\
+    1^d = 1 & = \\
+\end{align*}
+Consequently, $\phi(m) | d$, and so $\mathrm{ord}_m \overline{r} = d = \phi(m)$, which means that $\overline{r}$ is a primitive root modulo $m$.
+\end{document}

@@ -1,0 +1,8 @@
+For a continuous uniform random variable with range of (0,1):
+P(x) = {
+    1   (0 < x < 1)
+    0   (x < 0, 1 < x)
+}
+
+The nth moment is the the integral from 0 to 1 of x^n dx which simplifies to x^(n+1)/(n+1) evaluated between 0 and 1.
+This further simplifies to 1/(n+1) which matches the observations from the simulation.

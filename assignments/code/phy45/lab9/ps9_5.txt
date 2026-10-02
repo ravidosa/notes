@@ -1,0 +1,4 @@
+Having a system of springs with periodic boundary conditions can be compared to connecting the ends to each other,
+forming a circular chain of masses connected by springs.
+Consequently, the position of the defect does not matter, as every position can be rotated to match any other position,
+so all of the eigenvalues will be the same regardless of the position.

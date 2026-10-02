@@ -1,0 +1,6 @@
+[3] approximates the derivative df/dx for f(x) = x^2 for user-inputted x and dx.
+For x = 3 and dx = 0.1, the output is 6.1.
+For x = 3 and dx = 0.01, the output is 6.01.
+For x = 3 and dx = 0.001, the output is 6.001.
+This makes sense, as (f(x+dx)-f(x))/dx = ((x+dx)^2-x^2)/dx = (2xdx+dx^2)/dx = 2x+dx.
+As dx approaches 0, this equals 2x, which is the derivative of x^2 (as found analytically).

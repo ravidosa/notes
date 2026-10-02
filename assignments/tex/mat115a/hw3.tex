@@ -1,0 +1,141 @@
+\documentclass{article}
+\usepackage{../assignment_preamble}
+
+\title{Homework 3}
+\author{Ravi Kini}
+\date{October 31, 2025}
+
+\begin{document}
+
+\maketitle
+
+\problem{}
+Let $m \in \mathbb{N}$ such that $-7 \equiv 6 \bmod m$. Then $(6 - -7) = 13 \equiv 0 \bmod m$. For this to be true, $m \mid 13$. Consequently $m = 1, 13$.
+
+\clearpage
+\problem{}
+Let $a, b \in \mathbb{Z}$ and $m \in \mathbb{N}$ such that $a \equiv b \bmod m$. Then $a = b + mk$ for some $k \in \mathbb{Z}$. Let $d$ such that $d \mid b$ and $d \mid m$. Then $d \mid b + mk$, and so $d \mid a$. Similarly, if we have some $d$ such that $d \mid a$ and $d \mid m$, we can show that $d \mid b$. Since every common divisor of $a$ and $m$ is also a common divisor of $b$ and $m$, the greatest common divisors must be the same, and so $(a, m) = (b, m)$.
+
+\clearpage
+\problem{}
+Let $a \in \mathbb{Z}$. Suppose $a$ is odd. Then $a = 2k + 1$ for some $k \in \mathbb{Z}$ and so:
+\begin{align*}
+    a^2 & = {(2k + 1)}^2 \\
+    & = 4k^2 + 4k + 1 \\
+    & = 4(k^2 + k) + 1
+\end{align*}
+Suppose $k$ is odd. Then $k = 2l + 1$ for some $l \in \mathbb{Z}$ and so:
+\begin{align*}
+    a^2 & = 4({(2l + 1)}^2 + (2l + 1)) + 1 \\
+    & = 4(4l^2 + 4l + 1 + 2l + 1) + 1\\
+    & = 8(2l^2 + 3l + 1) + 1 \\
+\end{align*}
+Now suppose $k$ is even. Then $k = 2l$ for some $l \in \mathbb{Z}$ and so:
+\begin{align*}
+    a^2 & = 4({(2l)}^2 + (2l)) + 1 \\
+    & = 4(4l^2 + 2l) + 1\\
+    & = 8(2l^2 + l) + 1 \\
+\end{align*}
+In either case, $a^2 = 8z + 1$ for some $z \in \mathbb{Z}$, and so $a^2 \equiv 1 \bmod 8$.
+
+Now suppose $a$ is even. Then $a = 2k$ for some $k \in \mathbb{Z}$ and so:
+\begin{align*}
+    a^2 & = {(2k)}^2 \\
+    & = 4k^2 \\
+    & = 4(k^2)
+\end{align*}
+Suppose $k$ is odd. Then $k = 2l + 1$ for some $l \in \mathbb{Z}$ and so:
+\begin{align*}
+    a^2 & = 4({(2l + 1)}^2) \\
+    & = 4(4l^2 + 4l + 1)\\
+    & = 8(2l^2 + 2l) + 4 \\
+\end{align*}
+Now suppose $k$ is even. Then $k = 2l$ for some $l \in \mathbb{Z}$ and so:
+\begin{align*}
+    a^2 & = 4({(2l)}^2) \\
+    & = 4(4l^2)\\
+    & = 8(2l^2) + 0 \\
+\end{align*}
+In either case, $a^2 \neq 8z + 1$ for some $z \in \mathbb{Z}$, and so $a^2 \not\equiv 1 \bmod 8$. Consequently, $a$ is odd iff $a^2 \equiv 1 \bmod 8$.
+
+\clearpage
+\problem{}
+\subproblem{(a)}
+\begin{align*}
+    12x \equiv 16 \mod 32
+\end{align*}
+Applying the division algorithm repeatedly:
+\begin{align*}
+    32 & = 12 \cdot 2 + 8 \\
+    12 & = 8 \cdot 1 + 4 \\
+    8 & = 4 \cdot 2 + 0 \\
+\end{align*}
+Since $(12, 32) = 4$ and $4 \mid 16$, a solution does exist. We then solve the equivalent problem:
+\begin{align*}
+    3x \equiv 4 \bmod 8
+\end{align*}
+We now find the inverse of $3$ modulo $8$. Applying the division algorithm repeatedly:
+\begin{align*}
+    8 & = 3 \cdot 2 + 2 \\
+    3 & = 2 \cdot 1 + 1 \\
+    2 & = 1 \cdot 2 + 0 \\
+\end{align*}
+Consequently, $(34709, 100313) = 1$, so the inverse exists. Expressing the GCD as a linear combination:
+\begin{align*}
+    1 & = 2 \cdot -1 + 3 \\
+    & = (3 \cdot -2 + 8) \cdot -1 + 3 = 3 \cdot 3 + 8 \cdot -1
+\end{align*}
+The inverse of $3$ modulo $8$ is then $3$. Solving the congruence:
+\begin{align*}
+    3 \cdot 3x & \equiv 3 \cdot 4 \bmod 8 \\
+    x & \equiv 4 \bmod 8 
+\end{align*}
+
+\subproblem{(b)}
+\begin{align*}
+    481x \equiv 627 \mod 703
+\end{align*}
+Applying the division algorithm repeatedly:
+\begin{align*}
+    703 & = 481 \cdot 1 + 222 \\
+    481 & = 222 \cdot 2 + 37 \\
+    222 & = 37 \cdot 6 + 0 \\
+\end{align*}
+Since $(7481, 703) = 6$ and $6 \nmid 627$, no solutions exist.
+
+\clearpage
+\problem{}
+\subproblem{(a)}
+\begin{align*}
+    4^{-1} \bmod 17
+\end{align*}
+Applying the division algorithm repeatedly:
+\begin{align*}
+    17 & = 4 \cdot 4 + 1 \\
+    4 & = 1 \cdot 4 + 0 \\
+\end{align*}
+Consequently, $(17, 4) = 1$, so the inverse exists. Expressing the GCD as a linear combination:
+\begin{align*}
+    1 & = 4 \cdot -4 + 17 \\
+\end{align*}
+The inverse of $4$ modulo $17$ is then $-4$, or equivalently, $13$.
+
+\subproblem{(b)}
+\begin{align*}
+    8^{-1} \bmod 35
+\end{align*}
+Applying the division algorithm repeatedly:
+\begin{align*}
+    35 & = 8 \cdot 4 + 3 \\
+    8 & = 3 \cdot 2 + 2 \\
+    3 & = 2 \cdot 1 + 1 \\
+    2 & = 1 \cdot 2 + 0 \\
+\end{align*}
+Consequently, $(35, 8) = 1$, so the inverse exists. Expressing the GCD as a linear combination:
+\begin{align*}
+    1 & = 2 \cdot -1 + 3 \\
+    & = (3 \cdot -2 + 8) \cdot -1 + 3 = 3 \cdot 3 + 8 \cdot -1 \\
+    & = (8 \cdot -4 + 35) \cdot 3 + 8 \cdot -1 = 8 \cdot -13 + 35 \cdot 3 \\
+\end{align*}
+The inverse of $8$ modulo $35$ is then $-13$, or equivalently, $22$.
+\end{document}

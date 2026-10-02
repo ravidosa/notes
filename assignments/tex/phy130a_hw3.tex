@@ -1,0 +1,321 @@
+\documentclass{article}
+\usepackage{assignment_preamble}
+
+\title{Homework 3}
+\author{Ravi Kini}
+\date{March 5, 2024}
+
+\begin{document}
+
+\maketitle
+
+\problem[\textit{Introduction to Elementary Particles} (Griffiths, 2e) Exercise 6.8]
+The differential cross section is:
+\begin{equation}
+    \begin{split}
+        \frac{d\sigma}{d\Omega} & = \left(\frac{\hbar c}{8\pi}\right)^2\frac{\left|\mathcal{M}\right|^2}{\left(E_a + E_b\right)^2}\frac{\left|p_f\right|}{\left|p_i\right|} \\
+    \end{split}
+\end{equation}
+Since the recoil of the target is negligible, $\left|p_f\right| = \left|p_i\right|$ and since the target is so heavy, $E_b = m_bc^2 \gg E_a$, and $\left(E_a + E_b\right)^2 \approx \left(m_bc^2\right)^2 = m_b^2c^4$.
+\begin{equation}
+    \begin{split}
+        \frac{d\sigma}{d\Omega} & = \left(\frac{\hbar c}{8\pi}\right)^2\frac{S\left|\mathcal{M}\right|^2}{m_b^2c^4} \\
+        & = \left(\frac{\hbar}{8\pi m_bc}\right)^2\left|\mathcal{M}\right|^2 \\
+    \end{split}
+\end{equation}
+
+\clearpage
+
+\problem[\textit{Introduction to Elementary Particles} (Griffiths, 2e) Exercise 6.12]
+\subproblem{(a)}
+\begin{center}
+\resizebox{0.34\textwidth}{!}{\begin{tikzpicture}[scale=0.25]
+\begin{feynman}
+    \vertex (a1);
+    \vertex [below=of a1] (a2);
+    \vertex [right=of a1] (a3);
+    \vertex [below=of a3] (a4);
+    \vertex [above left=of a1] (i1) {$A$};
+    \vertex [below left=of a2] (i2) {$A$};
+    \vertex [above right=of a3] (f1) {$A$};
+    \vertex [below right=of a4] (f2) {$A$};
+
+    \diagram* {
+        (i1) -- (a1),
+        (i2) -- (a2),
+        (a3) -- (f1),
+        (a4) -- (f2),
+        (a2) -- [edge label=$B$] (a1),
+        (a1) -- [edge label=$C$] (a3),
+        (a4) -- [edge label=$C$] (a2),
+        (a3) -- [edge label=$B$] (a4),
+    };
+\end{feynman}
+\end{tikzpicture}}
+\resizebox{0.34\textwidth}{!}{\begin{tikzpicture}[scale=0.25]
+\begin{feynman}
+    \vertex (a1);
+    \vertex [below=of a1] (a2);
+    \vertex [right=of a1] (a3);
+    \vertex [below=of a3] (a4);
+    \vertex [above left=of a1] (i1) {$A$};
+    \vertex [below left=of a2] (i2) {$A$};
+    \vertex [above right=of a3] (f1) {$A$};
+    \vertex [below right=of a4] (f2) {$A$};
+
+    \diagram* {
+        (i1) -- (a1),
+        (i2) -- (a2),
+        (a3) -- (f1),
+        (a4) -- (f2),
+        (a2) -- [edge label=$B$] (a1),
+        (a1) -- [edge label=$C$, near start] (a4),
+        (a3) -- [edge label=$C$, near end] (a2),
+        (a3) -- [edge label=$B$] (a4),
+    };
+\end{feynman}
+\end{tikzpicture}}
+\resizebox{0.34\textwidth}{!}{\begin{tikzpicture}[scale=0.25]
+\begin{feynman}
+    \vertex (a1);
+    \vertex [below=of a1] (a2);
+    \vertex [right=of a1] (a3);
+    \vertex [below=of a3] (a4);
+    \vertex [above left=of a1] (i1) {$A$};
+    \vertex [below left=of a2] (i2) {$A$};
+    \vertex [above right=of a3] (f1) {$A$};
+    \vertex [below right=of a4] (f2) {$A$};
+
+    \diagram* {
+        (i1) -- (a1),
+        (i2) -- (a2),
+        (a3) -- (f1),
+        (a4) -- (f2),
+        (a2) -- [edge label=$C$] (a1),
+        (a1) -- [edge label=$B$, near start] (a4),
+        (a3) -- [edge label=$B$, near end] (a2),
+        (a3) -- [edge label=$C$] (a4),
+    };
+\end{feynman}
+\end{tikzpicture}}
+\resizebox{0.34\textwidth}{!}{\begin{tikzpicture}[scale=0.25]
+\begin{feynman}
+    \vertex (a1);
+    \vertex [below=of a1] (a2);
+    \vertex [right=of a1] (a3);
+    \vertex [below=of a3] (a4);
+    \vertex [above left=of a1] (i1) {$A$};
+    \vertex [below left=of a2] (i2) {$A$};
+    \vertex [above right=of a3] (f1) {$A$};
+    \vertex [below right=of a4] (f2) {$A$};
+
+    \diagram* {
+        (i1) -- (a1),
+        (i2) -- (a2),
+        (a3) -- (f1),
+        (a4) -- (f2),
+        (a2) -- [edge label=$C$] (a1),
+        (a1) -- [edge label=$B$] (a3),
+        (a4) -- [edge label=$B$] (a2),
+        (a3) -- [edge label=$C$] (a4),
+    };
+\end{feynman}
+\end{tikzpicture}}
+\resizebox{0.34\textwidth}{!}{\begin{tikzpicture}[scale=0.25]
+\begin{feynman}
+    \vertex (a1);
+    \vertex [below=of a1] (a2);
+    \vertex [right=of a1] (a3);
+    \vertex [below=of a3] (a4);
+    \vertex [above left=of a1] (i1) {$A$};
+    \vertex [below left=of a2] (i2) {$A$};
+    \vertex [above right=of a3] (f1) {$A$};
+    \vertex [below right=of a4] (f2) {$A$};
+
+    \diagram* {
+        (i1) -- (a1),
+        (i2) -- (a2),
+        (a3) -- (f1),
+        (a4) -- (f2),
+        (a1) -- [edge label=$C$] (a3),
+        (a4) -- [edge label=$B$, near end] (a1),
+        (a3) -- [edge label=$B$, near start] (a2),
+        (a4) -- [edge label=$C$] (a2),
+    };
+\end{feynman}
+\end{tikzpicture}}
+\resizebox{0.34\textwidth}{!}{\begin{tikzpicture}[scale=0.25]
+\begin{feynman}
+    \vertex (a1);
+    \vertex [below=of a1] (a2);
+    \vertex [right=of a1] (a3);
+    \vertex [below=of a3] (a4);
+    \vertex [above left=of a1] (i1) {$A$};
+    \vertex [below left=of a2] (i2) {$A$};
+    \vertex [above right=of a3] (f1) {$A$};
+    \vertex [below right=of a4] (f2) {$A$};
+
+    \diagram* {
+        (i1) -- (a1),
+        (i2) -- (a2),
+        (a3) -- (f1),
+        (a4) -- (f2),
+        (a1) -- [edge label=$B$] (a3),
+        (a4) -- [edge label=$C$, near end] (a1),
+        (a3) -- [edge label=$C$, near start] (a2),
+        (a4) -- [edge label=$B$] (a2),
+    };
+\end{feynman}
+\end{tikzpicture}}
+\end{center}
+\subproblem{(b)}
+\begin{center}
+\resizebox{0.34\textwidth}{!}{\begin{tikzpicture}[scale=0.25]
+\begin{feynman}
+    \vertex (a1);
+    \vertex [below=of a1] (a2);
+    \vertex [right=of a1] (a3);
+    \vertex [below=of a3] (a4);
+    \vertex [above left=of a1] (i1) {$A$};
+    \vertex [below left=of a2] (i2) {$A$};
+    \vertex [above right=of a3] (f1) {$A$};
+    \vertex [below right=of a4] (f2) {$A$};
+
+    \diagram* {
+        (i1) -- [fermion, edge label={$p_1$}] (a1),
+        (i2) -- [fermion, edge label={$p_2$}] (a2),
+        (a3) -- [fermion, edge label={$p_4$}] (f1),
+        (a4) -- [fermion, edge label={$p_3$}] (f2),
+        (a2) -- [fermion, edge label={$q_1,B$}] (a1),
+        (a1) -- [fermion, edge label={$q_4,C$}] (a3),
+        (a4) -- [fermion, edge label={$q_2,C$}] (a2),
+        (a3) -- [fermion, edge label={$q_3,B$}] (a4),
+    };
+\end{feynman}
+\end{tikzpicture}}
+\end{center}
+\begin{equation}
+    \begin{split}
+        & \iiiint \left(-ig\right)^4 \frac{i}{q_1^2 - m_B^2c^2}\frac{i}{q_2^2 - m_C^2c^2}\frac{i}{q_3^2 - m_C^2c^2}\frac{i}{q_4^2 - m_B^2c^2} \\
+        & \cdot \left(2\pi\right)^4\delta^4\left(p_1 + q_1 - q_4\right)\left(2\pi\right)^4\delta^4\left(p_2 + q_2 - q_1\right) \\
+        & \cdot \left(2\pi\right)^4\delta^4\left(p_3 - q_3 + q_2\right)\left(2\pi\right)^4\delta^4\left(p_4 - q_4 + q_3\right) \\
+        & \cdot \frac{d^4q_1}{(2\pi)^4}\frac{d^4q_2}{\left(2\pi\right)^4}\frac{d^4q_3}{\left(2\pi\right)^4}\frac{d^4q_4}{\left(2\pi\right)^4} \\
+        & = g^4 \iiiint d^4q_1d^4q_2d^4q_3d^4q_4 \frac{1}{q_1^2q_2^2q_3^2q_4^2} \\
+        & \cdot \delta^4\left(p_1 + q_1 - q_4\right)\delta^4\left(p_2 + q_2 - q_1\right) \delta^4\left(p_3 - q_3 + q_2\right)\delta^4\left(p_4 - q_4 + q_3\right) \\
+        & = g^4 \iiint d^4q_1d^4q_2d^4q_3 \frac{1}{q_1^2q_2^2q_3^2\left(p_1 + q_1\right)^2} \\
+        & \cdot \delta^4\left(p_2 + q_2 - q_1\right) \delta^4\left(p_3 - q_3 + q_2\right)\delta^4\left(p_4 - p_1 - q_1 + q_3\right) \\
+        & = g^4 \iint d^4q_1d^4q_2\frac{1}{q_1^2q_2^2\left(p_3 + q_2\right)^2\left(p_1 + q_1\right)^2} \\
+        & \cdot \delta^4\left(p_2 + q_2 - q_1\right) \delta^4\left(p_4 - p_1 - q_1 + p_3 + q_2\right) \\
+        & = g^4 \iint \frac{ \delta^4\left(p_4 - p_1 + p_3 - p_2\right)}{q_1^2\left(q_1 - p_2\right)^2\left(p_3 + q_1 - p_1\right)^2\left(p_1 + q_1\right)^2} d^4q_1 \\
+        \mathcal{M} & = i\left(\frac{g}{2\pi}\right)^4 \iint \frac{1}{q^2(q - p_2)^2\left(p_3 + q - p_1\right)^2\left(p_1 + q\right)^2} d^4q \\
+    \end{split}
+\end{equation}
+\clearpage
+
+\problem[\textit{Introduction to Elementary Particles} (Griffiths, 2e) Exercise 6.15]
+\subproblem{(a)}
+\begin{center}
+\resizebox{!}{0.3\textwidth}{\begin{tikzpicture}[scale=0.25]
+\begin{feynman}
+    \vertex (a1);
+    \vertex [below=of a1] (a2);
+    \vertex [above left=of a1] (i1) {$A$};
+    \vertex [below left=of a2] (i2) {$B$};
+    \vertex [above right=of a1] (f1) {$B$};
+    \vertex [below right=of a2] (f2) {$A$};
+
+    \diagram* {
+        (i1) -- [fermion, edge label={$p_1$}] (a1),
+        (i2) -- [fermion, edge label={$p_2$}] (a2),
+        (a1) -- [fermion, edge label={$p_3$}] (f1),
+        (a2) -- [fermion, edge label={$p_4$}] (f2),
+        (a2) -- [fermion, edge label={$q_1,C$}] (a1),
+    };
+\end{feynman}
+\end{tikzpicture}}
+\end{center}
+\begin{equation}
+    \begin{split}
+        & \int \left(-ig\right)^2 \frac{i}{q_1^2 - m_C^2c^2} \\
+        & \cdot \left(2\pi\right)^4\delta^4\left(p_1 + q_1 - p_3\right)\left(2\pi\right)^4\delta^4\left(p_2 - q_1 - p_4\right) \frac{d^4q_1}{\left(2\pi\right)^4} \\
+        & = -ig^2\left(2\pi\right)^4 \int \frac{\delta^4\left(p_1 + q_1 - p_3\right)\delta^4\left(p_2 - q_1 - p_4\right)}{q_1^2 - m_C^2c^2}  d^4q_1 \\
+        & = -ig^2(2\pi)^4 \frac{\delta^4\left(p_1 + p_2 - p_3 - p_4\right)}{\left(p_1 - p_3\right)^2 - m_C^2c^2}  \\
+        \mathcal{M}_1 & = \frac{g^2}{\left(p_1 - p_3\right)^2 - m_C^2c^2}
+    \end{split}
+\end{equation}
+\begin{center}
+\resizebox{0.3\textwidth}{!}{\begin{tikzpicture}[scale=0.25]
+\begin{feynman}
+    \vertex (a1);
+    \vertex [right=of a1] (a2);
+    \vertex [below left=of a1] (i2) {$B$};
+    \vertex [below right=of a2] (f1) {$A$};
+    \vertex [above left=of a1] (i1) {$A$};
+    \vertex [above right=of a2] (f2) {$B$};
+
+    \diagram* {
+        (i1) -- [fermion, edge label={$p_1$}] (a1),
+        (i2) -- [fermion, edge label={$p_2$}] (a1),
+        (a2) -- [fermion, edge label={$p_4$}] (f1),
+        (a2) -- [fermion, edge label={$p_3$}] (f2),
+        (a1) -- [fermion, edge label={$q_1,C$}] (a2),
+    };
+\end{feynman}
+\end{tikzpicture}}
+\end{center}
+\begin{equation}
+    \begin{split}
+        & \int \left(-ig\right)^2 \frac{i}{q_1^2 - m_C^2c^2} \\
+        & \cdot \left(2\pi\right)^4\delta^4\left(p_1 + p_2 - q_1\right)\left(2\pi\right)^4\delta^4\left(p_3 + p_4 - q_1\right) \frac{d^4q_1}{(2\pi)^4} \\
+        & = -ig^2\left(2\pi\right)^4 \int \frac{\delta^4\left(p_1 + p_2 - q_1\right)\delta^4\left(p_3 + p_4 - q_1\right)}{q_1^2 - m_C^2c^2}  d^4q_1 \\
+        & = -ig^2\left(2\pi\right)^4 \frac{\delta^4\left(p_3 + p_4 - p_1 - p_2\right)}{\left(p_1 + p_2\right)^2 - m_C^2c^2}  \\
+        \mathcal{M}_2 & = \frac{g^2}{\left(p_1 + p_2\right)^2 - m_C^2c^2} \\
+        \mathcal{M} = \mathcal{M}_1 + \mathcal{M}_2 & = g^2\left(\frac{1}{\left(p_1 - p_3\right)^2 - m_C^2c^2} + \frac{1}{\left(p_1 + p_2\right)^2 - m_C^2c^2}\right)
+    \end{split}
+\end{equation}
+
+\subproblem{(b)}
+\begin{equation}
+    \begin{split}
+        p_1 = \left(\frac{E}{c}, \vec{p}_1\right), & p_2 = \left(\frac{E}{c}, \vec{p}_2\right) = \left(\frac{E}{c}, -\vec{p}_1\right) \\
+        p_3 = \left(\frac{E}{c}, \vec{p}_3\right), & p_4 = \left(\frac{E}{c}, \vec{p}_4\right) = \left(\frac{E}{c}, -\vec{p}_3\right) \\
+        \left(p_1 + p_2\right)^2 & = \left(2\frac{E}{c}, \mathbf{0}\right)^2 = 4\frac{E^2}{c^2} \\
+        \left(p_1 - p_3\right)^2 & = \left(0, \vec{p}_1 + \vec{p}_3\right)^2 \\
+        & = -\left(\vec{p}_1 + \vec{p}_3\right)^2 = -\vec{p}_1^2 - \vec{p}_3^2 - 2|\vec{p}_1||\vec{p}_2|\cos\theta \\
+        & = -2p^2\left(1 + \cos\theta\right) = -4p^2\cos^2\frac{\theta}{2} \\
+        \frac{d\sigma}{d\Omega} & = \left(\frac{\hbar c}{8\pi}\right)^2\frac{\left|\mathcal{M}\right|^2}{(E + E)^2}\frac{\left|p_f\right|}{\left|p_i\right|} \\
+        & = \left(\frac{\hbar c}{8\pi}\right)^2\frac{g^4}{4E^2}\left(-\frac{1}{4\left(\frac{E^2}{c^2} - m^2c^2\right)\cos^2\frac{\theta}{2}} + \frac{c^2}{4E^2}\right)^2 \\
+        & = \left(\frac{\hbar c}{8\pi}\right)^2\frac{g^4c^4}{64E^2}\left(-\frac{1}{\left(E^2 - m^2c^4\right)\cos^2\frac{\theta}{2}} + \frac{1}{E^2}\right)^2 \\
+        & = -\left(\frac{\hbar c}{8\pi}\right)^2\frac{g^4c^4}{64E^2}\left(\frac{E^2\tan^2\frac{\theta}{2} + m^2c^4}{E^2(E^2 - m^2c^4)}\right)^2 \\
+        & = -\left(\frac{\hbar g^2c^3}{64\pi}\frac{E^2\tan^2\frac{\theta}{2} + m^2c^4}{E^3(E^2 - m^2c^4)}\right)^2 \\
+    \end{split}
+\end{equation}
+\subproblem{(c)}
+In the large $m_B$ limit:
+\begin{equation}
+    \begin{split}
+        p_1 = \left(\frac{E}{c}, \vec{p}_1\right), & p_2 = \left(m_Bc, \mathbf{0}\right) \\
+        p_3 = \left(m_Bc, \mathbf{0}\right), & p_4 = \left(\frac{E}{c}, \vec{p}_4\right) \\
+        s & = \left(p_1 + p_2\right)^2c^2 = \left(\frac{E}{c} + m_Bc, \vec{p}_1\right)^2c^2 \\
+        & = \left(\left(\frac{E}{c} + m_Bc\right)^2 - \left|\vec{p}_1\right|^2\right)c^2 \\
+        & = \left(\left(\frac{E}{c} + m_Bc\right)^2 - \left(\frac{E^2}{c^2} - m_A^2c^2\right)\right)c^2 \\
+        & = \left(2Em_B + m_B^2c^2 + m_A^2c^2\right)c^2 \approx m_B^2c^4 \\
+        t & = \left(p_1 - p_3\right)^2c^2 = \left(\frac{E}{c} - m_Bc, \vec{p}_1\right)^2c^2 \\
+        & = \left(\left(\frac{E}{c} - m_Bc\right)^2 - \left|\vec{p}_1\right|^2\right)c^2 \\
+        & = \left(\left(\frac{E}{c} - m_Bc\right)^2 - \left(\frac{E^2}{c^2} - m_A^2c^2\right)\right)c^2 \\
+        & = \left(-2Em_B + m_B^2c^2 + m_A^2c^2\right)c^2 \approx m_B^2c^4 \\
+        \frac{d\sigma}{d\Omega} & = \left(\frac{\hbar}{8\pi m_Bc}\right)^2g^4\left(\frac{2}{m_B^2c^2 - m_C^2c^2}\right)^2 \\
+        & \approx \left(\frac{\hbar}{8\pi m_Bc}\right)^2g^4\left(\frac{2}{m_B^2c^2}\right)^2 \\
+        & \approx \left(\frac{\hbar g^2}{4\pi m_B^3c^3}\right)^2 \\
+    \end{split}
+\end{equation}
+\subproblem{(d)}
+\begin{equation}
+    \begin{split}
+        \sigma & = \int \frac{d\sigma}{d\Omega} \ d\Omega \\
+        & = 4\pi \frac{d\sigma}{d\Omega} \\
+        & = 4\pi \left(\frac{\hbar g^2}{4\pi m_B^3c^3}\right)^2 = \frac{1}{\pi} \left(\frac{\hbar g^2}{2 m_B^3c^3}\right)^2
+    \end{split}
+\end{equation}
+
+\end{document}

@@ -1,0 +1,37 @@
+// DFA recognizing { w in {a,b,c}* | w does not contain the substring acab }
+
+states = {q,        // does not contain acab, does not end with a, ac, or aca
+          qa,       // does not contain acab, ends only with a
+          qac,      // does not contain acab, ends only with ac
+          qaca,     // does not contain acab, ends only with aca
+          Q}        // w contains acab
+
+input_alphabet = {a,b,c}
+
+// does not contain acab or end with a, ac, or aca when we start
+start_state =    q
+
+// accept if does not contain acab
+accept_states =  {q,qa,qac,qaca}
+
+delta =
+    // if we see a, ac, or aca, prepare to check for acab
+    q,a         -> qa;
+    qa,a        -> qa;
+    qa,c        -> qac;
+    qac,a       -> qaca;
+    qaca,a      -> qa;
+    qaca,c      -> qac;
+    
+    // if we see acab, reject
+    qaca,b      -> Q;
+    Q,a         -> Q;
+    Q,b         -> Q;
+    Q,c         -> Q;
+
+    // otherwise, reset
+    q,b         -> q;
+    q,c         -> q;
+    qa,b        -> q;
+    qac,b       -> q;
+    qac,c       -> q;

@@ -1,0 +1,2 @@
+This agrees with the changing of the participation ratio.
+This makes sense, as the funniness of the eigenvector decreases as the defect is made less significant.

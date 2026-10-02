@@ -1,0 +1,251 @@
+\documentclass{article}
+\usepackage{assignment_preamble}
+
+\title{Homework 5}
+\author{Ravi Kini}
+\date{November 9, 2023}
+
+\begin{document}
+
+\maketitle
+
+\problem[\textit{An Introduction to Thermal Physics} (Schroeder, 1e) Exercise 5.12]
+If $S$ is held constant in the thermodynamic identity for $U$:
+\begin{equation}
+    \begin{split}
+        \diff{U} & = T \, \diff{S} - p \, \diff{V} = -p \, \diff{V} \\
+        {\left(\pderiv{U}{V}\right)}_S & = -p
+    \end{split}
+\end{equation}
+If $V$ is held constant:
+\begin{equation}
+    \begin{split}
+        \diff{U} & = T \, \diff{S} - p \, \diff{V} = T \, \diff{S} \\
+        {\left(\pderiv{U}{S}\right)}_V & = T
+    \end{split}
+\end{equation}
+Then:
+\begin{equation}
+    \begin{split}
+        \pderiv{}{V}{\left(\pderiv{U}{S}\right)}_V & = \pderiv{}{S}{\left(\pderiv{U}{V}\right)}_S \\
+        {\left(\pderiv{T}{V}\right)}_S & = -{\left(\pderiv{p}{S}\right)}_V
+    \end{split}
+\end{equation}
+
+\clearpage
+
+\problem[\textit{An Introduction to Thermal Physics} (Schroeder, 1e) Exercise 5.23 (partial)]
+\subproblem{(a)}
+Deriving the thermodynamic identity for $\Phi$:
+\begin{equation}
+    \begin{split}
+        \Phi & = U - TS - \mu N \\
+        \diff{\Phi} & = \diff{U} - \diff{(TS)} - \diff{(\mu N)} \\
+        & = \diff{U} - T \, \diff{S} - S \, \diff{T} - \mu \, \diff{N} - N \, \diff{\mu} \\
+        & = (T \, \diff{S} - p \, \diff{V} + \mu \, \diff{N}) - T \, \diff{S} - S \, \diff{T} - \mu \, \diff{N} - N \, \diff{\mu} \\
+        & = - p \, \diff{V} - S \, \diff{T} - N \, \diff{\mu} \\
+    \end{split}
+\end{equation}
+If $V$ and $T$ are held constant in the thermodynamic identity for $\Phi$:
+\begin{equation}
+    \begin{split}
+        \diff{\Phi} & = - p \, \diff{V} - S \, \diff{T} - N \, \diff{\mu} = - N \, \diff{\mu} \\
+        {\left(\pderiv{\Phi}{\mu}\right)}_{V,T} & = -N
+    \end{split}
+\end{equation}
+If $V$ and $\mu$ are held constant:
+\begin{equation}
+    \begin{split}
+        \diff{\Phi} & = - p \, \diff{V} - S \, \diff{T} - N \, \diff{\mu} = - S \, \diff{T} \\
+        {\left(\pderiv{\Phi}{\mu}\right)}_{V,\mu} & = -S
+    \end{split}
+\end{equation}
+If $T$ and $\mu$ are held constant:
+\begin{equation}
+    \begin{split}
+        \diff{\Phi} & = - p \, \diff{V} - S \, \diff{T} - N \, \diff{\mu} = - p \, \diff{V} \\
+        {\left(\pderiv{\Phi}{\mu}\right)}_{T,\mu} & = -p
+    \end{split}
+\end{equation}
+\subproblem{(b)}
+For a system in thermal equilibrium, $T, \mu$ remain constant and equal for the system and the reservoir. Further assume that the volume $V_r$ remains fixed for the reservoir. Let the entropy of the universe (system and reservoir) increase by some $\diff{S}_{u} = \diff{S} + \diff{S}_r$ where $\diff{S}$ is the change in entropy of the system and $\diff{S}_r$ the change in entropy of the reservoir. Then:
+\begin{equation}
+    \begin{split}
+        \diff{U}_r & = T \, \diff{S}_r - P \, \diff{V}_r + \mu \, \diff{N}_r  \\
+        \diff{S}_r & = \frac{1}{T}\diff{U}_r - \frac{\mu}{T} \, \diff{N}_r \\
+        & = -\frac{1}{T}\diff{U} + \frac{\mu}{T} \, \diff{N} \\
+        \diff{S}_u & = \diff{S} -\frac{1}{T}\diff{U} + \frac{\mu}{T} \, \diff{N} \\
+        & = -\frac{1}{T}\left(\diff{U} - T \, \diff{S} - \mu \, \diff{N}\right) = -\frac{1}{T}\diff{\Phi}
+    \end{split}
+\end{equation}
+Since the entropy tends to increase spontaneously, $\diff{S}_u$ is positive, and $\diff{\Phi}$ is negative, indicating that the grand free energy $\Phi$ tends to decrease.
+
+\clearpage
+
+\problem[\textit{An Introduction to Thermal Physics} (Schroeder, 1e) Exercise 6.5]
+\subproblem{(a)}
+The partition function of the particle $Z$ is:
+\begin{equation}
+    \begin{split}
+        Z & = e^{-\frac{-0.05~\unit{\joule}}{k_BT}} + e^{-\frac{0~\unit{\joule}}{k_BT}} + e^{-\frac{0.05~\unit{\joule}}{k_BT}} \\
+        & = e^{-\frac{-0.05~\unit{\joule}}{8.617 \cdot 10^{-5}~\unit{\joule\per\kelvin} \cdot 300~\unit{\joule}}} + e^{-\frac{0~\unit{\joule}}{8.617 \cdot 10^{-5}~\unit{\joule\per\kelvin} \cdot 300~\unit{\joule}}} \\
+        & + e^{-\frac{0.05~\unit{\joule}}{8.617 \cdot 10^{-5}~\unit{\joule\per\kelvin} \cdot 300~\unit{\joule}}} \approx 8.063 \\
+    \end{split}
+\end{equation}
+\subproblem{(b)}
+The probabilities of the particle being in each of the states is:
+\begin{equation}
+    \begin{split}
+        P\left(E = -0.05~\unit{\joule}\right) & = \frac{e^{-\frac{-0.05~\unit{\joule}}{8.617 \cdot 10^{-5}~\unit{\joule\per\kelvin} \cdot 300~\unit{\joule}}}}{Z} \approx 0.858 \\
+        P\left(E = 0~\unit{\joule}\right) & = \frac{e^{-\frac{0~\unit{\joule}}{8.617 \cdot 10^{-5}~\unit{\joule\per\kelvin} \cdot 300~\unit{\joule}}}}{Z} \approx 0.124 \\
+        P\left(E = 0.05~\unit{\joule}\right) & = \frac{e^{-\frac{0.05~\unit{\joule}}{8.617 \cdot 10^{-5}~\unit{\joule\per\kelvin} \cdot 300~\unit{\joule}}}}{Z} \approx 0.018 \\
+    \end{split}
+\end{equation}
+\subproblem{(c)}
+Shifting the zero point and repeating the calculations:
+\begin{equation}
+    \begin{split}
+        Z & = e^{-\frac{0~\unit{\joule}}{k_BT}} + e^{-\frac{0.05~\unit{\joule}}{k_BT}} + e^{-\frac{0.10~\unit{\joule}}{k_BT}} \\
+        & = e^{-\frac{0~\unit{\joule}}{8.617 \cdot 10^{-5}~\unit{\joule\per\kelvin} \cdot 300~\unit{\joule}}} + e^{-\frac{0.05~\unit{\joule}}{8.617 \cdot 10^{-5}~\unit{\joule\per\kelvin} \cdot 300~\unit{\joule}}} \\
+        & + e^{-\frac{0.10~\unit{\joule}}{8.617 \cdot 10^{-5}~\unit{\joule\per\kelvin} \cdot 300~\unit{\joule}}} \approx 1.165 \\
+        P\left(E = 0~\unit{\joule}\right) & = \frac{e^{-\frac{0~\unit{\joule}}{8.617 \cdot 10^{-5}~\unit{\joule\per\kelvin} \cdot 300~\unit{\joule}}}}{Z} \approx 0.858 \\
+        P\left(E = 0.05~\unit{\joule}\right) & = \frac{e^{-\frac{0.05~\unit{\joule}}{8.617 \cdot 10^{-5}~\unit{\joule\per\kelvin} \cdot 300~\unit{\joule}}}}{Z} \approx 0.124 \\
+        P\left(E = 0.10~\unit{\joule}\right) & = \frac{e^{-\frac{0.10~\unit{\joule}}{8.617 \cdot 10^{-5}~\unit{\joule\per\kelvin} \cdot 300~\unit{\joule}}}}{Z} \approx 0.018 \\
+    \end{split}
+\end{equation}
+The partition function changes, but the probabilities remain the same, since the zero for measuring energy is arbitrary.
+
+\clearpage
+
+\problem[\textit{An Introduction to Thermal Physics} (Schroeder, 1e) Exercise 6.11]
+The partition function of a lithium nucleus is:
+\begin{equation}
+    \begin{split}
+        Z & = e^{-\frac{-\frac{3}{2}\mu B}{k_BT}} + e^{-\frac{-\frac{1}{2}\mu B}{k_BT}} + e^{-\frac{\frac{1}{2}\mu B}{k_BT}} + e^{-\frac{\frac{3}{2}\mu B}{k_BT}} \\
+        & = e^{-\frac{-\frac{3}{2} \cdot 1.03 \cdot 10^{-7}~\unit{eV\per\tesla}\cdot 0.63~\unit{\tesla}}{8.617 \cdot 10^{-5}~\unit{eV\per\kelvin} \cdot 300~\unit{\kelvin}}} + e^{-\frac{-\frac{1}{2} \cdot 1.03 \cdot 10^{-7}~\unit{eV\per\tesla}\cdot 0.63~\unit{\tesla}}{8.617 \cdot 10^{-5}~\unit{eV\per\kelvin} \cdot 300~\unit{\kelvin}}} \\
+        & + e^{-\frac{\frac{1}{2} \cdot 1.03 \cdot 10^{-7}~\unit{eV\per\tesla}\cdot 0.63~\unit{\tesla}}{8.617 \cdot 10^{-5}~\unit{eV\per\kelvin} \cdot 300~\unit{\kelvin}}} + e^{-\frac{\frac{3}{2} \cdot 1.03 \cdot 10^{-7}~\unit{eV\per\tesla}\cdot 0.63~\unit{\tesla}}{8.617 \cdot 10^{-5}~\unit{eV\per\kelvin} \cdot 300~\unit{\kelvin}}} \approx 4 \\
+    \end{split}
+\end{equation}
+The probability of the nucleus being in each of the spin orientations is then:
+\begin{equation}
+    \begin{split}
+        P\left(m = -\frac{3}{2}\right) & = \frac{e^{-\frac{-\frac{3}{2} \cdot 1.03 \cdot 10^{-7}~\unit{eV\per\tesla}\cdot 0.63~\unit{\tesla}}{8.617 \cdot 10^{-5}~\unit{eV\per\kelvin} \cdot 300~\unit{\kelvin}}}}{Z} \approx 0.25 \\
+        P\left(m = -\frac{1}{2}\right) & = \frac{e^{-\frac{-\frac{1}{2} \cdot 1.03 \cdot 10^{-7}~\unit{eV\per\tesla}\cdot 0.63~\unit{\tesla}}{8.617 \cdot 10^{-5}~\unit{eV\per\kelvin} \cdot 300~\unit{\kelvin}}}}{Z} \approx 0.25 \\
+        P\left(m = \frac{1}{2}\right) & = \frac{e^{-\frac{\frac{a}{2} \cdot 1.03 \cdot 10^{-7}~\unit{eV\per\tesla}\cdot 0.63~\unit{\tesla}}{8.617 \cdot 10^{-5}~\unit{eV\per\kelvin} \cdot 300~\unit{\kelvin}}}}{Z} \approx 0.25 \\
+        P\left(m = \frac{3}{2}\right) & = \frac{e^{-\frac{\frac{3}{2} \cdot 1.03 \cdot 10^{-7}~\unit{eV\per\tesla}\cdot 0.63~\unit{\tesla}}{8.617 \cdot 10^{-5}~\unit{eV\per\kelvin} \cdot 300~\unit{\kelvin}}}}{Z} \approx 0.25 \\
+    \end{split}
+\end{equation}
+If both $B$ and $T$ change sign, $\frac{m\mu B}{k_BT}$ does not change sign, so the expression for the probability remains the same. Consequently, the particles obey the Boltzmann distribution for $T = -300 \unit{\kelvin}$.
+
+\clearpage
+
+\problem[\textit{An Introduction to Thermal Physics} (Schroeder, 1e) Exercise 6.14]
+For a single air molecule, with $s_1$ being the state where the molecule is at sea level and $s_2$ being the state where the molecule is at height $z$:
+\begin{equation}
+    \begin{split}
+        E\left(s_1\right) & = E\left(s_2\right) + mgz \\
+        \frac{P\left(s = s_1\right)}{P\left(s = s_2\right)} & = \frac{e^{-\frac{E\left(s_1\right)}{k_BT}}}{e^{-\frac{E\left(s_2\right)}{k_BT}}} = e^{-\frac{E\left(s_1\right) - E\left(s_2\right)}{k_BT}} = e^{-\frac{mgz}{k_BT}} \\
+        P\left(s = s_1\right) & = P\left(s = s_2\right)e^{-\frac{mgz}{k_BT}} \\
+        P\left(z\right) & = P\left(0\right)e^{-\frac{mgz}{k_BT}} \\
+        \rho\left(z\right) & = \rho\left(0\right)e^{-\frac{mgz}{k_BT}} \\
+    \end{split}
+\end{equation}
+
+\clearpage
+
+\problem[\textit{An Introduction to Thermal Physics} (Schroeder, 1e) Exercise 6.16]
+For a system in equilibrium with a reservoir at temperature $T$, where $\beta = \frac{1}{k_BT}$:
+\begin{equation}
+    \begin{split}
+        -\deriv{}{\beta} \ln{Z} & = -\frac{\deriv{Z}{\beta}}{Z} = -\frac{\deriv{}{\beta}\sum_s e^{-\beta E\left(s\right)}}{Z} \\
+        & = -\frac{\sum_s \deriv{}{\beta} e^{-\beta E\left(s\right)}}{Z} \\
+        & = -\frac{\sum_s -E\left(s\right)e^{-\beta E\left(s\right)}}{Z} = \frac{\sum_s E\left(s\right)e^{-\beta E\left(s\right)}}{Z} = \overline{E}
+    \end{split}
+\end{equation}
+
+\clearpage
+
+\problem[\textit{An Introduction to Thermal Physics} (Schroeder, 1e) Exercise 6.20 (partial)]
+\subproblem{(a)}
+The partition function of a single harmonic oscillator $Z$ is:
+\begin{equation}
+    \begin{split}
+        Z & = \sum_s e^{-E\left(s\right)\beta} \\
+        & = \sum_{n=0}^\infty e^{-nhf\beta} \\
+        & = \sum_{n=0}^\infty {\left(e^{-hf\beta}\right)}^n \\
+        & = \frac{1}{1 - e^{-hf\beta}}
+    \end{split}
+\end{equation}
+\subproblem{(b)}
+At temperature $T$, the average energy of a single harmonic oscillator $\overline{E}$ is:
+\begin{equation}
+    \begin{split}
+        \overline{E} & = -\deriv{}{\beta} \ln{Z} \\
+        & = -\deriv{}{\beta} \ln{\left(\frac{1}{1 - e^{-hf\beta}}\right)} \\
+        & = \deriv{}{\beta} \ln{\left(1 - e^{-hf\beta}\right)} \\
+        & = \frac{hfe^{-hf\beta}}{1 - e^{-hf\beta}} \\
+        & = \frac{hf}{e^{hf\beta} - 1} = \frac{hf}{e^{\frac{hf}{k_BT}} - 1} \\
+    \end{split}
+\end{equation}
+\subproblem{(c)}
+The total energy of a system with $N$ oscillators $U$ is then:
+\begin{equation}
+    \begin{split}
+        U & = N\overline{E} \\
+        & = \frac{Nhf}{e^{\frac{hf}{k_BT}} - 1}
+    \end{split}
+\end{equation}
+\subproblem{(d)}
+The heat capacity of this system $C$ is:
+\begin{equation}
+    \begin{split}
+        C & = \pderiv{U}{T} = -Nhf\frac{-\frac{hf}{k_B T^2}e^{\frac{hf}{k_BT}}}{{\left(e^{\frac{hf}{k_BT}} - 1\right)}^2} \\
+        & = \frac{Nh^2f^2}{k_BT^2}\frac{e^{\frac{hf}{k_BT}}}{{\left(e^{\frac{hf}{k_BT}} - 1\right)}^2} \\
+    \end{split}
+\end{equation}
+In the low-temperature limit:
+\begin{equation}
+    \begin{split}
+        \lim_{T \to 0} C & = \lim_{T \to 0} \frac{Nh^2f^2}{k_BT^2}\frac{e^{\frac{hf}{k_BT}}}{{\left(e^{\frac{hf}{k_BT}} - 1\right)}^2} = 0 \\
+    \end{split}
+\end{equation}
+In the high-temperature limit:
+\begin{equation}
+    \begin{split}
+        \lim_{T \to \infty} C & = \lim_{T \to \infty} \frac{Nh^2f^2}{k_BT^2}\frac{e^{\frac{hf}{k_BT}}}{{\left(e^{\frac{hf}{k_BT}} - 1\right)}^2} \\
+        & = \lim_{T \to \infty} \frac{Nh^2f^2}{k_BT^2}\frac{1 + \frac{hf}{k_BT} + \ldots }{{\left(\frac{hf}{k_BT} + \frac{1}{2}{\left(\frac{hf}{k_BT}\right)}^2 + \ldots \right)}^2} \\
+        & = \lim_{T \to \infty} \frac{Nh^2f^2}{k_BT^2}\frac{1 + \ldots}{{\left(\frac{hf}{k_BT}\right)}^2 + \ldots} \\
+        & = Nk_B \\
+    \end{split}
+\end{equation}
+
+\clearpage
+
+\problem[\textit{An Introduction to Thermal Physics} (Schroeder, 1e) Exercise 6.26]
+Approximating the rotational partition function $Z_{\text{rot}}$:
+\begin{equation}
+    \begin{split}
+        Z_{\text{rot}} & = \sum_{j=0}^{\infty} (2j + 1)e^{-\frac{j(j + 1)\epsilon}{k_BT}}  \approx 1 + 3e^{-\frac{2\epsilon}{k_BT}} = 1 + 3e^{-2\epsilon\beta} \\
+    \end{split}
+\end{equation}
+Using this approximation to find the average energy $\overline{E}_{\text{rot}}$ and heat capacity $C$:
+\begin{equation}
+    \begin{split}
+        \overline{E}_{\text{rot}} & = -\deriv{}{\beta}\ln Z_{\text{rot}} \approx -\deriv{}{\beta}\ln(1 + 3e^{-2\epsilon\beta}) = \frac{6\epsilon e^{-2\epsilon\beta}}{1 + 3e^{-2\epsilon\beta}} \\
+        & \approx 6\epsilon e^{-2\epsilon\beta} = 6\epsilon e^{-\frac{2\epsilon}{k_BT}} \\
+        C & = \pderiv{\overline{E}}{T} \approx \pderiv{}{T} 6\epsilon e^{-\frac{2\epsilon}{k_BT}} \\
+        & \approx 6\epsilon \frac{2\epsilon}{k_BT^2}e^{-\frac{2\epsilon}{k_BT}} = \frac{12\epsilon^2}{k_BT^2}e^{-\frac{2\epsilon}{k_BT}} \\
+        \lim_{T\to 0} c & = \lim_{T \to 0} \frac{12\epsilon^2}{k_BT^2}e^{-\frac{2\epsilon}{k_BT}} = 0
+    \end{split}
+\end{equation}
+This result is consistent with the third law, as the heat capacity goes to $0$ as the temperature goes to $0$.
+
+\begin{tikzpicture}
+\begin{axis}[samples=200,xlabel=$T$,ylabel=$C$,ytick={0,1},yticklabels={$0$,$1$},xtick={},xmin=0,xmax=2]
+\addplot[color=red,domain=0:0.5]{1 / x^2 * e^(-2 / x)};
+\addplot[color=red,domain=0.5:1]{(1 - 0.0732625556)/0.5 * (x - 0.5) + 0.0732625556};
+\addplot[color=red,domain=1:2]{x/x};
+\end{axis}
+\end{tikzpicture}
+
+\end{document}

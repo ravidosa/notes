@@ -1,0 +1,5 @@
+// matches { x in {A, C, G, T}∗ | x violates at least one of the rules} }
+
+alph = (A|C|G|T)*;  // subexpression matching any DNA nucleotide
+notAT = (C|G);      // subexpression matching C or G
+(A|T) alph|alph (A|T)|notAT notAT notAT alph|alph notAT notAT notAT|notAT*|alph C alph C alph|alph GGGG alph

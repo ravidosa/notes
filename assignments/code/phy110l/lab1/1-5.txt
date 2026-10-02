@@ -1,0 +1,4 @@
+The potential of a charge distribution is relatively easier to compute.
+To directly compute the electric field, two values must be stored for each position, rather than only one for the potential.
+It is also harder to integrate from an arbitrary zero point along a path to find the potential.
+The weakness of the potential lies in the difficulty of computing forces, which would be far easier if charges computed their own fields.

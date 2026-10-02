@@ -1,0 +1,65 @@
+\documentclass{article}
+\usepackage{../assignment_preamble}
+
+\title{Weekly Problem 7}
+\author{Ravi Kini}
+\date{May 25, 2026}
+
+\begin{document}
+
+\maketitle
+
+\problem
+\subproblem{(a)}
+\begin{equation*}
+\begin{nd}[rules=relevant,justformat=just]
+\hypo {1} {p \Rightarrow (p \Rightarrow p)_\varnothing}
+\open
+\hypo {2} {p \Rightarrow q_{\{1\}}}
+\open
+\hypo {3} {p_{\{2\}}}
+\have {4} {p \Rightarrow (p \Rightarrow p)_\varnothing} \r{1}
+\have {5} {p \Rightarrow p_{\{2\}}} \conde{4,3}
+\open
+\hypo {6} {p_{\{3\}}}
+\have {7} {p \Rightarrow p_{\{2\}}} \r{5}
+\have {8} {p_{\{2,3\}}} \conde{7,6}
+\have {9} {p \Rightarrow q_{\{1\}}} \r{2}
+\have {10} {q_{\{1,2,3\}}} \conde{9,8}
+\close
+\have {11} {p \Rightarrow q_{\{1,2\}}} \condi{6-10}
+\close
+\have {12} {p \Rightarrow (p \Rightarrow q)_{\{1\}}} \condi{3-11}
+\close
+\have {13} {(p \Rightarrow q) \Rightarrow (p \Rightarrow (p \Rightarrow q))_{\varnothing}} \condi{2-12}
+\end{nd}
+\end{equation*}
+We then see that $p \Rightarrow (p \Rightarrow p) \vdash (p \Rightarrow q) \Rightarrow (p \Rightarrow (p \Rightarrow q))$ is a valid argument in relevant logic.
+
+This derivation satisfies the entailment restriction since only formulas of the form $A \Rightarrow B_\alpha$ have been reiterated into subproofs.
+
+\subproblem{(b)}
+\begin{equation*}
+\begin{nd}[rules=relevant,justformat=just]
+\open
+\hypo {1} {p \Rightarrow (q \Rightarrow p)_{\{1\}}}
+\open
+\hypo {2} {q_{\{2\}}}
+\open
+\hypo {3} {p_{\{3\}}}
+\have {4} {p \Rightarrow (q \Rightarrow p)_{\{1\}}} \r{1}
+\have {5} {q \Rightarrow p_{\{1,3\}}} \conde{4,3}
+\have {6} {q_{\{2\}}} \r{2}
+\have {7} {p_{\{1,2,3\}}} \conde{5,6}
+\close
+\have {8} {p \Rightarrow p_{\{1,2\}}} \condi{3-7}
+\close
+\have {9} {q \Rightarrow (p \Rightarrow p)_{\{1\}}} \condi{2-8}
+\close
+\have {10} {(p \Rightarrow (q \Rightarrow p)) \Rightarrow (q \Rightarrow (p \Rightarrow p))_\varnothing} \condi{1-9}
+\end{nd}
+\end{equation*}
+We then see that $ \vdash (p \Rightarrow (q \Rightarrow p)) \Rightarrow (q \Rightarrow (p \Rightarrow p))$ is a valid argument in relevant logic.
+
+This derivation does not satisfy the entailment restriction since $q_{\{2\}}$ was reiterated into a subproof on line $6$.
+\end{document}

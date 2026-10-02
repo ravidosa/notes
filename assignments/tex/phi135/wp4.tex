@@ -1,0 +1,43 @@
+\documentclass{article}
+\usepackage{../assignment_preamble}
+
+\title{Weekly Problem 4}
+\author{Ravi Kini}
+\date{April 27, 2026}
+
+\begin{document}
+
+\maketitle
+
+\problem
+\subproblem{(a)}
+\begin{equation*}
+\begin{nd}[rules=paradox,justformat=just]
+\hypo {1} {\lnot p \lor q}
+\open
+\hypo {2} {p}
+\open
+\hypo {3} {\lnot p}
+\have {4} {\lnot p \lor (p \land q)} \oi{3}
+\close
+\open
+\hypo {5} {q}
+\have {6} {p \land q} \ai{2,5}
+\have {7} {\lnot p \lor (p \land q)} \oi{6}
+\close
+\have {8} {\lnot p \lor (p \land q)} \oe{1,2-4,5-7}
+\close
+\open
+\hypo {9} {\lnot p}
+\have {10} {\lnot p \lor (p \land q)} \oe{9}
+\close
+\have {11} {\lnot p \lor (p \land q)} \tnd{2-8,9-10}
+\have {12} {p \Rightarrow (p \land q)} \mci{11}
+\end{nd}
+\end{equation*}
+We then see that $\lnot p \lor q \vdash p \Rightarrow (p \land q)$ is a valid argument in the Logic of Paradox.
+
+\subproblem{(b)}
+Let $p = i$, $q = 1$, and $r = 0$. We then see that $p \land q = i$, so $(p \land q) \Rightarrow r = i$. However, $q \Rightarrow r = 0$. Consequently, the argument $p, (p \land q) \Rightarrow r \vdash q \Rightarrow r$ is an invalid argument in the Logic of Paradox.
+
+\end{document}

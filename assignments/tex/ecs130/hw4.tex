@@ -1,0 +1,184 @@
+\documentclass{article}
+\usepackage{../assignment_preamble}
+
+\title{Homework 4}
+\author{Ravi Kini}
+\date{November 10, 2025}
+
+\begin{document}
+
+\maketitle
+
+\problem{}
+Let $A$ be a $2 \times 2$ upper triangular matrix. It then has the form:
+\begin{align*}
+    A = \begin{bmatrix}
+        a_{11} & a_{12} \\ 0 & a_{22}
+    \end{bmatrix}
+\end{align*}
+Its characteristic polynomial is then:
+\begin{align*}
+    \det(A - \lambda I) = (a_{11} - \lambda)(a_{22} - \lambda)
+\end{align*}
+For this to be zero, $\lambda = a_{11}, a_{22}$, so the eigenvalues are exactly the diagonal elements of $A$. Now suppose that for all $n \times n$ upper triangular matrices, the eigenvalues are exactly the diagonal elements of $A$. We now consider a $(n + 1) \times (n + 1)$ upper triangular matrix. It then has the form:
+\begin{align*}
+    A = \begin{bmatrix}
+        a_{11} & B \\ 0 & A'
+    \end{bmatrix}
+\end{align*}
+where $B$ is a $1 \times n$ matrix and $A'$ is a $n \times n$ upper triangular matrix. Its characteristic polynomial is then:
+\begin{align*}
+    \det(A - \lambda I) = (a_{11} - \lambda)\det(A' - \lambda I)
+\end{align*}
+For this to be zero, either $\lambda = a_{11}$ or $\lambda$ is a diagonal element of $A'$. Note that the diagonal elements of $A'$ are all but the first diagonal element of $A$, so the eigenvalues are exactly the diagonal elements of $A$. By induction, the eigenvalues of all upper triangular matrices are exactly its diagonal elements.
+
+\clearpage
+\problem{}
+\subproblem{(a)}
+Let $A, B$ be similar $n \times n$ matrices. Then $B = P^{-1}AP$ for some $n \times n$ matrix $P$, or equivalently, $A = PBP^{-1}$. Suppose $\lambda$ is an eigenvalue of $A$; then $Av = \lambda v$, where $v$ is the corresponding eigenvector. Then:
+\begin{align*}
+    Av = (PBP^{-1})v & = \lambda v \\
+    BP^{-1}v & = \lambda P^{-1}v \\
+    B(P^{-1}v) & = \lambda (P^{-1}v) \\
+\end{align*}
+Consequently, $\lambda$ is also an eigenvalue of $B$. By symmetry, the eigenvalues of $A$ are exactly the eigenvalues of $B$.
+\subproblem{(b)}
+If $v_A$ is an eigenvector of $A$ and $v_B$ is an eigenvector of $B$, then $v_B = P^{-1}v_A$.
+
+\clearpage
+\problem{}
+\subproblem{(a)}
+Let $u, v \in \mathbb{R}^n$ with $u^T v = 1$. Suppose $A = uv^T$; note that $A$ is an outer product and has $\mathrm{rank}(A) = 1$, so it only has one nonzero eigenvalue. Then:
+\begin{align*}
+    Au & = uv^T u \\
+    & = u(1) = u
+\end{align*}
+The remaining nonzero eigenvalue is $1$, with an eigenvector of $u$.
+\subproblem{(b)}
+By the power iteration method:
+\begin{align*}
+    x^{(k)} & = \frac{A^k x^{(0)}}{||A^k x^{(0)}||}
+\end{align*}
+Note that:
+\begin{align*}
+    A^2 & = {(uv^T)}^2 \\
+    & = uv^T u v^T = u(1)v^T \\
+    & = uv^T = A
+\end{align*}
+By induction, $A^k = A$ for all $k$. Now, since $A$ has only one nonzero eigenvalue, $x^{(0)} = \alpha u + w$, where $w \in \mathrm{null}(A)$ and for some constant $\alpha$. Then:
+\begin{align*}
+    x^{(1)} = Ax^{(0)} & = A(\alpha u + w) \\
+    & = uv^T(\alpha u) + Aw \\
+    & = \alpha u
+\end{align*}
+By induction, $x^{(k)} = x^{(0)}$ for all $k$, and power iteration converges in one iteration.
+
+\clearpage
+\problem{}
+The matrix:
+\begin{align*}
+    A = \begin{bmatrix}
+        0 & 1 \\ 1 & 0
+    \end{bmatrix}
+\end{align*}
+has eigenvalues $\lambda_1 = 1$ and $\lambda_2 = -1$, with eigenvectors $v_1 = {(1, 1)}^T$ and $v_2 = {(1, -1)}^T$, respectively. $x^{(0)}$ can be decomposed as $x^{(0)} = \alpha_1 v_1 + \alpha_2 v_2$. Then:
+\begin{align*}
+    A^k x^{(0)} & = \alpha_1{(1)}^k v_1 + \alpha_2{(-1)}^k v_2
+\end{align*}
+The result of power iteration then oscillates between $\alpha_1 v_1 + \alpha_2 v_2$ and $\alpha_1 v_1 - \alpha_2 v_2$, and does not converge. This occurs because the two eigenvalues have equal magnitude.
+
+\clearpage
+\problem{}
+Generalizing the QR algorithm to find eigenvectors and eigenvalues involves a shift in each iteration:
+\begin{align*}
+    A_0 & = A \\
+    A_k - \sigma_k I & = Q_k R_k \\
+    A_{k + 1} & = R_k Q_k + \sigma_k I
+\end{align*}
+Let $A$ be a $n \times n$ matrix, with $A = Q_0 R_0$. Then:
+\begin{align*}
+    A_1 & = R_0Q_0 + \sigma_0 I \\
+    & = Q_0^T Q_0 R_0Q_0 + \sigma_0 Q_0^T Q_0 \\
+    & = Q_0^T (Q_0R_0 + \sigma_0 I) Q_0 \\
+    & = Q_0^T (A_0 - \sigma_0 I + \sigma_0 I) Q_0 = Q_0^T A_0 Q_0
+\end{align*}
+Therefore $A_1$ is similar to $A$, with $A_1 = P^{-1}AP = P^T A P$ for some orthogonal $P$. Suppose $A_k$ is similar to $A$ for all $k$, with $A_k = P_k^T AP_k$ for some orthogonal $P_k$. Then:
+\begin{align*}
+    A_{k + 1} & = R_k Q_k + \sigma_k I \\
+    & = Q_k^T Q_k R_k Q_k + \sigma_k Q_k^T Q_k \\
+    & = Q_k^T (Q_k R_k + \sigma_k I) Q_k \\
+    & = Q_k^T (A_k - \sigma_k I + \sigma_k I) Q_k = Q_k^T A_k Q_k \\
+    & = Q_k^T (P_k^T AP_k) Q_k \\
+    & = {(P_k Q_k)}^T A (P_k Q_k) \\
+\end{align*}
+Note that $P_k Q_k$, being the product of two orthogonal matrices, is orthogonal. Therefore $A_k$ is similar to $A$, with $A_1 = {P'}^{-1}A{P'} = {P'}^T A P'$ for some orthogonal $P'$. By induction, $A_k$ is similar to $A$ for all $k$.
+
+\clearpage
+\problem{}
+\subproblem{(a)}
+\begin{lstlisting}
+n = 10;
+k_max = 100;
+A = 2 * eye(n) - diag(ones(n - 1, 1), 1) - diag(ones(n - 1, 1), -1);
+
+% power iteration
+x = [1; zeros(n - 1, 1)];
+for k = 1:k_max
+    x = A * x;
+    lambda = norm(x);
+    x = x / lambda;
+end
+\end{lstlisting}
+The computed eigenvalue is $\lambda = 3.9190$ and the corresponding eigenvalue is:
+\begin{align*}
+    v = \begin{bmatrix}
+        0.1210 \\
+        -0.2320 \\
+        0.3239 \\
+        -0.3891 \\
+        0.4225 \\
+        -0.4216 \\
+        0.3866 \\
+        -0.3206 \\
+        0.2291 \\
+        -0.1193 \\
+    \end{bmatrix}
+\end{align*}
+
+\subproblem{(b)}
+\begin{lstlisting}
+n = 10;
+k_max = 100;
+A = 2 * eye(n) - diag(ones(n - 1, 1), 1) - diag(ones(n - 1, 1), -1);
+
+% QR, no shift
+A_k = A;
+off_diag_norm = zeros(k_max, 1);
+
+for k = 1:k_max
+    [Q, R] = qr(A_k);
+    A_k = R * Q;
+    off_diag_norm(k) = norm(A_k - diag(diag(A_k)));
+end
+\end{lstlisting}
+The computed eigenvalue is $\lambda = 3.9190$. The off-diagonal elements decay gradually.
+
+\subproblem{(c)}
+\begin{lstlisting}
+n = 10;
+k_max = 100;
+A = 2 * eye(n) - diag(ones(n - 1, 1), 1) - diag(ones(n - 1, 1), -1);
+
+% QR, shift
+A_k = A;
+off_diag_norm = zeros(k_max, 1);
+
+for k = 1:k_max
+    sigma = A_k(n, n);
+    [Q, R] = qr(A_k - sigma * eye(n));
+    A_k = R * Q + sigma * eye(n);
+    off_diag_norm(k) = norm(A_k - diag(diag(A_k)));
+end
+\end{lstlisting}
+The computed eigenvalue is $\lambda = 2.0000$. The off-diagonal elements do not decay, likely because the diagonal elements of $A$ are identical.
+\end{document}

@@ -1,0 +1,10 @@
+The plot is no longer symmetrical, which makes sense as the top edge is no longer symmetrical.
+THe potential increases for some time as x increases, then decreases,
+which is reasonable given the boundary conditions on the left and right sides.
+This problem can be solved analytically. The solution for the following boundary conditions
+- V=0 at x=0 (0<y<L_y)
+- V=0 at y=0 (0<x<L_x)
+- V=0 at x=L_x (0<y<L_y)
+- V=3x at y=L_y (0<x<L_x)
+is:
+V(x,y) = sum for n=1,2,3... 18*(-1)**(n-1)/(n*pi*sinh(n*pi*2/3))*sin(n*pi*x/3)*sinh(n*pi*1/3)

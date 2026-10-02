@@ -1,0 +1,4 @@
+// matches { x in {a,b}* | x has even number of a's, odd number of b's, or contains both babb and aabaa }
+
+alph = (a|b)*;  // subexpression matching any character string
+(b*ab*ab*)*|(a*ba*ba*)*ba*|alph babb alph aabaa alph|alph aabaa alph babb alph

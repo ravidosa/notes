@@ -1,0 +1,4 @@
+GMm/r^2 = mv^2/r
+-GMm/r = -mv^2
+The potential energy is twice the negative value of the kinetic energy,
+so the total energy is equal to the negative value of the kinetic energy.

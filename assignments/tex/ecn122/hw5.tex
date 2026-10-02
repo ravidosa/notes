@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage{../assignment_preamble}
+
+\title{Homework 5}
+\author{Ravi Kini}
+\date{February 13, 2026}
+
+\begin{document}
+
+\maketitle
+
+\problem{}
+Let there be $n$ firms. Suppose the inverse demand function $P(Q)$ is:
+\begin{align*}
+    P(Q) = \begin{cases}
+        a - Q & Q \leq a \\
+        0 & Q > a \\
+    \end{cases}
+\end{align*}
+and each firm has the cost function $c_i(q_i) = cq_i^2$, with $c < a$. Letting $q_{-i} = Q - q_i$, the profit function $\pi_i(q_i, q_{-i})$ is:
+\begin{align*}
+    \pi_i(q_i, q_{-i}) & = P(Q)q_i - cq_i^2 \\
+    & = \max(a - q_i - q_{-i}, 0)q_i - cq_i^2
+\end{align*}
+Let us assume $a - q_i - q_{-i} \geq 0$. Taking the first derivative with respect to $q_i$:
+\begin{align*}
+    \frac{\partial \pi_i}{\partial q_i} = 0 & = (a - q_{-i}) - 2(1 + c)q_i \\
+    q_i & = \frac{a - q_{-i}}{2(1 + c)}
+\end{align*}
+Now taking the second derivative:
+\begin{align*}
+    \frac{\partial^2 \pi_i}{\partial q_i^2} = - 2(1 + c)q_i < 0 \\
+\end{align*}
+The best response is then indeed $q_i^* = \frac{a - q_{-i}}{2(1 + c)}$, mking $(q_1^*, \ldots, q_n^*)$ a Nash equilibrium.
+
+Suppose firms $i$ and $j$ have best responses $q_i^*$ and $q_j^*$, respectively, with $q_i^* \neq q_j^*$ and let ${Q'}^* = Q^* - q_i^* - q_j^*$. Then:
+\begin{align*}
+    2(1 + c)q_i^* & = a - {Q'}^* - q_j^*
+    2(1 + c)q_j^* & = a - {Q'}^* - q_i^*
+\end{align*}
+It then follows that:
+\begin{align*}
+    2(1 + c)(q_i^* - q_j^*) & = q_i^* - q_j^* \\
+    (1 + 2c)(q_i^* - q_j^*) & = 0
+\end{align*}
+For this to be true, $q_i^* = q_j^*$. This is a contradiction; therefore in a Nash equilibrium, all firms produce the same output $q^*$. That output is:
+\begin{align*}
+    q^* & = \frac{a - (n - 1)q^*}{2(1 + c)} \\
+    q^* & = \frac{a}{1 + 2c + n}
+\end{align*}
+The equilibrium price is:
+\begin{align*}
+    P^* & = a - Q^* = a - n \cdot \frac{a}{1 + 2c + n} \\
+    & = \frac{a(1 + 2c)}{1 + 2c + n}
+\end{align*}
+We see that $\lim_{n\to\infty} P^* = 0$, so the price decreases as the number of firms increases.
+\end{document}

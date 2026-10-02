@@ -1,0 +1,57 @@
+\documentclass{article}
+\usepackage{../assignment_preamble}
+
+\title{Homework 4}
+\author{Ravi Kini}
+\date{February 6, 2026}
+
+\begin{document}
+
+\maketitle
+
+\problem{}
+Let bidder $1$ bid $b_1$ and have valuation $v_1$, and bidder $2$ hav bid $b_2$ and valuation $v_2$. For bidder $1$, if $b_2 < v_1$, their best response is any $b_1 \geq b_2$, since they would be paying $b_2$, which is less than their valuation. If $b_2 = v_1$, their best response would be any $b_1 \geq 0$, since the payoff would be zero, regardless if they win or lose. If $b_2 > v_1$, their best response would be any $0 \leq b_1 < b_2$, since they cannot win without paying more than their valuation. The best response funcion for bidder $1$ is then:
+\begin{align*}
+    B_1(b_2) & = \begin{cases}
+        \{b_1 : b_1 \geq b_2\} & b_2 < v_1 \\
+        \{b_1 : b_1 \geq 0\} & b_2 = v_1 \\
+        \{b_1 : 0 \leq b_1 < b_2\} & b_2 > v_1 \\
+    \end{cases}
+\end{align*}
+By a similar argument, the best response funcion for bidder $2$ is:
+\begin{align*}
+    B_2(b_1) & = \begin{cases}
+        \{b_2 : b_2 \geq b_1\} & b_1 < v_2 \\
+        \{b_2 : b_2 \geq 0\} & b_1 = v_2 \\
+        \{b_2 : 0 \leq b_2 \leq b_1\} & b_1 > v_2 \\
+    \end{cases}
+\end{align*}
+
+Suppose bidder $1$ wins ($b_1 \geq b_2$). For there to be a Nash equilibrium, it must be the case that $b_1 \geq v_2$, since otherwise bidder $2$ could improve their payoff by bidding higher, winning, and still paying their valuation or less. Furthermore, $b_2 \leq v_1$, as otherwise bidder $1$ would be paying more than their valuation. Now suppose bidder $2$ wins ($b_2 > b_1$). For there to be a Nash equilibrium, it must be the case that $b_2 \geq v_1$, since otherwise bidder $1$ could improve their payoff by bidding higher, winning, and still paying their valuation or less. Furthermore, $b_1 \leq v_2$, as otherwise bidder $2$ would be paying more than their valuation. We then see that the Nash equilibria are when $b_1 \leq v_2$ and $b_2 \geq v_1$, or when $b_1 \geq v_2$, $b_1 \geq b_2$, and $b_2 \leq v_1$. 
+
+\clearpage
+\problem{}
+Suppose the two highest bids are not the same; the highest bidder could then improve their payoff by decreasing their bid to the second highest bid. Now suppose bidder $1$ is not one of the two highest bids; they could then improve their payoff by bidding at the highest bid, as they have the lowest name. Now suppose the highest bid is less than $v_2$; bidder $2$ could then improve their payoff by increasing their bid and winning while still paying less than their valuation. Similarly, if the highest bid is greater than $v_1$, the winner will have a negative payoff and could improve their payoff by decreasing their bid and losing. A Nash equilibrium for a first-price sealed-bid auction must then have the two highest bids be the same, one of the highest be bids be submitted by bidder $1$, and a highest bid betwen $v_2$ and $v_1$.
+
+Suppose we have an action profile satisfying these conditions. For bidder $1$, increasing the bid would result in a lower payoff since they are paying more, while decreasing the bid would result in them losing. For all other bidders, they cannot win without paying more than their valuation. The profile is then a Nash equilibrium.
+
+\clearpage
+\problem{}
+Let player $i$ bid $v_i$ for the first unit and $w_i$ for the second unit.
+
+For the discriminatory auction, consider the profile where all other bidders bid $0$ for both units. Player $i$ can then improve their payoff by bidding less and still winning.
+
+For the uniform-price auction, let bidder $j$ ($i \neq j$) bid some $u_i$ for the second unit where $w_i < u_i < v_i$ and $0$ for the first, and all other bidders bid $0$ for both units. Player $i$ would then win the first unit, and have to pay $w_i$ for it. They can then improve their payoff by decreasing their bid on the second unit.
+
+For the Vickrey auction, first consider the case where bidder $i$ does not win both units. For them to win either unit, they would have to increase their bid beyond their valuation, resulting in a worse payoff since the second highest (previously winning) bid would be more than their valuation as well. If bidder $i$ does win both units, changing their bid either does not affect their payoff, or causes them to lose.
+
+\clearpage
+\problem{}
+Let bidder $i$ submit a bid of $v_i$. Suppose they win; decreasing the bid to $b_i$ either results in them still winning (if they stay higher than the second-highest bid) or losing if they dip below the second highest bid. In the first case, decreasing the bid does not result in any change in the payoff, since the lowest bid stays the same, while in the second case, the payoff decreases to zero. If they do not win, decreasing the bid does not change the payoff, which remains at zero. Since decreasing the bid either decreases the payoff or has it remain constant, the bid of $v_i$ weakly dominates any lower bid.
+
+Conversely, consider the situation where bidder $i$ submits a bid of $v_i$ loses with winning bid $b_i - 1$ where $b_i > v_i$, but is not the lowest bidder. In this case, increasing the bid to $b_i$ would result in an increased payoff, since bidder $i$ wins and the lowest bid stays the same. The bid of $v_i$ then does not weakly dominate any higher bid.
+
+We now consider the action profile where each bidder bids their valuation. For any bidder$i$ that does not win (other than the lowest bidder), increasing their bid such that they win would result in a higher payoff, since they would win and the lowest bid stays the same, and lower than $v_i$.
+
+The symmetric Nash equilibrium is the action profile where all bidders bid $v_1$ (and bidder $1$ wins since they have the lowest name). For bidder $1$, decreasing the bid would result in them losing (and a payoff of zero), while increasing the bid would result in the payoff staying the same. For all other bidders, decreasing the bid would not change their payoff of zero while increasing the bid would result in them paying more than their valuation, giving a negative payoff. The profile is then a Nash equilibrium, and a symmetric Nash equilibrium since all players take the same action.
+\end{document}

@@ -1,0 +1,284 @@
+\documentclass{article}
+\usepackage{../assignment_preamble}
+
+\title{Homework 1}
+\author{Ravi Kini}
+\date{May 8, 2026}
+
+\begin{document}
+
+\maketitle
+
+\problem
+\subproblem{(a)}
+\begin{center}
+\begin{tabular}{|c|c||c|c|c|}
+    \hline
+    $p$ & $q$ & $\lnot p \lor \lnot q$ & $p \lor q$ & $(\lnot p \land q) \lor (p \land \lnot q)$ \\
+    \hline
+    $0$ & $0$ & $1$ & $0$ & $0$ \\
+    $0$ & $i$ & $1$ & $i$ & $i$ \\
+    $0$ & $1$ & $1$ & $1$ & $1$ \\
+    $i$ & $0$ & $1$ & $i$ & $i$ \\
+    $i$ & $i$ & $i$ & $i$ & $i$ \\
+    $i$ & $1$ & $i$ & $1$ & $i$ \\
+    $1$ & $0$ & $1$ & $1$ & $1$ \\
+    $1$ & $i$ & $i$ & $1$ & $i$ \\
+    $1$ & $1$ & $0$ & $1$ & $0$ \\
+    \hline
+\end{tabular}
+\end{center}
+The argument is valid in both Strong Kleene logic and the Logic of Paradox. This does not, however, tell us anything about its validity in the Logic of First-Degree Entailment. The following derivation works for Strong Kleene logic.
+\begin{equation*}
+\begin{nd}[rules=strongkleene,justformat=just]
+\hypo {1} {\lnot p \lor \lnot q}
+\hypo {2} {p \lor q}
+\open
+    \hypo {3} {p}
+    \open
+        \hypo {4} {\lnot p}
+        \have {5} {(\lnot p \land q) \lor (p \land \lnot q)} \ne{3,4}
+    \close
+    \open
+        \hypo {6} {\lnot q}
+        \have {7} {p \land \lnot q} \ai{3,6}
+        \have {8} {(\lnot p \land q) \lor (p \land \lnot q)} \oi{7}
+    \close
+    \have {9} {(\lnot p \land q) \lor (p \land \lnot q)} \oe{1,4-5,6-8}
+\close
+\end{nd}
+\end{equation*}
+\begin{equation*}
+\begin{ndresume}[rules=strongkleene,justformat=just]
+\open
+    \hypo {10} {q}
+    \open
+        \hypo {11} {\lnot p}
+        \have {12} {\lnot p \land q} \ai{10,11}
+        \have {13} {(\lnot p \land q) \lor (p \land \lnot q)} \oi{12}
+    \close
+    \open
+        \hypo {14} {\lnot q}
+        \have {15} {(\lnot p \land q) \lor (p \land \lnot q)} \ne{10,14}
+    \close
+    \have {16} {(\lnot p \land q) \lor (p \land \lnot q)} \oe{1,11-13,14-15}
+\close
+\have {17} {(\lnot p \land q) \lor (p \land \lnot q)} \oe{2,3-9,10-16}
+\end{ndresume}
+\end{equation*}
+The following derivation works for the Logic of Paradox.
+\begin{equation*}
+\begin{nd}[rules=paradox,justformat=just]
+\hypo {1} {\lnot p \lor \lnot q}
+\hypo {2} {p \lor q}
+\open
+    \hypo {3} {p}
+    \open
+        \hypo {4} {q}
+        \open
+            \hypo {5} {\lnot p}
+            \have {6} {\lnot p \land q} \ai{4,5}
+            \have {7} {(\lnot p \land q) \lor (p \land \lnot q)} \oi{6}
+        \close
+        \open
+            \hypo {8} {\lnot q}
+            \have {9} {p \land \lnot q} \ai{3,8}
+            \have {10} {(\lnot p \land q) \lor (p \land \lnot q)} \oi{9}
+        \close
+        \have {11} {(\lnot p \land q) \lor (p \land \lnot q)} \oe{1,5-7,8-10}
+    \close
+    \open
+        \hypo {12} {\lnot q}
+        \have {13} {p \land \lnot q} \ai{3,12}
+        \have {14} {(\lnot p \land q) \lor (p \land \lnot q)} \oi{13}
+    \close
+    \have {15} {(\lnot p \land q) \lor (p \land \lnot q)} \tnd{4-11,12-14}
+\close
+\end{nd}
+\end{equation*}
+\begin{equation*}
+\begin{ndresume}[rules=paradox,justformat=just]
+\open
+    \hypo {16} {q}
+    \open
+        \hypo {17} {p}
+        \open
+            \hypo {18} {\lnot p}
+            \have {19} {\lnot p \land q} \ai{16,18}
+            \have {20} {(\lnot p \land q) \lor (p \land \lnot q)} \oi{19}
+        \close
+        \open
+            \hypo {21} {\lnot q}
+            \have {22} {p \land \lnot q} \ai{17,21}
+            \have {23} {(\lnot p \land q) \lor (p \land \lnot q)} \oi{22}
+        \close
+        \have {24} {(\lnot p \land q) \lor (p \land \lnot q)} \oe{1,18-20,21-23}
+    \close
+    \open
+        \hypo {25} {\lnot p}
+        \have {26} {\lnot p \land q} \ai{16,25}
+        \have {27} {(\lnot p \land q) \lor (p \land \lnot q)} \oi{26}
+    \close
+    \have {28} {(\lnot p \land q) \lor (p \land \lnot q)} \tnd{17-24,25-27}
+\close
+\have {29} {(\lnot p \land q) \lor (p \land \lnot q)} \oe{2,3-15,16-28}
+\end{ndresume}
+\end{equation*}
+
+\subproblem{(b)}
+\begin{center}
+\begin{tabular}{|c|c||c|c|}
+    \hline
+    $p$ & $q$ & $p \Rightarrow q$ & $p \Rightarrow (p \land q)$ \\
+    \hline
+    $0$ & $0$ & $1$ & $1$ \\
+    $0$ & $i$ & $1$ & $1$ \\
+    $0$ & $1$ & $1$ & $1$ \\
+    $i$ & $0$ & $i$ & $i$ \\
+    $i$ & $i$ & $i$ & $i$ \\
+    $i$ & $1$ & $1$ & $i$ \\
+    $1$ & $0$ & $0$ & $0$ \\
+    $1$ & $i$ & $i$ & $i$ \\
+    $1$ & $1$ & $1$ & $1$ \\
+    \hline
+\end{tabular}
+\end{center}
+The argument is not valid in Strong Kleene logic. The valuation where $p = i$ and $q = 1$ is a counterexample. However, it is valid in the Logic of Paradox. Since the argument is not valid in Strong Kleene logic, it then cannot be valid in the Logic of First-Degree Entailment since it is weaker than Strong Kleene logic. The following derivation works for the Logic of Paradox.
+\begin{equation*}
+\begin{nd}[rules=paradox,justformat=just]
+\hypo {1} {p \Rightarrow q}
+\have {2} {\lnot p \lor q} \mce{1}
+\open
+    \hypo {3} {\lnot p}
+    \have {4} {\lnot p \lor (p \land q)} \oi{3}
+    \have {5} {p \Rightarrow (p \land q)} \mci{4}
+\close
+\open
+    \hypo {6} {q}
+    \open
+        \hypo {7} {p}
+        \have {8} {p \land q} \ai{6,7}
+        \have {9} {\lnot p \lor (p \land q)} \oi{8}
+        \have {10} {p \Rightarrow (p \land q)} \mci{9}
+    \close
+    \open
+        \hypo {11} {\lnot p}
+        \have {12} {\lnot p \lor (p \land q)} \oi{11}
+        \have {13} {p \Rightarrow (p \land q)} \mci{12}
+    \close
+    \have {14} {p \Rightarrow (p \land q)} \tnd{7-10,11-13}
+\close
+\have {15} {p \Rightarrow (p \land q)} \oe{2,3-5,6-14}
+\end{nd}
+\end{equation*}
+
+\subproblem{(c)}
+\begin{center}
+\begin{tabular}{|c|c||c|c|}
+    \hline
+    $p$ & $q$ & $\lnot(p \Rightarrow p) \lor \lnot(q \Rightarrow p)$ & $p$ \\
+    \hline
+    $0$ & $0$ & $0$ & $0$ \\
+    $0$ & $i$ & $i$ & $0$ \\
+    $0$ & $1$ & $1$ & $0$ \\
+    $i$ & $0$ & $i$ & $i$ \\
+    $i$ & $i$ & $i$ & $i$ \\
+    $i$ & $1$ & $i$ & $i$ \\
+    $1$ & $0$ & $0$ & $1$ \\
+    $1$ & $i$ & $0$ & $1$ \\
+    $1$ & $1$ & $0$ & $1$ \\
+    \hline
+\end{tabular}
+\end{center}
+The argument is not valid in either Strong Kleene logic or the Logic of Paradox. The valuation where $p = 0$ and $q = 1$ is a counterexample for both. Since the argument is not valid in either Strong Kleene logic or the Logic of Paradox, it then cannot be valid in the Logic of First-Degree Entailment since it is weaker than both Strong Kleene logic and the Logic of Paradox.
+
+\clearpage
+\problem{}
+\subproblem{(a)}
+\begin{equation*}
+\begin{nd}[rules=lukasiewicz,justformat=just]
+\open
+    \hypo {1} {\lnot A}
+    \have {2} {(\lnot A \Rightarrow A) \lor \lnot A} \oi{1}
+\close
+\open
+    \hypo {3} {\lnot A \Rightarrow A}
+    \have {4} {(\lnot A \Rightarrow A) \lor \lnot A} \oi{3}
+\close
+\have {5} {(\lnot A \Rightarrow A) \lor \lnot A} \condd{1-2,3-4}
+\end{nd}
+\end{equation*}
+We then see that $\vdash (\lnot A \Rightarrow A) \lor \lnot A$ is a valid argument in Łukasiewicz logic.
+
+\begin{equation*}
+\begin{nd}[rules=lukasiewicz,justformat=just]
+\hypo {1} {B}
+\open
+    \hypo {2} {A}
+    \have {3} {B} \r{1}
+\close
+\open
+    \hypo {4} {\lnot B}
+    \have {5} {\lnot A} \ne{1,4}
+\close
+\have {5} {A \Rightarrow B} \condi{2-3,4-5}
+\end{nd}
+\end{equation*}
+We then see that $B \vdash A \Rightarrow B$ is a valid argument in Łukasiewicz logic.
+
+\subproblem{(b)}
+\begin{equation*}
+\begin{nd}[rules=lukasiewiczmodified,justformat=just]
+\hypo {1} {\lnot (A \lor B) \Rightarrow (A \lor B)}
+\have {2} {(\lnot A \Rightarrow A) \lor \lnot A} \tdiam{}
+\open
+    \hypo {3} {\lnot A \Rightarrow A}
+    \have {4} {(\lnot A \Rightarrow A) \lor (\lnot B \Rightarrow B)} \oi{3}
+\close
+\open
+    \hypo {5} {\lnot A}
+    \have {6} {(\lnot B \Rightarrow B) \lor \lnot B} \tdiam{}
+    \open
+        \hypo {7} {\lnot B \Rightarrow B}
+        \have {8} {(\lnot A \Rightarrow A) \lor (\lnot B \Rightarrow B)} \oi{7}
+    \close
+    \open
+        \hypo {9} {\lnot B}
+        \have {10} {\lnot (A \lor B)} \ndi{5,9}
+        \have {11} {A \lor B} \ie{1,10}
+        \open
+            \hypo {12} {A}
+            \have {13} {\lnot A \Rightarrow A} \weaken{12}
+            \have {14} {(\lnot A \Rightarrow A) \lor (\lnot B \Rightarrow B)} \oi{13}
+        \close
+        \open
+            \hypo {15} {B}
+            \have {16} {\lnot B \Rightarrow B} \weaken{15}
+            \have {17} {(\lnot A \Rightarrow A) \lor (\lnot B \Rightarrow B)} \oi{17}
+        \close
+        \have {18} {(\lnot A \Rightarrow A) \lor (\lnot B \Rightarrow B)} \oe{11,12-14,15-17}
+    \close
+    \have {19} {(\lnot A \Rightarrow A) \lor (\lnot B \Rightarrow B)} \oe{6,7-8,9-17}
+\close
+\have {20} {(\lnot A \Rightarrow A) \lor (\lnot B \Rightarrow B)} \oe{2,3-4,5-19}
+\end{nd}
+\end{equation*}
+We then see that $\lnot (A \lor B) \Rightarrow (A \lor B) \vdash (\lnot A \Rightarrow A) \lor (\lnot B \Rightarrow B)$ is a valid argument in Łukasiewicz logic.
+
+\clearpage
+\problem{}
+\subproblem{(a)}
+Let $v, v'$ be LP-valuations such that $v \preceq v'$. Let $^*$ be a connective such that $v(^*A) = i$ regardless of $A$. Clearly, $v'(^*A) \neq 0$ for all $A$; it then follows that, vacuously, $v(^*A) = 0$ only when $v(^*A) = 0$. Similarly, $v(^*A) = 1$ only when $v(^*A) = 1$, and so Proposition 7.1.3 still holds if this connective is added to the Logic of Paradox.
+
+\subproblem{(b)}
+Let $\#$ be a connective such that:
+\begin{equation*}
+    p \# q = \begin{cases}
+        0 & p, q = 0 \\
+        i & p = 0, q = i \text{ or } p = i, q = 0 \\
+        1 & \text{otherwise}
+    \end{cases}
+\end{equation*}
+Let $v$ be a valuation where $v(p) = i$ and $v(q) = i$, and let $v'$ be a valuation where $v'(p) = 0$ and $v'(q) = 0$. We see that $v \preceq v'$. However, $v(p \# q) = i \# i = 1$ while $v'(p \# q) = 0 \# 0 = 0$. Consequently, Proposition 7.1.3 no longer holds if this connective is added to the Logic of Paradox.
+
+\end{document}

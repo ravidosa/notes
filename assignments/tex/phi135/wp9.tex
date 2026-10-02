@@ -1,0 +1,33 @@
+\documentclass{article}
+\usepackage{../assignment_preamble}
+
+\title{Weekly Problem 9}
+\author{Ravi Kini}
+\date{June 1, 2026}
+
+\begin{document}
+
+\maketitle
+
+\problem
+\subproblem{(a)}
+\begin{equation*}
+\begin{nd}[rules=connexive,justformat=just]
+\hypo {1} {\lnot (A \Rightarrow B)}
+\open
+\hypo {2} {A}
+\have {3} {\lnot B} \nconde{1,2}
+\have {4} {\lnot A \lor \lnot B} \oi{3}
+\close
+\open
+\hypo {5} {\lnot A}
+\have {6} {\lnot A \lor \lnot B} \oi{5}
+\close
+\have {7} {\lnot A \lor \lnot B} \tnd{2-4,5-6}
+\end{nd}
+\end{equation*}
+We then see that $\lnot (A \Rightarrow B) \vdash \lnot A \lor \lnot B$ is a valid argument in connexive logic.
+
+\subproblem{(b)}
+Let $A = i$ and $B = 1$. We see that $\lnot A = i$ and $\lnot B = 0$, so $\lnot A \lor \lnot B = i$. However, $A \Rightarrow B = 1$, and so $\lnot(A \Rightarrow B) = 0$. Consequently, the argument $\lnot A \lor \lnot B \vdash \lnot (A \Rightarrow B)$ is an invalid argument in connexive logic.
+\end{document}

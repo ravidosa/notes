@@ -1,0 +1,5 @@
+The localized mode is not present when the defective spring constant is smaller than the others.
+This makes sense, as a higher constant defective spring is more resistive to motion, and does not want to move as the other springs,
+but the lower constant defective spring is less resistive to motion, and can move as the other springs do.
+The higher constant defective spring dominates, making the system behave as one spring,
+but the lower constant defective spring is dominated, behaving as an empty space.

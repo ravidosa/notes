@@ -1,0 +1,77 @@
+\documentclass{article}
+\usepackage{../assignment_preamble}
+
+\title{Homework 2}
+\author{Ravi Kini}
+\date{January 23, 2026}
+
+\begin{document}
+
+\maketitle
+
+\problem{}
+The action profile $(e, \ldots, e)$ is a Nash equilibrium for all values of $e \in \{1, \ldots, K\}$. In this profile, a player's payoff is $2e - e = e$. For any individual player, decreasing their effort to $e_i$ would result in a payoff of $2e_i - e_i = e_i < e$, and increasing their effort would result in a payoff of $2e - e_i = e + (e - e_i) < e$.
+
+Let $(e_1, \ldots, e_n)$ be an action profile where not all of the effort levels are the same. Let $e^*$ be the minimum, and let some player $k$ have an effort level exceeding $e^*$. Their payoff is $2e^* - e_k < e^*$, while if they deviate to $e^*$, their payoff if $2e^* - e^* = e^*$, so the profile is not a Nash equilibrium.
+
+\clearpage
+\problem{}
+The action profile $(k, k, k)$ is not a Nash equilibrium for $k \geq 2$, and is for $k = 1$. Their payoff is $1/3$, and if they deviate to $k - 1$, $k - 1$ will be closer to $\frac{2}{3} \cdot \frac{(k + k + (k - 1))}{3} = \frac{2}{3}k - \frac{2}{9}$. The only value for which the profile is a Nash equilibrium, $k = 1$, is a Nah equilibrium because deviating lower is no longer possible.
+
+Let $(k_1, k_2, k_3)$ be an action profile where not all three integers are the same. Let $k^* = \max(k_1, k_2, k_3)$. Suppose only one person has $k^*$ as heir integer, and without loss of generality let it be $k^* = k_3$. Then $\frac{2}{3} \cdot \frac{k_1 + k_2 + k^*}{3} = \frac{2}{9}(k_1 + k_2 + k^*)$. If $k_1 \geq {2}{9}(k_1 + k_2 + k^*)$, $k^*$ does not win since $k^* > k_1$. Otherwise, $k^* - {2}{9}(k_1 + k_2 + k^*) = \frac{7}{9}k^* - \frac{2}{9}k_1 - \frac{2}{9}k_2$, while ${2}{9}(k_1 + k_2 + k^*) - k_1 = \frac{2}{9}k^* - \frac{7}{9}k_1 + \frac{2}{9}k_2$, which is smaller, and so $k^*$ still does not win. In either case, they would be better off decreasing their integer, so the profile is not a Nash equilibrium. Now instead suppose two people have $k^*$ as their integer, and without loss of generality let it be $k_2$ and $k_3$. Then $\frac{2}{3} \cdot \frac{k_1 + k^* + k^*}{3} = \frac{2}{9}k_1 + \frac{4}{9}k^*$. Then, since $\frac{2}{9}k_1 + \frac{4}{9}k^* < \frac{1}{2}(k^* + k)$, $k^*$ dos not win. They would be better off decreasing their integer, so the profile is not a Nash equilibrium.
+
+\clearpage
+\problem{}
+\subproblem{(a)}
+We can model selfish behavior by the following strategic game:
+\begin{center}
+\begin{tabular}{|c|c|c|}
+    \hline
+     & $Sit$ & $Stand$ \\
+     \hline
+     $Sit$ & $1, 1$ & $2, 0$ \\
+     \hline
+     $Stand$ & $0, 2$ & $0, 0$ \\
+     \hline
+\end{tabular}
+\end{center}
+In this game, player 1 would rank the outcomes as following:
+\begin{align*}
+    (Sit, Stand) > (Sit, Sit) > (Stand, Sit) = (Stand, Stand)
+\end{align*}
+This is not equivalent to the prisoner's dilemma, regardless of how the actions are named. The Nash Equilibrium is $(Sit, Sit)$.
+
+\subproblem{(b)}
+We can model altruistic behavior by the following strategic game:
+\begin{center}
+\begin{tabular}{|c|c|c|}
+    \hline
+     & $Sit$ & $Stand$ \\
+     \hline
+     $Sit$ & $2, 2$ & $0, 3$ \\
+     \hline
+     $Stand$ & $3, 0$ & $1, 1$ \\
+     \hline
+\end{tabular}
+\end{center}
+In this game, player 1 would rank the outcomes as following:
+\begin{align*}
+    (Stand, Sit) > (Sit, Sit) > (Stand, Stand) > (Sit, Stand)
+\end{align*}
+This is equivalent to the prisoner's dilemma, with $Stand = C$ and $Sit = N$. The Nash Equilibrium is $(Stand, Stand)$.
+
+\subproblem{(c)}
+In both equilibria, both people are acting accoridn got their selfish preferences.
+
+\clearpage
+\problem{}
+\subproblem{(a)}
+Suppose $h$ hunters pursue the stag. If $h \geq m$, the hunters who did not pursue the stag are better off pursuing the stag, since they prefer $1/n$ of the stag to the hare. If $h < m$, they are better off not pursuing the stag, since they prefer a hare to nothing The equilibria are then $(Stag, \ldots, Stag)$ and $(Hare, \ldots, Hare)$.
+
+\subproblem{(b)}
+Suppose $h$ hunters pursue the stag. If $h > k$, the hunters who did pursue the stag are better off not pursuing the stag, since they prefer the hare to $1/k$ of the stag. If $k > h \geq m$, the hunters who did not pursue the stag are better off pursuing the stag, since they prefer $1/k$ of the stag to the hare. If $h = k$, the profile is a Nash equilibrium. If $h < m$, they are better off not pursuing the stag, since they prefer a hare to nothing The equilibria are then the profile where exactly $k$ hunters pursue the stag and $(Hare, \ldots, Hare)$.
+
+\subproblem{(c)}
+The presence of a church means that hunters now prefer $\frac{0.9}{m}$ of a stag to a hare, but prefers a hare to $\frac{0.9}{m + 1}$ of a stag. This is the same as the origina stag hunt, but with $m' = \frac{m}{0.9} = \frac{10}{9}m$. Effectively, it just raises the threshold number of hunters that makes stag hunting preferable to hare hunting.
+
+\end{document}

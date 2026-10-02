@@ -1,0 +1,18 @@
+Eigenvalues:
+min eigenvalue:  -0.000
+eigenvector of min eigenvalue:
+  0.500  0.500  0.500  0.500
+max eigenvalue:   9.200
+eigenvector of max eigenvalue:
+ -0.500 -0.500 -0.500 -0.500
+middle eigenvalue:   4.600
+eigenvector of middle eigenvalue:
+ -0.530  0.468  0.530 -0.468
+middle eigenvalue:   4.600
+eigenvector of middle eigenvalue:
+ -0.468 -0.530  0.468  0.530
+ 
+ The eigenvectors of the lowest and highest eigenvalues agree with the ones in the lecture notes,
+but the eigenvectors of the middle two eigenvalues do not.
+This makes sense, as they are degenerate eigenvalues,
+but adding and subtracting the given eigenvectors gives the ones in the lecture notes.

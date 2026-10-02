@@ -1,0 +1,60 @@
+\documentclass{article}
+\usepackage{../assignment_preamble}
+
+\title{Weekly Problem 5}
+\author{Ravi Kini}
+\date{May 4, 2026}
+
+\begin{document}
+
+\maketitle
+
+\problem
+\subproblem{(a)}
+\begin{equation*}
+\begin{nd}[rules=fde,justformat=just]
+\hypo {1} {(p \lor q) \Rightarrow r}
+\have {2} {\lnot (p \lor q) \lor r} \mce{1}
+\open
+\hypo {3} {\lnot (p \lor q)}
+\have {4} {\lnot p} \nde{3}
+\have {5} {\lnot\lnot r \lor \lnot p} \oi{4}
+\close
+\open
+\hypo {6} {r}
+\have {7} {\lnot\lnot r} \dn{6}
+\have {8} {\lnot\lnot r \lor \lnot p} \oi{7}
+\close
+\have {9} {\lnot\lnot r \lor \lnot p} \oe{2,3-5,6-8}
+\have {10} {\lnot r \Rightarrow \lnot p} \mci{9}
+\end{nd}
+\end{equation*}
+We then see that $(p \lor q) \Rightarrow r \vdash \lnot r \Rightarrow \lnot p$ is a valid argument in the Logic of First-Degree Entailment.
+
+The derivation only used rules that were available in both Strong Kleene logic and the Logic of Paradox, so the argument is valid in those logics as well.
+
+\subproblem{(b)}
+Let $p = b$ and $q = n$. We then see that $\lnot p = b$, so $\lnot p \Rightarrow q = 1$ and $\lnot p \Rightarrow q = 1$. However, $q \Rightarrow q = n$. Consequently, the argument $p, (p \land q) \Rightarrow r \vdash q \Rightarrow r$ is an invalid argument in the Logic of First-Degree Entailment.
+
+However, this argument is valid in Strong Kleene logic and the Logic of Paradox, as seen by the following derivation.
+\begin{equation*}
+\begin{nd}[rules=strongkleene,justformat=just]
+\hypo {1} {\lnot p \Rightarrow q}
+\hypo {2} {p \Rightarrow q}
+\have {3} {\lnot\lnot p \lor q} \mce{1}
+\have {4} {\lnot p \lor q} \mce{2}
+\open
+\hypo {5} {\lnot p}
+\have {6} {q} \ie{1,5}
+\have {7} {\lnot q \lor q} \oi{6}
+\close
+\open
+\hypo {8} {q}
+\have {9} {\lnot q \lor q} \oi{8}
+\close
+\have {10} {\lnot q \lor q} \oe{3,5-7,8-9}
+\have {11} {q \Rightarrow q} \mci{10}
+\end{nd}
+\end{equation*}
+Th argument only fails in the Logic of First-Degree Entailment because of the truth values $b$ and $n$, which were not present in Strong Kleene logic or the Logic of Paradox.
+\end{document}
